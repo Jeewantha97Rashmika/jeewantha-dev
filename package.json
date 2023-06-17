@@ -31,9 +31,6 @@
     "gatsby-transformer-sharp": "^5.11.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.13.0",
-    "styled-components": "^5.3.11",
-    "text-shuffle": "^1.0.2",
-    "typewriter-effect": "^2.20.1"
+    "styled-components": "^5.3.11"
   }
 }
