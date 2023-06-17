@@ -40,7 +40,7 @@ export default function Education01() {
           fontFamily: "Work Sans",
         }}
       >
-              Infomation and Communication Technology -
+              Information and Communication Technology -
               BICT(horns)
       </Typography> <br></br>
       <Typography

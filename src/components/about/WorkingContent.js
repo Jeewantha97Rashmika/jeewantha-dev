@@ -39,7 +39,7 @@ export default function WorkingContent() {
           fontFamily: "Work Sans",
         }}
       >
-        Android apps and IOS app
+        Android apps and IOS apps
       </Typography>
     </div>
   );

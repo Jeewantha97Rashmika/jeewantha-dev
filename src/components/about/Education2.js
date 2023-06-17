@@ -42,7 +42,7 @@ export default function Education02() {
           fontFamily: "Work Sans",
         }}
       >
-        Passed Technology Stram with Infomation and Communication Technology
+        Passed Technology Stream with Information and Communication Technology
       </Typography>{" "}
       <br></br>
     </div>

@@ -1,6 +1,6 @@
 import React from "react";
-import { Chip, Container, Grid, Typography } from "@mui/material";
-import BodyText from "../../components/common/BodyText";
+import {  Container } from "@mui/material";
+
 import DevSkill from "../../components/about/DevSkill";
 import UiSkill from "../../components/about/UiSkills";
 

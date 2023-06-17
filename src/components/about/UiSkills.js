@@ -1,5 +1,5 @@
 import React from "react";
-import { Chip, Container, Grid, Typography } from "@mui/material";
+import { Chip, Grid, Typography } from "@mui/material";
 
 export default function UiSkill() {
   const uiSkills = [

@@ -1,5 +1,5 @@
 import React from "react";
-import { Chip, Box, Grid, Typography } from "@mui/material";
+import { Chip,  Grid, Typography } from "@mui/material";
 
 export default function DevSkill() {
   const skills = [

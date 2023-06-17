@@ -1,12 +1,11 @@
 import React from "react";
 import { Container, Grid, Box, Typography } from "@mui/material";
-import { Link } from "gatsby";
 
 export default function Footer() {
   return (
     <Container sx={{ mt: 20 }}>
       <hr></hr>
-      <Box sx={{ width: "40%", mt: 10 }}>
+      <Box sx={{ mt: 10 }}>
         <Grid item xs={12}>
           <Typography
             component="h3"
@@ -34,11 +33,15 @@ export default function Footer() {
           >
             jeewantharashmika80@gmail.com
           </Typography>
-          <a href="https://www.linkedin.com/in/jeewantha-rashmika-b5a56820a/">
+          <a
+            href="https://www.linkedin.com/in/jeewantha-rashmika-b5a56820a/"
+            style={{
+              textDecoration: "none",
+            }}
+          >
             <Typography
               component="h3"
               sx={{
-                textDecoration: "none",
                 transition: "transform 0.2s",
                 "&:hover": {
                   cursor: "pointer",
