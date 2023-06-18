@@ -13,8 +13,8 @@ import {
 } from "@mui/material";
 import Logo from "../images/logo.png";
 import MenuIcon from "@mui/icons-material/Menu";
-
-
+import Avatar from "@mui/material/Avatar";
+import ProImage from "../images/pro02.png";
 export default function Header() {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
@@ -32,9 +32,9 @@ export default function Header() {
     window.location.href = "/#work"; // Replace with your desired URL
   };
   return (
-    <div style={{ backgroundColor: "#f6fafd", paddingTop: "40px" }}>
+    <div style={{ backgroundColor: "#f6fafd" }}>
       {" "}
-      <Container>
+      <Container sx={{ paddingTop: { md: "40px", xs: "20px" } }}>
         <AppBar
           position="static"
           sx={{ backgroundColor: "#f6fafd", boxShadow: "none" }}
@@ -167,20 +167,79 @@ export default function Header() {
               open={drawerOpen}
               onClose={handleDrawerToggle}
             >
-              <List sx={{ width: 250 }} onClick={handleDrawerToggle}>
-                <ListItem button component="a"  href="/about">
-                  <ListItemText primary="About" />
-                </ListItem>
-                <ListItem button component="a"  href="/#work">
-                  <ListItemText primary="Work" />
-                </ListItem>
-                <ListItem button component="a"  href="/knowledge-sharing">
-                  <ListItemText primary="Knowledge Sharing" />
-                </ListItem>
-                <ListItem button component="a"  href="/linkedin">
-                  <ListItemText primary="Linkedin" />
-                </ListItem>
-              </List>
+              <Container>
+                <div
+                  style={{
+                    padding: "16px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  <Avatar
+                    src={ProImage}
+                    alt="Profile Picture"
+                    sx={{ width: 150, height: 150 }}
+                  />
+                </div>
+                <p
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontFamily: "Work Sans",
+                  }}
+                >
+                  Jeewantha Rashmika
+                </p>
+                <p
+                  style={{
+                    marginBottom: "20px",
+                    fontSize: "13px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontFamily: "Work Sans",
+                  }}
+                >
+                  jeewantharashmika80@gmail.com
+                </p>
+                <hr></hr>
+                <List sx={{ width: 260 }} onClick={handleDrawerToggle}>
+                  <ListItem button component="a" href="/about">
+                    <ListItemText
+                      primary="About"
+                      primaryTypographyProps={{
+                        style: { fontFamily: "Work Sans" },
+                      }}
+                    />
+                  </ListItem>
+                  <ListItem button component="a" href="/#work">
+                    <ListItemText
+                      primary="Work"
+                      primaryTypographyProps={{
+                        style: { fontFamily: "Work Sans" },
+                      }}
+                    />
+                  </ListItem>
+                  <ListItem button component="a" href="/knowledge-sharing">
+                    <ListItemText
+                      primary="Knowledge Sharing"
+                      primaryTypographyProps={{
+                        style: { fontFamily: "Work Sans" },
+                      }}
+                    />
+                  </ListItem>
+                  <ListItem button component="a" href="/linkedin">
+                    <ListItemText
+                      primary="LinkedIn"
+                      primaryTypographyProps={{
+                        style: { fontFamily: "Work Sans" },
+                      }}
+                    />
+                  </ListItem>
+                </List>
+              </Container>
             </Drawer>
           </Toolbar>
         </AppBar>

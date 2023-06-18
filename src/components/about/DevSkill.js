@@ -88,7 +88,7 @@ export default function DevSkill() {
           mt: 5,
           color: "black",
           fontSize: "20px",
-          fontWeight: 400,
+          fontWeight: 600,
           fontFamily: "Work Sans",
         }}
       >

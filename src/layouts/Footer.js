@@ -3,9 +3,9 @@ import { Container, Grid, Box, Typography } from "@mui/material";
 
 export default function Footer() {
   return (
-    <Container sx={{ mt: 20 }}>
+    <Container sx={{ mt: {md:20 , xs:10} }}>
       <hr></hr>
-      <Box sx={{ mt: 10 }}>
+      <Box sx={{ mt: {md:10, xs:5} }}>
         <Grid item xs={12}>
           <Typography
             component="h3"
@@ -61,8 +61,8 @@ export default function Footer() {
           <Typography
             component="h3"
             sx={{
-              mt: 10,
-              mb: 20,
+              mt: {md:10 ,xs:5},
+              mb: {md:20 ,xs:10},
               color: "rgba(112, 112, 112, 1)",
               fontSize: "16px",
               fontWeight: 400,

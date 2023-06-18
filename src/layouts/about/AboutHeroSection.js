@@ -22,7 +22,7 @@ export default function AboutHeroSection() {
             <Grid item xs={12} md={7} sx={{ order: { xs: 2, md: 1 } }}>
               <Heading1
                 component={"h1"}
-                text1={"A UI / UX designer,a mobile / web developer. "}
+                text1={"A UI / UX designer,a mobile/web developer."}
               />
               <Typography
                 component={"p"}

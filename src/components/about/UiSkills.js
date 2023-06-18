@@ -29,10 +29,10 @@ export default function UiSkill() {
       <Typography
         component="h3"
         sx={{
-          mt: 5,
+          mt:{md:10 ,xs:1},
           color: "black",
           fontSize: "20px",
-          fontWeight: 400,
+          fontWeight: 600,
           fontFamily: "Work Sans",
         }}
       >

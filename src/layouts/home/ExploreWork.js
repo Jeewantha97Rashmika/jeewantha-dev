@@ -54,7 +54,7 @@ export default function ExploreWork() {
       },
   ];
   return (
-    <Container sx={{ mt: 10 }} id="work">
+    <Container sx={{ mt: {md:10 ,xs :5} }} id="work">
       <Heading2 component={"h2"} text={"Explore works"} />
       <Box sx={{ width: "100%" }}>
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
