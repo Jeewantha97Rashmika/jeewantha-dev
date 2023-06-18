@@ -12,6 +12,7 @@ import {
   Container,
 } from "@mui/material";
 import Logo from "../images/logo.png";
+import Logo2 from "../images/logo2.png";
 import MenuIcon from "@mui/icons-material/Menu";
 import Avatar from "@mui/material/Avatar";
 import ProImage from "../images/pro02.png";
@@ -43,6 +44,8 @@ export default function Header() {
             sx={{
               display: "flex",
               justifyContent: "space-between",
+              alignItems: "center",
+
               borderBottom: "none",
             }}
           >
@@ -56,8 +59,14 @@ export default function Header() {
                 transition: "transform 0.2s",
               }}
             >
-              <a href="/">
-                <img src={Logo} alt="logo" width={200} />
+              <a href="/" style={{display:"flex"}}>
+                <img
+                  src={Logo}
+                  alt="logo"
+                  width={70}
+                  style={{ marginTop: "10px", marginLeft: "-20px" }}
+                />
+                <img src={Logo2} alt="logo" width={200} height={25}style={{marginTop:"28px"}} />
               </a>
             </Typography>
             <div sx={{ display: "flex", alignItems: "center" }}>

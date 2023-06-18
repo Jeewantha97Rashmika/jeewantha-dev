@@ -9,7 +9,7 @@ import SecondaryBtn from "../../components/common/SecondaryBtn";
 
 export default function HeroSection() {
   return (
-    <div style={{ backgroundColor: "#f6fafd", minHeight: "70vh" }}>
+    <div style={{ backgroundColor: "#f6fafd", minHeight: "670px" }}>
       <Container>
         <Box sx={{ width: "100%", paddingTop: { xs: "10px", md: "150px" } }}>
           <Grid
