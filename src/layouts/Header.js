@@ -32,6 +32,11 @@ export default function Header() {
   const handleWordClick = () => {
     window.location.href = "/#work"; // Replace with your desired URL
   };
+  const handleKnowledgeClick = () => {
+    window.location.href = "/#knowledge-sharing"; // Replace with your desired URL
+  };
+
+
   return (
     <div style={{ backgroundColor: "#f6fafd" }}>
       {" "}
@@ -118,6 +123,7 @@ export default function Header() {
               </Button>
               <Button
                 color="inherit"
+                onClick={handleKnowledgeClick}
                 sx={{
                   color: "black",
                   ml: 5,
@@ -239,7 +245,7 @@ export default function Header() {
                       }}
                     />
                   </ListItem>
-                  <ListItem button component="a" href="/linkedin">
+                  <ListItem button component="a" href="https://www.linkedin.com/in/jeewantha-rashmika-b5a56820a/">
                     <ListItemText
                       primary="LinkedIn"
                       primaryTypographyProps={{

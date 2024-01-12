@@ -6,12 +6,21 @@ import { Container, Typography } from "@mui/material";
 import ProImage from "../../images/profileImage.png";
 import PrimaryBtn from "../../components/common/Primarybtn";
 import SecondaryBtn from "../../components/common/SecondaryBtn";
+import Marquee from "react-fast-marquee";
+import UiSkill from "../../components/about/UiSkills";
+import BannerChips from "../../components/BannerChips";
 
 export default function HeroSection() {
   return (
     <div style={{ backgroundColor: "#f6fafd", minHeight: "670px" }}>
       <Container>
-        <Box sx={{ width: "100%", paddingTop: { xs: "10px", md: "150px" } }}>
+        <Box
+          sx={{
+            width: "100%",
+            paddingTop: { xs: "10px", md: "100px" },
+            pb: { md: 5, xs: 15 },
+          }}
+        >
           <Grid
             container
             rowSpacing={1}
@@ -26,7 +35,7 @@ export default function HeroSection() {
                 component={"p"}
                 sx={{
                   color: "rgba(112, 112, 112, 1)",
-                  fontSize: { xs: "14px", sm: "20px" },
+                  fontSize: { xs: "14px", sm: "16px" },
                   fontWeight: 400,
                   fontFamily: "Work Sans",
                 }}
@@ -41,6 +50,7 @@ export default function HeroSection() {
                 }
               </Typography>
               <br></br>
+              <br />
               <PrimaryBtn title={"Explore work"} id="work" />
               <SecondaryBtn title={"View my CV"} />
             </Grid>
@@ -60,6 +70,46 @@ export default function HeroSection() {
           </Grid>
         </Box>
       </Container>
+      <Box
+        sx={{
+          backgroundColor: "white",
+          width: "100%",
+          height: "4rem",
+          transform: "rotate(-1deg)",
+          boxShadow: "0 5px 15px rgba(0,0,0,.1)",
+          position: "absolute",
+          bottom: { md: 100, xs: 10 },
+        }}
+      >
+        <Marquee>
+          <BannerChips />
+        </Marquee>
+      </Box>
+      <Box
+        sx={{
+          backgroundColor: "white",
+          width: "100%",
+          height: "4rem",
+          marginTop:"65px",
+          boxShadow: "0 5px 15px rgba(0,0,0,.1)",
+          position: "absolute",
+          // bottom:{md:100 ,xs:10}
+        }}
+      >
+        <Marquee direction="right" autoFill="true" >
+          <Typography
+            sx={{
+              color: "rgba(112, 112, 112, 1)",
+              fontSize: { xs: "14px", sm: "42px" },
+              fontWeight: 600,
+              fontFamily: "Work Sans",
+            }}
+          >
+            | UI/UX Designer || Web Developer || Mobile Developer || Graphic
+            Designer || Content Creator |
+          </Typography>
+        </Marquee>
+      </Box>
     </div>
   );
 }

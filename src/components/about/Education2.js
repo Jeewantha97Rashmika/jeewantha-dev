@@ -6,7 +6,7 @@ export default function Education02() {
     <div style={{ marginTop: "30px" }}>
       <img
         src={School}
-        style={{ maxWidth: "20%", height: "auto" }}
+        style={{ maxWidth: "15%", height: "auto" }}
         alt="knovik"
       />
       <br></br>

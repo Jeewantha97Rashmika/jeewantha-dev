@@ -1,26 +1,23 @@
 import React from "react";
-import AboutLayout from "../layouts/AboutLayout";
 import Header from "../layouts/Header";
 import Footer from "../layouts/Footer";
 import "../global.css";
 import { Helmet } from "react-helmet";
-export default function About() {
+import ShoeZoneLayout from "../layouts/ShoeZoneLayout";
+export default function ShoeZone() {
   return (
     <>
-    <Helmet>
-        <title>Jeewantha.dev/about</title>
-      
+      <Helmet>
+        <title>Jeewantha.dev/shoezone</title>
+
         <meta
           name="description"
           content="UI/UX designer who is interested in solving complex problems through designing and mobile app/web development"
         />
-        <link
-          rel="canonical"
-          href=""
-        />
+        <link rel="canonical" href="" />
       </Helmet>
       <Header />
-      <AboutLayout />
+      <ShoeZoneLayout />
       <Footer />
     </>
   );

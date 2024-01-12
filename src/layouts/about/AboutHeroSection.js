@@ -9,9 +9,9 @@ import SecondaryBtn from "../../components/common/SecondaryBtn";
 
 export default function AboutHeroSection() {
   return (
-    <div style={{ backgroundColor: "#f6fafd", minHeight: "70vh" }}>
+    <div style={{ backgroundColor: "#f6fafd", minHeight: "700px" }}>
       <Container>
-        <Box sx={{ width: "100%", paddingTop: { xs: "10px", md: "100px" } }}>
+        <Box sx={{ width: "100%", paddingTop: { xs: "10px", md: "100px" }, pb:5  }}>
           <Grid
             container
             rowSpacing={1}
@@ -23,12 +23,12 @@ export default function AboutHeroSection() {
               <Heading1
                 component={"h1"}
                 text1={"A UI / UX designer,a mobile/web developer."}
-              />
+              /><br/>
               <Typography
                 component={"p"}
                 sx={{
                   color: "rgba(112, 112, 112, 1)",
-                  fontSize: { xs: "14px", sm: "20px" },
+                  fontSize: { xs: "14px", sm: "16px" },
                   fontWeight: 400,
                   fontFamily: "Work Sans",
                 }}
@@ -43,7 +43,7 @@ export default function AboutHeroSection() {
                   </span>
                 }
               </Typography>
-              <br></br>
+              <br></br><br/>
               <SecondaryBtn title={"View my CV"} />
 
               <SecondaryBtn title={"View Linedin"} url={"https://www.linkedin.com/in/jeewantha-rashmika-b5a56820a/"}/>

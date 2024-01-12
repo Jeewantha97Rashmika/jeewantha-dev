@@ -1,19 +1,19 @@
 import React from "react";
 import { Typography } from "@mui/material";
 
-export default function Heading3({ text, component }) {
+export default function NormalText({ bodyText, component }) {
   return (
     <>
       <Typography
         component={component}
         sx={{
-          fontSize: "26px",
-          fontWeight: 800,
-          lineHeight: "1.2",
+          color: "black",
+          fontSize: { xs: "14px", sm: "20px" },
+          fontWeight: 400,
           fontFamily: "Work Sans",
         }}
       >
-        {text}
+        {bodyText}
       </Typography>
     </>
   );

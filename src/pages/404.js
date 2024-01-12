@@ -1,49 +1,81 @@
-import * as React from "react"
-import { Link } from "gatsby"
+import * as React from "react";
+import Cuate from "../images/cuate.svg";
+import { Button, Container, Typography } from "@mui/material";
 
 const pageStyles = {
   color: "#232129",
   padding: "96px",
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
+};
+
 
 const paragraphStyles = {
   marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
+};
 
 const NotFoundPage = () => {
   return (
     <main style={pageStyles}>
-      <h1 style={headingStyles}>Page not found</h1>
+      {/* <h1 style={headingStyles}>Page not found</h1> */}
       <p style={paragraphStyles}>
-        Sorry 😔, we couldn’t find what you were looking for.
+      
         <br />
         {process.env.NODE_ENV === "development" ? (
           <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
+            {" "}
+            <br /> <br />
+            <Container
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <img src={Cuate} alt="" width={370} height={"auto"} />
+            </Container>
             <br />
           </>
         ) : null}
         <br />
-        <Link to="/">Go home</Link>.
+        <Container
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+         <Button
+    href="/"
+      sx={{
+        marginRight: "10px",
+        backgroundColor: "black",
+        borderRadius: "30px",
+        padding: "10px 40px ",
+        textTransform: "none",
+        transition: "background-color 0.3s, transform 0.3s",
+        "&:hover": {
+          backgroundColor: "black",
+          transform: "scale(0.95)",
+        },
+      }}
+    >
+      <Typography
+        sx={{
+          fontSize: { xs: "14px", sm: "20px" },
+          fontWeight: 400,
+          fontFamily: "Work Sans",
+          color: "white",
+        }}
+      >
+     Go home
+      </Typography>
+    </Button>
+        </Container>
       </p>
     </main>
-  )
-}
+  );
+};
 
-export default NotFoundPage
+export default NotFoundPage;
 
-export const Head = () => <title>Not found</title>
+export const Head = () => <title>Not found</title>;

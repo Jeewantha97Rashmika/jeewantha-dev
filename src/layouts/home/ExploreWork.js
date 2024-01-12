@@ -13,48 +13,53 @@ import { Container } from "@mui/material";
 import Heading2 from "../../components/common/Heading2";
 import Heading3 from "../../components/common/Heading3";
 import BodyText from "../../components/common/BodyText";
+import { Link } from "gatsby";
 export default function ExploreWork() {
   const exploreWork = [
     {
       image: Project01,
-      subTitle: "Project / UI/UX Design / ShoeZoon",
+      subTitle: "Project / UI/UX Design / ShoeZone",
       title:
         "Modern Shoe Shopping Solutions Mobile App and Web Admin UI/UX Design using figma ",
+      url: "/shoezone",
     },
-    {
-      image: Project02,
-      subTitle: "Project / UI/UX Design and Develop / Pacient Care",
-      title:
-        "Mobile app and admin panel UI/UX design and develop for Pacient care Medical system",
-    },
+    // {
+    //   image: Project02,
+    //   subTitle: "Project / UI/UX Design and Develop / Pacient Care",
+    //   title:
+    //     "Mobile app and admin panel UI/UX design and develop for Pacient care Medical system",
+    //   url: "/",
+    // },
     {
       image: Project03,
       subTitle: "Project / UI/UX Design / Hightec Lanka",
       title:
         "Redesign the Setel web design system to improve the quality of the deliverables",
+      url: "/",
     },
     {
       image: Project04,
       subTitle: "Project / UI/UX Design / Learn Shape",
       title:
         "UI/ UX Design for Java swing library application to learn shaps (This pro premary students)",
+      url: "/",
     },
-    
+
+    // {
+    //   image: Project06,
+    //   subTitle: "Project / UI/UX Design / Best mom",
+    //   title: "Modern Android app Solutions UI/UX Design using figma",
+    //   url: "/",
+    // },
     {
-      image: Project06,
-      subTitle: "Project / UI/UX Design / Best mom",
-      title:
-        "Modern Android app Solutions UI/UX Design using figma",
+      image: Project05,
+      subTitle: "Project / UI/UX Design / IPL",
+      title: "Redesign the Setel web design system to wordpress theme",
+      url: "/",
     },
-    {
-        image: Project05,
-        subTitle: "Project / UI/UX Design / IPL",
-        title:
-          "Redesign the Setel web design system to wordpress theme",
-      },
   ];
   return (
-    <Container sx={{ mt: {md:10 ,xs :5} }} id="work">
+    <Container sx={{ mt: { md: 10, xs: 5 } }} id="work">
       <Heading2 component={"h2"} text={"Explore works"} />
       <Box sx={{ width: "100%" }}>
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
@@ -66,23 +71,26 @@ export default function ExploreWork() {
                 xs={12}
                 md={6}
                 sx={{
+                  p:5,
                   mt: 5,
                   transition: "transform 0.2s",
                   "&:hover": {
-                    transform: "scale(0.95)",
+                    transform: "scale(0.98)",
                   },
                 }}
               >
-                <div>
-                  <img
-                    src={val.image}
-                    alt="Shoe Zoon UI design project"
-                    style={{ maxWidth: "100%", height: "auto" }}
-                  />
-                  <BodyText component={"p"} bodyText={val.subTitle} />
-                  <br></br>
-                  <Heading3 component={"h3"} text={val.title} />
-                </div>
+                <Link to={val.url} style={{textDecoration:"none",color:"black"}}>
+                  <div>
+                    <img
+                      src={val.image}
+                      alt="Shoe Zoon UI design project"
+                      style={{ maxWidth: "100%", height: "auto" }}
+                    />
+                    <BodyText component={"p"} bodyText={val.subTitle} />
+                    <br></br>
+                    <Heading3 component={"h3"} text={val.title} />
+                  </div>
+                </Link>
               </Grid>
             );
           })}

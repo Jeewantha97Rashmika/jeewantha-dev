@@ -52,7 +52,7 @@ export default function UiSkill() {
                   transform: "scale(0.95)",
                 },
               }}
-              label={val.name}
+              label={<Typography sx={{fontWeight:"600"}}>{val.name}</Typography>}
               avatar={
                 <img src={val.image} alt={val.name} width="25" height="25" />
               }
