@@ -3,7 +3,7 @@ import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Heading1 from "../../components/common/Heading1";
 import { Container, Typography } from "@mui/material";
-import ProImage from "../../images/profileImage.png";
+import ProImage from "../../images/proImage03.jpg";
 import PrimaryBtn from "../../components/common/Primarybtn";
 import SecondaryBtn from "../../components/common/SecondaryBtn";
 import Marquee from "react-fast-marquee";
@@ -35,7 +35,7 @@ export default function HeroSection() {
                 component={"p"}
                 sx={{
                   color: "rgba(112, 112, 112, 1)",
-                  fontSize: { xs: "14px", sm: "16px" },
+                  fontSize: { xs: "16px", sm: "20px" },
                   fontWeight: 400,
                   fontFamily: "Work Sans",
                 }}
@@ -52,7 +52,7 @@ export default function HeroSection() {
               <br></br>
               <br />
               <PrimaryBtn title={"Explore work"} id="work" />
-              <SecondaryBtn title={"View my CV"} />
+              {/* <SecondaryBtn title={"View my CV"} /> */}
             </Grid>
             <Grid
               item
@@ -63,14 +63,23 @@ export default function HeroSection() {
                 display: "flex",
                 alignItems: { xs: "left", md: "right" },
                 justifyContent: { xs: "left", md: "right" },
+               
               }}
             >
-              <img src={ProImage} width="350px" height="350px" alt="" />
+              <img
+                src={ProImage}
+                width="340px" height="450px"
+                alt=""
+                style={{
+                  borderRadius: "10px",
+                  boxShadow: "0 5px 15px rgba(0,0,0,.1)",
+                }}
+              />
             </Grid>
           </Grid>
         </Box>
       </Container>
-      <Box
+      {/* <Box
         sx={{
           backgroundColor: "white",
           width: "100%",
@@ -84,19 +93,19 @@ export default function HeroSection() {
         <Marquee>
           <BannerChips />
         </Marquee>
-      </Box>
+      </Box> */}
       <Box
         sx={{
           backgroundColor: "white",
           width: "100%",
           height: "4rem",
-          marginTop:"65px",
+          marginTop: "65px",
           boxShadow: "0 5px 15px rgba(0,0,0,.1)",
           position: "absolute",
           // bottom:{md:100 ,xs:10}
         }}
       >
-        <Marquee direction="right" autoFill="true" >
+        <Marquee direction="right" autoFill="true">
           <Typography
             sx={{
               color: "rgba(112, 112, 112, 1)",

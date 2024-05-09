@@ -14,8 +14,8 @@ import Education02 from "../../components/about/Education2";
 
 export default function WorkingExperince() {
   return (
-    <Container sx={{ mt: {md:10 ,xs:5}, mb: {md:10 ,xs:5} }}>
-      <Box sx={{ width: "100%", mb: {md:10 ,xs:5} }}>
+    <Container sx={{ mt: { md: 10, xs: 5 }, mb: { md: 10, xs: 5 } }}>
+      <Box sx={{ width: "100%", mb: { md: 10, xs: 5 } }}>
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
           <Grid item xs={12} md={6}>
             <Heading2 component={"h2"} text={"Work experience"} />

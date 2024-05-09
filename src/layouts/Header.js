@@ -36,11 +36,10 @@ export default function Header() {
     window.location.href = "/#knowledge-sharing"; // Replace with your desired URL
   };
 
-
   return (
     <div style={{ backgroundColor: "#f6fafd" }}>
       {" "}
-      <Container sx={{ paddingTop: { md: "40px", xs: "20px" } }}>
+      <Container sx={{ paddingTop: { md: "20px", xs: "20px" } }}>
         <AppBar
           position="static"
           sx={{ backgroundColor: "#f6fafd", boxShadow: "none" }}
@@ -64,14 +63,15 @@ export default function Header() {
                 transition: "transform 0.2s",
               }}
             >
-              <a href="/" style={{display:"flex"}}>
-                <img
-                  src={Logo}
-                  alt="logo"
-                  width={70}
-                  style={{ marginTop: "10px", marginLeft: "-20px" }}
-                />
-                <img src={Logo2} alt="logo" width={200} height={25}style={{marginTop:"28px"}} />
+              <a
+                href="/"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <img src={Logo2} alt="logo" width={180} height={20} style={{marginLeft: "-20px"}} />
               </a>
             </Typography>
             <div sx={{ display: "flex", alignItems: "center" }}>
@@ -245,7 +245,11 @@ export default function Header() {
                       }}
                     />
                   </ListItem>
-                  <ListItem button component="a" href="https://www.linkedin.com/in/jeewantha-rashmika-b5a56820a/">
+                  <ListItem
+                    button
+                    component="a"
+                    href="https://www.linkedin.com/in/jeewantha-rashmika-b5a56820a/"
+                  >
                     <ListItemText
                       primary="LinkedIn"
                       primaryTypographyProps={{

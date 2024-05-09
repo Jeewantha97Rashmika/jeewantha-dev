@@ -11,7 +11,9 @@ export default function AboutHeroSection() {
   return (
     <div style={{ backgroundColor: "#f6fafd", minHeight: "700px" }}>
       <Container>
-        <Box sx={{ width: "100%", paddingTop: { xs: "10px", md: "100px" }, pb:5  }}>
+        <Box
+          sx={{ width: "100%", paddingTop: { xs: "10px", md: "100px" }, pb: 5 }}
+        >
           <Grid
             container
             rowSpacing={1}
@@ -23,7 +25,8 @@ export default function AboutHeroSection() {
               <Heading1
                 component={"h1"}
                 text1={"A UI / UX designer,a mobile/web developer."}
-              /><br/>
+              />
+              <br />
               <Typography
                 component={"p"}
                 sx={{
@@ -38,15 +41,21 @@ export default function AboutHeroSection() {
                     I’m a Ui / Ux designer from Sri Lanka passionate about
                     solving complex problems through designing and development.
                     My primary focus is mobile/web app development and
-                    mobile/web designing. I have a favour for gaming 🖥️ and playing
-                    guitar. 🎸
+                    mobile/web designing. I have a favour for gaming 🖥️ and
+                    playing guitar. 🎸
                   </span>
                 }
               </Typography>
-              <br></br><br/>
-              <SecondaryBtn title={"View my CV"} />
+              <br></br>
+              <br />
+              {/* <SecondaryBtn title={"View my CV"} /> */}
 
-              <SecondaryBtn title={"View Linedin"} url={"https://www.linkedin.com/in/jeewantha-rashmika-b5a56820a/"}/>
+              <SecondaryBtn
+                title={"View Linedin"}
+                url={
+                  "https://www.linkedin.com/in/jeewantha-rashmika-b5a56820a/"
+                }
+              />
             </Grid>
             <Grid
               item
@@ -59,7 +68,16 @@ export default function AboutHeroSection() {
                 justifyContent: { xs: "left", md: "right" },
               }}
             >
-              <img src={ProImage} width="350px" height="440px" alt="" />
+              <img
+                src={ProImage}
+                width="350px"
+                height="440px"
+                alt=""
+                style={{
+                  borderRadius: "10px",
+                  boxShadow: "0 5px 15px rgba(0,0,0,.1)",
+                }}
+              />
             </Grid>
           </Grid>
         </Box>

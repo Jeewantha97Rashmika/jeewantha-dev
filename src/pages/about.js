@@ -7,17 +7,14 @@ import { Helmet } from "react-helmet";
 export default function About() {
   return (
     <>
-    <Helmet>
+      <Helmet>
         <title>Jeewantha.dev/about</title>
-      
+
         <meta
           name="description"
           content="UI/UX designer who is interested in solving complex problems through designing and mobile app/web development"
         />
-        <link
-          rel="canonical"
-          href=""
-        />
+        <link rel="canonical" href="" />
       </Helmet>
       <Header />
       <AboutLayout />
