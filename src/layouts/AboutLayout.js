@@ -1,5 +1,5 @@
 import React from "react";
-import AboutHeroSection from "./About/AboutHeroSection";
+import AboutHeroSection from "./about/AboutHeroSection";
 import WorkingExperince from "./about/WorkingExperince";
 import SkillAndTech from "./about/SkillAndTech";
 import SkillsChips from "./about/SkillChips";
