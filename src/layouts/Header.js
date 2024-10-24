@@ -11,11 +11,12 @@ import {
   ListItemText,
   Container,
 } from "@mui/material";
-import Logo from "../images/logo.png";
-import Logo2 from "../images/logo2.png";
+import Logo from "../images/JRLogo.svg";
+
 import MenuIcon from "@mui/icons-material/Menu";
 import Avatar from "@mui/material/Avatar";
 import ProImage from "../images/pro02.png";
+import MainBtn from "../components/MainBtn";
 export default function Header() {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
@@ -39,8 +40,8 @@ export default function Header() {
   return (
     <div style={{ backgroundColor: "#f6fafd" }}>
       {" "}
-      <Container sx={{ paddingTop: { md: "20px", xs: "20px" } }}>
-        <AppBar
+      <Container sx={{ paddingTop: { md: "20px", xs: "20px" },display: "flex", justifyContent: "space-between" }}>
+        {/* <AppBar
           position="static"
           sx={{ backgroundColor: "#f6fafd", boxShadow: "none" }}
         >
@@ -48,39 +49,33 @@ export default function Header() {
             sx={{
               display: "flex",
               justifyContent: "space-between",
-              alignItems: "center",
 
               borderBottom: "none",
             }}
-          >
+          > */}
             <Typography
-              variant="h6"
               sx={{
                 color: "black",
+
                 "&:hover": {
                   transform: "scale(0.95)",
                 },
                 transition: "transform 0.2s",
               }}
             >
-              <a
-                href="/"
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <img src={Logo2} alt="logo" width={180} height={20} style={{marginLeft: "-20px"}} />
+              <a href="/">
+                <img src={Logo} alt="logo" width={250} height={40} style={{
+                  marginLeft: "-50px",
+                }}/>
               </a>
             </Typography>
-            <div sx={{ display: "flex", alignItems: "center" }}>
+            <div>
               <Button
                 onClick={handleAboutClick}
                 color="inherit"
                 sx={{
                   color: "black",
-                  ml: 5,
+                  ml: 2,
                   display: { xs: "none", md: "inline" },
                   "&:hover": {
                     backgroundColor: "#e8f5ff",
@@ -103,7 +98,7 @@ export default function Header() {
                 color="inherit"
                 sx={{
                   color: "black",
-                  ml: 5,
+                  ml: 2,
                   display: { xs: "none", md: "inline" },
                   "&:hover": {
                     backgroundColor: "#e8f5ff",
@@ -126,7 +121,7 @@ export default function Header() {
                 onClick={handleKnowledgeClick}
                 sx={{
                   color: "black",
-                  ml: 5,
+                  ml: 2,
                   display: { xs: "none", md: "inline" },
                   "&:hover": {
                     backgroundColor: "#e8f5ff",
@@ -149,7 +144,7 @@ export default function Header() {
                 color="inherit"
                 sx={{
                   color: "black",
-                  ml: 5,
+                  ml: 2,
                   display: { xs: "none", md: "inline" },
                   "&:hover": {
                     backgroundColor: "#e8f5ff",
@@ -167,6 +162,7 @@ export default function Header() {
               >
                 Linkedin
               </Button>
+
               <IconButton
                 color="black"
                 aria-label="toggle menu"
@@ -176,6 +172,9 @@ export default function Header() {
               >
                 <MenuIcon />
               </IconButton>
+            </div>
+            <div>
+              <MainBtn handleLinkedinClick={handleLinkedinClick} />
             </div>
             <Drawer
               anchor="right"
@@ -260,8 +259,8 @@ export default function Header() {
                 </List>
               </Container>
             </Drawer>
-          </Toolbar>
-        </AppBar>
+          {/* </Toolbar>
+        </AppBar> */}
       </Container>
     </div>
   );

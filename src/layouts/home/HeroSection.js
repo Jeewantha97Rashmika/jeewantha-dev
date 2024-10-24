@@ -1,43 +1,107 @@
-import React from "react";
+import React, { useRef } from "react";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Heading1 from "../../components/common/Heading1";
 import { Container, Typography } from "@mui/material";
-import ProImage from "../../images/proImage03.jpg";
-import PrimaryBtn from "../../components/common/Primarybtn";
-import SecondaryBtn from "../../components/common/SecondaryBtn";
-import Marquee from "react-fast-marquee";
-import UiSkill from "../../components/about/UiSkills";
-import BannerChips from "../../components/BannerChips";
+import GridImage from "../../images/grid.svg";
+import ProfileImage from "../../images/gridux.svg";
+import MainBtn from "../../components/MainBtn";
+import HarlfCircel from "../../images/circel.svg";
+import {
+  motion,
+  useScroll,
+  useVelocity,
+  useTransform,
+  useSpring,
+} from "framer-motion";
 
 export default function HeroSection() {
+  const handleLinkedinClick = () => {
+    window.location.href =
+      "https://www.linkedin.com/in/jeewantha-rashmika-b5a56820a/"; // Replace with your desired URL
+  };
+
+  const targetRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ["start start", "end start"],
+  });
+
+  const scrollVelocity = useVelocity(scrollYProgress);
+
+  const skewXRaw = useTransform(
+    scrollVelocity,
+    [-0.5, 0.5],
+    ["45deg", "-45deg"]
+  );
+  const skewX = useSpring(skewXRaw, { mass: 3, stiffness: 400, damping: 50 });
+
+  const xRaw = useTransform(scrollYProgress, [0, 1], [0, -4000]);
+  const x = useSpring(xRaw, { mass: 3, stiffness: 400, damping: 50 });
+
   return (
-    <div style={{ backgroundColor: "#f6fafd", minHeight: "670px" }}>
-      <Container>
+    <div
+      style={{
+        backgroundColor: "#f6fafd",
+        minHeight: "550px",
+        backgroundImage: `url(${GridImage})`,
+      }}
+    >
+      <Container
+        sx={{
+          position: "relative",
+          zIndex: 100,
+        }}
+      >
         <Box
           sx={{
             width: "100%",
-            paddingTop: { xs: "10px", md: "100px" },
-            pb: { md: 5, xs: 15 },
           }}
         >
           <Grid
             container
             rowSpacing={1}
             columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-            justifyContent={"center"}
-            alignItems={"center"}
+
+            // justifyContent={"center"}
+            // alignItems={"center"}
           >
-            <Grid item xs={12} md={7} sx={{ order: { xs: 2, md: 1 } }}>
-              <Heading1 component={"h1"} text1={"Hello, I'm Jeewantha."} />
+            <Grid item xs={12} md={5} sx={{ order: { xs: 1, md: 2 }, mt: 10 }}>
+              <Box
+                sx={{
+                  paddingLeft: "15px",
+                }}
+              >
+                <Typography
+                  sx={{
+                    color: "rgba(112, 112, 112, 1)",
+                    fontSize: { xs: "16px", sm: "20px" },
+                    border: "1px solid #2E90FA",
+                    display: "inline-block",
+                    padding: "0px 10px 0px 10px",
+                  }}
+                >
+                  UI / UX Designer & Developer
+                </Typography>
+              </Box>
+              <Box
+                sx={{
+                  paddingLeft: "15px",
+                }}
+              >
+                <Heading1 component={"h1"} text1={"Hello, I'm Jeewantha."} />
+              </Box>
               <br></br>
               <Typography
                 component={"p"}
                 sx={{
                   color: "rgba(112, 112, 112, 1)",
-                  fontSize: { xs: "16px", sm: "20px" },
+                  fontSize: { xs: "16px", sm: "16px" },
                   fontWeight: 400,
+                  lineHeight: 1.8,
                   fontFamily: "Work Sans",
+                  paddingLeft: "15px",
                 }}
               >
                 {
@@ -51,73 +115,142 @@ export default function HeroSection() {
               </Typography>
               <br></br>
               <br />
-              <PrimaryBtn title={"Explore work"} id="work" />
+              <Box
+                sx={{
+                  paddingLeft: "15px",
+                }}
+              >
+                <MainBtn handleLinkedinClick={handleLinkedinClick} />
+              </Box>
               {/* <SecondaryBtn title={"View my CV"} /> */}
             </Grid>
             <Grid
               item
               xs={12}
-              md={5}
+              md={7}
               sx={{
-                order: { xs: 1, md: 2 },
+                order: { xs: 2, md: 1 },
                 display: "flex",
-                alignItems: { xs: "left", md: "right" },
-                justifyContent: { xs: "left", md: "right" },
-               
+                justifyContent: "start",
+                alignItems: "left",
               }}
             >
-              <img
-                src={ProImage}
-                width="340px" height="450px"
-                alt=""
-                style={{
-                  borderRadius: "10px",
-                  boxShadow: "0 5px 15px rgba(0,0,0,.1)",
+              <Box
+                sx={{
+                  width: "100%",
+                  marginTop: "20px",
                 }}
-              />
+              >
+                <img
+                  src={ProfileImage}
+                  style={{ maxWidth: "100%", height: "auto" }}
+                  alt="knovik"
+                />
+              </Box>
             </Grid>
           </Grid>
         </Box>
       </Container>
-      {/* <Box
-        sx={{
-          backgroundColor: "white",
-          width: "100%",
-          height: "4rem",
-          transform: "rotate(-1deg)",
-          boxShadow: "0 5px 15px rgba(0,0,0,.1)",
+      <section
+        ref={targetRef}
+        style={{
+          zIndex: 1,
           position: "absolute",
-          bottom: { md: 100, xs: 10 },
+          top: 650,
+          height: "40vh",
+          color: "#1A1A1A",
+          overflow: "hidden",
         }}
       >
-        <Marquee>
-          <BannerChips />
-        </Marquee>
-      </Box> */}
-      <Box
-        sx={{
-          backgroundColor: "white",
-          width: "100%",
-          height: "4rem",
-          marginTop: "65px",
-          boxShadow: "0 5px 15px rgba(0,0,0,.1)",
-          position: "absolute",
-          // bottom:{md:100 ,xs:10}
-        }}
-      >
-        <Marquee direction="right" autoFill="true">
-          <Typography
-            sx={{
-              color: "rgba(112, 112, 112, 1)",
-              fontSize: { xs: "14px", sm: "42px" },
-              fontWeight: 600,
-              fontFamily: "Work Sans",
+        <div
+          style={{
+            position: "static",
+            top: 0,
+            display: "flex",
+            height: "20vh",
+            alignItems: "center",
+          }}
+        >
+          <motion.p
+            style={{
+              transformOrigin: "bottom left",
+              whiteSpace: "nowrap",
+              fontSize: "10rem", // text-5xl size
+              textTransform: "uppercase",
+              lineHeight: 0.85,
+              ...(skewX && { skewX }), // If you have dynamic values for skewX and x, keep them
+              ...(x && { x }),
+              "@media (min-width: 768px)": {
+                fontSize: "4.5rem", // md:text-7xl size
+                lineHeight: 0.85,
+                overflow: "hidden",
+              },
             }}
           >
-            | UI/UX Designer || Web Developer || Mobile Developer || Graphic
-            Designer || Content Creator |
-          </Typography>
-        </Marquee>
+            <span
+              style={{
+                color: "transparent",
+                WebkitTextStroke: "1px #1d1d1d",
+                overflow: "hidden",
+              }}
+            >
+              Freelancer - UI/UX Designer & Developer
+            </span>{" "}
+          </motion.p>
+        </div>
+      </section>
+
+      <Box
+        sx={{
+          position: "absolute",
+          top: -50, // Align to top
+          left: 700, // Align to left
+          width: "auto",
+          height: "auto",
+        }}
+      >
+        <img
+          src={HarlfCircel}
+          style={{
+            transform: "rotate(90deg)",
+          }}
+        />
+      </Box>
+
+      {/* Right HarlfCircel */}
+      <Box
+        sx={{
+          position: "absolute",
+          top: 200, // Align to top
+          right: 0, // Align to right
+          width: "auto",
+          height: "auto",
+        }}
+      >
+        <img
+          src={HarlfCircel}
+          style={{
+            transform: "rotate(180deg)", // Rotating to position it on the right
+          }}
+        />
+      </Box>
+
+      {/* Bottom HarlfCircel */}
+      <Box
+        sx={{
+          position: "absolute",
+          bottom: 400, // Align to the bottom of the container
+          left: 0, // Adjusting positioning from the left side
+          width: "auto",
+          height: "auto",
+        }}
+      >
+        <img
+          src={HarlfCircel}
+          style={{
+            transform: "rotate(0deg)", // Rotating for the bottom placement
+          }}
+        />
       </Box>
     </div>
   );
