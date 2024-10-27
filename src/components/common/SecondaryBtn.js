@@ -25,7 +25,7 @@ export default function SecondaryBtn({ title,url }) {
         sx={{
           fontSize: { xs: "14px", sm: "20px" },
           fontWeight: 400,
-          fontFamily: "Work Sans",
+        fontFamily: "Montserrat",
           color: "black",
         }}
       >

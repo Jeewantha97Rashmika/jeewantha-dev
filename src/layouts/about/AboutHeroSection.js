@@ -33,7 +33,7 @@ export default function AboutHeroSection() {
                   color: "rgba(112, 112, 112, 1)",
                   fontSize: { xs: "14px", sm: "16px" },
                   fontWeight: 400,
-                  fontFamily: "Work Sans",
+                fontFamily: "Montserrat",
                 }}
               >
                 {

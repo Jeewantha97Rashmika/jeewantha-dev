@@ -3,6 +3,7 @@ import {
   AppBar,
   Toolbar,
   Typography,
+  Box,
   Button,
   IconButton,
   Drawer,
@@ -10,6 +11,7 @@ import {
   ListItem,
   ListItemText,
   Container,
+  useMediaQuery
 } from "@mui/material";
 import Logo from "../images/JRLogo.svg";
 
@@ -19,7 +21,7 @@ import ProImage from "../images/pro02.png";
 import MainBtn from "../components/MainBtn";
 export default function Header() {
   const [drawerOpen, setDrawerOpen] = useState(false);
-
+const isMobile = useMediaQuery('(max-width: 920px)');
   const handleDrawerToggle = () => {
     setDrawerOpen(!drawerOpen);
   };
@@ -39,227 +41,216 @@ export default function Header() {
 
   return (
     <div style={{ backgroundColor: "#f6fafd" }}>
-      {" "}
-      <Container sx={{ paddingTop: { md: "20px", xs: "20px" },display: "flex", justifyContent: "space-between" }}>
-        {/* <AppBar
-          position="static"
-          sx={{ backgroundColor: "#f6fafd", boxShadow: "none" }}
+      <Container
+        sx={{
+          paddingTop: { md: "20px", xs: "20px" },
+          display: "flex",
+          justifyContent: "space-between",
+        }}
+      >
+        <Box
+          sx={{
+            color: "black",
+            "&:hover": {
+              transform: "scale(0.95)",
+            },
+            transition: "transform 0.2s",
+            display: "flex",
+            justifyContent: "start",
+            alignItems: "center",
+          }}
         >
-          <Toolbar
+          <a href="/">
+            <img src={Logo} alt="logo" width={"auto"} height={40} />
+          </a>
+        </Box>
+        <div>
+          <Button
+            onClick={handleAboutClick}
+            color="inherit"
             sx={{
-              display: "flex",
-              justifyContent: "space-between",
-
-              borderBottom: "none",
+              color: "black",
+              ml: 2,
+              display: isMobile ? "none" : "inline",
+              "&:hover": {
+                backgroundColor: "#e8f5ff",
+                padding: "5px 20px",
+                borderRadius: "40px",
+                transform: "scale(0.95)",
+              },
+            fontFamily: "Montserrat",
+              textAlign: "center",
+              textTransform: "none",
+              fontSize: "20px",
+              padding: "5px 20px",
+              transition: "transform 0.2s",
             }}
-          > */}
-            <Typography
-              sx={{
-                color: "black",
+          >
+            About
+          </Button>
+          <Button
+            onClick={handleWordClick}
+            color="inherit"
+            sx={{
+              color: "black",
+              ml: 2,
+              display: isMobile ? "none" : "inline",
+              "&:hover": {
+                backgroundColor: "#e8f5ff",
+                padding: "5px 20px",
+                borderRadius: "40px",
+                transform: "scale(0.95)",
+              },
+            fontFamily: "Montserrat",
+              textAlign: "center",
+              textTransform: "none",
+              fontSize: "20px",
+              padding: "5px 20px",
+              transition: "transform 0.2s",
+            }}
+          >
+            Work
+          </Button>
+          <Button
+            color="inherit"
+            onClick={handleKnowledgeClick}
+            sx={{
+              color: "black",
+              ml: 2,
+              display: isMobile ? "none" : "inline",
+              "&:hover": {
+                backgroundColor: "#e8f5ff",
+                padding: "5px 20px",
+                borderRadius: "40px",
+                transform: "scale(0.95)",
+              },
+            fontFamily: "Montserrat",
+              textAlign: "center",
+              textTransform: "none",
+              fontSize: "20px",
+              padding: "5px 20px",
+              transition: "transform 0.2s",
+            }}
+          >
+            Knowledge Sharing
+          </Button>
+          <Button
+            onClick={handleLinkedinClick}
+            color="inherit"
+            sx={{
+              color: "black",
+              ml: 2,
+              display: isMobile ? "none" : "inline",
+              "&:hover": {
+                backgroundColor: "#e8f5ff",
+                padding: "5px 20px",
+                borderRadius: "40px",
+                transform: "scale(0.95)",
+              },
+            fontFamily: "Montserrat",
+              textAlign: "center",
+              textTransform: "none",
+              fontSize: "20px",
+              padding: "5px 20px",
+              transition: "transform 0.2s",
+            }}
+          >
+            Linkedin
+          </Button>
+          <MainBtn handleLinkedinClick={handleLinkedinClick} isMobile={isMobile} />
+          <Box>
+            <IconButton
+              color="black"
+              aria-label="toggle menu"
+              edge="end"
+              onClick={handleDrawerToggle}
+              sx={{   display: isMobile ? "block" : "none", }}
+            >
+              <MenuIcon />
+            </IconButton>
+          </Box>
+        </div>
 
-                "&:hover": {
-                  transform: "scale(0.95)",
-                },
-                transition: "transform 0.2s",
+        <Drawer anchor="right" open={drawerOpen} onClose={handleDrawerToggle}>
+          <Container>
+            <div
+              style={{
+                padding: "16px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
               }}
             >
-              <a href="/">
-                <img src={Logo} alt="logo" width={250} height={40} style={{
-                  marginLeft: "-50px",
-                }}/>
-              </a>
-            </Typography>
-            <div>
-              <Button
-                onClick={handleAboutClick}
-                color="inherit"
-                sx={{
-                  color: "black",
-                  ml: 2,
-                  display: { xs: "none", md: "inline" },
-                  "&:hover": {
-                    backgroundColor: "#e8f5ff",
-                    padding: "5px 20px",
-                    borderRadius: "40px",
-                    transform: "scale(0.95)",
-                  },
-                  fontFamily: "Work Sans",
-                  textAlign: "center",
-                  textTransform: "none",
-                  fontSize: "20px",
-                  padding: "5px 20px",
-                  transition: "transform 0.2s",
-                }}
-              >
-                About
-              </Button>
-              <Button
-                onClick={handleWordClick}
-                color="inherit"
-                sx={{
-                  color: "black",
-                  ml: 2,
-                  display: { xs: "none", md: "inline" },
-                  "&:hover": {
-                    backgroundColor: "#e8f5ff",
-                    padding: "5px 20px",
-                    borderRadius: "40px",
-                    transform: "scale(0.95)",
-                  },
-                  fontFamily: "Work Sans",
-                  textAlign: "center",
-                  textTransform: "none",
-                  fontSize: "20px",
-                  padding: "5px 20px",
-                  transition: "transform 0.2s",
-                }}
-              >
-                Work
-              </Button>
-              <Button
-                color="inherit"
-                onClick={handleKnowledgeClick}
-                sx={{
-                  color: "black",
-                  ml: 2,
-                  display: { xs: "none", md: "inline" },
-                  "&:hover": {
-                    backgroundColor: "#e8f5ff",
-                    padding: "5px 20px",
-                    borderRadius: "40px",
-                    transform: "scale(0.95)",
-                  },
-                  fontFamily: "Work Sans",
-                  textAlign: "center",
-                  textTransform: "none",
-                  fontSize: "20px",
-                  padding: "5px 20px",
-                  transition: "transform 0.2s",
-                }}
-              >
-                Knowledge Sharing
-              </Button>
-              <Button
-                onClick={handleLinkedinClick}
-                color="inherit"
-                sx={{
-                  color: "black",
-                  ml: 2,
-                  display: { xs: "none", md: "inline" },
-                  "&:hover": {
-                    backgroundColor: "#e8f5ff",
-                    padding: "5px 20px",
-                    borderRadius: "40px",
-                    transform: "scale(0.95)",
-                  },
-                  fontFamily: "Work Sans",
-                  textAlign: "center",
-                  textTransform: "none",
-                  fontSize: "20px",
-                  padding: "5px 20px",
-                  transition: "transform 0.2s",
-                }}
-              >
-                Linkedin
-              </Button>
-
-              <IconButton
-                color="black"
-                aria-label="toggle menu"
-                edge="end"
-                onClick={handleDrawerToggle}
-                sx={{ display: { xs: "inline", md: "none" } }}
-              >
-                <MenuIcon />
-              </IconButton>
+              <Avatar
+                src={ProImage}
+                alt="Profile Picture"
+                sx={{ width: 150, height: 150 }}
+              />
             </div>
-            <div>
-              <MainBtn handleLinkedinClick={handleLinkedinClick} />
-            </div>
-            <Drawer
-              anchor="right"
-              open={drawerOpen}
-              onClose={handleDrawerToggle}
+            <p
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              fontFamily: "Montserrat",
+              }}
             >
-              <Container>
-                <div
-                  style={{
-                    padding: "16px",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
+              Jeewantha Rashmika
+            </p>
+            <p
+              style={{
+                marginBottom: "20px",
+                fontSize: "13px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              fontFamily: "Montserrat",
+              }}
+            >
+              jeewantharashmika80@gmail.com
+            </p>
+            <hr></hr>
+            <List sx={{ width: 260 }} onClick={handleDrawerToggle}>
+              <ListItem button component="a" href="/about">
+                <ListItemText
+                  primary="About"
+                  primaryTypographyProps={{
+                    style: { fontFamily: "Work Sans" },
                   }}
-                >
-                  <Avatar
-                    src={ProImage}
-                    alt="Profile Picture"
-                    sx={{ width: 150, height: 150 }}
-                  />
-                </div>
-                <p
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    fontFamily: "Work Sans",
+                />
+              </ListItem>
+              <ListItem button component="a" href="/#work">
+                <ListItemText
+                  primary="Work"
+                  primaryTypographyProps={{
+                    style: { fontFamily: "Work Sans" },
                   }}
-                >
-                  Jeewantha Rashmika
-                </p>
-                <p
-                  style={{
-                    marginBottom: "20px",
-                    fontSize: "13px",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    fontFamily: "Work Sans",
+                />
+              </ListItem>
+              <ListItem button component="a" href="/knowledge-sharing">
+                <ListItemText
+                  primary="Knowledge Sharing"
+                  primaryTypographyProps={{
+                    style: { fontFamily: "Work Sans" },
                   }}
-                >
-                  jeewantharashmika80@gmail.com
-                </p>
-                <hr></hr>
-                <List sx={{ width: 260 }} onClick={handleDrawerToggle}>
-                  <ListItem button component="a" href="/about">
-                    <ListItemText
-                      primary="About"
-                      primaryTypographyProps={{
-                        style: { fontFamily: "Work Sans" },
-                      }}
-                    />
-                  </ListItem>
-                  <ListItem button component="a" href="/#work">
-                    <ListItemText
-                      primary="Work"
-                      primaryTypographyProps={{
-                        style: { fontFamily: "Work Sans" },
-                      }}
-                    />
-                  </ListItem>
-                  <ListItem button component="a" href="/knowledge-sharing">
-                    <ListItemText
-                      primary="Knowledge Sharing"
-                      primaryTypographyProps={{
-                        style: { fontFamily: "Work Sans" },
-                      }}
-                    />
-                  </ListItem>
-                  <ListItem
-                    button
-                    component="a"
-                    href="https://www.linkedin.com/in/jeewantha-rashmika-b5a56820a/"
-                  >
-                    <ListItemText
-                      primary="LinkedIn"
-                      primaryTypographyProps={{
-                        style: { fontFamily: "Work Sans" },
-                      }}
-                    />
-                  </ListItem>
-                </List>
-              </Container>
-            </Drawer>
-          {/* </Toolbar>
+                />
+              </ListItem>
+              <ListItem
+                button
+                component="a"
+                href="https://www.linkedin.com/in/jeewantha-rashmika-b5a56820a/"
+              >
+                <ListItemText
+                  primary="LinkedIn"
+                  primaryTypographyProps={{
+                    style: { fontFamily: "Work Sans" },
+                  }}
+                />
+              </ListItem>
+            </List>
+          </Container>
+        </Drawer>
+        {/* </Toolbar>
         </AppBar> */}
       </Container>
     </div>

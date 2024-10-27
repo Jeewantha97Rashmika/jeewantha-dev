@@ -12,7 +12,7 @@ export default function Footer() {
             sx={{
               fontSize: "24px",
               fontWeight: 800,
-              fontFamily: "Work Sans",
+            fontFamily: "Montserrat",
             }}
           >
             Contact
@@ -24,7 +24,7 @@ export default function Footer() {
               color: "rgba(112, 112, 112, 1)",
               fontSize: "20px",
               fontWeight: 400,
-              fontFamily: "Work Sans",
+            fontFamily: "Montserrat",
               transition: "transform 0.2s",
               "&:hover": {
                 transform: "scale(0.99)",
@@ -51,7 +51,7 @@ export default function Footer() {
                 color: "rgba(112, 112, 112, 1)",
                 fontSize: "20px",
                 fontWeight: 400,
-                fontFamily: "Work Sans",
+              fontFamily: "Montserrat",
               }}
             >
               {" "}
@@ -66,7 +66,7 @@ export default function Footer() {
               color: "rgba(112, 112, 112, 1)",
               fontSize: "16px",
               fontWeight: 400,
-              fontFamily: "Work Sans",
+            fontFamily: "Montserrat",
             }}
           >
             Designed by Jeewantha, built using Gatsby-Js in 2023.

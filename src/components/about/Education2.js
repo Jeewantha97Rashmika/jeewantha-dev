@@ -3,7 +3,7 @@ import School from "../../images/schoool.jpg";
 import { Typography } from "@mui/material";
 export default function Education02() {
   return (
-    <div style={{ marginTop: "30px" }}>
+    <div style={{ marginTop: "30px",backgroundColor: "#fafafa", padding: "1rem 1rem", borderRadius: "1rem" }}>
       <img
         src={School}
         style={{ maxWidth: "15%", height: "auto" }}
@@ -16,7 +16,7 @@ export default function Education02() {
           color: "rgba(112, 112, 112, 1)",
           fontSize: "16px",
           fontWeight: 400,
-          fontFamily: "Work Sans",
+        fontFamily: "Montserrat",
         }}
       >
         2003 - 2016 - Sri Lanka
@@ -28,7 +28,7 @@ export default function Education02() {
           color: "black",
           fontSize: "16px",
           fontWeight: 800,
-          fontFamily: "Work Sans",
+        fontFamily: "Montserrat",
         }}
       >
         Berrewaerts National college kandy
@@ -39,7 +39,7 @@ export default function Education02() {
           color: "rgba(112, 112, 112, 1)",
           fontSize: "16px",
           fontWeight: 400,
-          fontFamily: "Work Sans",
+        fontFamily: "Montserrat",
         }}
       >
         Passed Technology Stream with Information and Communication Technology

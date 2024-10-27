@@ -79,7 +79,7 @@ export default function WorkingExperince() {
           </Grid>
         </Grid>
       </Box>
-      <hr></hr>
+      
     </Container>
   );
 }

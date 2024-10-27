@@ -7,11 +7,12 @@ export default function Heading2({ text, component, color }) {
       <Typography
         component={component}
         sx={{
-          mb:{md:5},
-          fontSize: "36px",
-          fontWeight: 800,
+          mb: { md: 5 },
+          fontSize: "30px",
+          fontWeight: "bold",
           lineHeight: "1.2",
-          fontFamily: "Work Sans",
+          fontFamily: "Montserrat",
+          color: "#0B0C0C",
         }}
       >
         {text}

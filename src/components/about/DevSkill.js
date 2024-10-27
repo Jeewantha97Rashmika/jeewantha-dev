@@ -89,7 +89,7 @@ export default function DevSkill() {
           color: "black",
           fontSize: "20px",
           fontWeight: 600,
-          fontFamily: "Work Sans",
+        fontFamily: "Montserrat",
         }}
       >
         Development Tools and Technologies

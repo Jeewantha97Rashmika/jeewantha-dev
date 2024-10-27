@@ -2,11 +2,13 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import { Container, Typography } from "@mui/material";
+import CountUp from "react-countup";
 export default function CountBanner() {
   return (
     <div
       style={{
         backgroundColor: "#2C2B2E",
+        marginTop: "-5px",
       }}
     >
       <Container>
@@ -23,18 +25,19 @@ export default function CountBanner() {
                   color: "white",
                   fontSize: "64px",
                   fontWeight: 800,
-                  fontFamily: "Work Sans",
+                  fontFamily: "Montserrat",
                   textAlign: "center",
                 }}
               >
-                100+
+                <CountUp start={0} end={100} />
+                {"+"}
               </Typography>
               <Typography
                 sx={{
                   color: "white",
                   fontSize: "16px",
                   fontWeight: 400,
-                  fontFamily: "Work Sans",
+                  fontFamily: "Montserrat",
                   textAlign: "center",
                 }}
               >
@@ -47,18 +50,19 @@ export default function CountBanner() {
                   color: "white",
                   fontSize: "64px",
                   fontWeight: 800,
-                  fontFamily: "Work Sans",
+                  fontFamily: "inter",
                   textAlign: "center",
                 }}
               >
-                04+
+                <CountUp start={0} end={4} />
+                {"+"}
               </Typography>
               <Typography
                 sx={{
                   color: "white",
                   fontSize: "16px",
                   fontWeight: 400,
-                  fontFamily: "Work Sans",
+                  fontFamily: "inter",
                   textAlign: "center",
                 }}
               >
@@ -71,18 +75,19 @@ export default function CountBanner() {
                   color: "white",
                   fontSize: "64px",
                   fontWeight: 800,
-                  fontFamily: "Work Sans",
+                  fontFamily: "inter",
                   textAlign: "center",
                 }}
               >
-                198+
+                <CountUp start={0} end={198} />
+                {"+"}
               </Typography>
               <Typography
                 sx={{
                   color: "white",
                   fontSize: "16px",
                   fontWeight: 400,
-                  fontFamily: "Work Sans",
+                  fontFamily: "inter",
                   textAlign: "center",
                 }}
               >

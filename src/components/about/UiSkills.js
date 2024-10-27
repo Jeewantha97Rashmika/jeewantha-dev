@@ -33,7 +33,7 @@ export default function UiSkill() {
           color: "black",
           fontSize: "20px",
           fontWeight: 600,
-          fontFamily: "Work Sans",
+        fontFamily: "Montserrat",
         }}
       >
         UI/UX Design Tools

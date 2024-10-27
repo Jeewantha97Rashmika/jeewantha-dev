@@ -9,7 +9,7 @@ export default function SkillDescription() {
         color: "rgba(112, 112, 112, 1)",
         fontSize: "20px",
         fontWeight: 400,
-        fontFamily: "Work Sans",
+      fontFamily: "Montserrat",
         transition: "transform 0.2s",
         "&:hover": {
           transform: "scale(0.98)",
