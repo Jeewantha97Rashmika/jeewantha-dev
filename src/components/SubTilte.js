@@ -27,6 +27,7 @@ export default function SubTilte() {
             // bottom: { xs: 390, sm: 270, md: 390, lg: 360 },
             width: { xs: 100, md: 100 },
             // left: { xs: 250, sm: 290, md: 260, lg: 300 },
+            
           }}
         >
           <img src={Designer} alt="Designer" width={"100%"} height={"auto"} />

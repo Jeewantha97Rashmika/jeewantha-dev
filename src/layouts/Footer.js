@@ -1,78 +1,147 @@
 import React from "react";
-import { Container, Grid, Box, Typography } from "@mui/material";
-
+import { Container, Grid, Box, Typography, Button } from "@mui/material";
+import Logo from "../images/mylogo.svg";
+import { useMediaQuery } from "@mui/material";
 export default function Footer() {
+  const handleLinkedinClick = () => {
+    window.location.href =
+      "https://www.linkedin.com/in/jeewantha-rashmika-b5a56820a/"; // Replace with your desired URL
+  };
+  const handleAboutClick = () => {
+    window.location.href = "/about"; // Replace with your desired URL
+  };
+  const handleWordClick = () => {
+    window.location.href = "/#work"; // Replace with your desired URL
+  };
+  const handleKnowledgeClick = () => {
+    window.location.href = "/#knowledge-sharing"; // Replace with your desired URL
+  };
+
+  const isMobile = useMediaQuery("(max-width: 920px)");
   return (
-    <Container sx={{ mt: {md:20 , xs:10} }}>
-      <hr></hr>
-      <Box sx={{ mt: {md:10, xs:5} }}>
-        <Grid item xs={12}>
-          <Typography
-            component="h3"
-            sx={{
-              fontSize: "24px",
-              fontWeight: 800,
+    <div
+      style={{
+        backgroundColor: "#1F1F1F",
+      }}
+    >
+      <Container sx={{ pt: { xs: 10 },}}>
+        <Box sx={{ display: "flex", justifyContent: "center" }}>
+          <img src={Logo} alt="logo" width={200} />
+        </Box>
+        <Box sx={{ mt: { md: 10, xs: 5 } }}>
+          <Grid item xs={12}>
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <Button
+                onClick={handleAboutClick}
+                color="inherit"
+                sx={{
+                  color: "white",
+                  ml: 2,
+                  display: isMobile ? "none" : "inline",
+                  "&:hover": {
+                    // backgroundColor: "#e8f5ff",
+                    padding: "5px 20px",
+                    borderRadius: "40px",
+                    transform: "scale(0.95)",
+                  },
+                  fontFamily: "Montserrat",
+                  textAlign: "center",
+                  textTransform: "none",
+                  fontSize: "18px",
+                  padding: "5px 20px",
+                  transition: "transform 0.2s",
+                }}
+              >
+                About
+              </Button>
+              <Button
+                onClick={handleWordClick}
+                color="inherit"
+                sx={{
+                  color: "white",
+                  ml: 2,
+                  display: isMobile ? "none" : "inline",
+                  "&:hover": {
+                    // backgroundColor: "#e8f5ff",
+                    padding: "5px 20px",
+                    borderRadius: "40px",
+                    transform: "scale(0.95)",
+                  },
+                  fontFamily: "Montserrat",
+                  textAlign: "center",
+                  textTransform: "none",
+                  fontSize: "18px",
+                  padding: "5px 20px",
+                  transition: "transform 0.2s",
+                }}
+              >
+                Work
+              </Button>
+              <Button
+                color="inherit"
+                onClick={handleKnowledgeClick}
+                sx={{
+                  color: "white",
+                  ml: 2,
+                  display: isMobile ? "none" : "inline",
+                  "&:hover": {
+                    // backgroundColor: "#e8f5ff",
+                    padding: "5px 20px",
+                    borderRadius: "40px",
+                    transform: "scale(0.95)",
+                  },
+                  fontFamily: "Montserrat",
+                  textAlign: "center",
+                  textTransform: "none",
+                  fontSize: "18px",
+                  padding: "5px 20px",
+                  transition: "transform 0.2s",
+                }}
+              >
+                Knowledge Sharing
+              </Button>
+              <Button
+                onClick={handleLinkedinClick}
+                color="inherit"
+                sx={{
+                  color: "white",
+                  ml: 2,
+                  display: isMobile ? "none" : "inline",
+                  "&:hover": {
+                    // backgroundColor: "#e8f5ff",
+                    padding: "5px 20px",
+                    borderRadius: "40px",
+                    transform: "scale(0.95)",
+                  },
+                  fontFamily: "Montserrat",
+                  textAlign: "center",
+                  textTransform: "none",
+                  fontSize: "18px",
+                  padding: "5px 20px",
+                  transition: "transform 0.2s",
+                }}
+              >
+                Linkedin
+              </Button>
+            </div>
+          </Grid>
+        </Box>
+      </Container>
+      <Box sx={{ display: "flex", justifyContent: "center" ,pb: { md:3, xs: 3 }}}>
+        <Typography
+          component="h3"
+          sx={{
+            mt: { md: 10, xs: 5 },
+            transition: "transform 0.2s",
+            color: "#f1f1f1",
+            fontSize: "14px",
+            fontWeight: 400,
             fontFamily: "Montserrat",
-            }}
-          >
-            Contact
-          </Typography>
-          <Typography
-            component="h3"
-            sx={{
-              mt: 5,
-              color: "rgba(112, 112, 112, 1)",
-              fontSize: "20px",
-              fontWeight: 400,
-            fontFamily: "Montserrat",
-              transition: "transform 0.2s",
-              "&:hover": {
-                transform: "scale(0.99)",
-              },
-            }}
-          >
-            jeewantharashmika80@gmail.com
-          </Typography>
-          <a
-            href="https://www.linkedin.com/in/jeewantha-rashmika-b5a56820a/"
-            style={{
-              textDecoration: "none",
-            }}
-          >
-            <Typography
-              component="h3"
-              sx={{
-                transition: "transform 0.2s",
-                "&:hover": {
-                  cursor: "pointer",
-                  transform: "scale(0.99)",
-                },
-                mt: 3,
-                color: "rgba(112, 112, 112, 1)",
-                fontSize: "20px",
-                fontWeight: 400,
-              fontFamily: "Montserrat",
-              }}
-            >
-              {" "}
-              linkedin/in/jeewantha
-            </Typography>
-          </a>
-          <Typography
-            component="h3"
-            sx={{
-              mt: {md:10 ,xs:5},
-              mb: {md:20 ,xs:10},
-              color: "rgba(112, 112, 112, 1)",
-              fontSize: "16px",
-              fontWeight: 400,
-            fontFamily: "Montserrat",
-            }}
-          >
-            Designed by Jeewantha, built using Gatsby-Js in 2023.
-          </Typography>
-        </Grid>
+          }}
+        >
+          Designed by Jeewantha, built using Gatsby-Js in 2023.
+        </Typography>
       </Box>
-    </Container>
+    </div>
   );
 }

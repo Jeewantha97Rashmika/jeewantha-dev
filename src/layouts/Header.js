@@ -11,7 +11,7 @@ import {
   ListItem,
   ListItemText,
   Container,
-  useMediaQuery
+  useMediaQuery,
 } from "@mui/material";
 import Logo from "../images/JRLogo.svg";
 
@@ -21,7 +21,7 @@ import ProImage from "../images/pro02.png";
 import MainBtn from "../components/MainBtn";
 export default function Header() {
   const [drawerOpen, setDrawerOpen] = useState(false);
-const isMobile = useMediaQuery('(max-width: 920px)');
+  const isMobile = useMediaQuery("(max-width: 920px)");
   const handleDrawerToggle = () => {
     setDrawerOpen(!drawerOpen);
   };
@@ -73,20 +73,20 @@ const isMobile = useMediaQuery('(max-width: 920px)');
               ml: 2,
               display: isMobile ? "none" : "inline",
               "&:hover": {
-                backgroundColor: "#e8f5ff",
+                // backgroundColor: "#e8f5ff",
                 padding: "5px 20px",
                 borderRadius: "40px",
                 transform: "scale(0.95)",
               },
-            fontFamily: "Montserrat",
+              fontFamily: "Montserrat",
               textAlign: "center",
               textTransform: "none",
-              fontSize: "20px",
+              fontSize: "18px",
               padding: "5px 20px",
               transition: "transform 0.2s",
             }}
           >
-            About
+           Services
           </Button>
           <Button
             onClick={handleWordClick}
@@ -96,20 +96,20 @@ const isMobile = useMediaQuery('(max-width: 920px)');
               ml: 2,
               display: isMobile ? "none" : "inline",
               "&:hover": {
-                backgroundColor: "#e8f5ff",
+                // backgroundColor: "#e8f5ff",
                 padding: "5px 20px",
                 borderRadius: "40px",
                 transform: "scale(0.95)",
               },
-            fontFamily: "Montserrat",
+              fontFamily: "Montserrat",
               textAlign: "center",
               textTransform: "none",
-              fontSize: "20px",
+              fontSize: "18px",
               padding: "5px 20px",
               transition: "transform 0.2s",
             }}
           >
-            Work
+           Projects
           </Button>
           <Button
             color="inherit"
@@ -119,15 +119,15 @@ const isMobile = useMediaQuery('(max-width: 920px)');
               ml: 2,
               display: isMobile ? "none" : "inline",
               "&:hover": {
-                backgroundColor: "#e8f5ff",
+                // backgroundColor: "#e8f5ff",
                 padding: "5px 20px",
                 borderRadius: "40px",
                 transform: "scale(0.95)",
               },
-            fontFamily: "Montserrat",
+              fontFamily: "Montserrat",
               textAlign: "center",
               textTransform: "none",
-              fontSize: "20px",
+              fontSize: "18px",
               padding: "5px 20px",
               transition: "transform 0.2s",
             }}
@@ -142,29 +142,32 @@ const isMobile = useMediaQuery('(max-width: 920px)');
               ml: 2,
               display: isMobile ? "none" : "inline",
               "&:hover": {
-                backgroundColor: "#e8f5ff",
+                // backgroundColor: "#e8f5ff",
                 padding: "5px 20px",
                 borderRadius: "40px",
                 transform: "scale(0.95)",
               },
-            fontFamily: "Montserrat",
+              fontFamily: "Montserrat",
               textAlign: "center",
               textTransform: "none",
-              fontSize: "20px",
+              fontSize: "18px",
               padding: "5px 20px",
               transition: "transform 0.2s",
             }}
           >
             Linkedin
           </Button>
-          <MainBtn handleLinkedinClick={handleLinkedinClick} isMobile={isMobile} />
+          <MainBtn
+            handleLinkedinClick={handleLinkedinClick}
+            isMobile={isMobile}
+          />
           <Box>
             <IconButton
               color="black"
               aria-label="toggle menu"
               edge="end"
               onClick={handleDrawerToggle}
-              sx={{   display: isMobile ? "block" : "none", }}
+              sx={{ display: isMobile ? "block" : "none" }}
             >
               <MenuIcon />
             </IconButton>
@@ -192,7 +195,7 @@ const isMobile = useMediaQuery('(max-width: 920px)');
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-              fontFamily: "Montserrat",
+                fontFamily: "Montserrat",
               }}
             >
               Jeewantha Rashmika
@@ -204,7 +207,7 @@ const isMobile = useMediaQuery('(max-width: 920px)');
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-              fontFamily: "Montserrat",
+                fontFamily: "Montserrat",
               }}
             >
               jeewantharashmika80@gmail.com

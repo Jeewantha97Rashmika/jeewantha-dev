@@ -7,16 +7,15 @@ export default function Heading1({ text1, component }) {
       <Typography
         component={component}
         sx={{
-          fontSize: "58px",
+          fontSize: {xs:"44px", md:"48px",lg:"58px"},
           fontWeight: "bold",
-          lineHeight: "1.2",
-        fontFamily: "Montserrat",
-          color:"#FF595A"
+          lineHeight: "1.1",
+          fontFamily: "Montserrat",
+          color: "#FF595A",
         }}
       >
         {text1}
       </Typography>
-
     </>
   );
 }

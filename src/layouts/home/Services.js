@@ -9,12 +9,13 @@ import Development from "../../images/Development.svg";
 import DescriptionLayout from "./DescriptionLayout";
 export default function Services() {
   return (
-    <div>
+    <div style={{   backgroundColor: "#fff", }}>
       <DescriptionLayout />
 
       <Box
         component="section"
         sx={{
+        
           margin: "0 auto",
           maxWidth: "74rem",
           padding: "3rem 1rem",

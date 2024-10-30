@@ -8,16 +8,19 @@ import Services from "./home/Services";
 import EduAndExp from "./home/EduAndExp";
 import SkillGrid from "./home/SkillGrid";
 import Projrcts from "./home/Projrcts";
-
+import FunActivity from "./home/FunActivity";
+import { CursorOne } from "cursor-style";
 export default function Home() {
   return (
     <div>
+       <CursorOne />
       <HeroSection />
-      <CountBanner/>
-      <Services/>
-      <EduAndExp/>
-      <SkillGrid/>
-      <Projrcts/>
+      <CountBanner />
+      <Services />
+      <EduAndExp />
+      <SkillGrid />
+      <Projrcts />
+      <FunActivity />
       {/* <ExploreWork /> */}
     </div>
   );

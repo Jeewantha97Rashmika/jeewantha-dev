@@ -4,6 +4,7 @@ import Home from "../layouts/Home";
 import "../global.css";
 import Footer from "../layouts/Footer";
 import { Helmet } from "react-helmet";
+import { CursorOne, CursorTwo, CursorThree } from "cursor-style";
 const IndexPage = () => {
   return (
     <>
@@ -17,6 +18,7 @@ const IndexPage = () => {
         <link rel="canonical" href="" />
       </Helmet>
       <Header />
+     
       <Home />
       <Footer />
     </>

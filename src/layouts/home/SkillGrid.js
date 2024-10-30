@@ -1,21 +1,22 @@
 import React from "react";
 import {
-  SiAdobe,
-  SiApple,
-  SiFacebook,
-  SiGoogle,
-  SiLinkedin,
   SiShopify,
-  SiSoundcloud,
-  SiSpotify,
-  SiTiktok,
+  SiReact,
+  SiGatsby,
+  SiStrapi,
+  SiNextdotjs,
+  SiWordpress,
+  SiFigma,
+  SiAdobephotoshop,
+  SiAdobeillustrator,
 } from "react-icons/si";
 import { color, useAnimate } from "framer-motion";
+import { Typography } from "@mui/material";
 
 export default function SkillGrid() {
   return (
     <div style={{ backgroundColor: "#F1F1F1", padding: "8rem 0rem" }}>
-      <div style={{ margin: "0 auto", maxWidth: "74rem", }}>
+      <div style={{ margin: "0 auto", maxWidth: "74rem" }}>
         <ClipPathLinks />
       </div>
     </div>
@@ -35,8 +36,8 @@ const ClipPathLinks = () => {
           gridTemplateColumns: "repeat(2, 1fr)",
         }}
       >
-        <LinkBox Icon={SiGoogle} href="#" />
-        <LinkBox Icon={SiShopify} href="#" />
+        <LinkBox Icon={SiReact} Name={"React Js"} href="#" />
+        <LinkBox Icon={SiShopify} Name={"Shopify"} href="#" />
       </div>
       <div
         style={{
@@ -44,10 +45,10 @@ const ClipPathLinks = () => {
           gridTemplateColumns: "repeat(4, 1fr)",
         }}
       >
-        <LinkBox Icon={SiApple} href="#" />
-        <LinkBox Icon={SiSoundcloud} href="#" />
-        <LinkBox Icon={SiAdobe} href="#" />
-        <LinkBox Icon={SiFacebook} href="#" />
+        <LinkBox Icon={SiGatsby} Name={"Gatsby Js"} href="#" />
+        <LinkBox Icon={SiStrapi} Name={"Strapi"} href="#" />
+        <LinkBox Icon={SiNextdotjs} Name={"Next Js"} href="#" />
+        <LinkBox Icon={SiWordpress} Name={"Wordpress"} href="#" />
       </div>
       <div
         style={{
@@ -55,9 +56,9 @@ const ClipPathLinks = () => {
           gridTemplateColumns: "repeat(3, 1fr)",
         }}
       >
-        <LinkBox Icon={SiTiktok} href="#" />
-        <LinkBox Icon={SiSpotify} href="#" />
-        <LinkBox Icon={SiLinkedin} href="#" />
+        <LinkBox Icon={SiFigma} Name={"Figma Design"} href="#" />
+        <LinkBox Icon={SiAdobephotoshop} Name={"Photoshop"} href="#" />
+        <LinkBox Icon={SiAdobeillustrator} Name={"Illastrator"} href="#" />
       </div>
     </div>
   );
@@ -83,7 +84,7 @@ const EXIT_KEYFRAMES = {
   right: [NO_CLIP, BOTTOM_LEFT_CLIP],
 };
 
-const LinkBox = ({ Icon, href }) => {
+const LinkBox = ({ Icon, href, Name }) => {
   const [scope, animate] = useAnimate();
 
   const getNearestSide = (e) => {
@@ -141,6 +142,9 @@ const LinkBox = ({ Icon, href }) => {
         position: "relative",
         display: "grid",
         border: "0.5px solid #474747",
+        textDecoration: "none",
+        alignItems: "center",
+        justifyContent: "center",
         height: "8rem",
         width: "100%",
         placeContent: "center",
@@ -148,14 +152,34 @@ const LinkBox = ({ Icon, href }) => {
         "@media (min-width: 768px)": { height: "9rem" },
       }}
     >
-      <Icon
+      <div
         style={{
-          color: "#474747",
-          fontSize: "2.25rem",
-          "@media (min-width: 640px)": { fontSize: "1.875rem" },
-          "@media (min-width: 1024px)": { fontSize: "2.5rem" },
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
         }}
-      />
+      >
+        <Icon
+          style={{
+            color: "#474747",
+            fontSize: "2.25rem",
+            "@media (min-width: 640px)": { fontSize: "1.875rem" },
+            "@media (min-width: 1024px)": { fontSize: "2.5rem" },
+          }}
+        />
+        <Typography
+          sx={{
+            fontFamily: "Montserrat",
+            fontWeight: 600,
+            fontSize: "16px",
+            color: "#474747",
+            textAlign: "center",
+          }}
+        >
+          {Name}
+        </Typography>
+      </div>
 
       <div
         ref={scope}
@@ -164,18 +188,38 @@ const LinkBox = ({ Icon, href }) => {
           inset: 0,
           display: "grid",
           placeContent: "center",
-          backgroundColor: "#171717",
+          backgroundColor: "#FF595A",
           color: "white",
           clipPath: BOTTOM_RIGHT_CLIP,
         }}
       >
-        <Icon
+        <div
           style={{
-            fontSize: "2.25rem",
-            "@media (min-width: 640px)": { fontSize: "1.875rem" },
-            "@media (min-width: 768px)": { fontSize: "2.5rem" },
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
           }}
-        />
+        >
+          <Icon
+            style={{
+              fontSize: "2.25rem",
+              "@media (min-width: 640px)": { fontSize: "1.875rem" },
+              "@media (min-width: 768px)": { fontSize: "2.5rem" },
+            }}
+          />
+          <Typography
+            sx={{
+              fontFamily: "Montserrat",
+              fontWeight: 600,
+              fontSize: "16px",
+              color: "#fff",
+              textAlign: "center",
+            }}
+          >
+            {Name}
+          </Typography>
+        </div>
       </div>
     </a>
   );

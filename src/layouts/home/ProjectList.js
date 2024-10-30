@@ -15,12 +15,14 @@ export default function ProjectList() {
         padding: "1rem",
         paddingBottom: "2rem",
         marginTop: "3rem",
+        marginBottom: "3rem",
+        
       }}
     >
-      <div style={{ margin: "0 auto", maxWidth: "74rem" }}>
+      <div style={{ margin: "0 auto", maxWidth: "72rem" }}>
         <Link
           heading="Shoe Zone App"
-          subheading="Mobile App UI design for online Shoe store"
+          subheading="Modern Shoe Shopping Solutions Mobile App and Web Admin UI/UX Design using figma"
           imgSrc={Project1}
           href="#"
         />
@@ -89,6 +91,7 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
       initial="initial"
       whileHover="whileHover"
       style={{
+        
         position: "relative",
         display: "flex",
         alignItems: "center",
@@ -141,7 +144,8 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
           style={{
             position: "relative",
             zIndex: 10,
-            marginTop: "0.5rem",
+            maxWidth: "30rem",
+            marginTop: "1rem",
             display: "block",
             fontSize: "1rem",
             color: "#3f3f3f",

@@ -24,10 +24,10 @@ export default function HeroSection() {
     " 077 123 4567 | 077 123 4567",
   ];
   return (
-    <div
-      style={{
+    <Box
+      sx={{
         backgroundColor: "#f6fafd",
-        minHeight: "550px",
+        minHeight: {xs:"550px",md:"700px"},
         backgroundImage: `url(${GridImage})`,
       }}
     >
@@ -35,6 +35,7 @@ export default function HeroSection() {
         sx={{
           position: "relative",
           zIndex: 100,
+        
         }}
       >
         <Box
@@ -52,7 +53,7 @@ export default function HeroSection() {
               item
               xs={12}
               md={5}
-              sx={{ order: { xs: 1, md: 2 }, mt: { xs: 5, md: 6 } }}
+              sx={{ order: { xs: 1, md: 2 }, mt: { xs: 5, md: 4,lg:7 } }}
             >
               <Box
                 sx={{
@@ -63,7 +64,7 @@ export default function HeroSection() {
                 <SubTilte />
                 <Box
                   sx={{
-                    backgroundColor: { xs: "none", md: "#f6fafd" },
+                    // backgroundColor: { xs: "none", md: "#f6fafd" },
                   }}
                 >
                   <Heading1 component={"h1"} text1={"Hello, I'm Jeewantha."} />
@@ -77,7 +78,7 @@ export default function HeroSection() {
                     textAlign: "justify",
                     fontFamily: "Montserrat",
                     fontWeight: 500,
-                    lineHeight: 1.8,
+                    lineHeight: 1.6,
                     backgroundColor: "#f6fafd",
                   }}
                 >
@@ -94,7 +95,7 @@ export default function HeroSection() {
                 <Typewrite examples={examples} />
                 <br></br>
                 <br />
-                <Box>
+                <Box >
                   <MainBtn handleLinkedinClick={handleLinkedinClick} />
                 </Box>
               </Box>
@@ -114,7 +115,8 @@ export default function HeroSection() {
               <Box
                 sx={{
                   width: "100%",
-                  marginTop: "20px",
+                  // marginTop: "20px",
+                  pt:{md:10,lg:0,xl:5}
                 }}
               >
                 <img
@@ -170,6 +172,6 @@ export default function HeroSection() {
           }}
         />
       </Box>
-    </div>
+    </Box>
   );
 }
