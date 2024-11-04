@@ -10,7 +10,8 @@ import HarlfCircel from "../../images/circel.svg";
 import Typewrite from "../../components/Typewrite";
 import SubTilte from "../../components/SubTilte";
 import BigTextnimation from "../../components/BigTextnimation";
-
+import { motion } from "framer-motion";
+import { Scale } from "@mui/icons-material";
 export default function HeroSection() {
   const handleLinkedinClick = () => {
     window.location.href =
@@ -27,7 +28,7 @@ export default function HeroSection() {
     <Box
       sx={{
         backgroundColor: "#f6fafd",
-        minHeight: {xs:"550px",md:"700px"},
+        minHeight: { xs: "550px", md: "700px" },
         backgroundImage: `url(${GridImage})`,
       }}
     >
@@ -35,7 +36,6 @@ export default function HeroSection() {
         sx={{
           position: "relative",
           zIndex: 100,
-        
         }}
       >
         <Box
@@ -53,52 +53,64 @@ export default function HeroSection() {
               item
               xs={12}
               md={5}
-              sx={{ order: { xs: 1, md: 2 }, mt: { xs: 5, md: 4,lg:7 } }}
+              sx={{ order: { xs: 1, md: 2 }, mt: { xs: 5, md: 4, lg: 7 } }}
             >
-              <Box
-                sx={{
-                  paddingLeft: { xs: 0, md: "15px" },
-                  position: "relative",
-                }}
+              <motion.div
+                initial={{ opacity: 1, x: 300, rotate: 60 }}
+                animate={{ opacity: 1, x: 0, rotate: 0 }}
+                transition={{ duration: 2, type: "spring" }}
               >
-                <SubTilte />
                 <Box
                   sx={{
-                    // backgroundColor: { xs: "none", md: "#f6fafd" },
+                    paddingLeft: { xs: 0, md: "15px" },
+                    position: "relative",
                   }}
                 >
-                  <Heading1 component={"h1"} text1={"Hello, I'm Jeewantha."} />
+                  <SubTilte />
+                  <Box
+                    sx={
+                      {
+                        // backgroundColor: { xs: "none", md: "#f6fafd" },
+                      }
+                    }
+                  >
+                    <Heading1
+                      component={"h1"}
+                      text1={"Hello, I'm Jeewantha."}
+                    />
+                  </Box>
+                  <br></br>
+                  <Typography
+                    component={"p"}
+                    sx={{
+                      color: "rgba(112, 112, 112, 1)",
+                      fontSize: { xs: "16px", sm: "18px" },
+                      textAlign: "justify",
+                      fontFamily: "Montserrat",
+                      fontWeight: 500,
+                      lineHeight: 1.6,
+                      backgroundColor: "#f6fafd",
+                    }}
+                  >
+                    {
+                      <span>
+                        I am a passionate <b> UI/UX designer</b> who is
+                        interested in solving complex problems through designing
+                        and
+                        <b> mobile app/web development </b> dedicated to
+                        crafting exceptional digital experiences.
+                      </span>
+                    }
+                  </Typography>
+                  <br />
+                  <Typewrite examples={examples} />
+                  <br></br>
+                  <br />
+                  <Box>
+                    <MainBtn handleLinkedinClick={handleLinkedinClick} />
+                  </Box>
                 </Box>
-                <br></br>
-                <Typography
-                  component={"p"}
-                  sx={{
-                    color: "rgba(112, 112, 112, 1)",
-                    fontSize: { xs: "16px", sm: "18px" },
-                    textAlign: "justify",
-                    fontFamily: "Montserrat",
-                    fontWeight: 500,
-                    lineHeight: 1.6,
-                    backgroundColor: "#f6fafd",
-                  }}
-                >
-                  {
-                    <span>
-                      I am a passionate <b> UI/UX designer</b> who is interested
-                      in solving complex problems through designing and
-                      <b> mobile app/web development </b> dedicated to crafting
-                      exceptional digital experiences.
-                    </span>
-                  }
-                </Typography>
-                <br />
-                <Typewrite examples={examples} />
-                <br></br>
-                <br />
-                <Box >
-                  <MainBtn handleLinkedinClick={handleLinkedinClick} />
-                </Box>
-              </Box>
+              </motion.div>
               {/* <SecondaryBtn title={"View my CV"} /> */}
             </Grid>
             <Grid
@@ -116,7 +128,7 @@ export default function HeroSection() {
                 sx={{
                   width: "100%",
                   // marginTop: "20px",
-                  pt:{md:10,lg:0,xl:5}
+                  pt: { md: 10, lg: 0, xl: 5 },
                 }}
               >
                 <img
@@ -136,10 +148,14 @@ export default function HeroSection() {
       <BigTextnimation />
 
       <Box
+        component={motion.div}
+        initial={{ opacity: 1, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 2, type: "spring" }}
         sx={{
           position: "absolute",
           top: { xs: 100, md: 200 }, // Align to top
-          right: { xs: 0, md: 0 }, // Align to right
+          right: { xs: 0, md: 0 }, // Align to rightZ
           width: "auto",
           height: "auto",
           overflow: "hidden",
@@ -151,11 +167,16 @@ export default function HeroSection() {
             transform: "rotate(180deg)",
             overflow: "hidden",
           }}
+          alt="HarlfCircel"
         />
       </Box>
 
       {/* Bottom HarlfCircel */}
       <Box
+        component={motion.div}
+        initial={{ opacity: 1, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 2, type: "spring" }}
         sx={{
           position: "absolute",
           bottom: { xs: 220, md: 400 },
@@ -170,6 +191,7 @@ export default function HeroSection() {
           style={{
             transform: "rotate(0deg)",
           }}
+          alt="HarlfCircel"
         />
       </Box>
     </Box>

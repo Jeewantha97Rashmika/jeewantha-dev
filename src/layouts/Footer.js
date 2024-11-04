@@ -134,7 +134,7 @@ export default function Footer() {
             mt: { md: 10, xs: 5 },
             transition: "transform 0.2s",
             color: "#f1f1f1",
-            fontSize: "14px",
+            fontSize: { xs: "12px", md: "14px" },
             fontWeight: 400,
             fontFamily: "Montserrat",
           }}

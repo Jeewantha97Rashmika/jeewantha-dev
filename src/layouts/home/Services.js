@@ -1,26 +1,80 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Grid, Box, Typography, Button } from "@mui/material";
-import UiBanner from "../../images/uibanner.png";
+import { Grid, Box, Typography } from "@mui/material";
 import FigmaLogo from "../../images/Figma.svg";
 import UXResearch from "../../images/usResearch.svg";
 import Testing from "../../images/testing.svg";
 import Development from "../../images/Development.svg";
 import DescriptionLayout from "./DescriptionLayout";
+import HarlfCircel from "../../images/circel.svg";
+
 export default function Services() {
   return (
-    <div style={{   backgroundColor: "#fff", }}>
+    <div style={{ backgroundColor: "#fff", position: "relative" }}>
       <DescriptionLayout />
-
       <Box
-        component="section"
+        component={motion.div}
+        initial={{ opacity: 1, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 2, type: "spring" }}
         sx={{
-        
+          position: "absolute",
+          top: { xs: 100, md: 300 }, // Align to top
+          right: { xs: 0, md: 0 }, // Align to rightZ
+          width: "auto",
+          height: "auto",
+          display: { xs: "none", lg: "block" },
+          overflow: "hidden",
+        }}
+      >
+        <img
+          src={HarlfCircel}
+          style={{
+            transform: "rotate(180deg)",
+            overflow: "hidden",
+          }}
+          alt="HarlfCircel"
+        />
+      </Box>
+
+      {/* Bottom HarlfCircel */}
+      <Box
+        component={motion.div}
+        initial={{ opacity: 1, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 2, type: "spring" }}
+        sx={{
+          position: "absolute",
+          display: { xs: "none", lg: "block" },
+          bottom: { xs: 220, md: 100 },
+          left: { xs: -30, md: 0 },
+          width: "auto",
+          height: "auto",
+          overflow: "hidden",
+        }}
+      >
+        <img
+          src={HarlfCircel}
+          style={{
+            transform: "rotate(0deg)",
+          }}
+          alt="HarlfCircel"
+        />
+      </Box>
+      <Box
+        component={motion.section}
+        initial={{ opacity: 0, y: 80 }} // Start with hidden and below position
+        whileInView={{ opacity: 1, y: 0 }} // Animate to full opacity and position
+        viewport={{ once: true, amount: 0.2 }} // Only animate once when 20% of the component is in view
+        transition={{ type: "spring", stiffness: 100 }}
+        sx={{
           margin: "0 auto",
           maxWidth: "74rem",
           padding: "3rem 1rem",
           color: "#334155",
-          mb:5,
+          mb: 5,
         }}
       >
         <Grid container spacing={2} sx={{ marginBottom: "1rem" }}>

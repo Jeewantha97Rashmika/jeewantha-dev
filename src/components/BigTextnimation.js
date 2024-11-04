@@ -29,6 +29,10 @@ export default function BigTextnimation() {
   const x = useSpring(xRaw, { mass: 3, stiffness: 400, damping: 50 });
   return (
     <Box
+      component={motion.dev}
+      initial={{ opacity: 1, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ type: "spring", }}
       ref={targetRef}
       sx={{
         zIndex: 1,

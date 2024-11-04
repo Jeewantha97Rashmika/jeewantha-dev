@@ -4,8 +4,17 @@ import Home from "../layouts/Home";
 import "../global.css";
 import Footer from "../layouts/Footer";
 import { Helmet } from "react-helmet";
-import { CursorOne, CursorTwo, CursorThree } from "cursor-style";
+import { Box } from "@mui/material";
+import Preloder from "../components/Preloder";
+
 const IndexPage = () => {
+  const [loading, setLoading] = React.useState(true);
+  React.useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, []);
   return (
     <>
       <Helmet>
@@ -17,10 +26,15 @@ const IndexPage = () => {
         />
         <link rel="canonical" href="" />
       </Helmet>
-      <Header />
-     
-      <Home />
-      <Footer />
+      {loading ? (
+        <Preloder />
+      ) : (
+        <Box>
+          <Header />
+          <Home />
+          <Footer />
+        </Box>
+      )}
     </>
   );
 };

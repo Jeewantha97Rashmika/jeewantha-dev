@@ -23,6 +23,7 @@ export default function Typewrite({ examples }) {
 
   return (
     <Typography
+      
       sx={{
         // marginBottom: "0.625rem",
         fontSize: { xs: "16px", md: "18px" },

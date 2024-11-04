@@ -1,8 +1,5 @@
 import React, { useState } from "react";
 import {
-  AppBar,
-  Toolbar,
-  Typography,
   Box,
   Button,
   IconButton,
@@ -14,7 +11,6 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import Logo from "../images/JRLogo.svg";
-
 import MenuIcon from "@mui/icons-material/Menu";
 import Avatar from "@mui/material/Avatar";
 import ProImage from "../images/pro02.png";

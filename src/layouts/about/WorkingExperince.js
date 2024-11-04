@@ -11,14 +11,72 @@ import WorkingContent02 from "../../components/about/WorkingContent02";
 import Heading2 from "../../components/common/Heading2";
 import Education01 from "../../components/about/Education1";
 import Education02 from "../../components/about/Education2";
-
+import { motion } from "framer-motion";
+import HarlfCircel from "../../images/circel.svg";
 export default function WorkingExperince() {
   return (
     <Box
+      component={motion.dev}
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ type: "spring", stiffness: 100 }}
       sx={{
         backgroundColor: "#fff",
+        position: "relative",
       }}
     >
+      <Box
+        component={motion.div}
+        initial={{ opacity: 1, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 2, type: "spring" }}
+        sx={{
+          position: "absolute",
+          top: { xs: 100, md: 100 }, // Align to top
+          right: { xs: 0, md: 0 }, // Align to rightZ
+          width: "auto",
+          height: "auto",
+          display: { xs: "none", lg: "block" },
+          overflow: "hidden",
+        }}
+      >
+        <img
+          src={HarlfCircel}
+          style={{
+            transform: "rotate(180deg)",
+            overflow: "hidden",
+          }}
+          alt="HarlfCircel"
+        />
+      </Box>
+
+      {/* Bottom HarlfCircel */}
+      <Box
+        component={motion.div}
+        initial={{ opacity: 1, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 2, type: "spring" }}
+        sx={{
+          position: "absolute",
+          display: { xs: "none", lg: "block" },
+          bottom: { xs: 220, md: 200 },
+          left: { xs: -30, md: 0 },
+          width: "auto",
+          height: "auto",
+          overflow: "hidden",
+        }}
+      >
+        <img
+          src={HarlfCircel}
+          style={{
+            transform: "rotate(0deg)",
+          }}
+          alt="HarlfCircel"
+        />
+      </Box>
       <Container sx={{ pt: { md: 10, xs: 5 }, pb: { md: 10, xs: 5 } }}>
         <Box sx={{ width: "100%", mb: { md: 10, xs: 5 } }}>
           <Grid
@@ -41,7 +99,8 @@ export default function WorkingExperince() {
                     <TimelineDot
                       sx={{
                         backgroundColor: "#FF595A",
-                        width:"20px",                        height:"20px"
+                        width: "20px",
+                        height: "20px",
                         // Set custom color here
                       }}
                     />
@@ -56,7 +115,8 @@ export default function WorkingExperince() {
                     <TimelineDot
                       sx={{
                         backgroundColor: "#FF595A",
-                        width:"20px",                        height:"20px"
+                        width: "20px",
+                        height: "20px",
                         // Set custom color here
                       }}
                     />
@@ -83,7 +143,8 @@ export default function WorkingExperince() {
                     <TimelineDot
                       sx={{
                         backgroundColor: "#FF595A",
-                        width:"20px",                        height:"20px"
+                        width: "20px",
+                        height: "20px",
                         // Set custom color here
                       }}
                     />
@@ -98,8 +159,8 @@ export default function WorkingExperince() {
                     <TimelineDot
                       sx={{
                         backgroundColor: "#FF595A",
-                        width:"20px",
-                        height:"20px"
+                        width: "20px",
+                        height: "20px",
                         // Set custom color here
                       }}
                     />

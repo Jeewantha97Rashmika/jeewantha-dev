@@ -5,8 +5,9 @@ import MyImage2 from "../../images/myImages (2).jpg";
 import MyImage3 from "../../images/myImages (3).jpg";
 import MyImage4 from "../../images/myImages (4).jpg";
 import MyImage5 from "../../images/myImages (5).jpg";
-
+import { useMediaQuery } from "@mui/material";
 export default function PhotoSet() {
+ 
   return (
     <section
       style={{
@@ -40,7 +41,7 @@ export default function PhotoSet() {
 
 const Cards = () => {
   const containerRef = useRef(null);
-
+  const isMobile = useMediaQuery("(max-width: 600px)");
   return (
     <div
       style={{
@@ -57,7 +58,7 @@ const Cards = () => {
         rotate="6deg"
         top="20%"
         left="25%"
-        width="25rem"
+        width={isMobile ? "12rem" : "25em"}
       />
       <Card
         containerRef={containerRef}
@@ -66,7 +67,7 @@ const Cards = () => {
         rotate="12deg"
         top="45%"
         left="60%"
-        width="35rem"
+        width={isMobile ? "12rem" : "35em"}
       />
       <Card
         containerRef={containerRef}
@@ -75,7 +76,7 @@ const Cards = () => {
         rotate="-6deg"
         top="20%"
         left="40%"
-        width="25rem"
+        width={isMobile ? "12rem" : "25em"}
       />
       <Card
         containerRef={containerRef}
@@ -84,7 +85,7 @@ const Cards = () => {
         rotate="8deg"
         top="50%"
         left="40%"
-        width="20rem"
+        width={isMobile ? "12rem" : "25em"}
       />
       <Card
         containerRef={containerRef}
@@ -93,7 +94,7 @@ const Cards = () => {
         rotate="18deg"
         top="20%"
         left="65%"
-        width="25rem"
+        width={isMobile ? "12rem" : "25em"}
       />
       <Card
         containerRef={containerRef}
@@ -102,7 +103,7 @@ const Cards = () => {
         rotate="-3deg"
         top="35%"
         left="55%"
-        width="22rem"
+        width={isMobile ? "12rem" : "25em"}
       />
     </div>
   );
