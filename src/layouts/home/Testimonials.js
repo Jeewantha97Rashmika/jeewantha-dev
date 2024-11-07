@@ -1,20 +1,13 @@
-import React, { useState, useEffect } from "react";
-import {
-  Box,
-  Card,
-  CardContent,
-  Typography,
-  Button,
-  Grid,
-  Container,
-  IconButton 
-} from "@mui/material";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState, useEffect, useRef } from "react";
+import { Container } from "@mui/material";
 import ReviewCard from "../../components/ReviewCard";
 import RImage from "../../images/r1.jpg";
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import DescriptionLayout from "./DescriptionLayout";
 export default function Testimonials() {
   const testimonials = [
     {
@@ -82,82 +75,57 @@ export default function Testimonials() {
       date: "2023-08-15",
     },
   ];
-  const [current, setCurrent] = useState(0);
-
-  const handleNext = () => {
-    setCurrent((prev) => (prev + 1) % testimonials.length);
+  const progressCircle = useRef(null);
+  const progressContent = useRef(null);
+  const onAutoplayTimeLeft = (s, time, progress) => {
+    progressCircle.current.style.setProperty("--progress", 1 - progress);
+    progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
   };
-
-  const handlePrev = () => {
-    setCurrent(
-      (prev) => (prev - 1 + testimonials.length) % testimonials.length
-    );
-  };
-
   return (
-    <Container
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        padding: 4,
-        position: "relative",
-        overflow: "hidden",
-        width: "100%",
-        maxWidth: 600,
-      }}
-    >
-      <IconButton
-        onClick={handlePrev}
+    <>
+      <DescriptionLayout />
+
+      <Container
         sx={{
-          position: "absolute",
-          left: 0,
-          top: "50%",
-          transform: "translateY(-50%)",
-          zIndex: 1,
+       
+          pb: { xs: 5, },
+          height:"80vh",
         }}
       >
-        <ArrowBackIosIcon />
-      </IconButton>
-
-      <IconButton
-        onClick={handleNext}
-        sx={{
-          position: "absolute",
-          right: 0,
-          top: "50%",
-          transform: "translateY(-50%)",
-          zIndex: 1,
-        }}
-      >
-        <ArrowForwardIosIcon />
-      </IconButton>
-
-      <AnimatePresence initial={false}>
-        <motion.div
-          key={current}
-          initial={{ x: 300, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          exit={{ x: -300, opacity: 0 }}
-          transition={{ duration: 0.5 }}
-          drag="x"
-          dragConstraints={{ left: 0, right: 0 }}
-          onDragEnd={(e, { offset, velocity }) => {
-            if (offset.x > 100 || velocity.x > 0.5) {
-              handlePrev();
-            } else if (offset.x < -100 || velocity.x < -0.5) {
-              handleNext();
-            }
+        <Swiper
+          spaceBetween={30}
+          centeredSlides={true}
+          autoplay={{
+            delay: 9500,
+            disableOnInteraction: false,
           }}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={true}
+          modules={[Autoplay, Pagination, Navigation]}
+          onAutoplayTimeLeft={onAutoplayTimeLeft}
+          className="mySwiper"
         >
-          <ReviewCard
-            img={testimonials[current].img}
-            name={testimonials[current].name}
-            review={testimonials[current].review}
-            date={testimonials[current].date}
-          />
-        </motion.div>
-      </AnimatePresence>
-    </Container>
+          {testimonials.map((item) => (
+            <SwiperSlide key={item.id}>
+              <ReviewCard
+                img={item.img}
+                name={item.name}
+                review={item.review}
+                date={item.date}
+              />
+            </SwiperSlide>
+          ))}
+
+          <div className="autoplay-progress" slot="container-end">
+            <svg viewBox="0 0 48 48" ref={progressCircle}>
+              <circle cx="24" cy="24" r="20"></circle>
+            </svg>
+            <span ref={progressContent}></span>
+          </div>
+        </Swiper>
+      </Container>
+    </>
   );
 }

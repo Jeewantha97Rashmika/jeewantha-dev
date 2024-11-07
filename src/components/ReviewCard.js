@@ -7,17 +7,20 @@ export default function ReviewCard({ img, name, review, date }) {
       sx={{
         display: "flex",
         flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
         gap: 2,
+      
         backgroundColor: "white",
         padding: "2rem",
         borderRadius: "10px",
-        boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
+        // boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
       }}
     >
       <img
         src={img}
         alt="img"
-        width={"80px"}
+        width={"10px"}
         height={"auto"}
         style={{ borderRadius: "50%" }}
       />
