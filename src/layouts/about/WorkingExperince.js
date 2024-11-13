@@ -13,6 +13,7 @@ import Education01 from "../../components/about/Education1";
 import Education02 from "../../components/about/Education2";
 import { motion } from "framer-motion";
 import HarlfCircel from "../../images/circel.svg";
+import ScrollEffect from "../../components/common/ScrollEffect";
 export default function WorkingExperince() {
   return (
     <Box
@@ -77,104 +78,106 @@ export default function WorkingExperince() {
           alt="HarlfCircel"
         />
       </Box>
-      <Container sx={{ pt: { md: 10, xs: 5 }, pb: { md: 10, xs: 5 } }}>
-        <Box sx={{ width: "100%", mb: { md: 10, xs: 5 } }}>
-          <Grid
-            container
-            rowSpacing={1}
-            columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-          >
-            <Grid item xs={12} md={6}>
-              <Heading2 component={"h2"} text={"Work experience"} />
-              <Timeline
-                sx={{
-                  [`& .${timelineItemClasses.root}:before`]: {
-                    flex: 0,
-                    padding: 0,
-                  },
-                }}
-              >
-                <TimelineItem>
-                  <TimelineSeparator>
-                    <TimelineDot
-                      sx={{
-                        backgroundColor: "#FF595A",
-                        width: "20px",
-                        height: "20px",
-                        // Set custom color here
-                      }}
-                    />
-                    <TimelineConnector />
-                  </TimelineSeparator>
-                  <TimelineContent>
-                    <WorkingContent />
-                  </TimelineContent>
-                </TimelineItem>
-                <TimelineItem>
-                  <TimelineSeparator>
-                    <TimelineDot
-                      sx={{
-                        backgroundColor: "#FF595A",
-                        width: "20px",
-                        height: "20px",
-                        // Set custom color here
-                      }}
-                    />
-                    <TimelineConnector />
-                  </TimelineSeparator>
-                  <TimelineContent>
-                    <WorkingContent02 />
-                  </TimelineContent>
-                </TimelineItem>
-              </Timeline>
+      <ScrollEffect>
+        <Container sx={{ pt: { md: 10, xs: 5 }, pb: { md: 10, xs: 5 } }}>
+          <Box sx={{ width: "100%", mb: { md: 10, xs: 5 } }}>
+            <Grid
+              container
+              rowSpacing={1}
+              columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+            >
+              <Grid item xs={12} md={6}>
+                <Heading2 component={"h2"} text={"Work experience"} />
+                <Timeline
+                  sx={{
+                    [`& .${timelineItemClasses.root}:before`]: {
+                      flex: 0,
+                      padding: 0,
+                    },
+                  }}
+                >
+                  <TimelineItem>
+                    <TimelineSeparator>
+                      <TimelineDot
+                        sx={{
+                          backgroundColor: "#FF595A",
+                          width: "20px",
+                          height: "20px",
+                          // Set custom color here
+                        }}
+                      />
+                      <TimelineConnector />
+                    </TimelineSeparator>
+                    <TimelineContent>
+                      <WorkingContent />
+                    </TimelineContent>
+                  </TimelineItem>
+                  <TimelineItem>
+                    <TimelineSeparator>
+                      <TimelineDot
+                        sx={{
+                          backgroundColor: "#FF595A",
+                          width: "20px",
+                          height: "20px",
+                          // Set custom color here
+                        }}
+                      />
+                      <TimelineConnector />
+                    </TimelineSeparator>
+                    <TimelineContent>
+                      <WorkingContent02 />
+                    </TimelineContent>
+                  </TimelineItem>
+                </Timeline>
+              </Grid>
+              <Grid item xs={12} md={6}>
+                <Heading2 component={"h2"} text={"Education"} />
+                <Timeline
+                  sx={{
+                    [`& .${timelineItemClasses.root}:before`]: {
+                      flex: 0,
+                      padding: 0,
+                    },
+                  }}
+                >
+                  <TimelineItem>
+                    <TimelineSeparator>
+                      <TimelineDot
+                        sx={{
+                          backgroundColor: "#FF595A",
+                          width: "20px",
+                          height: "20px",
+                          // Set custom color here
+                        }}
+                      />
+                      <TimelineConnector />
+                    </TimelineSeparator>
+                    <TimelineContent>
+                      <Education01 />
+                    </TimelineContent>
+                  </TimelineItem>
+                  <TimelineItem>
+                    <TimelineSeparator>
+                      <TimelineDot
+                        sx={{
+                          backgroundColor: "#FF595A",
+                          width: "20px",
+                          height: "20px",
+                          // Set custom color here
+                        }}
+                      />
+                      <TimelineConnector />
+                    </TimelineSeparator>
+                    <TimelineContent>
+                      <Education02 />
+                    </TimelineContent>
+                  </TimelineItem>
+                </Timeline>
+              </Grid>
             </Grid>
-            <Grid item xs={12} md={6}>
-              <Heading2 component={"h2"} text={"Education"} />
-              <Timeline
-                sx={{
-                  [`& .${timelineItemClasses.root}:before`]: {
-                    flex: 0,
-                    padding: 0,
-                  },
-                }}
-              >
-                <TimelineItem>
-                  <TimelineSeparator>
-                    <TimelineDot
-                      sx={{
-                        backgroundColor: "#FF595A",
-                        width: "20px",
-                        height: "20px",
-                        // Set custom color here
-                      }}
-                    />
-                    <TimelineConnector />
-                  </TimelineSeparator>
-                  <TimelineContent>
-                    <Education01 />
-                  </TimelineContent>
-                </TimelineItem>
-                <TimelineItem>
-                  <TimelineSeparator>
-                    <TimelineDot
-                      sx={{
-                        backgroundColor: "#FF595A",
-                        width: "20px",
-                        height: "20px",
-                        // Set custom color here
-                      }}
-                    />
-                    <TimelineConnector />
-                  </TimelineSeparator>
-                  <TimelineContent>
-                    <Education02 />
-                  </TimelineContent>
-                </TimelineItem>
-              </Timeline>
-            </Grid>
-          </Grid>
-        </Box>
-      </Container>
+          </Box>
+        </Container>
+      </ScrollEffect>
     </Box>
   );
 }

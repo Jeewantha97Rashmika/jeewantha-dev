@@ -82,7 +82,7 @@ export default function Header() {
               transition: "transform 0.2s",
             }}
           >
-           Services
+            Services
           </Button>
           <Button
             onClick={handleWordClick}
@@ -105,7 +105,7 @@ export default function Header() {
               transition: "transform 0.2s",
             }}
           >
-           Projects
+            Projects
           </Button>
           <Button
             color="inherit"

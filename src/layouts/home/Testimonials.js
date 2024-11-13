@@ -1,13 +1,14 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import { Container } from "@mui/material";
 import ReviewCard from "../../components/ReviewCard";
-import RImage from "../../images/r1.jpg";
+import RImage from "../../images/myImages (5).jpg";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import DescriptionLayout from "./DescriptionLayout";
+import ScrollEffect from "../../components/common/ScrollEffect";
 export default function Testimonials() {
   const testimonials = [
     {
@@ -23,7 +24,7 @@ export default function Testimonials() {
       img: RImage, // Replace with actual image URL
       name: "Mark Smith",
       review:
-        "Outstanding work on our e-commerce platform! The design not only looks great but also improves our conversion rates significantly.",
+        "Outstanding work on our e-commerce platform! The design not only looks great but also improves our conversion rates significantly.Jeewantha is a true professional! The website redesign has made it much easier for our clients to navigate and find information.",
       date: "2023-05-15",
     },
     {
@@ -31,7 +32,7 @@ export default function Testimonials() {
       img: RImage, // Replace with actual image URL
       name: "Jessica Brown",
       review:
-        "Jeewantha is a true professional! The website redesign has made it much easier for our clients to navigate and find information.",
+        "Jeewantha is a true professional! The website redesign has made it much easier for our clients to navigate and find information. Jeewantha is a true professional! The website redesign has made it much easier for our clients to navigate and find information.",
       date: "2023-06-01",
     },
     {
@@ -39,7 +40,7 @@ export default function Testimonials() {
       img: RImage, // Replace with actual image URL
       name: "Daniel Lee",
       review:
-        "I was thoroughly impressed with the attention to detail in the UI/UX design. Our users have noticed the difference!",
+        "I was thoroughly impressed with the attention to detail in the UI/UX design. Our users have noticed the difference! Jeewantha is a true professional! The website redesign has made it much easier for our clients to navigate and find information.",
       date: "2023-06-20",
     },
     {
@@ -47,7 +48,7 @@ export default function Testimonials() {
       img: RImage, // Replace with actual image URL
       name: "Sophia Wilson",
       review:
-        "The development process was smooth and collaborative. Jeewantha listened to our needs and delivered a product we love.",
+        "The development process was smooth and collaborative. Jeewantha listened to our needs and delivered a product we love.Jeewantha is a true professional! The website redesign has made it much easier for our clients to navigate and find information.",
       date: "2023-07-05",
     },
     {
@@ -55,7 +56,7 @@ export default function Testimonials() {
       img: RImage, // Replace with actual image URL
       name: "Ryan Davis",
       review:
-        "Fantastic work on our mobile app! The design is sleek and users find it very engaging and easy to use.",
+        "Fantastic work on our mobile app! The design is sleek and users find it very engaging and easy to use.Jeewantha is a true professional! The website redesign has made it much easier for our clients to navigate and find information.",
       date: "2023-07-12",
     },
     {
@@ -63,7 +64,7 @@ export default function Testimonials() {
       img: RImage, // Replace with actual image URL
       name: "Emily Garcia",
       review:
-        "Jeewantha exceeded our expectations with the UI/UX design of our dashboard. The interface is both functional and beautiful.",
+        "Jeewantha exceeded our expectations with the UI/UX design of our dashboard. The interface is both functional and beautiful.Jeewantha is a true professional! The website redesign has made it much easier for our clients to navigate and find information.",
       date: "2023-08-01",
     },
     {
@@ -82,50 +83,54 @@ export default function Testimonials() {
     progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
   };
   return (
-    <>
+    <div
+      style={{
+        backgroundColor: "#fff",
+      }}
+    >
       <DescriptionLayout />
-
-      <Container
-        sx={{
-       
-          pb: { xs: 5, },
-          height:"80vh",
-        }}
-      >
-        <Swiper
-          spaceBetween={30}
-          centeredSlides={true}
-          autoplay={{
-            delay: 9500,
-            disableOnInteraction: false,
+      <ScrollEffect>
+        <Container
+          sx={{
+            pb: { xs: 5 },
+            height: "70vh",
           }}
-          pagination={{
-            clickable: true,
-          }}
-          navigation={true}
-          modules={[Autoplay, Pagination, Navigation]}
-          onAutoplayTimeLeft={onAutoplayTimeLeft}
-          className="mySwiper"
         >
-          {testimonials.map((item) => (
-            <SwiperSlide key={item.id}>
-              <ReviewCard
-                img={item.img}
-                name={item.name}
-                review={item.review}
-                date={item.date}
-              />
-            </SwiperSlide>
-          ))}
+          <Swiper
+            spaceBetween={30}
+            centeredSlides={true}
+            autoplay={{
+              delay: 9500,
+              disableOnInteraction: false,
+            }}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={true}
+            modules={[Autoplay, Pagination, Navigation]}
+            onAutoplayTimeLeft={onAutoplayTimeLeft}
+            className="mySwiper"
+          >
+            {testimonials.map((item) => (
+              <SwiperSlide key={item.id}>
+                <ReviewCard
+                  img={item.img}
+                  name={item.name}
+                  review={item.review}
+                  date={item.date}
+                />
+              </SwiperSlide>
+            ))}
 
-          <div className="autoplay-progress" slot="container-end">
-            <svg viewBox="0 0 48 48" ref={progressCircle}>
-              <circle cx="24" cy="24" r="20"></circle>
-            </svg>
-            <span ref={progressContent}></span>
-          </div>
-        </Swiper>
-      </Container>
-    </>
+            <div className="autoplay-progress" slot="container-end">
+              <svg viewBox="0 0 48 48" ref={progressCircle}>
+                <circle cx="24" cy="24" r="20"></circle>
+              </svg>
+              <span ref={progressContent}></span>
+            </div>
+          </Swiper>
+        </Container>
+      </ScrollEffect>
+    </div>
   );
 }

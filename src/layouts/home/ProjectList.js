@@ -7,6 +7,9 @@ import Project3 from "../../images/project3.jpg";
 import Project4 from "../../images/project4.jpg";
 import Project5 from "../../images/project5.jpg";
 import Project6 from "../../images/project6.jpg";
+
+import { useMediaQuery } from "@mui/material";
+
 export default function ProjectList() {
   return (
     <section
@@ -14,9 +17,8 @@ export default function ProjectList() {
         backgroundColor: "#fff",
         padding: "1rem",
         paddingBottom: "2rem",
-        marginTop: "3rem",
-        marginBottom: "3rem",
-        
+        paddingTop: "3rem",
+        paddingBottom: "5rem",
       }}
     >
       <div style={{ margin: "0 auto", maxWidth: "72rem" }}>
@@ -56,6 +58,7 @@ export default function ProjectList() {
 }
 
 const Link = ({ heading, imgSrc, subheading, href }) => {
+  const isMobile = useMediaQuery("(max-width: 600px)");
   const ref = useRef(null);
 
   const x = useMotionValue(0);
@@ -91,7 +94,6 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
       initial="initial"
       whileHover="whileHover"
       style={{
-        
         position: "relative",
         display: "flex",
         alignItems: "center",
@@ -106,6 +108,30 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
       }}
     >
       <div>
+        {isMobile && (
+          <img
+            style={{
+              top,
+              left,
+              // translateX: "-50%",
+              // translateY: "-50%",
+              // position: "absolute",
+              zIndex: 0,
+              height: "auto",
+              width: "100%",
+              borderRadius: "0.5rem",
+              objectFit: "cover",
+              marginBottom: "2rem",
+            }}
+            // variants={{
+            //   initial: { scale: 0, rotate: "-12.5deg" },
+            //   whileHover: { scale: 1.8, rotate: "12.5deg" },
+            // }}
+            // transition={{ type: "spring" }}
+            src={imgSrc}
+            alt={`Image representing a link for ${heading}`}
+          />
+        )}
         <motion.span
           variants={{
             initial: { x: 0 },
@@ -178,26 +204,34 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
         alt={`Image representing a link for ${heading}`}
       />
 
-      <motion.div
-        variants={{
-          initial: {
-            x: "25%",
-            opacity: 0,
-          },
-          whileHover: {
-            x: "0%",
-            opacity: 1,
-          },
-        }}
-        transition={{ type: "spring" }}
-        style={{
-          position: "relative",
-          zIndex: 10,
-          padding: "1rem",
-        }}
-      >
-        <FiArrowRight style={{ fontSize: "2.5rem", color: "#333" ,fontFamily: "Montserrat",}} />
-      </motion.div>
+      {!isMobile && (
+        <motion.div
+          variants={{
+            initial: {
+              x: "25%",
+              opacity: 0,
+            },
+            whileHover: {
+              x: "0%",
+              opacity: 1,
+            },
+          }}
+          transition={{ type: "spring" }}
+          style={{
+            position: "relative",
+            zIndex: 10,
+            padding: "1rem",
+          }}
+        >
+          <FiArrowRight
+            style={{
+              fontSize: "2.5rem",
+              color: "#333",
+              fontFamily: "Montserrat",
+            }}
+          />
+        </motion.div>
+      )}
     </motion.a>
   );
 };

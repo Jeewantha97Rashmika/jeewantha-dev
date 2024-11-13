@@ -9,9 +9,8 @@ export default function ReviewCard({ img, name, review, date }) {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
+     
         gap: 2,
-      
-        backgroundColor: "white",
         padding: "2rem",
         borderRadius: "10px",
         // boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
@@ -20,15 +19,13 @@ export default function ReviewCard({ img, name, review, date }) {
       <img
         src={img}
         alt="img"
-        width={"10px"}
-        height={"auto"}
-        style={{ borderRadius: "50%" }}
+        style={{ borderRadius: "50%" ,width:"100px",height:"100px",objectFit:"cover"}}
       />
       <Typography
         sx={{
           color: "rgba(112, 112, 112, 1)",
-          fontSize: "18px",
-          fontWeight: 400,
+          fontSize: "20px",
+          fontWeight: 600,
           fontFamily: "Montserrat",
           lineHeight: "1.5rem",
         }}
@@ -38,10 +35,10 @@ export default function ReviewCard({ img, name, review, date }) {
       <Typography
         sx={{
           color: "rgba(112, 112, 112, 1)",
-          fontSize: "14px",
+          fontSize: "18px",
           fontWeight: 400,
           fontFamily: "Montserrat",
-          lineHeight: "1.5rem",
+          lineHeight: "2rem",
         }}
       >
         {review}
@@ -49,7 +46,7 @@ export default function ReviewCard({ img, name, review, date }) {
       <Typography
         sx={{
           color: "rgba(112, 112, 112, 1)",
-          fontSize: "12px",
+          fontSize: "16px",
           fontWeight: 400,
           fontFamily: "Montserrat",
           lineHeight: "1.5rem",

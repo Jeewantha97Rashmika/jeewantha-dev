@@ -8,9 +8,11 @@ export default function CountBanner() {
     <div
       style={{
         backgroundColor: "#2C2B2E",
-        marginTop: "-5px",
+        marginTop: "-15px",
+        // borderRadius: "3rem",
       }}
     >
+   
       <Container>
         <Box
           sx={{
@@ -97,6 +99,7 @@ export default function CountBanner() {
           </Grid>
         </Box>
       </Container>
+      
     </div>
   );
 }

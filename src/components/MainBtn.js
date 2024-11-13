@@ -1,6 +1,6 @@
-import { Button } from "@mui/material";
 import React from "react";
-
+import { Button } from "@mui/material";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 export default function MainBtn({ handleLinkedinClick, isMobile }) {
   return (
     <Button
@@ -10,14 +10,15 @@ export default function MainBtn({ handleLinkedinClick, isMobile }) {
         color: "white",
         width: { xs: "100%", sm: "auto" },
         backgroundColor: "#333",
-        display: isMobile ? "none" : "inline",
+        display: isMobile ? "none" : "inline-flex",
+        alignItems: "center",
+        justifyContent: "center",
         "&:hover": {
           backgroundColor: "#333333",
           padding: "5px 20px",
-          // borderRadius: "40px",
           transform: "scale(0.95)",
         },
-      fontFamily: "Montserrat",
+        fontFamily: "Montserrat",
         textAlign: "center",
         textTransform: "none",
         fontSize: "16px",
@@ -26,6 +27,13 @@ export default function MainBtn({ handleLinkedinClick, isMobile }) {
       }}
     >
       Let’s Talk
+      <ArrowForwardIcon
+        sx={{
+          color: "white",
+          marginLeft: "10px",
+          fontSize: { xs: "18px", sm: "24px" },
+        }}
+      />
     </Button>
   );
 }

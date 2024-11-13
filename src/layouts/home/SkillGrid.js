@@ -15,7 +15,7 @@ import { Typography } from "@mui/material";
 
 export default function SkillGrid() {
   return (
-    <div style={{ backgroundColor: "#F1F1F1", padding: "8rem 1rem" }}>
+    <div style={{ backgroundColor: "#fff", padding: "8rem 1rem" }}>
       <div style={{ margin: "0 auto", maxWidth: "74rem" }}>
         <ClipPathLinks />
       </div>

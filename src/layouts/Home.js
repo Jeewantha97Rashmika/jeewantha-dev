@@ -11,16 +11,16 @@ import Testimonials from "./home/Testimonials";
 export default function Home() {
   return (
     <div>
-       <CursorOne />
       <HeroSection />
       <CountBanner />
       <Services />
-      <EduAndExp />
-      <SkillGrid />
       <Projrcts />
-      <Testimonials/>
+      <Testimonials />
+      <EduAndExp />
+      {/* <SkillGrid /> */}
       <FunActivity />
       {/* <ExploreWork /> */}
+      <CursorOne />
     </div>
   );
 }
