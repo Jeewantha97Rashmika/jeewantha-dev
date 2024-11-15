@@ -7,9 +7,8 @@ export default function EduAndExp() {
   return (
     <div>
       <DescriptionLayout />
-     
-        <WorkingExperince />
-     
+
+      <WorkingExperince />
     </div>
   );
 }
