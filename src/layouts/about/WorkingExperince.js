@@ -17,11 +17,6 @@ import ScrollEffect from "../../components/common/ScrollEffect";
 export default function WorkingExperince() {
   return (
     <Box
-      component={motion.dev}
-      initial={{ opacity: 0, y: 100 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ type: "spring", stiffness: 100 }}
       sx={{
         backgroundColor: "#fff",
         position: "relative",
@@ -78,7 +73,7 @@ export default function WorkingExperince() {
           alt="HarlfCircel"
         />
       </Box>
-      <ScrollEffect>
+      {/* <ScrollEffect> */}
         <Container sx={{ pt: { md: 10, xs: 5 }, pb: { md: 10, xs: 5 } }}>
           <Box sx={{ width: "100%", mb: { md: 10, xs: 5 } }}>
             <Grid
@@ -177,7 +172,7 @@ export default function WorkingExperince() {
             </Grid>
           </Box>
         </Container>
-      </ScrollEffect>
+      {/* </ScrollEffect> */}
     </Box>
   );
 }

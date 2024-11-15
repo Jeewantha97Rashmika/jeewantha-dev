@@ -36,10 +36,21 @@ export default function Header() {
   };
 
   return (
-    <div style={{ backgroundColor: "#f6fafd" }}>
+    <div
+      style={{
+        backgroundColor: "#f6fafd",
+        opacity: 0.9,
+       backdropFilter: "blur(50px)",
+        position: "sticky",
+        top: 0,
+        zIndex: 10000,
+        overflow: " hidden",
+      }}
+    >
       <Container
         sx={{
           paddingTop: { md: "20px", xs: "20px" },
+          pb: 2,
           display: "flex",
           justifyContent: "space-between",
         }}

@@ -9,7 +9,7 @@ export default function ReviewCard({ img, name, review, date }) {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-     
+
         gap: 2,
         padding: "2rem",
         borderRadius: "10px",
@@ -19,7 +19,12 @@ export default function ReviewCard({ img, name, review, date }) {
       <img
         src={img}
         alt="img"
-        style={{ borderRadius: "50%" ,width:"100px",height:"100px",objectFit:"cover"}}
+        style={{
+          borderRadius: "50%",
+          width: "100px",
+          height: "100px",
+          objectFit: "cover",
+        }}
       />
       <Typography
         sx={{
