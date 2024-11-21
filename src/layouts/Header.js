@@ -37,7 +37,7 @@ export default function Header() {
   const handleKnowledgeClick = () => {
     window.location.href = "/#knowledge-sharing"; // Replace with your desired URL
   };
-  const them = useTheme();
+  const theme = useTheme();
   const [themeMode, setThemeMode] = useState("");
   useEffect(() => {
     if(typeof window !== 'undefined'){
@@ -48,8 +48,7 @@ export default function Header() {
   return (
     <div
       style={{
-        backgroundColor: them.palette.bgColor.main,
-
+        backgroundColor: theme.palette.bgColor.main,
         position: "sticky",
         top: 0,
         zIndex: 100000,
