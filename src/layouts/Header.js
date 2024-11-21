@@ -89,7 +89,7 @@ export default function Header() {
             onClick={handleAboutClick}
             color="inherit"
             sx={{
-              color: them.palette.textColor.main,
+              color: theme.palette.textColor.main,
               ml: 2,
               display: isMobile ? "none" : "inline",
               "&:hover": {
@@ -112,7 +112,7 @@ export default function Header() {
             onClick={handleWordClick}
             color="inherit"
             sx={{
-              color: them.palette.textColor.main,
+              color: theme.palette.textColor.main,
               ml: 2,
               display: isMobile ? "none" : "inline",
               "&:hover": {
@@ -135,7 +135,7 @@ export default function Header() {
             color="inherit"
             onClick={handleKnowledgeClick}
             sx={{
-              color: them.palette.textColor.main,
+              color: theme.palette.textColor.main,
               ml: 2,
               display: isMobile ? "none" : "inline",
               "&:hover": {
@@ -158,7 +158,7 @@ export default function Header() {
             onClick={handleLinkedinClick}
             color="inherit"
             sx={{
-              color: them.palette.textColor.main,
+              color: theme.palette.textColor.main,
               ml: 2,
               mr: 2,
               display: isMobile ? "none" : "inline",
