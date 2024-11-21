@@ -40,8 +40,11 @@ export default function Header() {
   const them = useTheme();
   const [themeMode, setThemeMode] = useState("");
   useEffect(() => {
-    setThemeMode(localStorage.getItem("themeMode"));
-  }, [localStorage.getItem("themeMode")]);
+    if(typeof window !== 'undefined'){
+
+      setThemeMode(localStorage.getItem("themeMode"));
+    }
+  }, [themeMode]);
   return (
     <div
       style={{
