@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div>
       <HeroSection />
-      <SkillMarquee/>
+      {/* <SkillMarquee/> */}
       <CountBanner />
       <Services />
       <Projrcts />
@@ -22,7 +22,7 @@ export default function Home() {
       {/* <SkillGrid /> */}
       <FunActivity />
       {/* <ExploreWork /> */}
-      <CursorOne />
+      {/* <CursorOne /> */}
     </div>
   );
 }

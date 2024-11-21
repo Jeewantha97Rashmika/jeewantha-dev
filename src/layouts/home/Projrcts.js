@@ -7,9 +7,9 @@ export default function Projrcts() {
   return (
     <div>
       <DescriptionLayout />
-      <ScrollEffect>
+      {/* <ScrollEffect> */}
         <ProjectList />
-      </ScrollEffect>
+      {/* </ScrollEffect> */}
     </div>
   );
 }

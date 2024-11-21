@@ -8,7 +8,7 @@ export default function CountBanner() {
     <div
       style={{
         backgroundColor: "#2C2B2E",
-        marginTop: "-15px",
+        marginTop: "-5px",
         // borderRadius: "3rem",
       }}
     >

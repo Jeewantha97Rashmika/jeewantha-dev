@@ -37,7 +37,7 @@ export default function BigTextnimation() {
       sx={{
         zIndex: 1,
         position: "absolute",
-        top: { xs: 740, sm: 920, md: 500, lg: 500, xl: 550 },
+        top: { xs: 740, sm: 920, md: 500, lg: 500, xl: 580 },
         height: { xs: "20vh", md: "40vh" },
         overflow: "hidden",
         width: "100%",

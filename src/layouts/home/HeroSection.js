@@ -34,7 +34,7 @@ export default function HeroSection() {
    
       }}
     >
-      <ScrollEffect>
+      {/* <ScrollEffect> */}
         <Container
           sx={{
             position: "relative",
@@ -149,7 +149,7 @@ export default function HeroSection() {
           </Box>
         </Container>
         <BigTextnimation />
-      </ScrollEffect>
+      {/* </ScrollEffect> */}
       <Box
         component={motion.div}
         initial={{ opacity: 1, y: -50 }}
