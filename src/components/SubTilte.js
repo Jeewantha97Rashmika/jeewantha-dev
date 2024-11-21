@@ -1,7 +1,9 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography, useTheme } from "@mui/material";
 import React from "react";
 import Designer from "../images/designer.svg";
 export default function SubTilte() {
+
+  const theme = useTheme();
   return (
     <Grid container>
       <Grid>
@@ -9,7 +11,7 @@ export default function SubTilte() {
           sx={{
             color: "#fff",
             fontSize: { xs: "16px", sm: "20px" },
-            border: "3px dashed #333333",
+            border: `3px dashed ${theme.palette.borderColor.main}`,
             display: "inline-block",
             padding: "0px 10px 0px 10px",
             position: "relative",

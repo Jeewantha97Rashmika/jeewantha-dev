@@ -6,7 +6,7 @@ import Footer from "../layouts/Footer";
 import { Helmet } from "react-helmet";
 import { Box } from "@mui/material";
 import Preloder from "../components/Preloder";
-
+import ThemeLayout from "../Theme/ThemeLayout";
 const IndexPage = () => {
   const [loading, setLoading] = React.useState(true);
   React.useEffect(() => {
@@ -15,6 +15,7 @@ const IndexPage = () => {
       setLoading(false);
     }, 3000);
   }, []);
+
   return (
     <>
       <Helmet>
@@ -29,11 +30,13 @@ const IndexPage = () => {
       {loading ? (
         <Preloder />
       ) : (
-        <Box>
-          <Header />
-          <Home />
-          <Footer />
-        </Box>
+        <ThemeLayout>
+          <Box>
+            <Header />
+            <Home />
+            <Footer />
+          </Box>
+        </ThemeLayout>
       )}
     </>
   );

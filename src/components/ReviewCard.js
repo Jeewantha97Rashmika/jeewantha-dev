@@ -9,7 +9,7 @@ export default function ReviewCard({ img, name, review, date }) {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-
+        maxWidth:"50vw",
         gap: 2,
         padding: "2rem",
         borderRadius: "10px",
@@ -55,6 +55,7 @@ export default function ReviewCard({ img, name, review, date }) {
           fontWeight: 400,
           fontFamily: "Montserrat",
           lineHeight: "1.5rem",
+
         }}
       >
         {date}

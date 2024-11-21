@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Grid, Box, Typography, Button } from "@mui/material";
-import Logo from "../images/mylogo.svg";
+import Logo from "../images/mylogo3.svg";
 import { useMediaQuery } from "@mui/material";
 export default function Footer() {
   const handleLinkedinClick = () => {

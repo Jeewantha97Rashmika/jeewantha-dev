@@ -10,7 +10,7 @@ import {
   Container,
   useMediaQuery,
 } from "@mui/material";
-import Logo from "../images/mylogo2.svg";
+import Logo from "../images/mylogo4.svg";
 import MenuIcon from "@mui/icons-material/Menu";
 import Avatar from "@mui/material/Avatar";
 import ProImage from "../images/pro02.png";

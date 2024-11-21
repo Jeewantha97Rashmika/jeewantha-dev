@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from 'react';
+import { CssBaseline, Button } from '@mui/material';
 import HeroSection from "./home/HeroSection";
 import CountBanner from "./home/CountBanner";
 import Services from "./home/Services";
@@ -8,12 +9,14 @@ import Projrcts from "./home/Projrcts";
 import FunActivity from "./home/FunActivity";
 import { CursorOne } from "cursor-style";
 import Testimonials from "./home/Testimonials";
-import SkillMarquee from "./home/SkillMarquee";
-import SkillAndTech from "../layouts/about/SkillAndTech"
-import SkillChips from "../layouts/about/SkillChips"
+import BlogSection from './home/BlogSection';
+
 export default function Home() {
+  
+ 
   return (
-    <div>
+    <>
+      
       <HeroSection />
       {/* <SkillMarquee/> */}
       <CountBanner />
@@ -22,11 +25,13 @@ export default function Home() {
       <Testimonials />
       <EduAndExp />
       {/* <SkillAndTech/> */}
-     
+
       {/* <SkillGrid /> */}
+      <BlogSection/>
       <FunActivity />
       {/* <ExploreWork /> */}
       {/* <CursorOne /> */}
-    </div>
+    </>
+
   );
 }

@@ -12,8 +12,10 @@ import SubTilte from "../../components/SubTilte";
 import BigTextnimation from "../../components/BigTextnimation";
 import { motion } from "framer-motion";
 import ScrollEffect from "../../components/common/ScrollEffect";
+import { useTheme } from "@mui/material/styles"; // Import useTheme
 
 export default function HeroSection() {
+  const theme = useTheme();
   const handleLinkedinClick = () => {
     window.location.href =
       "https://www.linkedin.com/in/jeewantha-rashmika-b5a56820a/"; // Replace with your desired URL
@@ -25,130 +27,132 @@ export default function HeroSection() {
     " jeewantharashmika80@gmail.com",
     " 077 123 4567 | 077 123 4567",
   ];
+  const bgColor = theme.palette.bgColor.main;
+  const secondaryColor = theme.palette.secondary.main;
+
   return (
     <Box
       sx={{
-        backgroundColor: "#f6fafd",
+        backgroundColor: bgColor,
         // minHeight: { xs: "50vh", md: "70vh" },
         backgroundImage: `url(${GridImage})`,
-   
       }}
     >
       {/* <ScrollEffect> */}
-        <Container
+      <Container
+        sx={{
+          position: "relative",
+          zIndex: 10,
+        }}
+      >
+        <Box
           sx={{
-            position: "relative",
-            zIndex: 10,
+            width: "100%",
+            paddingLeft: { xs: 0, md: "15px" },
           }}
         >
-          <Box
-            sx={{
-              width: "100%",
-              paddingLeft: { xs: 0, md: "15px" },
-            }}
+          <Grid
+            container
+            rowSpacing={1}
+            columnSpacing={{ xs: 1, sm: 2, md: 3 }}
           >
             <Grid
-              container
-              rowSpacing={1}
-              columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+              item
+              xs={12}
+              md={5}
+              sx={{ order: { xs: 1, md: 2 }, mt: { xs: 5, md: 4, lg: 7 } }}
             >
-              <Grid
-                item
-                xs={12}
-                md={5}
-                sx={{ order: { xs: 1, md: 2 }, mt: { xs: 5, md: 4, lg: 7 } }}
-              >
-                <motion.div
-                  initial={{ opacity: 1, x: 300, rotate: 60 }}
-                  animate={{ opacity: 1, x: 0, rotate: 0 }}
-                  transition={{ duration: 2, type: "spring" }}
-                >
-                  <Box
-                    sx={{
-                      paddingLeft: { xs: 0, md: "15px" },
-                      position: "relative",
-                    }}
-                  >
-                    <SubTilte />
-                    <Box
-                      sx={
-                        {
-                          // backgroundColor: { xs: "none", md: "#f6fafd" },
-                        }
-                      }
-                    >
-                      <Heading1
-                        component={"h1"}
-                        text1={"Hello, I'm Jeewantha."}
-                      />
-                    </Box>
-                    <br></br>
-                    <Typography
-                      component={"p"}
-                      sx={{
-                        color: "rgba(112, 112, 112, 1)",
-                        fontSize: { xs: "16px", sm: "18px" },
-                        textAlign: "justify",
-                        fontFamily: "Montserrat",
-                        fontWeight: 500,
-                        lineHeight: 1.6,
-                        backgroundColor: "#f6fafd",
-                      }}
-                    >
-                      {
-                        <span>
-                          I am a passionate <b> UI/UX designer</b> who is
-                          interested in solving complex problems through
-                          designing and
-                          <b> mobile app/web development </b> dedicated to
-                          crafting exceptional digital experiences.
-                        </span>
-                      }
-                    </Typography>
-                    <br />
-                    <Typewrite examples={examples} />
-                    <br></br>
-                    <br />
-                    <Box>
-                      <MainBtn handleLinkedinClick={handleLinkedinClick} />
-                    </Box>
-                  </Box>
-                </motion.div>
-                {/* <SecondaryBtn title={"View my CV"} /> */}
-              </Grid>
-              <Grid
-                item
-                xs={12}
-                md={7}
-                sx={{
-                  order: { xs: 2, md: 1 },
-                  display: "flex",
-                  justifyContent: "start",
-                  alignItems: "left",
-                }}
+              <motion.div
+                initial={{ opacity: 1, x: 300, rotate: 60 }}
+                animate={{ opacity: 1, x: 0, rotate: 0 }}
+                transition={{ duration: 2, type: "spring" }}
               >
                 <Box
                   sx={{
-                    width: "100%",
-                    // marginTop: "20px",
-                    pt: { md: 10, lg: 0, xl: 5 },
+                    paddingLeft: { xs: 0, md: "15px" },
+                    position: "relative",
                   }}
                 >
-                  <img
-                    src={ProfileImage}
-                    style={{
-                      maxWidth: "100%",
-                      height: "auto",
-                      position: "relative",
+                  <SubTilte />
+                  <Box
+                    sx={
+                      {
+                        // backgroundColor: { xs: "none", md: "#f6fafd" },
+                      }
+                    }
+                  >
+                    <Heading1
+                      component={"h1"}
+                      text1={"Hello, I'm Jeewantha."}
+                    />
+                  </Box>
+                  <br></br>
+                  <Typography
+                    component={"p"}
+                    sx={{
+                      color: theme.palette.textColor.main,
+                      fontSize: { xs: "16px", sm: "18px" },
+                      textAlign: "justify",
+                      fontFamily: "Montserrat",
+                      fontWeight: 500,
+                      lineHeight: 1.6,
+                      backgroundColor: theme.palette.bgColor.main,
                     }}
-                    alt="knovik"
-                  />
+                  >
+                    {
+                      <span>
+                        I am a passionate <b> UI/UX designer</b> who is
+                        interested in solving complex problems through designing
+                        and
+                        <b> mobile app/web development </b> dedicated to
+                        crafting exceptional digital experiences.
+                      </span>
+                    }
+                  </Typography>
+                  <br />
+                  <Typewrite examples={examples} />
+                  <br></br>
+                  <br />
+                  <Box>
+                    <MainBtn handleLinkedinClick={handleLinkedinClick} />
+                  </Box>
                 </Box>
-              </Grid>
+              </motion.div>
+              {/* <SecondaryBtn title={"View my CV"} /> */}
             </Grid>
-          </Box>
-        </Container>
-        <BigTextnimation />
+            <Grid
+              item
+              xs={12}
+              md={7}
+              sx={{
+                order: { xs: 2, md: 1 },
+                display: "flex",
+                justifyContent: "start",
+                alignItems: "left",
+              }}
+            >
+              <Box
+                sx={{
+                  width: "100%",
+                  // marginTop: "20px",
+                  pt: { md: 10, lg: 0, xl: 5 },
+                }}
+              >
+                <img
+                  src={ProfileImage}
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto",
+                    position: "relative",
+                  }}
+                  alt="knovik"
+                />
+              </Box>
+            </Grid>
+          </Grid>
+        </Box>
+      </Container>
+      <BigTextnimation />
       {/* </ScrollEffect> */}
       <Box
         component={motion.div}
@@ -182,7 +186,7 @@ export default function HeroSection() {
         transition={{ duration: 2, type: "spring" }}
         sx={{
           position: "absolute",
-          top: { xs: 620, md: 400, lg: 400, xl: 500 }, // Align to top
+          top: { xs: 620, md: 400, lg: 400, xl: 420 }, // Align to top
           left: { xs: -30, md: 0 },
           width: "auto",
           height: "auto",

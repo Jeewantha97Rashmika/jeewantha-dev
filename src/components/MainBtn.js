@@ -1,15 +1,16 @@
 import React from "react";
-import { Button } from "@mui/material";
+import { Button, useTheme } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 export default function MainBtn({ handleLinkedinClick, isMobile }) {
+  const theme = useTheme();
   return (
     <Button
       onClick={handleLinkedinClick}
       color="inherit"
       sx={{
-        color: "white",
+        color: theme.palette.btnColor.text,
         width: { xs: "100%", sm: "auto" },
-        backgroundColor: "#333",
+        backgroundColor: theme.palette.btnColor.main,
         display: isMobile ? "none" : "inline-flex",
         alignItems: "center",
         justifyContent: "center",
@@ -23,13 +24,13 @@ export default function MainBtn({ handleLinkedinClick, isMobile }) {
         textTransform: "none",
         fontSize: "16px",
         padding: "5px 20px",
-        transition: "transform 0.2s",
+        transition: "transform 0.1s",
       }}
     >
       Let’s Talk
       <ArrowForwardIcon
         sx={{
-          color: "white",
+          color: theme.palette.btnColor.text,
           marginLeft: "10px",
           fontSize: { xs: "18px", sm: "24px" },
         }}
