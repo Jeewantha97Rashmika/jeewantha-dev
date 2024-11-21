@@ -44,7 +44,7 @@ export default function Header() {
 
       setThemeMode(localStorage.getItem("themeMode"));
     }
-  }, [themeMode]);
+  }, [typeof window !=="undefined" && localStorage.getItem("themeMode")]);
   return (
     <Box
       sx={{

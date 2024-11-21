@@ -93,7 +93,7 @@ export default function Testimonials() {
         <Container
           sx={{
             pb: { xs: 5 },
-            height: "70vh",
+            height: {xs:"80vh",md:"70vh"},
           }}
         >
           <Swiper
