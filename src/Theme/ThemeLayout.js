@@ -1,10 +1,9 @@
 // src/components/ThemeLayout.js
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { ThemeProvider, createTheme, CssBaseline, Button } from "@mui/material";
 import { motion } from "framer-motion";
 import { FiMoon, FiSun } from "react-icons/fi";
-import { Light } from "@mui/icons-material";
 
 const lightTheme = createTheme({
   palette: {
@@ -21,7 +20,7 @@ const lightTheme = createTheme({
     },
     bgColor: {
       main: "#ffffff",
-        secondary:"#2C2B2E"
+      secondary: "#2C2B2E",
     },
     textColor: {
       main: "#707070",
@@ -47,7 +46,7 @@ const darkTheme = createTheme({
     },
     bgColor: {
       main: "#2C2B2E",
-      secondary:"#191919"
+      secondary: "#191919",
     },
     textColor: {
       main: "#ffffff",
@@ -84,14 +83,14 @@ const ThemeLayout = ({ children }) => {
             backgroundColor: theme.palette.btnColor.main,
             position: "fixed",
             borderRadius: "9999px",
-            px:2,
-            py:1,
+            px: 2,
+            py: 1,
             top: "80%",
             right: 10,
             zIndex: 1000000,
-            "&:hover":{
+            "&:hover": {
               backgroundColor: theme.palette.btnColor.main,
-            }
+            },
           }}
         >
           {themeMode === "light" ? (

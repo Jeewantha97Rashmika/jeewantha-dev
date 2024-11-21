@@ -3,10 +3,10 @@ import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import { Container, Typography } from "@mui/material";
 import CountUp from "react-countup";
-import { useTheme } from "styled-components";
+
 
 export default function CountBanner() {
-  const theme =useTheme();
+
   return (
     <Box
       sx={{

@@ -81,6 +81,7 @@ export default function BlogSection() {
               >
                 <img
                   src={val.img}
+                  alt="pro"
                   width={"100%"}
                   style={{
                     borderRadius: "8px",

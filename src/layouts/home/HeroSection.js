@@ -11,7 +11,6 @@ import Typewrite from "../../components/Typewrite";
 import SubTilte from "../../components/SubTilte";
 import BigTextnimation from "../../components/BigTextnimation";
 import { motion } from "framer-motion";
-import ScrollEffect from "../../components/common/ScrollEffect";
 import { useTheme } from "@mui/material/styles"; // Import useTheme
 
 export default function HeroSection() {
