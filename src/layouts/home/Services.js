@@ -11,7 +11,7 @@ import ScrollEffect from "../../components/common/ScrollEffect";
 
 export default function Services() {
   return (
-    <div style={{ backgroundColor: "#fff", position: "relative" }}>
+    <div id="services" style={{ backgroundColor: "#fff", position: "relative" }}>
       <DescriptionLayout />
 
       <Box

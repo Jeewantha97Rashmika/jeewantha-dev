@@ -9,12 +9,12 @@ export default function UiSkill() {
     },
     {
       name: "xd",
-      image: "https://cdn.worldvectorlogo.com/logos/adobe-xd.svg",
+      image: "https://upload.wikimedia.org/wikipedia/commons/c/c2/Adobe_XD_CC_icon.svg",
     },
     {
       name: "photoshop",
       image:
-        "https://raw.githubusercontent.com/devicons/devicon/master/icons/photoshop/photoshop-line.svg",
+        "https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg",
     },
 
     {
@@ -31,7 +31,7 @@ export default function UiSkill() {
         sx={{
           mt:{md:10 ,xs:1},
           color: "black",
-          fontSize: "20px",
+          fontSize: "30px",
           fontWeight: 600,
         fontFamily: "Montserrat",
         }}
@@ -46,7 +46,7 @@ export default function UiSkill() {
               sx={{
                 p: 3,
                 m: 1,
-                backgroundColor: "#e8f5ff",
+                backgroundColor: "rgba(112, 112, 112, 0.1)",
                 transition: "transform 0.2s",
                 "&:hover": {
                   transform: "scale(0.95)",

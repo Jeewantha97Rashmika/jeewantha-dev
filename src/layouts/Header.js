@@ -10,7 +10,7 @@ import {
   Container,
   useMediaQuery,
 } from "@mui/material";
-import Logo from "../images/JRLogo.svg";
+import Logo from "../images/mylogo2.svg";
 import MenuIcon from "@mui/icons-material/Menu";
 import Avatar from "@mui/material/Avatar";
 import ProImage from "../images/pro02.png";
@@ -26,10 +26,10 @@ export default function Header() {
       "https://www.linkedin.com/in/jeewantha-rashmika-b5a56820a/"; // Replace with your desired URL
   };
   const handleAboutClick = () => {
-    window.location.href = "/about"; // Replace with your desired URL
+    window.location.href = "/#services"; // Replace with your desired URL
   };
   const handleWordClick = () => {
-    window.location.href = "/#work"; // Replace with your desired URL
+    window.location.href = "/#projects"; // Replace with your desired URL
   };
   const handleKnowledgeClick = () => {
     window.location.href = "/#knowledge-sharing"; // Replace with your desired URL
@@ -40,10 +40,10 @@ export default function Header() {
       style={{
         backgroundColor: "#f6fafd",
         opacity: 0.9,
-       backdropFilter: "blur(50px)",
+        backdropFilter: "blur(50px)",
         position: "sticky",
         top: 0,
-        zIndex: 10000,
+        zIndex: 100000,
         overflow: " hidden",
       }}
     >
@@ -182,7 +182,9 @@ export default function Header() {
         </div>
 
         <Drawer anchor="right" open={drawerOpen} onClose={handleDrawerToggle}>
-          <Container>
+          <Container sx={{
+            mt: 8
+          }}>
             <div
               style={{
                 padding: "16px",
@@ -225,7 +227,7 @@ export default function Header() {
                 <ListItemText
                   primary="About"
                   primaryTypographyProps={{
-                    style: { fontFamily: "Work Sans" },
+                    style: { fontFamily: "Montserrat", },
                   }}
                 />
               </ListItem>
@@ -233,7 +235,7 @@ export default function Header() {
                 <ListItemText
                   primary="Work"
                   primaryTypographyProps={{
-                    style: { fontFamily: "Work Sans" },
+                    style: { fontFamily: "Montserrat", },
                   }}
                 />
               </ListItem>
@@ -241,7 +243,7 @@ export default function Header() {
                 <ListItemText
                   primary="Knowledge Sharing"
                   primaryTypographyProps={{
-                    style: { fontFamily: "Work Sans" },
+                    style: { fontFamily: "Montserrat", },
                   }}
                 />
               </ListItem>
@@ -253,7 +255,7 @@ export default function Header() {
                 <ListItemText
                   primary="LinkedIn"
                   primaryTypographyProps={{
-                    style: { fontFamily: "Work Sans" },
+                    style: { fontFamily: "Montserrat", },
                   }}
                 />
               </ListItem>

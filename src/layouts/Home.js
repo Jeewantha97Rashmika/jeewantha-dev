@@ -9,6 +9,8 @@ import FunActivity from "./home/FunActivity";
 import { CursorOne } from "cursor-style";
 import Testimonials from "./home/Testimonials";
 import SkillMarquee from "./home/SkillMarquee";
+import SkillAndTech from "../layouts/about/SkillAndTech"
+import SkillChips from "../layouts/about/SkillChips"
 export default function Home() {
   return (
     <div>
@@ -19,6 +21,8 @@ export default function Home() {
       <Projrcts />
       <Testimonials />
       <EduAndExp />
+      {/* <SkillAndTech/> */}
+     
       {/* <SkillGrid /> */}
       <FunActivity />
       {/* <ExploreWork /> */}

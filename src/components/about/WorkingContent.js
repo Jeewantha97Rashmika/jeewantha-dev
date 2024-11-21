@@ -39,7 +39,7 @@ export default function WorkingContent() {
         fontFamily: "Montserrat",
         }}
       >
-        Android apps and IOS apps
+        As a Mobile Developer Intern, I have gained hands-on experience in designing and developing user-friendly mobile applications for both Android and iOS platforms. My work includes crafting intuitive user interfaces with a focus on seamless user experiences (UI/UX design), as well as coding and deploying functional apps.
       </Typography>
     </div>
   );

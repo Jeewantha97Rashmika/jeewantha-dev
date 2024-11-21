@@ -14,6 +14,7 @@ import Education02 from "../../components/about/Education2";
 import { motion } from "framer-motion";
 import HarlfCircel from "../../images/circel.svg";
 import ScrollEffect from "../../components/common/ScrollEffect";
+import SkillsChips from "./SkillChips";
 export default function WorkingExperince() {
   return (
     <Box
@@ -49,32 +50,9 @@ export default function WorkingExperince() {
       </Box>
 
       {/* Bottom HarlfCircel */}
-      <Box
-        component={motion.div}
-        initial={{ opacity: 1, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 2, type: "spring" }}
-        sx={{
-          position: "absolute",
-          display: { xs: "none", lg: "block" },
-          bottom: { xs: 220, md: 200 },
-          left: { xs: -30, md: 0 },
-          width: "auto",
-          height: "auto",
-          overflow: "hidden",
-        }}
-      >
-        <img
-          src={HarlfCircel}
-          style={{
-            transform: "rotate(0deg)",
-          }}
-          alt="HarlfCircel"
-        />
-      </Box>
+      
       {/* <ScrollEffect> */}
-        <Container sx={{ pt: { md: 10, xs: 5 }, pb: { md: 10, xs: 5 } }}>
+        <Container sx={{ pt: { md: 10, xs: 5 }, pb: { md: 1, xs: 5 } }}>
           <Box sx={{ width: "100%", mb: { md: 10, xs: 5 } }}>
             <Grid
               container
@@ -172,6 +150,7 @@ export default function WorkingExperince() {
             </Grid>
           </Box>
         </Container>
+        <SkillsChips/>
       {/* </ScrollEffect> */}
     </Box>
   );

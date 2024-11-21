@@ -5,7 +5,7 @@ import ScrollEffect from "../../components/common/ScrollEffect";
 
 export default function Projrcts() {
   return (
-    <div>
+    <div id="projects">
       <DescriptionLayout />
       {/* <ScrollEffect> */}
         <ProjectList />

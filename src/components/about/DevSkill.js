@@ -87,7 +87,7 @@ export default function DevSkill() {
         sx={{
           mt: 5,
           color: "black",
-          fontSize: "20px",
+          fontSize: "30px",
           fontWeight: 600,
         fontFamily: "Montserrat",
         }}
@@ -102,7 +102,7 @@ export default function DevSkill() {
               sx={{
                 p: 3,
                 m: 1,
-                backgroundColor: "#e8f5ff",
+                backgroundColor: "rgba(112, 112, 112, 0.1)",
                 transition: "transform 0.2s",
                 "&:hover": {
                   transform: "scale(0.95)",
