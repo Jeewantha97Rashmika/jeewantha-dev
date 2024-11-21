@@ -28,7 +28,7 @@ export default function HeroSection() {
     " 077 123 4567 | 077 123 4567",
   ];
   const bgColor = theme.palette.bgColor.main;
-  const secondaryColor = theme.palette.secondary.main;
+
 
   return (
     <Box

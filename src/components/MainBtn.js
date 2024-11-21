@@ -15,7 +15,7 @@ export default function MainBtn({ handleLinkedinClick, isMobile }) {
         alignItems: "center",
         justifyContent: "center",
         "&:hover": {
-          backgroundColor: "#333333",
+          backgroundColor: theme.palette.btnColor.main,
           padding: "5px 20px",
           transform: "scale(0.95)",
         },

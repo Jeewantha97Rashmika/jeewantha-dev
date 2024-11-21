@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Box,
   Button,
@@ -9,12 +9,15 @@ import {
   ListItemText,
   Container,
   useMediaQuery,
+  useTheme,
 } from "@mui/material";
 import Logo from "../images/mylogo4.svg";
+import Logo2 from "../images/mylogo3.svg";
 import MenuIcon from "@mui/icons-material/Menu";
 import Avatar from "@mui/material/Avatar";
 import ProImage from "../images/pro02.png";
 import MainBtn from "../components/MainBtn";
+
 export default function Header() {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const isMobile = useMediaQuery("(max-width: 920px)");
@@ -34,13 +37,16 @@ export default function Header() {
   const handleKnowledgeClick = () => {
     window.location.href = "/#knowledge-sharing"; // Replace with your desired URL
   };
-
+  const them = useTheme();
+  const [themeMode, setThemeMode] = useState("");
+  useEffect(() => {
+    setThemeMode(localStorage.getItem("themeMode"));
+  }, [localStorage.getItem("themeMode")]);
   return (
     <div
       style={{
-        backgroundColor: "#f6fafd",
-        opacity: 0.9,
-        backdropFilter: "blur(50px)",
+        backgroundColor: them.palette.bgColor.main,
+
         position: "sticky",
         top: 0,
         zIndex: 100000,
@@ -49,8 +55,8 @@ export default function Header() {
     >
       <Container
         sx={{
-          paddingTop: { md: "20px", xs: "20px" },
-          pb: 2,
+          paddingTop: { md: "10px", xs: "10px" },
+          pb: 1,
           display: "flex",
           justifyContent: "space-between",
         }}
@@ -68,7 +74,12 @@ export default function Header() {
           }}
         >
           <a href="/">
-            <img src={Logo} alt="logo" width={"auto"} height={40} />
+            <img
+              src={themeMode === "dark" ? Logo2 : Logo}
+              alt="logo"
+              width={"auto"}
+              height={40}
+            />
           </a>
         </Box>
         <div>
@@ -76,7 +87,7 @@ export default function Header() {
             onClick={handleAboutClick}
             color="inherit"
             sx={{
-              color: "black",
+              color: them.palette.textColor.main,
               ml: 2,
               display: isMobile ? "none" : "inline",
               "&:hover": {
@@ -99,7 +110,7 @@ export default function Header() {
             onClick={handleWordClick}
             color="inherit"
             sx={{
-              color: "black",
+              color: them.palette.textColor.main,
               ml: 2,
               display: isMobile ? "none" : "inline",
               "&:hover": {
@@ -122,7 +133,7 @@ export default function Header() {
             color="inherit"
             onClick={handleKnowledgeClick}
             sx={{
-              color: "black",
+              color: them.palette.textColor.main,
               ml: 2,
               display: isMobile ? "none" : "inline",
               "&:hover": {
@@ -145,8 +156,9 @@ export default function Header() {
             onClick={handleLinkedinClick}
             color="inherit"
             sx={{
-              color: "black",
+              color: them.palette.textColor.main,
               ml: 2,
+              mr: 2,
               display: isMobile ? "none" : "inline",
               "&:hover": {
                 // backgroundColor: "#e8f5ff",
@@ -182,9 +194,11 @@ export default function Header() {
         </div>
 
         <Drawer anchor="right" open={drawerOpen} onClose={handleDrawerToggle}>
-          <Container sx={{
-            mt: 8
-          }}>
+          <Container
+            sx={{
+              mt: 8,
+            }}
+          >
             <div
               style={{
                 padding: "16px",
@@ -227,7 +241,7 @@ export default function Header() {
                 <ListItemText
                   primary="About"
                   primaryTypographyProps={{
-                    style: { fontFamily: "Montserrat", },
+                    style: { fontFamily: "Montserrat" },
                   }}
                 />
               </ListItem>
@@ -235,7 +249,7 @@ export default function Header() {
                 <ListItemText
                   primary="Work"
                   primaryTypographyProps={{
-                    style: { fontFamily: "Montserrat", },
+                    style: { fontFamily: "Montserrat" },
                   }}
                 />
               </ListItem>
@@ -243,7 +257,7 @@ export default function Header() {
                 <ListItemText
                   primary="Knowledge Sharing"
                   primaryTypographyProps={{
-                    style: { fontFamily: "Montserrat", },
+                    style: { fontFamily: "Montserrat" },
                   }}
                 />
               </ListItem>
@@ -255,7 +269,7 @@ export default function Header() {
                 <ListItemText
                   primary="LinkedIn"
                   primaryTypographyProps={{
-                    style: { fontFamily: "Montserrat", },
+                    style: { fontFamily: "Montserrat" },
                   }}
                 />
               </ListItem>

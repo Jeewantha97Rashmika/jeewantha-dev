@@ -3,11 +3,14 @@ import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import { Container, Typography } from "@mui/material";
 import CountUp from "react-countup";
+import { useTheme } from "styled-components";
+
 export default function CountBanner() {
+  const theme =useTheme();
   return (
-    <div
-      style={{
-        backgroundColor: "#2C2B2E",
+    <Box
+      sx={{
+        backgroundColor: "#1D1C21",
         marginTop: "-5px",
         // borderRadius: "3rem",
       }}
@@ -100,6 +103,6 @@ export default function CountBanner() {
         </Box>
       </Container>
       
-    </div>
+    </Box>
   );
 }
