@@ -46,8 +46,8 @@ export default function Header() {
     }
   }, [themeMode]);
   return (
-    <div
-      style={{
+    <Box
+      sx={{
         backgroundColor: theme.palette.bgColor.main,
         position: "sticky",
         top: 0,
@@ -281,6 +281,6 @@ export default function Header() {
         {/* </Toolbar>
         </AppBar> */}
       </Container>
-    </div>
+    </Box>
   );
 }
