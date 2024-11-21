@@ -80,7 +80,7 @@ const ThemeLayout = ({ children }) => {
           variant="contained"
           onClick={toggleTheme}
           sx={{
-            backgroundColor: theme.palette.btnColor.main,
+            backgroundColor: theme.palette.btnColor?.main,
             position: "fixed",
             borderRadius: "9999px",
             px: 2,
@@ -89,7 +89,7 @@ const ThemeLayout = ({ children }) => {
             right: 10,
             zIndex: 1000000,
             "&:hover": {
-              backgroundColor: theme.palette.btnColor.main,
+              backgroundColor: theme.palette.btnColor?.main,
             },
           }}
         >

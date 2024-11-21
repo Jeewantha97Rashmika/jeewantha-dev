@@ -11,7 +11,7 @@ export default function SubTilte() {
           sx={{
             color: "#fff",
             fontSize: { xs: "16px", sm: "20px" },
-            border: `3px dashed ${theme.palette.borderColor.main}`,
+            border: `3px dashed ${theme.palette.borderColor?.main}`,
             display: "inline-block",
             padding: "0px 10px 0px 10px",
             position: "relative",

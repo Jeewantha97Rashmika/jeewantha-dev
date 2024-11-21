@@ -26,7 +26,7 @@ export default function HeroSection() {
     " jeewantharashmika80@gmail.com",
     " 077 123 4567 | 077 123 4567",
   ];
-  const bgColor = theme.palette.bgColor.main;
+  const bgColor = theme.palette.bgColor?.main;
 
 
   return (
@@ -89,13 +89,13 @@ export default function HeroSection() {
                   <Typography
                     component={"p"}
                     sx={{
-                      color: theme.palette.textColor.main,
+                      color: theme.palette.textColor?.main,
                       fontSize: { xs: "16px", sm: "18px" },
                       textAlign: "justify",
                       fontFamily: "Montserrat",
                       fontWeight: 500,
                       lineHeight: 1.6,
-                      backgroundColor: theme.palette.bgColor.main,
+                      backgroundColor: theme.palette.bgColor?.main,
                     }}
                   >
                     {

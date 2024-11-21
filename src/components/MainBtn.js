@@ -8,14 +8,14 @@ export default function MainBtn({ handleLinkedinClick, isMobile }) {
       onClick={handleLinkedinClick}
       color="inherit"
       sx={{
-        color: theme.palette.btnColor.text,
+        color: theme.palette.btnColor?.text,
         width: { xs: "100%", sm: "auto" },
-        backgroundColor: theme.palette.btnColor.main,
+        backgroundColor: theme.palette.btnColor?.main,
         display: isMobile ? "none" : "inline-flex",
         alignItems: "center",
         justifyContent: "center",
         "&:hover": {
-          backgroundColor: theme.palette.btnColor.main,
+          backgroundColor: theme.palette.btnColor?.main,
           padding: "5px 20px",
           transform: "scale(0.95)",
         },
@@ -30,7 +30,7 @@ export default function MainBtn({ handleLinkedinClick, isMobile }) {
       Let’s Talk
       <ArrowForwardIcon
         sx={{
-          color: theme.palette.btnColor.text,
+          color: theme.palette.btnColor?.text,
           marginLeft: "10px",
           fontSize: { xs: "18px", sm: "24px" },
         }}
