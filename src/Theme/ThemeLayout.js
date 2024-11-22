@@ -10,9 +10,10 @@ const lightTheme = createTheme({
     mode: "light",
     primary: {
       main: "#333",
+      offBlack:"#333"
     },
     secondary: {
-      main: "#9c27b0",
+      main: "#FF595A",
     },
     btnColor: {
       main: "#333333",
@@ -21,13 +22,19 @@ const lightTheme = createTheme({
     bgColor: {
       main: "#ffffff",
       secondary: "#2C2B2E",
+      dec:"#FFD3D0"
     },
     textColor: {
       main: "#707070",
+      secondary:"#333",
+      decText:"#FF595A"
     },
     borderColor: {
       main: "#333",
     },
+    cardBgColor:{
+      main:"#f8fafc"
+    }
   },
 });
 
@@ -36,9 +43,10 @@ const darkTheme = createTheme({
     mode: "dark",
     primary: {
       main: "#90caf9",
+      offBlack:"#333"
     },
     secondary: {
-      main: "#f48fb1",
+      main: "#FF595A",
     },
     btnColor: {
       main: "#ffffff",
@@ -47,13 +55,21 @@ const darkTheme = createTheme({
     bgColor: {
       main: "#2C2B2E",
       secondary: "#191919",
+      dec:"#FF8081"
     },
     textColor: {
       main: "#ffffff",
+      secondary:"#fff",
+      decText:"##fff"
     },
     borderColor: {
       main: "#fff",
+      
     },
+    cardBgColor:{
+      main:"#333"
+    }
+
   },
 });
 

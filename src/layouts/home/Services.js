@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Grid, Box, Typography } from "@mui/material";
+import { Grid, Box, Typography, useTheme } from "@mui/material";
 import FigmaLogo from "../../images/Figma.svg";
 import UXResearch from "../../images/usResearch.svg";
 import Testing from "../../images/testing.svg";
@@ -10,8 +10,15 @@ import HarlfCircel from "../../images/circel.svg";
 import ScrollEffect from "../../components/common/ScrollEffect";
 
 export default function Services() {
+  const theme = useTheme();
   return (
-    <div id="services" style={{ backgroundColor: "#fff", position: "relative" }}>
+    <Box
+      id="services"
+      sx={{
+        backgroundColor: theme.palette.bgColor?.main,
+        position: "relative",
+      }}
+    >
       <DescriptionLayout />
 
       <Box
@@ -77,7 +84,8 @@ export default function Services() {
             maxWidth: "74rem",
             padding: "3rem 1rem",
             color: "#334155",
-            mb: 5,
+            pb: 5,
+            pt:10
           }}
         >
           <Grid container spacing={2} sx={{ marginBottom: "1rem" }}>
@@ -295,11 +303,11 @@ export default function Services() {
           </Grid>
         </Box>
       </ScrollEffect>
-    </div>
+    </Box>
   );
 }
-
 const BounceCard = ({ children }) => {
+  const theme = useTheme();
   return (
     <motion.div
       whileHover={{ scale: 0.95, rotate: "-1deg" }}
@@ -309,7 +317,7 @@ const BounceCard = ({ children }) => {
         cursor: "pointer",
         overflow: "hidden",
         borderRadius: "1rem",
-        backgroundColor: "#f8fafc",
+        backgroundColor: theme.palette.cardBgColor?.main,
         padding: "2rem",
         transition: "transform 10ms",
       }}
@@ -320,16 +328,19 @@ const BounceCard = ({ children }) => {
 };
 
 const CardTitle = ({ children }) => {
+  const theme = useTheme();
   return (
     <Typography
       component="h3"
       sx={{
+        color:theme.palette.textColor.secondary,
         margin: "0 auto",
         textAlign: "center",
         fontSize: "1.875rem",
         lineHeight: "2rem",
         fontWeight: "600",
         fontFamily: "Montserrat",
+        
       }}
     >
       {children}

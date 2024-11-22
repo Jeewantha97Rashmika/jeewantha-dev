@@ -37,7 +37,7 @@ const theme= useTheme();
       sx={{
         zIndex: 1,
         position: "absolute",
-        top: { xs: 780, sm: 950, md: 625, lg: 600, xl: 610 },
+        top: { xs: -780, sm: 950, md: -100, lg: 600, xl: 610 },
         height: { xs: "20vh", md: "40vh" },
         overflow: "hidden",
         width: "100%",

@@ -33,7 +33,7 @@ export default function HeroSection() {
     <Box
       sx={{
         backgroundColor: bgColor,
-        // minHeight: { xs: "50vh", md: "70vh" },
+      
         backgroundImage: `url(${GridImage})`,
       }}
     >

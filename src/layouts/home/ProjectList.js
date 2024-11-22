@@ -8,13 +8,14 @@ import Project4 from "../../images/project4.jpg";
 import Project5 from "../../images/project5.jpg";
 import Project6 from "../../images/project6.jpg";
 
-import { useMediaQuery } from "@mui/material";
+import { useMediaQuery, useTheme } from "@mui/material";
 
 export default function ProjectList() {
+  const theme = useTheme();
   return (
     <section
       style={{
-        backgroundColor: "#fff",
+        backgroundColor:theme.palette.bgColor?.main,
         padding: "1rem",
         paddingBottom: "2rem",
         paddingTop: "3rem",
@@ -58,6 +59,7 @@ export default function ProjectList() {
 }
 
 const Link = ({ heading, imgSrc, subheading, href }) => {
+  const theme =useTheme();
   const isMobile = useMediaQuery("(max-width: 600px)");
   const ref = useRef(null);
 
@@ -148,7 +150,7 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
             display: "block",
             fontSize: "2.5rem",
             fontWeight: "bold",
-            color: "#3f3f3f",
+            color: theme.palette.textColor?.secondary,
             transition: "color 0.5s",
           }}
         >
@@ -174,7 +176,7 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
             marginTop: "1rem",
             display: "block",
             fontSize: "1rem",
-            color: "#3f3f3f",
+            color: theme.palette.textColor?.main,
             transition: "color 0.5s",
           }}
         >
@@ -226,7 +228,7 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
           <FiArrowRight
             style={{
               fontSize: "2.5rem",
-              color: "#333",
+              color: theme.palette.secondary?.main,
               fontFamily: "Montserrat",
             }}
           />

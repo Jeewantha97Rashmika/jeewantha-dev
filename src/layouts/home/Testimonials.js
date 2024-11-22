@@ -1,7 +1,12 @@
 import React, { useRef } from "react";
-import { Container } from "@mui/material";
+import { Container,useTheme } from "@mui/material";
 import ReviewCard from "../../components/ReviewCard";
-import RImage from "../../images/myImages (5).jpg";
+import RImage1 from "../../images/review1.png";
+import RImage2 from "../../images/review2.png";
+import RImage3 from "../../images/review3.png";
+import RImage4 from "../../images/review4.png";
+import RImage5 from "../../images/review5.png";
+// import RImage6 from "../../images/review6.png";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -13,7 +18,7 @@ export default function Testimonials() {
   const testimonials = [
     {
       id: "1",
-      img: RImage, // Replace with actual image URL
+      img: RImage1, // Replace with actual image URL
       name: "Alice Johnson",
       review:
         "The web application designed by Jeewantha has transformed our business. The UI is intuitive and the user experience is seamless.",
@@ -21,7 +26,7 @@ export default function Testimonials() {
     },
     {
       id: "2",
-      img: RImage, // Replace with actual image URL
+      img: RImage2, // Replace with actual image URL
       name: "Mark Smith",
       review:
         "Outstanding work on our e-commerce platform! The design not only looks great but also improves our conversion rates significantly.Jeewantha is a true professional! The website redesign has made it much easier for our clients to navigate and find information.",
@@ -29,7 +34,7 @@ export default function Testimonials() {
     },
     {
       id: "3",
-      img: RImage, // Replace with actual image URL
+      img: RImage3, // Replace with actual image URL
       name: "Jessica Brown",
       review:
         "Jeewantha is a true professional! The website redesign has made it much easier for our clients to navigate and find information. Jeewantha is a true professional! The website redesign has made it much easier for our clients to navigate and find information.",
@@ -37,7 +42,7 @@ export default function Testimonials() {
     },
     {
       id: "4",
-      img: RImage, // Replace with actual image URL
+      img: RImage4, // Replace with actual image URL
       name: "Daniel Lee",
       review:
         "I was thoroughly impressed with the attention to detail in the UI/UX design. Our users have noticed the difference! Jeewantha is a true professional! The website redesign has made it much easier for our clients to navigate and find information.",
@@ -45,7 +50,7 @@ export default function Testimonials() {
     },
     {
       id: "5",
-      img: RImage, // Replace with actual image URL
+      img: RImage3, // Replace with actual image URL
       name: "Sophia Wilson",
       review:
         "The development process was smooth and collaborative. Jeewantha listened to our needs and delivered a product we love.Jeewantha is a true professional! The website redesign has made it much easier for our clients to navigate and find information.",
@@ -53,7 +58,7 @@ export default function Testimonials() {
     },
     {
       id: "6",
-      img: RImage, // Replace with actual image URL
+      img: RImage2, // Replace with actual image URL
       name: "Ryan Davis",
       review:
         "Fantastic work on our mobile app! The design is sleek and users find it very engaging and easy to use.Jeewantha is a true professional! The website redesign has made it much easier for our clients to navigate and find information.",
@@ -61,7 +66,7 @@ export default function Testimonials() {
     },
     {
       id: "7",
-      img: RImage, // Replace with actual image URL
+      img: RImage4, // Replace with actual image URL
       name: "Emily Garcia",
       review:
         "Jeewantha exceeded our expectations with the UI/UX design of our dashboard. The interface is both functional and beautiful.Jeewantha is a true professional! The website redesign has made it much easier for our clients to navigate and find information.",
@@ -69,7 +74,7 @@ export default function Testimonials() {
     },
     {
       id: "8",
-      img: RImage, // Replace with actual image URL
+      img: RImage5, // Replace with actual image URL
       name: "Michael Johnson",
       review:
         "The project was completed on time and the final product is amazing! We’ve received so many compliments on our new site.",
@@ -82,10 +87,11 @@ export default function Testimonials() {
     progressCircle.current.style.setProperty("--progress", 1 - progress);
     progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
   };
+  const theme = useTheme();
   return (
     <div
       style={{
-        backgroundColor: "#fff",
+        backgroundColor: theme.palette.bgColor?.main,
       }}
     >
       <DescriptionLayout />
@@ -93,7 +99,7 @@ export default function Testimonials() {
         <Container
           sx={{
             pb: { xs: 5 },
-            height: {xs:"80vh",md:"70vh"},
+            height: {xs:"85vh",md:"95vh", lg:"80vh"},
           }}
         >
           <Swiper

@@ -1,7 +1,8 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useTheme } from "@mui/material";
 import React from "react";
 
 export default function ReviewCard({ img, name, review, date }) {
+  const theme = useTheme();
   return (
     <Box
       sx={{
@@ -20,16 +21,16 @@ export default function ReviewCard({ img, name, review, date }) {
         src={img}
         alt="img"
         style={{
-          borderRadius: "50%",
-          width: "100px",
-          height: "100px",
+          // borderRadius: "50%",
+          width: "200px",
+          height: "auto",
           objectFit: "cover",
         }}
       />
       <Typography
         sx={{
-          color: "rgba(112, 112, 112, 1)",
-          fontSize: "20px",
+          color: theme.palette.textColor?.secondary,
+          fontSize: "26px",
           fontWeight: 600,
           fontFamily: "Montserrat",
           lineHeight: "1.5rem",
@@ -39,18 +40,18 @@ export default function ReviewCard({ img, name, review, date }) {
       </Typography>
       <Typography
         sx={{
-          color: "rgba(112, 112, 112, 1)",
+          color: theme.palette.textColor?.main,
           fontSize: {xs:"14px", md:"18px"},
           fontWeight: 400,
           fontFamily: "Montserrat",
-          lineHeight: "2rem",
+          lineHeight: "1.8rem",
         }}
       >
         {review}
       </Typography>
       <Typography
         sx={{
-          color: "rgba(112, 112, 112, 1)",
+          color: theme.palette.textColor?.main,
           fontSize: "16px",
           fontWeight: 400,
           fontFamily: "Montserrat",

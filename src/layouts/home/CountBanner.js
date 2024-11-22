@@ -1,17 +1,19 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import { Container, Typography } from "@mui/material";
+import { Container, Typography, useTheme } from "@mui/material";
 import CountUp from "react-countup";
 
 
 export default function CountBanner() {
-
+const theme = useTheme();
   return (
     <Box
       sx={{
-        backgroundColor: "#1D1C21",
+        backgroundColor: theme.palette.primary?.offBlack,
         marginTop: "-5px",
+        zIndex:100,
+
         // borderRadius: "3rem",
       }}
     >

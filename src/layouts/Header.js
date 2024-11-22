@@ -20,7 +20,7 @@ import MainBtn from "../components/MainBtn";
 
 export default function Header() {
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const isMobile = useMediaQuery("(max-width: 920px)");
+  const isMobile = useMediaQuery("(max-width: 1006px)");
   const handleDrawerToggle = () => {
     setDrawerOpen(!drawerOpen);
   };

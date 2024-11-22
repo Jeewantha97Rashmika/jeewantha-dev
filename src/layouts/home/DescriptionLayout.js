@@ -1,12 +1,13 @@
-import { Grid, Typography, Box, Container } from "@mui/material";
+import { Grid, Typography, Box, Container, useTheme } from "@mui/material";
 import React from "react";
 import MainBtn from "../../components/MainBtn";
 
 export default function DescriptionLayout() {
+  const theme = useTheme();
   return (
     <Box
       sx={{
-        backgroundColor: "#FFD3D0",
+        backgroundColor: theme.palette.bgColor?.dec,
         height: { xs: "35vh", md: "25vh" },
         display: "flex",
         justifyContent: "center",
@@ -29,7 +30,7 @@ export default function DescriptionLayout() {
               sx={{
                 fontSize: { xs: "30px", md: "40px" },
                 fontWeight: "bold",
-                color: "#FF595A",
+                color: theme.palette.textColor?.decText,
               }}
             >
               hire me Now?
