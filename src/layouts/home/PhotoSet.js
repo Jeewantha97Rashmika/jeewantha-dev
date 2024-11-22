@@ -5,9 +5,9 @@ import MyImage2 from "../../images/myImages (2).jpg";
 import MyImage3 from "../../images/myImages (3).jpg";
 import MyImage4 from "../../images/myImages (4).jpg";
 import MyImage5 from "../../images/myImages (5).jpg";
-import { useMediaQuery } from "@mui/material";
+import { useMediaQuery, useTheme } from "@mui/material";
 export default function PhotoSet() {
- 
+  const theme = useTheme();
   return (
     <section
       style={{
@@ -17,7 +17,7 @@ export default function PhotoSet() {
         width: "100%",
         placeContent: "center",
         overflow: "hidden",
-        backgroundColor: "#f1f1f1",
+        backgroundColor: theme.palette.bgColor?.main,
         paddingBottom: "10rem",
       }}
     >
@@ -27,12 +27,13 @@ export default function PhotoSet() {
           zIndex: 0,
           fontSize: "20vw",
           fontWeight: "900",
-          color: "#1f2937",
+          color: theme.palette.textColor?.funTextColor ,
           lineHeight: "1",
           textAlign: "center",
         }}
       >
-        Play Now<span style={{ color: "#6366f1" }}>.</span>
+        Play Now
+        <span style={{ color: theme.palette.textColor?.funTextColor }}>.</span>
       </h2>
       <Cards />
     </section>

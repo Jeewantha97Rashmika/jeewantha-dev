@@ -27,7 +27,8 @@ const lightTheme = createTheme({
     textColor: {
       main: "#707070",
       secondary:"#333",
-      decText:"#FF595A"
+      decText:"#FF595A",
+      funTextColor:"#6366F1",
     },
     borderColor: {
       main: "#333",
@@ -60,7 +61,8 @@ const darkTheme = createTheme({
     textColor: {
       main: "#ffffff",
       secondary:"#fff",
-      decText:"##fff"
+      decText:"##fff",
+      funTextColor:"#C3C4FF",
     },
     borderColor: {
       main: "#fff",
