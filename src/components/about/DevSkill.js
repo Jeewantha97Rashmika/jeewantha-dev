@@ -1,5 +1,5 @@
 import React from "react";
-import { Chip, Grid, Typography } from "@mui/material";
+import { Chip, Grid, Typography, useTheme } from "@mui/material";
 
 export default function DevSkill() {
   const skills = [
@@ -79,14 +79,14 @@ export default function DevSkill() {
       image: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
     },
   ];
-
+const theme = useTheme();
   return (
     <div>
       <Typography
         component="h3"
         sx={{
           mt: 5,
-          color: "black",
+          color: theme.palette.textColor?.secondary,
           fontSize: "30px",
           fontWeight: 600,
         fontFamily: "Montserrat",
@@ -102,7 +102,7 @@ export default function DevSkill() {
               sx={{
                 p: 3,
                 m: 1,
-                backgroundColor: "rgba(112, 112, 112, 0.1)",
+                backgroundColor: theme.palette.cardBgColor?.main,
                 transition: "transform 0.2s",
                 "&:hover": {
                   transform: "scale(0.95)",

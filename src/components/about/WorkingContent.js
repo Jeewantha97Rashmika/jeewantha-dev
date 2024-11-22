@@ -1,18 +1,38 @@
 import React from "react";
 import Knovik from "../../images/knovik.png";
-import { Typography } from "@mui/material";
+import { Box, Typography, useTheme } from "@mui/material";
 export default function WorkingContent() {
+  const theme = useTheme();
   return (
-    <div style={{marginTop:"30px" ,backgroundColor: "#fafafa", padding: "1rem 1rem", borderRadius: "1rem" }}>
-      <img src={Knovik} style={{ maxWidth: "20%", height: "auto" }} alt="knovik"/>
+    <div
+      style={{
+        marginTop: "30px",
+        backgroundColor: theme.palette.cardBgColor?.main,
+        padding: "1rem 1rem",
+        borderRadius: "1rem",
+      }}
+    >
+      <Box>
+        <img
+          src={Knovik}
+          style={{
+            maxWidth: "120px",
+            height: "auto",
+            backgroundColor: "#fff",
+            padding: "4px",
+            borderRadius:"5px"
+          }}
+          alt="knovik"
+        />
+      </Box>
       <br></br>
       <Typography
         component={"p"}
         sx={{
-          color: "rgba(112, 112, 112, 1)",
+          color: theme.palette.textColor?.main,
           fontSize: "16px",
           fontWeight: 400,
-        fontFamily: "Montserrat",
+          fontFamily: "Montserrat",
         }}
       >
         2022-10-01 - 2023-03-01 - Sri Lanka
@@ -21,25 +41,29 @@ export default function WorkingContent() {
       <Typography
         component={"p"}
         sx={{
-          color: "black",
+          color: theme.palette.textColor?.secondary,
           fontSize: "16px",
           fontWeight: 800,
-        fontFamily: "Montserrat",
+          fontFamily: "Montserrat",
         }}
       >
-       Mobile developer ( Intern )
+        Mobile developer ( Intern )
       </Typography>
-   
+
       <Typography
         component={"p"}
         sx={{
-          color: "rgba(112, 112, 112, 1)",
+          color: theme.palette.textColor?.main,
           fontSize: "16px",
           fontWeight: 400,
-        fontFamily: "Montserrat",
+          fontFamily: "Montserrat",
         }}
       >
-        As a Mobile Developer Intern, I have gained hands-on experience in designing and developing user-friendly mobile applications for both Android and iOS platforms. My work includes crafting intuitive user interfaces with a focus on seamless user experiences (UI/UX design), as well as coding and deploying functional apps.
+        As a Mobile Developer Intern, I have gained hands-on experience in
+        designing and developing user-friendly mobile applications for both
+        Android and iOS platforms. My work includes crafting intuitive user
+        interfaces with a focus on seamless user experiences (UI/UX design), as
+        well as coding and deploying functional apps.
       </Typography>
     </div>
   );

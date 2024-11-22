@@ -1,7 +1,8 @@
 import React from "react";
-import { Typography } from "@mui/material";
+import { Typography, useTheme } from "@mui/material";
 
 export default function Heading2({ text, component, color }) {
+  const theme= useTheme();
   return (
     <>
       <Typography
@@ -12,7 +13,7 @@ export default function Heading2({ text, component, color }) {
           fontWeight: "bold",
           lineHeight: "1.2",
           fontFamily: "Montserrat",
-          color: "#0B0C0C",
+          color: theme.palette.textColor?.secondary,
         }}
       >
         {text}

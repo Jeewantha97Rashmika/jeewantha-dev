@@ -1,5 +1,5 @@
 import React from "react";
-import { Chip, Grid, Typography } from "@mui/material";
+import { Chip, Grid, Typography, useTheme } from "@mui/material";
 
 export default function UiSkill() {
   const uiSkills = [
@@ -9,7 +9,8 @@ export default function UiSkill() {
     },
     {
       name: "xd",
-      image: "https://upload.wikimedia.org/wikipedia/commons/c/c2/Adobe_XD_CC_icon.svg",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/c/c2/Adobe_XD_CC_icon.svg",
     },
     {
       name: "photoshop",
@@ -23,17 +24,17 @@ export default function UiSkill() {
         "https://www.vectorlogo.zone/logos/adobe_illustrator/adobe_illustrator-icon.svg",
     },
   ];
-
+  const theme = useTheme();
   return (
     <div>
       <Typography
         component="h3"
         sx={{
-          mt:{md:10 ,xs:1},
-          color: "black",
+          mt: { md: 10, xs: 1 },
+          color: theme.palette.textColor?.secondary,
           fontSize: "30px",
           fontWeight: 600,
-        fontFamily: "Montserrat",
+          fontFamily: "Montserrat",
         }}
       >
         UI/UX Design Tools
@@ -46,13 +47,15 @@ export default function UiSkill() {
               sx={{
                 p: 3,
                 m: 1,
-                backgroundColor: "rgba(112, 112, 112, 0.1)",
+                backgroundColor: theme.palette.cardBgColor?.main,
                 transition: "transform 0.2s",
                 "&:hover": {
                   transform: "scale(0.95)",
                 },
               }}
-              label={<Typography sx={{fontWeight:"600"}}>{val.name}</Typography>}
+              label={
+                <Typography sx={{ fontWeight: "600" }}>{val.name}</Typography>
+              }
               avatar={
                 <img src={val.image} alt={val.name} width="25" height="25" />
               }

@@ -1,15 +1,33 @@
 import React from "react";
 import UOJ from "../../images/uoj_logo.png";
-import { Typography } from "@mui/material";
+import { Typography, useTheme } from "@mui/material";
 export default function Education01() {
+  const theme = useTheme();
   return (
-    <div style={{ marginTop: "30px" ,backgroundColor: "#fafafa", padding: "1rem 1rem", borderRadius: "1rem"}}>
-      <img src={UOJ} style={{ maxWidth: "40%", height: "auto" }} alt="knovik" />
+    <div
+      style={{
+        marginTop: "30px",
+        backgroundColor: theme.palette.cardBgColor?.main,
+        padding: "1rem 1rem",
+        borderRadius: "1rem",
+      }}
+    >
+      <img
+        src={UOJ}
+        style={{
+          maxWidth: "160px",
+          height: "auto",
+          backgroundColor: "#fff",
+          padding: "4px",
+          borderRadius: "5px",
+        }}
+        alt="knovik"
+      />
       <br></br>
       <Typography
         component={"p"}
         sx={{
-          color: "rgba(112, 112, 112, 1)",
+          color: theme.palette.textColor?.main,
           fontSize: "16px",
           fontWeight: 400,
           fontFamily: "Montserrat",
@@ -21,7 +39,7 @@ export default function Education01() {
       <Typography
         component={"p"}
         sx={{
-          color: "black",
+          color: theme.palette.textColor?.secondary,
           fontSize: "16px",
           fontWeight: 800,
           fontFamily: "Montserrat",
@@ -32,7 +50,7 @@ export default function Education01() {
       <Typography
         component={"p"}
         sx={{
-          color: "rgba(112, 112, 112, 1)",
+          color: theme.palette.textColor?.main,
           fontSize: "16px",
           fontWeight: 400,
           fontFamily: "Montserrat",
@@ -44,7 +62,7 @@ export default function Education01() {
       <Typography
         component={"p"}
         sx={{
-          color: "rgba(112, 112, 112, 1)",
+          color: theme.palette.textColor?.main,
           fontSize: "16px",
           fontWeight: 400,
           fontFamily: "Montserrat",

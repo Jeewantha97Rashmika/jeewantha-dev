@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Box, Container, Grid } from "@mui/material";
+import { Box, Container, Grid, useTheme } from "@mui/material";
 import Timeline from "@mui/lab/Timeline";
 import TimelineItem, { timelineItemClasses } from "@mui/lab/TimelineItem";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
@@ -13,13 +13,13 @@ import Education01 from "../../components/about/Education1";
 import Education02 from "../../components/about/Education2";
 import { motion } from "framer-motion";
 import HarlfCircel from "../../images/circel.svg";
-import ScrollEffect from "../../components/common/ScrollEffect";
 import SkillsChips from "./SkillChips";
 export default function WorkingExperince() {
+  const theme= useTheme();
   return (
     <Box
       sx={{
-        backgroundColor: "#fff",
+        backgroundColor: theme.palette.bgColor?.main,
         position: "relative",
       }}
     >
