@@ -153,7 +153,7 @@ export default function HeroSection() {
       </Container>
       <BigTextnimation />
       {/* </ScrollEffect> */}
-      <Box
+      {/* <Box
         component={motion.div}
         initial={{ opacity: 1, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -175,10 +175,10 @@ export default function HeroSection() {
           }}
           alt="HarlfCircel"
         />
-      </Box>
+      </Box> */}
 
       {/* Bottom HarlfCircel */}
-      <Box
+      {/* <Box
         component={motion.div}
         initial={{ opacity: 1, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -199,7 +199,7 @@ export default function HeroSection() {
           }}
           alt="HarlfCircel"
         />
-      </Box>
+      </Box> */}
 
       {/* <CountBanner/> */}
     </Box>

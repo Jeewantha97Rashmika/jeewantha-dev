@@ -23,7 +23,7 @@ export default function WorkingExperince() {
         position: "relative",
       }}
     >
-      <Box
+      {/* <Box
         component={motion.div}
         initial={{ opacity: 1, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -47,7 +47,7 @@ export default function WorkingExperince() {
           }}
           alt="HarlfCircel"
         />
-      </Box>
+      </Box> */}
 
       {/* Bottom HarlfCircel */}
       

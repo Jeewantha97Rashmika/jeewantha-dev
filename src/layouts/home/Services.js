@@ -21,7 +21,7 @@ export default function Services() {
     >
       <DescriptionLayout />
 
-      <Box
+      {/* <Box
         component={motion.div}
         initial={{ opacity: 1, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -45,10 +45,10 @@ export default function Services() {
           }}
           alt="HarlfCircel"
         />
-      </Box>
+      </Box> */}
 
       {/* Bottom HarlfCircel */}
-      <Box
+      {/* <Box
         component={motion.div}
         initial={{ opacity: 1, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -71,7 +71,7 @@ export default function Services() {
           }}
           alt="HarlfCircel"
         />
-      </Box>
+      </Box> */}
       <ScrollEffect>
         <Box
           component={motion.section}
@@ -317,6 +317,7 @@ const BounceCard = ({ children }) => {
         cursor: "pointer",
         overflow: "hidden",
         borderRadius: "1rem",
+        // border:"1px solid #8B8B8B",
         backgroundColor: theme.palette.cardBgColor?.main,
         padding: "2rem",
         transition: "transform 10ms",

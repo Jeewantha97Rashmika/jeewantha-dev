@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Typography } from "@mui/material";
+import { Typography, useTheme } from "@mui/material";
 
 export default function Typewrite({ examples }) {
   const [exampleIndex, setExampleIndex] = useState(0);
@@ -20,7 +20,7 @@ export default function Typewrite({ examples }) {
 
     return () => clearInterval(intervalId);
   }, []);
-
+const theme = useTheme();
   return (
     <Typography
       
@@ -29,13 +29,13 @@ export default function Typewrite({ examples }) {
         fontSize: { xs: "16px", md: "18px" },
         fontWeight: 400,
         fontFamily: "Montserrat",
-        color: "rgba(112, 112, 112, 1)",
-        border: "3px dashed rgba(112, 112, 112, 1)",
+        color: theme.palette.textColor?.main,
+        // border: "3px dashed rgba(112, 112, 112, 1)",
         padding: "0.5rem",
         borderRadius: "0.25rem",
         display: "inline-flex",
         alignItems: "center",
-        backgroundColor: "#f6fafd",
+        // backgroundColor: "#f6fafd",
 
         // textTransform: "uppercase",
       }}

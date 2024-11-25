@@ -15,7 +15,7 @@ const SkillsChips = () => {
         pb: 8,
 
       }}>
-        <Box
+        {/* <Box
           component={motion.div}
           initial={{ opacity: 1, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -38,7 +38,7 @@ const SkillsChips = () => {
             }}
             alt="HarlfCircel"
           />
-        </Box>
+        </Box> */}
         <DevSkill />
         <UiSkill />
       </Container>
