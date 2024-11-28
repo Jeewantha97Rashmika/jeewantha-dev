@@ -116,7 +116,7 @@ export default function HeroSection() {
                   <br></br>
                   <br />
                   <Box>
-                    <MainBtn handleLinkedinClick={handleLinkedinClick} />
+                    <MainBtn handleLinkedinClick={handleLinkedinClick} title={"Hire me Now"} />
                   </Box>
                 </Box>
               </motion.div>

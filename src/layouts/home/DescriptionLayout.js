@@ -2,7 +2,7 @@ import { Grid, Typography, Box, Container, useTheme } from "@mui/material";
 import React from "react";
 import MainBtn from "../../components/MainBtn";
 
-export default function DescriptionLayout() {
+export default function DescriptionLayout({description,btnTitle}) {
   const theme = useTheme();
   return (
     <Box
@@ -51,7 +51,7 @@ export default function DescriptionLayout() {
               prototyping and testing. Let's craft exceptional digital
               experiences together.
             </Typography>
-            <MainBtn />
+            <MainBtn title={"Hire Me"}/>
           </Grid>
         </Grid>
       </Container>
