@@ -16,6 +16,8 @@ export default function ProjectList() {
     <section
       style={{
         backgroundColor:theme.palette.bgColor?.main,
+        transition: "background-color 0.5s ease, color 0.5s ease",
+
         padding: "1rem",
         paddingBottom: "2rem",
         paddingTop: "3rem",

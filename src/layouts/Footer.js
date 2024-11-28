@@ -22,6 +22,8 @@ export default function Footer() {
     <div
       style={{
         backgroundColor: "#1F1F1F",
+        transition: "background-color 0.5s ease, color 0.5s ease",
+
       }}
     >
       <Container sx={{ pt: { xs: 10 },}}>

@@ -11,6 +11,8 @@ const theme = useTheme();
     <Box
       sx={{
         backgroundColor: theme.palette.primary?.offBlack,
+        transition: "background-color 0.5s ease, color 0.5s ease",
+
         marginTop: "-5px",
         zIndex:100,
 

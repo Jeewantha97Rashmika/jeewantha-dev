@@ -48,6 +48,7 @@ export default function UiSkill() {
                 p: 3,
                 m: 1,
                 backgroundColor: theme.palette.cardBgColor?.main,
+                transition: "background-color 0.5s ease, color 0.5s ease",
                 transition: "transform 0.2s",
                 "&:hover": {
                   transform: "scale(0.95)",

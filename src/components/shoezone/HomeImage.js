@@ -28,6 +28,8 @@ export default function HomeImage() {
     <div
       style={{
         backgroundColor: "#f6fafd",
+        transition: "background-color 0.5s ease, color 0.5s ease",
+
       }}
     >
       <Container>

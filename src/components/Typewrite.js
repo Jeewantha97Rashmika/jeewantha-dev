@@ -43,7 +43,8 @@ const theme = useTheme();
       <span
         style={{
           display: "inline-block",
-          backgroundColor: "#111111",
+          backgroundColor: theme.palette.textColor.main,
+          transition: "background-color 0.5s ease, color 0.5s ease",
           width: "10px",
           height: "10px",
         }}
@@ -100,6 +101,7 @@ const theme = useTheme();
                 right: "0",
                 top: "3px",
                 backgroundColor: "#111111",
+                transition: "background-color 0.5s ease, color 0.5s ease",
               }}
             />
           </motion.span>

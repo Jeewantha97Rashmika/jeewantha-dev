@@ -16,6 +16,8 @@ export default function Services() {
       id="services"
       sx={{
         backgroundColor: theme.palette.bgColor?.main,
+        transition: "background-color 0.5s ease, color 0.5s ease",
+
         position: "relative",
       }}
     >
@@ -319,6 +321,8 @@ const BounceCard = ({ children }) => {
         borderRadius: "1rem",
         // border:"1px solid #8B8B8B",
         backgroundColor: theme.palette.cardBgColor?.main,
+        transition: "background-color 0.5s ease, color 0.5s ease",
+         
         padding: "2rem",
         transition: "transform 10ms",
       }}
@@ -334,7 +338,7 @@ const CardTitle = ({ children }) => {
     <Typography
       component="h3"
       sx={{
-        color:theme.palette.textColor.secondary,
+        color:theme.palette.textColor?.secondary,
         margin: "0 auto",
         textAlign: "center",
         fontSize: "1.875rem",

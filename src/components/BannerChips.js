@@ -104,6 +104,7 @@ export default function BannerChips() {
                 p: 3,
                 m: 1,
                 backgroundColor: "#e8f5ff",
+                transition: "background-color 0.5s ease, color 0.5s ease",
                 transition: "transform 0.2s",
                 "&:hover": {
                   transform: "scale(0.95)",

@@ -92,6 +92,8 @@ export default function Testimonials() {
     <div
       style={{
         backgroundColor: theme.palette.bgColor?.main,
+        transition: "background-color 0.5s ease, color 0.5s ease",
+
       }}
     >
       <DescriptionLayout />

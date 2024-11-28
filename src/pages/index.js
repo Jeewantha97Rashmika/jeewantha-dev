@@ -1,4 +1,4 @@
-import * as React from "react";
+import React,{useState, useEffect} from "react";
 import Header from "../layouts/Header";
 import Home from "../layouts/Home";
 import "../global.css";
@@ -13,8 +13,23 @@ const IndexPage = () => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 100);
   }, []);
+
+
+  const [themeMode, setThemeMode] = useState(() => {
+    return typeof window !== "undefined"
+      ? localStorage.getItem("themeMode") || "light"
+      : "light";
+  });
+
+  useEffect(() => {
+    localStorage.setItem("themeMode", themeMode);
+  }, [themeMode]);
+
+  const toggleTheme = () => {
+    setThemeMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
+  };
 
   return (
     <>
@@ -30,9 +45,9 @@ const IndexPage = () => {
       {loading ? (
         <Preloder />
       ) : (
-        <ThemeLayout>
+        <ThemeLayout themeMode={themeMode}>
           <Box>
-            <Header />
+            <Header themeMode={themeMode} toggleTheme={toggleTheme}/>
             <Home />
             <Footer />
           </Box>

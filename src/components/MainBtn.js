@@ -11,11 +11,13 @@ export default function MainBtn({ handleLinkedinClick, isMobile }) {
         color: theme.palette.btnColor?.text,
         width: { xs: "100%", sm: "auto" },
         backgroundColor: theme.palette.btnColor?.main,
+        transition: "background-color 0.5s ease, color 0.5s ease",
         display: isMobile ? "none" : "inline-flex",
         alignItems: "center",
         justifyContent: "center",
         "&:hover": {
           backgroundColor: theme.palette.btnColor?.main,
+          transition: "background-color 0.5s ease, color 0.5s ease",
           padding: "5px 20px",
           transform: "scale(0.95)",
         },

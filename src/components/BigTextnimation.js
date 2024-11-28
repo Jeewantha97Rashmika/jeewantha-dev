@@ -74,7 +74,8 @@ const theme= useTheme();
           <span
             style={{
               color: "transparent",
-              WebkitTextStroke: `1px ${theme.palette.borderColor?.main}`,
+              
+              WebkitTextStroke: `1px ${theme.palette.textColor?.bigText}`,
             }}
           >
             Freelancer - UI/UX Designer & Developer

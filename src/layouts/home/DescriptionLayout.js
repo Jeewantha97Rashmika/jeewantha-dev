@@ -8,6 +8,8 @@ export default function DescriptionLayout() {
     <Box
       sx={{
         backgroundColor: theme.palette.bgColor?.dec,
+        transition: "background-color 0.5s ease, color 0.5s ease",
+
         height: { xs: "35vh", md: "25vh" },
         display: "flex",
         justifyContent: "center",

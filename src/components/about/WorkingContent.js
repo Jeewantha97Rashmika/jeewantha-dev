@@ -8,6 +8,7 @@ export default function WorkingContent() {
       style={{
         marginTop: "30px",
         backgroundColor: theme.palette.cardBgColor?.main,
+        transition: "background-color 0.5s ease, color 0.5s ease",
         padding: "1rem 1rem",
         borderRadius: "1rem",
       }}
@@ -19,6 +20,7 @@ export default function WorkingContent() {
             maxWidth: "120px",
             height: "auto",
             backgroundColor: "#fff",
+            transition: "background-color 0.5s ease, color 0.5s ease",
             padding: "4px",
             borderRadius:"5px"
           }}

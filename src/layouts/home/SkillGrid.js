@@ -189,6 +189,8 @@ const LinkBox = ({ Icon, href, Name }) => {
           display: "grid",
           placeContent: "center",
           backgroundColor: "#FF595A",
+        transition: "background-color 0.5s ease, color 0.5s ease",
+
           color: "white",
           clipPath: BOTTOM_RIGHT_CLIP,
         }}

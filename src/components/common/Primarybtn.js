@@ -13,7 +13,8 @@ export default function PrimaryBtn({ title }) {
         borderRadius: "30px",
         padding: "10px 40px",
         textTransform: "none",
-        transition: "background-color 0.3s, transform 0.3s",
+        transition: "background-color 0.5s ease, color 0.5s ease",
+
         "&:hover": {
           backgroundColor: "black",
           transform: "scale(0.95)",

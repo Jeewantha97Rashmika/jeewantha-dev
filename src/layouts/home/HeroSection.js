@@ -33,6 +33,7 @@ export default function HeroSection() {
     <Box
       sx={{
         backgroundColor: bgColor,
+        transition: "background-color 0.5s ease, color 0.5s ease",
       
         backgroundImage: `url(${GridImage})`,
       }}
@@ -96,6 +97,8 @@ export default function HeroSection() {
                       fontWeight: 500,
                       lineHeight: 1.6,
                       backgroundColor: theme.palette.bgColor?.main,
+        transition: "background-color 0.5s ease, color 0.5s ease",
+
                     }}
                   >
                     {

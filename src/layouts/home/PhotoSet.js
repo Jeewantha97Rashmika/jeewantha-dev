@@ -18,6 +18,8 @@ export default function PhotoSet() {
         placeContent: "center",
         overflow: "hidden",
         backgroundColor: theme.palette.bgColor?.main,
+        transition: "background-color 0.5s ease, color 0.5s ease",
+
         paddingBottom: "10rem",
       }}
     >
@@ -142,6 +144,8 @@ const Card = ({ containerRef, src, alt, top, left, rotate, width }) => {
         zIndex,
         width,
         backgroundColor: "#e5e7eb",
+        transition: "background-color 0.5s ease, color 0.5s ease",
+
         padding: "0.25rem",
         paddingBottom: "1rem",
       }}

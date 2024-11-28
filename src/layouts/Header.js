@@ -17,8 +17,10 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Avatar from "@mui/material/Avatar";
 import ProImage from "../images/pro02.png";
 import MainBtn from "../components/MainBtn";
+import { FiMoon, FiSun } from "react-icons/fi";
+import { motion } from "framer-motion";
 
-export default function Header() {
+export default function Header({ themeMode, toggleTheme }) {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const isMobile = useMediaQuery("(max-width: 1006px)");
   const handleDrawerToggle = () => {
@@ -38,17 +40,19 @@ export default function Header() {
     window.location.href = "/#knowledge-sharing"; // Replace with your desired URL
   };
   const theme = useTheme();
-  const [themeMode, setThemeMode] = useState("");
-  useEffect(() => {
-    if(typeof window !== 'undefined'){
+  // const [themeMode, setThemeMode] = useState("");
+  // useEffect(() => {
+  //   if (typeof window !== "undefined") {
+  //     setThemeMode(localStorage.getItem("themeMode"));
+  //   }
+  // }, [typeof window !== "undefined" && localStorage.getItem("themeMode")]);
 
-      setThemeMode(localStorage.getItem("themeMode"));
-    }
-  }, [typeof window !=="undefined" && localStorage.getItem("themeMode")]);
   return (
     <Box
       sx={{
         backgroundColor: theme.palette.bgColor?.main,
+        transition: "background-color 0.5s ease, color 0.5s ease",
+        boxShadow:theme.palette.shadow?.main,
         position: "sticky",
         top: 0,
         zIndex: 100000,
@@ -178,10 +182,64 @@ export default function Header() {
           >
             Linkedin
           </Button>
-          <MainBtn
+          {/* <MainBtn
             handleLinkedinClick={handleLinkedinClick}
             isMobile={isMobile}
-          />
+          /> */}
+
+          <Button
+            variant="contained"
+            onClick={toggleTheme}
+            sx={{
+              backgroundColor: theme.palette.btnColor?.main,
+              transition: "background-color 0.5s ease, color 0.5s ease",
+              // position: "fixed",
+              display: isMobile && "none",
+
+              borderRadius: "9999px",
+              px: 2,
+              py: 1,
+              // top: "80%",
+              // right: 10,
+              // zIndex: 1000000,
+              "&:hover": {
+                backgroundColor: theme.palette.btnColor?.main,
+              },
+            }}
+          >
+            {themeMode === "light" ? (
+              <FiSun style={{ fontSize: "1.25rem", zIndex: 10 }} />
+            ) : (
+              <FiMoon style={{ fontSize: "1.25rem", zIndex: 10 }} />
+            )}
+
+            <span style={{ zIndex: 10 }}>
+              {themeMode === "dark" ? "Light" : "Dark"}
+            </span>
+            {/* Animated background slider */}
+            <div
+              style={{
+                position: "absolute",
+                inset: 0,
+                zIndex: 0,
+                display: "flex",
+                justifyContent:
+                  themeMode === "dark" ? "flex-end" : "flex-start",
+              }}
+            >
+              <motion.span
+                layout
+                transition={{ type: "spring", damping: 15, stiffness: 250 }}
+                style={{
+                  height: "100%",
+                  width: "50%",
+                  borderRadius: "9999px", // Full rounded background
+                  background: "linear-gradient(to right, #7c3aed, #6366f1)", // Gradient from violet to indigo
+                }}
+              />
+            </div>
+          </Button>
+
           <Box>
             <IconButton
               color="black"
@@ -276,6 +334,58 @@ export default function Header() {
                 />
               </ListItem>
             </List>
+            <Button
+              variant="contained"
+              onClick={toggleTheme}
+              sx={{
+                backgroundColor: theme.palette.btnColor?.main,
+                transition: "background-color 0.5s ease, color 0.5s ease",
+                // position: "fixed",
+                // display: isMobile ? "none" : "inline",
+
+                borderRadius: "9999px",
+                px: 2,
+                py: 1,
+                // top: "80%",
+                // right: 10,
+                // zIndex: 1000000,
+                "&:hover": {
+                  backgroundColor: theme.palette.btnColor?.main,
+                },
+              }}
+            >
+              {themeMode === "light" ? (
+                <FiSun style={{ fontSize: "1.25rem", zIndex: 10 }} />
+              ) : (
+                <FiMoon style={{ fontSize: "1.25rem", zIndex: 10 }} />
+              )}
+
+              <span style={{ zIndex: 10 }}>
+                {themeMode === "dark" ? "Light" : "Dark"}
+              </span>
+              {/* Animated background slider */}
+              <div
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  zIndex: 0,
+                  display: "flex",
+                  justifyContent:
+                    themeMode === "dark" ? "flex-end" : "flex-start",
+                }}
+              >
+                <motion.span
+                  layout
+                  transition={{ type: "spring", damping: 15, stiffness: 250 }}
+                  style={{
+                    height: "100%",
+                    width: "50%",
+                    borderRadius: "9999px", // Full rounded background
+                    background: "linear-gradient(to right, #7c3aed, #6366f1)", // Gradient from violet to indigo
+                  }}
+                />
+              </div>
+            </Button>
           </Container>
         </Drawer>
         {/* </Toolbar>
