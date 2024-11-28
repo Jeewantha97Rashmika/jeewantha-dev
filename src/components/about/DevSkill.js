@@ -16,7 +16,7 @@ export default function DevSkill() {
     {
       name: "bootstrap",
       image:
-        "https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg",
+        "https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg",
     },
     {
       name: "css3",
@@ -78,6 +78,40 @@ export default function DevSkill() {
       name: "postman",
       image: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
     },
+
+
+    {
+      name: "Shopify",
+      image: "https://www.realisable.co.uk/wp-content/themes/realisable/images/logos/shopify.svg",
+    },
+    {
+      name: "Wordpress",
+      image: "https://wpapprentice.com/wp-content/uploads/2020/05/wordpress-logo-200x200-1.png",
+    },
+    {
+      name: "Gatsby JS",
+      image: "https://cdn.iconscout.com/icon/free/png-512/free-gatsby-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-vol-3-pack-logos-icons-2944886.png?f=webp&w=256",
+    },
+    // {
+    //   name: "postman",
+    //   image: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
+    // },
+    // {
+    //   name: "postman",
+    //   image: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
+    // },
+    // {
+    //   name: "postman",
+    //   image: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
+    // },
+    // {
+    //   name: "postman",
+    //   image: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
+    // },
+    // {
+    //   name: "postman",
+    //   image: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
+    // },
   ];
 const theme = useTheme();
   return (
@@ -102,6 +136,8 @@ const theme = useTheme();
               sx={{
                 p: 3,
                 m: 1,
+                border:"1px solid #E3E3E3",
+                boxShadow:theme.palette.shadow?.main,
                 backgroundColor: theme.palette.cardBgColor?.main,
                 transition: "background-color 0.5s ease, color 0.5s ease",
                 transition: "transform 0.2s",

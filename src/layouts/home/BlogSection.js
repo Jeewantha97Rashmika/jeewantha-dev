@@ -46,13 +46,12 @@ export default function BlogSection() {
   ];
   const theme = useTheme();
   return (
-    <div>
+    <div id="knowledge-sharing">
       <DescriptionLayout />
       <div
         style={{
           backgroundColor: theme.palette.bgColor?.main,
-        transition: "background-color 0.5s ease, color 0.5s ease",
-
+          transition: "background-color 0.5s ease, color 0.5s ease",
         }}
       >
         <Container sx={{}}>
@@ -76,7 +75,7 @@ export default function BlogSection() {
                       p: 1.5,
                       m: 1,
                       backgroundColor: theme.palette.cardBgColor?.main,
-        transition: "background-color 0.5s ease, color 0.5s ease",
+                      transition: "background-color 0.5s ease, color 0.5s ease",
 
                       border: "1px solid #FFF",
                       borderRadius: "15px",

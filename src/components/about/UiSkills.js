@@ -23,10 +23,15 @@ export default function UiSkill() {
       image:
         "https://www.vectorlogo.zone/logos/adobe_illustrator/adobe_illustrator-icon.svg",
     },
+    {
+      name: "Sketch",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/5/59/Sketch_Logo.svg",
+    },
   ];
   const theme = useTheme();
   return (
-    <div>
+    <div >
       <Typography
         component="h3"
         sx={{
@@ -47,6 +52,8 @@ export default function UiSkill() {
               sx={{
                 p: 3,
                 m: 1,
+                border:"1px solid #E3E3E3",
+                boxShadow:theme.palette.shadow?.main,
                 backgroundColor: theme.palette.cardBgColor?.main,
                 transition: "background-color 0.5s ease, color 0.5s ease",
                 transition: "transform 0.2s",

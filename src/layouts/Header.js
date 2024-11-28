@@ -1,4 +1,4 @@
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import {
   Box,
   Button,
@@ -52,7 +52,7 @@ export default function Header({ themeMode, toggleTheme }) {
       sx={{
         backgroundColor: theme.palette.bgColor?.main,
         transition: "background-color 0.5s ease, color 0.5s ease",
-        boxShadow:theme.palette.shadow?.main,
+        boxShadow: theme.palette.shadow?.main,
         position: "sticky",
         top: 0,
         zIndex: 100000,
@@ -188,34 +188,40 @@ export default function Header({ themeMode, toggleTheme }) {
           /> */}
 
           <Button
-            variant="contained"
+            // variant="contained"
             onClick={toggleTheme}
             sx={{
-              backgroundColor: theme.palette.btnColor?.main,
+              color: theme.palette.textColor?.main,
+              // backgroundColor: theme.palette.btnColor?.main,
               transition: "background-color 0.5s ease, color 0.5s ease",
               // position: "fixed",
               display: isMobile && "none",
-
               borderRadius: "9999px",
               px: 2,
               py: 1,
               // top: "80%",
               // right: 10,
               // zIndex: 1000000,
-              "&:hover": {
-                backgroundColor: theme.palette.btnColor?.main,
-              },
+              // "&:hover": {
+              //   backgroundColor: theme.palette.btnColor?.main,
+              // },
             }}
           >
             {themeMode === "light" ? (
               <FiSun style={{ fontSize: "1.25rem", zIndex: 10 }} />
             ) : (
-              <FiMoon style={{ fontSize: "1.25rem", zIndex: 10 }} />
+              <FiMoon
+                style={{
+                  fontSize: "1.25rem",
+                  zIndex: 10,
+                  color: theme.palette.textColor?.main,
+                }}
+              />
             )}
 
-            <span style={{ zIndex: 10 }}>
+            {/* <span style={{ zIndex: 10 }}>
               {themeMode === "dark" ? "Light" : "Dark"}
-            </span>
+            </span> */}
             {/* Animated background slider */}
             <div
               style={{
@@ -227,16 +233,16 @@ export default function Header({ themeMode, toggleTheme }) {
                   themeMode === "dark" ? "flex-end" : "flex-start",
               }}
             >
-              <motion.span
+              {/* <motion.span
                 layout
                 transition={{ type: "spring", damping: 15, stiffness: 250 }}
                 style={{
                   height: "100%",
                   width: "50%",
                   borderRadius: "9999px", // Full rounded background
-                  background: "linear-gradient(to right, #7c3aed, #6366f1)", // Gradient from violet to indigo
+                  // background: "linear-gradient(to right, #7c3aed, #6366f1)", // Gradient from violet to indigo
                 }}
-              />
+              /> */}
             </div>
           </Button>
 
@@ -295,25 +301,81 @@ export default function Header({ themeMode, toggleTheme }) {
             >
               jeewantharashmika80@gmail.com
             </p>
+            <center>
+              <Button
+                variant="contained"
+                onClick={toggleTheme}
+                sx={{
+                  backgroundColor: theme.palette.btnColor?.main,
+                  transition: "background-color 0.5s ease, color 0.5s ease",
+                  // position: "fixed",
+                  // display: isMobile ? "none" : "inline",
+
+                  borderRadius: "9999px",
+                  px: 2,
+                  py: 1,
+                  mb: 1,
+                  // top: "80%",
+                  // right: 10,
+                  // zIndex: 1000000,
+                  "&:hover": {
+                    backgroundColor: theme.palette.btnColor?.main,
+                  },
+                }}
+              >
+                {themeMode === "light" ? (
+                  <FiSun style={{ fontSize: "1.25rem", zIndex: 10 }} />
+                ) : (
+                  <FiMoon style={{ fontSize: "1.25rem", zIndex: 10 }} />
+                )}
+
+                <span style={{ zIndex: 10 }}>
+                  {themeMode === "dark" ? "Light" : "Dark"}
+                </span>
+                {/* Animated background slider */}
+                <div
+                  style={{
+                    position: "absolute",
+                    inset: 0,
+                    zIndex: 0,
+                    display: "flex",
+                    justifyContent:
+                      themeMode === "dark" ? "flex-end" : "flex-start",
+                  }}
+                >
+                  <motion.span
+                    layout
+                    transition={{ type: "spring", damping: 15, stiffness: 250 }}
+                    style={{
+                      height: "100%",
+                      width: "50%",
+                      borderRadius: "9999px", // Full rounded background
+                      background: "linear-gradient(to right, #7c3aed, #6366f1)", // Gradient from violet to indigo
+                    }}
+                  />
+                </div>
+              </Button>
+            </center>
+            <br />
             <hr></hr>
             <List sx={{ width: 260 }} onClick={handleDrawerToggle}>
-              <ListItem button component="a" href="/about">
+              <ListItem button component="a" href="/#services">
                 <ListItemText
-                  primary="About"
+                  primary="Services"
                   primaryTypographyProps={{
                     style: { fontFamily: "Montserrat" },
                   }}
                 />
               </ListItem>
-              <ListItem button component="a" href="/#work">
+              <ListItem button component="a" href="/#projects">
                 <ListItemText
-                  primary="Work"
+                  primary="Projects"
                   primaryTypographyProps={{
                     style: { fontFamily: "Montserrat" },
                   }}
                 />
               </ListItem>
-              <ListItem button component="a" href="/knowledge-sharing">
+              <ListItem button component="a" href="/#knowledge-sharing">
                 <ListItemText
                   primary="Knowledge Sharing"
                   primaryTypographyProps={{
@@ -334,58 +396,6 @@ export default function Header({ themeMode, toggleTheme }) {
                 />
               </ListItem>
             </List>
-            <Button
-              variant="contained"
-              onClick={toggleTheme}
-              sx={{
-                backgroundColor: theme.palette.btnColor?.main,
-                transition: "background-color 0.5s ease, color 0.5s ease",
-                // position: "fixed",
-                // display: isMobile ? "none" : "inline",
-
-                borderRadius: "9999px",
-                px: 2,
-                py: 1,
-                // top: "80%",
-                // right: 10,
-                // zIndex: 1000000,
-                "&:hover": {
-                  backgroundColor: theme.palette.btnColor?.main,
-                },
-              }}
-            >
-              {themeMode === "light" ? (
-                <FiSun style={{ fontSize: "1.25rem", zIndex: 10 }} />
-              ) : (
-                <FiMoon style={{ fontSize: "1.25rem", zIndex: 10 }} />
-              )}
-
-              <span style={{ zIndex: 10 }}>
-                {themeMode === "dark" ? "Light" : "Dark"}
-              </span>
-              {/* Animated background slider */}
-              <div
-                style={{
-                  position: "absolute",
-                  inset: 0,
-                  zIndex: 0,
-                  display: "flex",
-                  justifyContent:
-                    themeMode === "dark" ? "flex-end" : "flex-start",
-                }}
-              >
-                <motion.span
-                  layout
-                  transition={{ type: "spring", damping: 15, stiffness: 250 }}
-                  style={{
-                    height: "100%",
-                    width: "50%",
-                    borderRadius: "9999px", // Full rounded background
-                    background: "linear-gradient(to right, #7c3aed, #6366f1)", // Gradient from violet to indigo
-                  }}
-                />
-              </div>
-            </Button>
           </Container>
         </Drawer>
         {/* </Toolbar>

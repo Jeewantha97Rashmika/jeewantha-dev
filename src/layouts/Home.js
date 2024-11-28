@@ -27,7 +27,7 @@ export default function Home() {
       <EduAndExp />
       {/* <SkillAndTech/> */}
 
-      <SkillGrid />
+      {/* <SkillGrid /> */}
       <BlogSection/>
       <FunActivity />
       {/* <ExploreWork /> */}

@@ -23,18 +23,15 @@ export default function HeroSection() {
   const examples = [
     " Hello , How are you?",
     " Contact me to know more",
-    " jeewantharashmika80@gmail.com",
-    " 077 123 4567 | 077 123 4567",
   ];
   const bgColor = theme.palette.bgColor?.main;
-
 
   return (
     <Box
       sx={{
         backgroundColor: bgColor,
         transition: "background-color 0.5s ease, color 0.5s ease",
-      
+
         backgroundImage: `url(${GridImage})`,
       }}
     >
@@ -97,8 +94,7 @@ export default function HeroSection() {
                       fontWeight: 500,
                       lineHeight: 1.6,
                       backgroundColor: theme.palette.bgColor?.main,
-        transition: "background-color 0.5s ease, color 0.5s ease",
-
+                      transition: "background-color 0.5s ease, color 0.5s ease",
                     }}
                   >
                     {
@@ -116,7 +112,10 @@ export default function HeroSection() {
                   <br></br>
                   <br />
                   <Box>
-                    <MainBtn handleLinkedinClick={handleLinkedinClick} title={"Hire me Now"} />
+                    <MainBtn
+                      handleLinkedinClick={handleLinkedinClick}
+                      title={"Hire me Now"}
+                    />
                   </Box>
                 </Box>
               </motion.div>
