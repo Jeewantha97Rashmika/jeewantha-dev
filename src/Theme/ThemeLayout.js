@@ -1,9 +1,8 @@
 // src/components/ThemeLayout.js
 
-import React, { useState } from "react";
-import { ThemeProvider, createTheme, CssBaseline, Button } from "@mui/material";
-import { motion } from "framer-motion";
-import { FiMoon, FiSun } from "react-icons/fi";
+import React from "react";
+import { ThemeProvider, createTheme, CssBaseline } from "@mui/material";
+
 
 const lightTheme = createTheme({
   palette: {

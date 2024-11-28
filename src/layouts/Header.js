@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import {
   Box,
   Button,
@@ -16,7 +16,7 @@ import Logo2 from "../images/mylogo3.svg";
 import MenuIcon from "@mui/icons-material/Menu";
 import Avatar from "@mui/material/Avatar";
 import ProImage from "../images/pro02.png";
-import MainBtn from "../components/MainBtn";
+// import MainBtn from "../components/MainBtn";
 import { FiMoon, FiSun } from "react-icons/fi";
 import { motion } from "framer-motion";
 
