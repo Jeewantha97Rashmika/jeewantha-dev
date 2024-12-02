@@ -8,6 +8,7 @@ import Development from "../../images/Development.svg";
 import DescriptionLayout from "./DescriptionLayout";
 import HarlfCircel from "../../images/circel.svg";
 import ScrollEffect from "../../components/common/ScrollEffect";
+import MainBtn from "../../components/MainBtn";
 
 export default function Services() {
   const theme = useTheme();
@@ -17,7 +18,6 @@ export default function Services() {
       sx={{
         backgroundColor: theme.palette.bgColor?.main,
         transition: "background-color 0.5s ease, color 0.5s ease",
-
         position: "relative",
       }}
     >
@@ -86,7 +86,7 @@ export default function Services() {
             maxWidth: "74rem",
             padding: "3rem 1rem",
             color: "#334155",
-            pb: 5,
+            pb: 10,
             pt:10
           }}
         >
@@ -110,6 +110,7 @@ export default function Services() {
                 <CardTitle>UI/ UX Design</CardTitle>
 
                 <Box
+                  align="center"
                   sx={{
                     position: "absolute",
                     bottom: 0,
@@ -118,14 +119,14 @@ export default function Services() {
                     top: "8rem",
                     transform: "translateY(2rem)",
                     borderRadius: "1rem 1rem 0 0",
-
-                    backgroundImage:
-                      "linear-gradient(to bottom right, #f59e0b, #f97316)",
+                    backgroundColor:"#3A3A3A",
+                    // backgroundImage:
+                    //   "linear-gradient(to bottom right, #f59e0b, #f97316)",
                     padding: "1rem",
-                    transition: "transform 250ms",
-                    "&:hover": {
-                      transform: "rotate(2deg) ",
-                    },
+                    // transition: "transform 250ms",
+                    // "&:hover": {
+                    //   transform: "rotate(2deg) ",
+                    // },
                   }}
                 >
                   <Typography
@@ -136,11 +137,13 @@ export default function Services() {
                       maxWidth: "450px",
                       margin: "0 auto",
                       fontFamily: "Montserrat",
+                      // mb:2,
                     }}
                   >
                     "I specialize in web development and design, creating
                     visually appealing, user-friendly digital experiences.""
                   </Typography>
+                  {/* <MainBtn title={"I need this Service"}/> */}
                 </Box>
               </BounceCard>
             </Grid>
@@ -162,6 +165,7 @@ export default function Services() {
                   />
                 </Box>
                 <CardTitle>UX Research</CardTitle>
+
                 <Box
                   sx={{
                     position: "absolute",
@@ -171,13 +175,14 @@ export default function Services() {
                     top: "8rem",
                     transform: "translateY(2rem)",
                     borderRadius: "1rem 1rem 0 0",
-                    backgroundImage:
-                      "linear-gradient(to bottom right, #7c3aed, #4f46e5)",
+                    backgroundColor:"#3A3A3A",
+                    // backgroundImage:
+                    //   "linear-gradient(to bottom right, #7c3aed, #4f46e5)",
                     padding: "1rem",
-                    transition: "transform 250ms",
-                    "&:hover": {
-                      transform: "rotate(2deg) ",
-                    },
+                    // transition: "transform 250ms",
+                    // "&:hover": {
+                    //   transform: "rotate(2deg) ",
+                    // },
                   }}
                 >
                   <Typography
@@ -192,6 +197,7 @@ export default function Services() {
                     web development, and ensuring user-friendly digital
                     products."
                   </Typography>
+            
                 </Box>
               </BounceCard>
             </Grid>
@@ -224,14 +230,14 @@ export default function Services() {
                     top: "8rem",
                     transform: "translateY(2rem)",
                     borderRadius: "1rem 1rem 0 0",
-
-                    backgroundImage:
-                      "linear-gradient(to bottom right, #ec4899, #f43f5e)",
+                    backgroundColor:"#3A3A3A",
+                    // backgroundImage:
+                    //   "linear-gradient(to bottom right, #ec4899, #f43f5e)",
                     padding: "1rem",
-                    transition: "transform 250ms",
-                    "&:hover": {
-                      transform: "rotate(2deg) ",
-                    },
+                    // transition: "transform 250ms",
+                    // "&:hover": {
+                    //   transform: "rotate(2deg) ",
+                    // },
                   }}
                 >
                   <Typography
@@ -276,14 +282,16 @@ export default function Services() {
                     right: "1rem",
                     top: "8rem",
                     transform: "translateY(2rem)",
+                   
                     borderRadius: "1rem 1rem 0 0",
-                    backgroundImage:
-                      "linear-gradient(to bottom right, #10b981, #059669)",
+                    backgroundColor:"#3A3A3A",
+                    // backgroundImage:
+                    //   "linear-gradient(to bottom right, #10b981, #059669)",
                     padding: "1rem",
-                    transition: "transform 250ms",
-                    "&:hover": {
-                      transform: "rotate(2deg) ",
-                    },
+                    // transition: "transform 250ms",
+                    // "&:hover": {
+                    //   transform: "rotate(2deg) ",
+                    // },
                   }}
                 >
                   <Typography

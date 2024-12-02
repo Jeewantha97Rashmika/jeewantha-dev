@@ -4,11 +4,6 @@ import { Chip, Grid, Typography, useTheme } from "@mui/material";
 export default function DevSkill() {
   const skills = [
     {
-      name: "android",
-      image:
-        "https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original-wordmark.svg",
-    },
-    {
       name: "html5",
       image:
         "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg",
@@ -49,6 +44,24 @@ export default function DevSkill() {
         "https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg",
     },
     {
+      name: "Shopify",
+      image: "https://www.realisable.co.uk/wp-content/themes/realisable/images/logos/shopify.svg",
+    },
+    {
+      name: "Wordpress",
+      image: "https://wpapprentice.com/wp-content/uploads/2020/05/wordpress-logo-200x200-1.png",
+    },
+    {
+      name: "Gatsby JS",
+      image: "https://cdn.iconscout.com/icon/free/png-512/free-gatsby-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-vol-3-pack-logos-icons-2944886.png?f=webp&w=256",
+    },
+    {
+      name: "android",
+      image:
+        "https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original-wordmark.svg",
+    },
+   
+    {
       name: "dart",
       image: "https://www.vectorlogo.zone/logos/dartlang/dartlang-icon.svg",
     },
@@ -80,18 +93,7 @@ export default function DevSkill() {
     },
 
 
-    {
-      name: "Shopify",
-      image: "https://www.realisable.co.uk/wp-content/themes/realisable/images/logos/shopify.svg",
-    },
-    {
-      name: "Wordpress",
-      image: "https://wpapprentice.com/wp-content/uploads/2020/05/wordpress-logo-200x200-1.png",
-    },
-    {
-      name: "Gatsby JS",
-      image: "https://cdn.iconscout.com/icon/free/png-512/free-gatsby-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-vol-3-pack-logos-icons-2944886.png?f=webp&w=256",
-    },
+    
     // {
     //   name: "postman",
     //   image: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",

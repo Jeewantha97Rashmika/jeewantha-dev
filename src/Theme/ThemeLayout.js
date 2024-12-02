@@ -34,7 +34,7 @@ const lightTheme = createTheme({
       main: "#333",
     },
     cardBgColor: {
-      main: "#f8fafc",
+      main: "#F1F5F9",
     },
     shadow:{
       main:"0px 2px 6px rgba(0, 0, 0, 0.03)"

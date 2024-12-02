@@ -20,8 +20,8 @@ export default function ProjectList() {
 
         padding: "1rem",
         paddingBottom: "2rem",
-        paddingTop: "3rem",
-        paddingBottom: "5rem",
+        paddingTop: "7rem",
+        paddingBottom: "7rem",
       }}
     >
       <div style={{ margin: "0 auto", maxWidth: "72rem" }}>

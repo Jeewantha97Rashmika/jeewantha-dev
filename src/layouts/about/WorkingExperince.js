@@ -55,7 +55,7 @@ export default function WorkingExperince() {
 
       {/* <ScrollEffect> */}
       <Container sx={{ pt: { md: 10, xs: 5 }, pb: { md: 1, xs: 5 } }}>
-        <Box sx={{ width: "100%", mb: { md: 10, xs: 5 } }}>
+        <Box sx={{ width: "100%", mb: {  xs: 5 } }}>
           <Grid
             container
             rowSpacing={1}
@@ -145,7 +145,8 @@ export default function WorkingExperince() {
                     <TimelineDot
                       sx={{
                         backgroundColor: "#FF595A",
-        transition: "background-color 0.5s ease, color 0.5s ease",
+                        transition:
+                          "background-color 0.5s ease, color 0.5s ease",
 
                         width: "20px",
                         height: "20px",

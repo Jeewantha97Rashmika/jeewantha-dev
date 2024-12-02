@@ -77,7 +77,7 @@ export default function BlogSection() {
                       backgroundColor: theme.palette.cardBgColor?.main,
                       transition: "background-color 0.5s ease, color 0.5s ease",
 
-                      border: "1px solid #FFF",
+                      // border: "1px solid #FFF",
                       borderRadius: "15px",
                       cursor: "pointer",
                       boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
