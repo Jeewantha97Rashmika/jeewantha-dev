@@ -20,10 +20,7 @@ export default function HeroSection() {
       "https://www.linkedin.com/in/jeewantha-rashmika-b5a56820a/"; // Replace with your desired URL
   };
 
-  const examples = [
-    " Hello , How are you?",
-    " Contact me to know more",
-  ];
+  const examples = [" Hello , How are you?", " Contact me to know more"];
   const bgColor = theme.palette.bgColor?.main;
 
   return (
@@ -99,11 +96,14 @@ export default function HeroSection() {
                   >
                     {
                       <span>
-                        I am a passionate <b> UI/UX designer</b> who is
+                        {/* I am a passionate <b> UI/UX designer</b> who is
                         interested in solving complex problems through designing
                         and
                         <b> mobile app/web development </b> dedicated to
-                        crafting exceptional digital experiences.
+                        crafting exceptional digital experiences. */}
+                        Welcome to my portfolio of captivating digital
+                        experiences. Explore my work and let's create something
+                        extraordinary together.
                       </span>
                     }
                   </Typography>

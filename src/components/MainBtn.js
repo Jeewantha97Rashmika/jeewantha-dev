@@ -37,13 +37,13 @@ export default function MainBtn({ handleLinkedinClick, isMobile ,title}) {
   {title}
       <ArrowForwardIcon
         sx={{
-          backgroundColor:theme.palette.bgColor?.main,
+          backgroundColor:"#fff",
 
-          color: theme.palette.textColor?.main,
+          color: "#333",
           marginLeft: "10px",
           padding:"3px",
           borderRadius:"50%",
-          fontSize: { xs: "18px", sm: "28px" },
+          fontSize: { xs: "24px", sm: "28px" },
         }}
       />
       {/* <img src={Arrow} alt="arrow" style={{

@@ -6,8 +6,8 @@ export default function WorkingContent() {
   return (
     <div
       style={{
-        marginTop: "30px",
-        backgroundColor: theme.palette.cardBgColor?.main,
+        marginTop: "10px",
+        // backgroundColor: theme.palette.cardBgColor?.main,
         transition: "background-color 0.5s ease, color 0.5s ease",
         padding: "1rem 1rem",
         borderRadius: "1rem",
@@ -32,7 +32,7 @@ export default function WorkingContent() {
         component={"p"}
         sx={{
           color: theme.palette.textColor?.main,
-          fontSize: "16px",
+          fontSize: "14px",
           fontWeight: 400,
           fontFamily: "Montserrat",
         }}
@@ -55,8 +55,9 @@ export default function WorkingContent() {
       <Typography
         component={"p"}
         sx={{
+          textAlign:"justify",
           color: theme.palette.textColor?.main,
-          fontSize: "16px",
+          fontSize: "14px",
           fontWeight: 400,
           fontFamily: "Montserrat",
         }}

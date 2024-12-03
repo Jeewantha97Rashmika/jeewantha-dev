@@ -21,7 +21,7 @@ export default function Services() {
         position: "relative",
       }}
     >
-      <DescriptionLayout />
+      {/* <DescriptionLayout /> */}
 
       {/* <Box
         component={motion.div}
@@ -86,8 +86,8 @@ export default function Services() {
             maxWidth: "74rem",
             padding: "3rem 1rem",
             color: "#334155",
-            pb: 10,
-            pt:10
+            pt: { md: 15, xs: 5 },
+            pb: { md: 15, xs: 5 },
           }}
         >
           <Grid container spacing={2} sx={{ marginBottom: "1rem" }}>
@@ -119,9 +119,9 @@ export default function Services() {
                     top: "8rem",
                     transform: "translateY(2rem)",
                     borderRadius: "1rem 1rem 0 0",
-                    backgroundColor:"#3A3A3A",
-                    // backgroundImage:
-                    //   "linear-gradient(to bottom right, #f59e0b, #f97316)",
+                    // backgroundColor: "#5E5E5E",
+                    backgroundImage:
+                      "linear-gradient(to bottom right, #f59e0b, #f97316)",
                     padding: "1rem",
                     // transition: "transform 250ms",
                     // "&:hover": {
@@ -175,9 +175,9 @@ export default function Services() {
                     top: "8rem",
                     transform: "translateY(2rem)",
                     borderRadius: "1rem 1rem 0 0",
-                    backgroundColor:"#3A3A3A",
-                    // backgroundImage:
-                    //   "linear-gradient(to bottom right, #7c3aed, #4f46e5)",
+                    // backgroundColor: "#5E5E5E",
+                    backgroundImage:
+                      "linear-gradient(to bottom right, #7c3aed, #4f46e5)",
                     padding: "1rem",
                     // transition: "transform 250ms",
                     // "&:hover": {
@@ -197,7 +197,6 @@ export default function Services() {
                     web development, and ensuring user-friendly digital
                     products."
                   </Typography>
-            
                 </Box>
               </BounceCard>
             </Grid>
@@ -230,9 +229,9 @@ export default function Services() {
                     top: "8rem",
                     transform: "translateY(2rem)",
                     borderRadius: "1rem 1rem 0 0",
-                    backgroundColor:"#3A3A3A",
-                    // backgroundImage:
-                    //   "linear-gradient(to bottom right, #ec4899, #f43f5e)",
+                    // backgroundColor: "#5E5E5E",
+                    backgroundImage:
+                      "linear-gradient(to bottom right, #ec4899, #f43f5e)",
                     padding: "1rem",
                     // transition: "transform 250ms",
                     // "&:hover": {
@@ -282,11 +281,11 @@ export default function Services() {
                     right: "1rem",
                     top: "8rem",
                     transform: "translateY(2rem)",
-                   
+
                     borderRadius: "1rem 1rem 0 0",
-                    backgroundColor:"#3A3A3A",
-                    // backgroundImage:
-                    //   "linear-gradient(to bottom right, #10b981, #059669)",
+                    // backgroundColor: "#5E5E5E",
+                    backgroundImage:
+                      "linear-gradient(to bottom right, #10b981, #059669)",
                     padding: "1rem",
                     // transition: "transform 250ms",
                     // "&:hover": {
@@ -330,7 +329,7 @@ const BounceCard = ({ children }) => {
         // border:"1px solid #8B8B8B",
         backgroundColor: theme.palette.cardBgColor?.main,
         transition: "background-color 0.5s ease, color 0.5s ease",
-         
+
         padding: "2rem",
         transition: "transform 10ms",
       }}
@@ -346,14 +345,13 @@ const CardTitle = ({ children }) => {
     <Typography
       component="h3"
       sx={{
-        color:theme.palette.textColor?.secondary,
+        color: theme.palette.textColor?.secondary,
         margin: "0 auto",
         textAlign: "center",
         fontSize: "1.875rem",
         lineHeight: "2rem",
         fontWeight: "600",
         fontFamily: "Montserrat",
-        
       }}
     >
       {children}

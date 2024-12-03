@@ -21,8 +21,8 @@ export default function WorkingExperince() {
       sx={{
         backgroundColor: theme.palette.bgColor?.main,
         transition: "background-color 0.5s ease, color 0.5s ease",
-
         position: "relative",
+        pb:5,
       }}
     >
       {/* <Box
@@ -54,8 +54,8 @@ export default function WorkingExperince() {
       {/* Bottom HarlfCircel */}
 
       {/* <ScrollEffect> */}
-      <Container sx={{ pt: { md: 10, xs: 5 }, pb: { md: 1, xs: 5 } }}>
-        <Box sx={{ width: "100%", mb: {  xs: 5 } }}>
+      <Container sx={{ pt: { md: 10, xs: 5 }, pb: { md: 5, xs: 5 } }}>
+        <Box sx={{ width: "100%" }}>
           <Grid
             container
             rowSpacing={1}

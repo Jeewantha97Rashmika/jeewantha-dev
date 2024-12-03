@@ -41,7 +41,7 @@ export default function DescriptionLayout({description,btnTitle}) {
           <Grid item xs={12} md={7}>
             <Typography
               sx={{
-                fontSize: { xs: "14px", md: "16px" },
+                fontSize: { xs: "16px"},
                 color: "#1F1F1F",
                 fontWeight: 400,
                 mb: 3,

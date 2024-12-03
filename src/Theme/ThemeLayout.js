@@ -3,7 +3,6 @@
 import React from "react";
 import { ThemeProvider, createTheme, CssBaseline } from "@mui/material";
 
-
 const lightTheme = createTheme({
   palette: {
     mode: "light",
@@ -15,8 +14,8 @@ const lightTheme = createTheme({
       main: "#FF595A",
     },
     btnColor: {
-      main: "#333333",
-      text: "#ffffff",
+      main: "#2E90FA",
+      text: "#fff",
     },
     bgColor: {
       main: "#ffffff",
@@ -36,9 +35,15 @@ const lightTheme = createTheme({
     cardBgColor: {
       main: "#F1F5F9",
     },
-    shadow:{
-      main:"0px 2px 6px rgba(0, 0, 0, 0.03)"
-    }
+    blogCardBgColor: {
+      main: "#fff",
+    },
+    arrowColor:{
+      main:"#fff"
+    },
+    shadow: {
+      main: "0px 2px 6px rgba(0, 0, 0, 0.03)",
+    },
   },
 });
 
@@ -46,15 +51,15 @@ const darkTheme = createTheme({
   palette: {
     mode: "dark",
     primary: {
-      main: "#90caf9",
+      main: "#fff",
       offBlack: "#333",
     },
     secondary: {
       main: "#FF595A",
     },
     btnColor: {
-      main: "#ffffff",
-      text: "#333333",
+      main: "#2E90FA",
+      text: "#fff",
     },
     bgColor: {
       main: "#2C2B2E",
@@ -74,27 +79,20 @@ const darkTheme = createTheme({
     cardBgColor: {
       main: "#333",
     },
-    shadow:{
-      main:"0px 2px 6px rgba(255, 255, 255, 0.1)"
-    }
+
+    blogCardBgColor: {
+      main: "#333",
+    },
+    arrowColor:{
+      main:"#333"
+    },
+    shadow: {
+      main: "0px 2px 6px rgba(255, 255, 255, 0.1)",
+    },
   },
 });
 
 const ThemeLayout = ({ children, themeMode }) => {
-  // Check for theme in localStorage or default to 'light'
-  // const savedTheme =
-  //   typeof window !== "undefined"
-  //     ? localStorage.getItem("themeMode") || "light"
-  //     : "light";
-  // const [themeMode, setThemeMode] = useState(savedTheme);
-  // const [selected, setSelected] = useState("light");
-
-  // const toggleTheme = () => {
-  //   const newMode = themeMode === "light" ? "dark" : "light";
-  //   setThemeMode(newMode);
-  //   setSelected(newMode);
-  //   localStorage.setItem("themeMode", newMode); // Persist theme in localStorage
-  // };
   const theme = themeMode === "light" ? lightTheme : darkTheme;
   return (
     <ThemeProvider theme={theme}>

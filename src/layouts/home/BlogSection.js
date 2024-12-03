@@ -5,6 +5,7 @@ import Blog2 from "../../images/blog2.jpg";
 import Blog3 from "../../images/blog3.jpg";
 import DescriptionLayout from "./DescriptionLayout";
 import { motion } from "framer-motion";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 export default function BlogSection() {
   const blog = [
     {
@@ -58,7 +59,7 @@ export default function BlogSection() {
           <Grid
             container
             sx={{
-              pt: 5,
+              pt: 10,
               pb: 15,
             }}
           >
@@ -74,7 +75,7 @@ export default function BlogSection() {
                     sx={{
                       p: 1.5,
                       m: 1,
-                      backgroundColor: theme.palette.cardBgColor?.main,
+                      backgroundColor: theme.palette.blogCardBgColor?.main,
                       transition: "background-color 0.5s ease, color 0.5s ease",
 
                       // border: "1px solid #FFF",
@@ -114,6 +115,28 @@ export default function BlogSection() {
                     >
                       {val.dec}
                     </Typography>
+                    <Box sx={{
+                      display:"flex",
+                      alignItems:"center",
+                      justifyContent:"sart",
+                      mt:1,
+                    }}>
+                      <Typography sx={{
+                        fontSize:"16px",
+                        color:theme.palette.textColor?.main,
+                        textDecoration:"underline"
+                      }}>Read More</Typography>
+                      <ArrowForwardIcon
+                        sx={{
+                          backgroundColor: theme.palette.primary?.main,
+                          color: theme.palette.arrowColor?.main,
+                          marginLeft: "10px",
+                          padding: "3px",
+                          borderRadius: "50%",
+                          fontSize: { xs: "18px", sm: "28px" },
+                        }}
+                      />
+                    </Box>
                   </Box>
                 </Grid>
               );

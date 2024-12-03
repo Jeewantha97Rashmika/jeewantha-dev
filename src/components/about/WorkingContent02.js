@@ -6,8 +6,8 @@ export default function WorkingContent02() {
   return (
     <div
       style={{
-        marginTop: "30px",
-        backgroundColor: theme.palette.cardBgColor?.main,
+        marginTop: "10px",
+        // backgroundColor: theme.palette.cardBgColor?.main,
         transition: "background-color 0.5s ease, color 0.5s ease",
         padding: "1rem 1rem",
         borderRadius: "1rem",
@@ -30,7 +30,7 @@ export default function WorkingContent02() {
         component={"p"}
         sx={{
           color: theme.palette.textColor?.main,
-          fontSize: "16px",
+          fontSize: "14px",
           fontWeight: 400,
           fontFamily: "Montserrat",
         }}
@@ -54,9 +54,10 @@ export default function WorkingContent02() {
         component={"p"}
         sx={{
           color: theme.palette.textColor?.main,
-          fontSize: "16px",
+          fontSize: "14px",
           fontWeight: 400,
           fontFamily: "Montserrat",
+          textAlign:"justify",
         }}
       >
         As an Associate Software Engineer, I specialize in developing robust

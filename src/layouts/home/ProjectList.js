@@ -8,60 +8,63 @@ import Project4 from "../../images/project4.jpg";
 import Project5 from "../../images/project5.jpg";
 import Project6 from "../../images/project6.jpg";
 
-import { useMediaQuery, useTheme } from "@mui/material";
+import { Box, useMediaQuery, useTheme } from "@mui/material";
 
 export default function ProjectList() {
   const theme = useTheme();
   return (
-    <section
-      style={{
-        backgroundColor:theme.palette.bgColor?.main,
-        transition: "background-color 0.5s ease, color 0.5s ease",
-
-        padding: "1rem",
-        paddingBottom: "2rem",
-        paddingTop: "7rem",
-        paddingBottom: "7rem",
+    <Box
+      sx={{
+        pt: { md: 10, xs: 1 },
+        pb: { md: 10, xs: 5 },
       }}
     >
-      <div style={{ margin: "0 auto", maxWidth: "72rem" }}>
-        <Link
-          heading="Shoe Zone App"
-          subheading="Modern Shoe Shopping Solutions Mobile App and Web Admin UI/UX Design using figma"
-          imgSrc={Project1}
-          href="#"
-        />
-        <Link
-          heading="Clients"
-          subheading="We work with great people"
-          imgSrc={Project2}
-          href="#"
-        />
-        <Link
-          heading="Portfolio"
-          subheading="Our work speaks for itself"
-          imgSrc={Project3}
-          href="#"
-        />
-        <Link
-          heading="Careers"
-          subheading="We want cool people"
-          imgSrc={Project4}
-          href="#"
-        />
-        <Link
-          heading="Fun"
-          subheading="Incase you're bored"
-          imgSrc={Project5}
-          href="#"
-        />
-      </div>
-    </section>
+      <section
+        style={{
+          backgroundColor: theme.palette.bgColor?.main,
+          transition: "background-color 0.5s ease, color 0.5s ease",
+          padding: "1rem",
+        }}
+      >
+        <div style={{ margin: "0 auto", maxWidth: "72rem" }}>
+          <Link
+            heading="Shoe Zone App"
+            subheading="Modern Shoe Shopping Solutions Mobile App and Web Admin UI/UX Design using figma"
+            imgSrc={Project1}
+            href="#"
+          />
+          <Link
+            heading="Clients"
+            subheading="We work with great people"
+            imgSrc={Project2}
+            href="#"
+          />
+          <Link
+            heading="Portfolio"
+            subheading="Our work speaks for itself"
+            imgSrc={Project3}
+            href="#"
+          />
+          <Link
+            heading="Careers"
+            subheading="We want cool people"
+            imgSrc={Project4}
+            href="#"
+          />
+          <Link
+            heading="Fun"
+            subheading="Incase you're bored"
+            imgSrc={Project5}
+            href="#"
+          />
+        </div>
+      </section>
+    </Box>
   );
 }
 
 const Link = ({ heading, imgSrc, subheading, href }) => {
-  const theme =useTheme();
+  const theme = useTheme();
   const isMobile = useMediaQuery("(max-width: 600px)");
   const ref = useRef(null);
 
@@ -103,7 +106,7 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
         alignItems: "center",
         justifyContent: "space-between",
         borderBottom: "2px solid #3f3f3f",
-        paddingTop: "1rem",
+        paddingTop: "4rem",
         paddingBottom: "1rem",
         transition: "border-color 0.5s",
         hover: { borderColor: "#fafafa" },
@@ -111,8 +114,8 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
         fontFamily: "Montserrat",
       }}
     >
-      <div>
-        {isMobile && (
+      {isMobile && (
+        <div>
           <img
             style={{
               top,
@@ -135,79 +138,155 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
             src={imgSrc}
             alt={`Image representing a link for ${heading}`}
           />
-        )}
-        <motion.span
-          variants={{
-            initial: { x: 0 },
-            whileHover: { x: -16 },
-          }}
-          transition={{
-            type: "spring",
-            staggerChildren: 0.075,
-            delayChildren: 0.25,
-          }}
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            <Box>
+              <motion.span
+                variants={{
+                  initial: { x: 0 },
+                  whileHover: { x: -16 },
+                }}
+                transition={{
+                  type: "spring",
+                  staggerChildren: 0.075,
+                  delayChildren: 0.25,
+                }}
+                style={{
+                  position: "relative",
+                  zIndex: 10,
+                  display: "block",
+                  fontSize: "2.5rem",
+                  fontWeight: "bold",
+                  color: theme.palette.textColor?.secondary,
+                  transition: "color 0.5s",
+                }}
+              >
+                {heading.split("").map((l, i) => (
+                  <motion.span
+                    variants={{
+                      initial: { x: 0 },
+                      whileHover: { x: 16 },
+                    }}
+                    transition={{ type: "spring" }}
+                    style={{ display: "inline-block" }}
+                    key={i}
+                  >
+                    {l}
+                  </motion.span>
+                ))}
+              </motion.span>
+              <span
+                style={{
+                  position: "relative",
+                  zIndex: 10,
+                  maxWidth: "30rem",
+                  marginTop: "1rem",
+                  display: "block",
+                  fontSize: "1rem",
+                  color: theme.palette.textColor?.main,
+                  transition: "color 0.5s",
+                }}
+              >
+                {subheading}
+              </span>
+            </Box>
+            <FiArrowRight
+              style={{
+                fontSize: "2.5rem",
+                color: theme.palette.secondary?.main,
+                fontFamily: "Montserrat",
+              }}
+            />
+          </Box>
+        </div>
+      )}
+
+      {!isMobile && (
+        <div
           style={{
-            position: "relative",
-            zIndex: 10,
-            display: "block",
-            fontSize: "2.5rem",
-            fontWeight: "bold",
-            color: theme.palette.textColor?.secondary,
-            transition: "color 0.5s",
+            display: "flex",
+            justifyContent: "space-between",
           }}
         >
-          {heading.split("").map((l, i) => (
+          <Box>
             <motion.span
               variants={{
                 initial: { x: 0 },
-                whileHover: { x: 16 },
+                whileHover: { x: -16 },
+              }}
+              transition={{
+                type: "spring",
+                staggerChildren: 0.075,
+                delayChildren: 0.25,
+              }}
+              style={{
+                position: "relative",
+                zIndex: 10,
+                display: "block",
+                fontSize: "2.5rem",
+                fontWeight: "bold",
+                color: theme.palette.textColor?.secondary,
+                transition: "color 0.5s",
+              }}
+            >
+              {heading.split("").map((l, i) => (
+                <motion.span
+                  variants={{
+                    initial: { x: 0 },
+                    whileHover: { x: 16 },
+                  }}
+                  transition={{ type: "spring" }}
+                  style={{ display: "inline-block" }}
+                  key={i}
+                >
+                  {l}
+                </motion.span>
+              ))}
+            </motion.span>
+            <span
+              style={{
+                position: "relative",
+                zIndex: 10,
+                maxWidth: "30rem",
+                marginTop: "1rem",
+                display: "block",
+                fontSize: "1rem",
+                color: theme.palette.textColor?.main,
+                transition: "color 0.5s",
+              }}
+            >
+              {subheading}
+            </span>
+
+            <motion.img
+              style={{
+                top,
+                left,
+                translateX: "-80%",
+                translateY: "-50%",
+                position: "absolute",
+                zIndex: 0,
+                height: "8rem",
+                width: "10rem",
+                borderRadius: "0.5rem",
+                objectFit: "cover",
+              }}
+              variants={{
+                initial: { scale: 0, rotate: "-12.5deg" },
+                whileHover: { scale: 1.8, rotate: "12.5deg" },
               }}
               transition={{ type: "spring" }}
-              style={{ display: "inline-block" }}
-              key={i}
-            >
-              {l}
-            </motion.span>
-          ))}
-        </motion.span>
-        <span
-          style={{
-            position: "relative",
-            zIndex: 10,
-            maxWidth: "30rem",
-            marginTop: "1rem",
-            display: "block",
-            fontSize: "1rem",
-            color: theme.palette.textColor?.main,
-            transition: "color 0.5s",
-          }}
-        >
-          {subheading}
-        </span>
-      </div>
-
-      <motion.img
-        style={{
-          top,
-          left,
-          translateX: "-50%",
-          translateY: "-50%",
-          position: "absolute",
-          zIndex: 0,
-          height: "6rem",
-          width: "8rem",
-          borderRadius: "0.5rem",
-          objectFit: "cover",
-        }}
-        variants={{
-          initial: { scale: 0, rotate: "-12.5deg" },
-          whileHover: { scale: 1.8, rotate: "12.5deg" },
-        }}
-        transition={{ type: "spring" }}
-        src={imgSrc}
-        alt={`Image representing a link for ${heading}`}
-      />
-
+              src={imgSrc}
+              alt={`Image representing a link for ${heading}`}
+            />
+          </Box>
+        </div>
+      )}
       {!isMobile && (
         <motion.div
           variants={{

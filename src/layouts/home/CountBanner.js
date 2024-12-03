@@ -23,8 +23,8 @@ const theme = useTheme();
       <Container>
         <Box
           sx={{
-            Height: "50vh",
-            py: 5,
+            
+            py: 3,
           }}
         >
           <Grid container>

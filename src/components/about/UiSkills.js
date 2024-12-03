@@ -1,6 +1,6 @@
 import React from "react";
-import { Chip, Grid, Typography, useTheme } from "@mui/material";
-
+import { Box, Chip, Grid, Typography, useTheme } from "@mui/material";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 export default function UiSkill() {
   const uiSkills = [
     {
@@ -31,7 +31,7 @@ export default function UiSkill() {
   ];
   const theme = useTheme();
   return (
-    <div >
+    <div>
       <Typography
         component="h3"
         sx={{
@@ -47,13 +47,16 @@ export default function UiSkill() {
       <br />
       <Grid container spacing={1}>
         {uiSkills.map((val, key) => (
-          <Grid item key={key}>
-            <Chip
+          <Grid item xs={12} md={4} key={key}>
+            <Box
               sx={{
-                p: 3,
-                m: 1,
-                border:"1px solid #E3E3E3",
-                boxShadow:theme.palette.shadow?.main,
+                p: 2,
+                display: "flex",
+                gap: 1,
+                borderRadius: "10px",
+                width: "100%",
+                // border: "1px solid #E3E3E3",
+                // boxShadow: theme.palette.shadow?.main,
                 backgroundColor: theme.palette.cardBgColor?.main,
                 transition: "background-color 0.5s ease, color 0.5s ease",
                 transition: "transform 0.2s",
@@ -61,13 +64,49 @@ export default function UiSkill() {
                   transform: "scale(0.95)",
                 },
               }}
-              label={
-                <Typography sx={{ fontWeight: "600" }}>{val.name}</Typography>
-              }
-              avatar={
-                <img src={val.image} alt={val.name} width="25" height="25" />
-              }
-            />
+            >
+              <Grid container>
+                <Grid item xs={8}>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      gap: 2,
+                    }}
+                  >
+                    <img
+                      src={val.image}
+                      alt={val.name}
+                      width="25"
+                      height="25"
+                    />
+                    <Typography sx={{ fontWeight: "600", fontSize: "16px" }}>
+                      {val.name}
+                    </Typography>
+                  </Box>
+                </Grid>
+                <Grid
+                  item
+                  xs={4}
+                  sx={{
+                    display: "flex",
+                    alignItems: "rigth",
+                    justifyContent: "end",
+                  }}
+                >
+                  <ArrowForwardIcon
+                    sx={{
+                      backgroundColor: theme.palette.bgColor?.main,
+
+                      color: theme.palette.textColor?.main,
+                      marginLeft: "10px",
+                      padding: "3px",
+                      borderRadius: "50%",
+                      fontSize: { xs: "28px", sm: "28px" },
+                    }}
+                  />
+                </Grid>
+              </Grid>
+            </Box>
           </Grid>
         ))}
       </Grid>
