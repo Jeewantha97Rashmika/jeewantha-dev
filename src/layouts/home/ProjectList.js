@@ -6,7 +6,6 @@ import Project2 from "../../images/project2.jpg";
 import Project3 from "../../images/project3.jpg";
 import Project4 from "../../images/project4.jpg";
 import Project5 from "../../images/project5.jpg";
-import Project6 from "../../images/project6.jpg";
 
 import { Box, useMediaQuery, useTheme } from "@mui/material";
 
@@ -15,13 +14,15 @@ export default function ProjectList() {
   return (
     <Box
       sx={{
+        backgroundColor: theme.palette.bgColor?.main,
+        zIndex: 0,
         pt: { md: 10, xs: 1 },
         pb: { md: 10, xs: 5 },
       }}
     >
       <section
         style={{
-          backgroundColor: theme.palette.bgColor?.main,
+        
           transition: "background-color 0.5s ease, color 0.5s ease",
           padding: "1rem",
         }}
@@ -101,6 +102,7 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
       initial="initial"
       whileHover="whileHover"
       style={{
+        zIndex: 5,
         position: "relative",
         display: "flex",
         alignItems: "center",

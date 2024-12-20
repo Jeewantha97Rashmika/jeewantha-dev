@@ -6,6 +6,7 @@ export default function ReviewCard({ img, name, review, date }) {
   return (
     <Box
       sx={{
+        zIndex: 5,
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -21,6 +22,7 @@ export default function ReviewCard({ img, name, review, date }) {
         src={img}
         alt="img"
         style={{
+       
           // borderRadius: "50%",
           width: "200px",
           height: "auto",

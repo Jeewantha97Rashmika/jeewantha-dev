@@ -6,7 +6,6 @@ import { Container, Typography } from "@mui/material";
 import GridImage from "../../images/grid.svg";
 import ProfileImage from "../../images/gridux.svg";
 import MainBtn from "../../components/MainBtn";
-import HarlfCircel from "../../images/circel.svg";
 import Typewrite from "../../components/Typewrite";
 import SubTilte from "../../components/SubTilte";
 import BigTextnimation from "../../components/BigTextnimation";
@@ -15,10 +14,6 @@ import { useTheme } from "@mui/material/styles"; // Import useTheme
 
 export default function HeroSection() {
   const theme = useTheme();
-  const handleLinkedinClick = () => {
-    window.location.href =
-      "https://www.linkedin.com/in/jeewantha-rashmika-b5a56820a/"; // Replace with your desired URL
-  };
 
   const examples = [" Hello , How are you?", " Contact me to know more"];
   const bgColor = theme.palette.bgColor?.main;
@@ -111,15 +106,10 @@ export default function HeroSection() {
                   <Typewrite examples={examples} />
                   <br></br>
                   <br />
-                  <Box>
-                    <MainBtn
-                      handleLinkedinClick={handleLinkedinClick}
-                      title={"Hire me Now"}
-                    />
-                  </Box>
+                   <MainBtn title={"Hire Me"}/>
                 </Box>
               </motion.div>
-              {/* <SecondaryBtn title={"View my CV"} /> */}
+              
             </Grid>
             <Grid
               item
@@ -154,56 +144,6 @@ export default function HeroSection() {
         </Box>
       </Container>
       <BigTextnimation />
-      {/* </ScrollEffect> */}
-      {/* <Box
-        component={motion.div}
-        initial={{ opacity: 1, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 2, type: "spring" }}
-        sx={{
-          position: "absolute",
-          top: { xs: 100, md: 200 }, // Align to top
-          right: { xs: 0, md: 0 }, // Align to rightZ
-          width: "auto",
-          height: "auto",
-          overflow: "hidden",
-        }}
-      >
-        <img
-          src={HarlfCircel}
-          style={{
-            transform: "rotate(180deg)",
-            overflow: "hidden",
-          }}
-          alt="HarlfCircel"
-        />
-      </Box> */}
-
-      {/* Bottom HarlfCircel */}
-      {/* <Box
-        component={motion.div}
-        initial={{ opacity: 1, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 2, type: "spring" }}
-        sx={{
-          position: "absolute",
-          top: { xs: 620, md: 400, lg: 400, xl: 420 }, // Align to top
-          left: { xs: -30, md: 0 },
-          width: "auto",
-          height: "auto",
-          overflow: "hidden",
-        }}
-      >
-        <img
-          src={HarlfCircel}
-          style={{
-            transform: "rotate(0deg)",
-          }}
-          alt="HarlfCircel"
-        />
-      </Box> */}
-
-      {/* <CountBanner/> */}
     </Box>
   );
 }

@@ -55,7 +55,7 @@ export default function Header({ themeMode, toggleTheme }) {
         boxShadow: theme.palette.shadow?.main,
         position: "sticky",
         top: 0,
-        zIndex: 100000,
+        zIndex: 10000,
         overflow: " hidden",
       }}
     >

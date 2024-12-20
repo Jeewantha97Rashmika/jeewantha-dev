@@ -79,6 +79,7 @@ const HowDare = ({ setRMRF }) => {
       ref={containerRef}
       onClick={() => setRMRF(false)}
       style={{
+        
         position: "fixed",
         width: "100%",
         height: "100%",
@@ -298,6 +299,7 @@ class Terminal extends React.Component {
     return (
       <div
         style={{
+          
           background: "black",
           color: "white",
           padding: "10px",

@@ -59,8 +59,8 @@ export default function BlogSection() {
           <Grid
             container
             sx={{
-              pt: 10,
-              pb: 15,
+              pt:  { md: 10, xs: 5 },
+              pb:  { md: 10, xs: 5 },
             }}
           >
             {blog.map((val, key) => {

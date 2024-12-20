@@ -7,8 +7,8 @@ export default function Footer() {
     window.location.href =
       "https://www.linkedin.com/in/jeewantha-rashmika-b5a56820a/"; // Replace with your desired URL
   };
-  const handleAboutClick = () => {
-    window.location.href = "/about"; // Replace with your desired URL
+  const handleServicesClick = () => {
+    window.location.href = "/#services"; // Replace with your desired URL
   };
   const handleWordClick = () => {
     window.location.href = "/#work"; // Replace with your desired URL
@@ -23,23 +23,37 @@ export default function Footer() {
       style={{
         backgroundColor: "#1F1F1F",
         transition: "background-color 0.5s ease, color 0.5s ease",
-
       }}
     >
-      <Container sx={{ pt: { xs: 10 },}}>
-        <Box sx={{ display: "flex", justifyContent: "center" }}>
+      <Container sx={{ pt: { xs: 10 } }}>
+        <Box
+          sx={{
+            margin: "0 auto",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
           <img src={Logo} alt="logo" width={200} />
+          <Typography sx={{ color: "white", mt: 2 }}>
+            {" "}
+            <a href="mailto:jeewantharashmika80@gmail.com" 
+            style={{ color: "#ffff",  }}>
+              jeewantharashmika80@gmail.com{" "}
+            </a>
+          </Typography>
         </Box>
         <Box sx={{ mt: { md: 10, xs: 5 } }}>
           <Grid item xs={12}>
             <div style={{ display: "flex", justifyContent: "center" }}>
               <Button
-                onClick={handleAboutClick}
+                onClick={handleServicesClick}
                 color="inherit"
                 sx={{
                   color: "white",
                   ml: 2,
-                  display: isMobile ? "none" : "inline",
+                  display: isMobile ? "block" : "inline",
                   "&:hover": {
                     // backgroundColor: "#e8f5ff",
                     padding: "5px 20px",
@@ -49,12 +63,12 @@ export default function Footer() {
                   fontFamily: "Montserrat",
                   textAlign: "center",
                   textTransform: "none",
-                  fontSize: "18px",
+                  fontSize: "16px",
                   padding: "5px 20px",
                   transition: "transform 0.2s",
                 }}
               >
-                About
+                Services
               </Button>
               <Button
                 onClick={handleWordClick}
@@ -62,7 +76,7 @@ export default function Footer() {
                 sx={{
                   color: "white",
                   ml: 2,
-                  display: isMobile ? "none" : "inline",
+                  display: isMobile ? "block" : "inline",
                   "&:hover": {
                     // backgroundColor: "#e8f5ff",
                     padding: "5px 20px",
@@ -72,7 +86,7 @@ export default function Footer() {
                   fontFamily: "Montserrat",
                   textAlign: "center",
                   textTransform: "none",
-                  fontSize: "18px",
+                  fontSize: "16px",
                   padding: "5px 20px",
                   transition: "transform 0.2s",
                 }}
@@ -95,7 +109,7 @@ export default function Footer() {
                   fontFamily: "Montserrat",
                   textAlign: "center",
                   textTransform: "none",
-                  fontSize: "18px",
+                  fontSize: "16px",
                   padding: "5px 20px",
                   transition: "transform 0.2s",
                 }}
@@ -108,7 +122,7 @@ export default function Footer() {
                 sx={{
                   color: "white",
                   ml: 2,
-                  display: isMobile ? "none" : "inline",
+                  display: isMobile ? "block" : "inline",
                   "&:hover": {
                     // backgroundColor: "#e8f5ff",
                     padding: "5px 20px",
@@ -118,7 +132,7 @@ export default function Footer() {
                   fontFamily: "Montserrat",
                   textAlign: "center",
                   textTransform: "none",
-                  fontSize: "18px",
+                  fontSize: "16px",
                   padding: "5px 20px",
                   transition: "transform 0.2s",
                 }}
@@ -129,7 +143,79 @@ export default function Footer() {
           </Grid>
         </Box>
       </Container>
-      <Box sx={{ display: "flex", justifyContent: "center" ,pb: { md:3, xs: 3 }}}>
+      {/* <Box>
+        <Button
+          onClick={handleServicesClick}
+          color="inherit"
+          sx={{
+            color: "white",
+            ml: 2,
+
+            "&:hover": {
+              // backgroundColor: "#e8f5ff",
+              padding: "5px 20px",
+              borderRadius: "40px",
+              transform: "scale(0.95)",
+            },
+            fontFamily: "Montserrat",
+            textAlign: "center",
+            textTransform: "none",
+            fontSize: "14px",
+            padding: "5px 20px",
+            transition: "transform 0.2s",
+          }}
+        >
+          Services
+        </Button>
+        <Button
+          onClick={handleWordClick}
+          color="inherit"
+          sx={{
+            color: "white",
+            ml: 2,
+
+            "&:hover": {
+              // backgroundColor: "#e8f5ff",
+              padding: "5px 20px",
+              borderRadius: "40px",
+              transform: "scale(0.95)",
+            },
+            fontFamily: "Montserrat",
+            textAlign: "center",
+            textTransform: "none",
+            fontSize: "14px",
+            padding: "5px 20px",
+            transition: "transform 0.2s",
+          }}
+        >
+          Work
+        </Button>
+        <Button
+          color="inherit"
+          onClick={handleKnowledgeClick}
+          sx={{
+            color: "white",
+            ml: 2,
+            "&:hover": {
+              // backgroundColor: "#e8f5ff",
+              padding: "5px 20px",
+              borderRadius: "40px",
+              transform: "scale(0.95)",
+            },
+            fontFamily: "Montserrat",
+            textAlign: "center",
+            textTransform: "none",
+            fontSize: "14px",
+            padding: "5px 20px",
+            transition: "transform 0.2s",
+          }}
+        >
+          Knowledge Sharing
+        </Button>
+      </Box> */}
+      <Box
+        sx={{ display: "flex", justifyContent: "center", pb: { md: 3, xs: 3 } }}
+      >
         <Typography
           component="h3"
           sx={{
@@ -141,7 +227,7 @@ export default function Footer() {
             fontFamily: "Montserrat",
           }}
         >
-          Designed by Jeewantha, built using Gatsby-Js in 2023.
+          Designed by Jeewantha, built using Gatsby-Js in 2025.
         </Typography>
       </Box>
     </div>

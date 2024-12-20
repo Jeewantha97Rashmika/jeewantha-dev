@@ -2,7 +2,6 @@ import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
-
 export default function ScrollEffect({ children }) {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -26,13 +25,13 @@ export default function ScrollEffect({ children }) {
     >
       <motion.div
         style={{
-        //   position: "absolute",
+          //   position: "absolute",
           inset: 1,
-        
+
           //   backgroundColor: "rgba(18, 18, 18, 0.7)", // Neutral color with opacity
         }}
       />
-      <div style={{ position: "relative", zIndex: 1000,  opacity, }}>{children}</div>
+      <div style={{ position: "relative", zIndex: 1, opacity }}>{children}</div>
     </motion.div>
   );
 }

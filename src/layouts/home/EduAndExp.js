@@ -1,8 +1,6 @@
 import React from "react";
 import DescriptionLayout from "./DescriptionLayout";
 import WorkingExperince from "../about/WorkingExperince";
-import ScrollEffect from "../../components/common/ScrollEffect";
-
 
 export default function EduAndExp() {
   return (
@@ -10,7 +8,6 @@ export default function EduAndExp() {
       <DescriptionLayout />
 
       <WorkingExperince />
-   
     </div>
   );
 }

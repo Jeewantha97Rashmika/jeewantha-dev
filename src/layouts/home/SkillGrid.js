@@ -10,7 +10,7 @@ import {
   SiAdobephotoshop,
   SiAdobeillustrator,
 } from "react-icons/si";
-import { color, useAnimate } from "framer-motion";
+import {  useAnimate } from "framer-motion";
 import { Typography } from "@mui/material";
 
 export default function SkillGrid() {

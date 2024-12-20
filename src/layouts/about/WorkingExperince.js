@@ -22,7 +22,7 @@ export default function WorkingExperince() {
         backgroundColor: theme.palette.bgColor?.main,
         transition: "background-color 0.5s ease, color 0.5s ease",
         position: "relative",
-        pb:5,
+    
       }}
     >
       {/* <Box

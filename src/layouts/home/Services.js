@@ -5,17 +5,16 @@ import FigmaLogo from "../../images/Figma.svg";
 import UXResearch from "../../images/usResearch.svg";
 import Testing from "../../images/testing.svg";
 import Development from "../../images/Development.svg";
-import DescriptionLayout from "./DescriptionLayout";
-import HarlfCircel from "../../images/circel.svg";
 import ScrollEffect from "../../components/common/ScrollEffect";
-import MainBtn from "../../components/MainBtn";
 
 export default function Services() {
   const theme = useTheme();
   return (
     <Box
+    
       id="services"
       sx={{
+        zIndex: 5,
         backgroundColor: theme.palette.bgColor?.main,
         transition: "background-color 0.5s ease, color 0.5s ease",
         position: "relative",
@@ -321,6 +320,7 @@ const BounceCard = ({ children }) => {
     <motion.div
       whileHover={{ scale: 0.95, rotate: "-1deg" }}
       style={{
+        zIndex: 10,
         position: "relative",
         minHeight: "300px",
         cursor: "pointer",
@@ -331,7 +331,7 @@ const BounceCard = ({ children }) => {
         transition: "background-color 0.5s ease, color 0.5s ease",
 
         padding: "2rem",
-        transition: "transform 10ms",
+        // transition: "transform 10ms",
       }}
     >
       {children}

@@ -91,6 +91,7 @@ export default function Testimonials() {
   return (
     <div
       style={{
+        zIndex: 0,
         backgroundColor: theme.palette.bgColor?.main,
         transition: "background-color 0.5s ease, color 0.5s ease",
 
@@ -100,6 +101,7 @@ export default function Testimonials() {
       <ScrollEffect>
         <Container
           sx={{
+            zIndex: 5,
             pb: { xs: 5 },
             height: {xs:"85vh",md:"95vh", lg:"80vh"},
           }}

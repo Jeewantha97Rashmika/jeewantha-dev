@@ -19,7 +19,7 @@ export default function PhotoSet() {
         overflow: "hidden",
         backgroundColor: theme.palette.bgColor?.main,
         transition: "background-color 0.5s ease, color 0.5s ease",
-
+        zIndex: 5,
         paddingBottom: "10rem",
       }}
     >
