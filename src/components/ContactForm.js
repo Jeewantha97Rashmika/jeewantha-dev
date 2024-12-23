@@ -6,13 +6,18 @@ import {
   Box,
   Snackbar,
   Alert,
-  MenuItem,
-  Select,
-  InputLabel,
   FormControl,
+  FormControlLabel,
+  Radio,
+  RadioGroup,
+  useTheme,
 } from "@mui/material";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import SecondaryBtn from "./common/SecondaryBtn";
 
 export default function ContactForm({ setIsOpen }) {
+  const theme = useTheme();
+
   // State to handle form inputs
   const [formData, setFormData] = useState({
     name: "",
@@ -24,15 +29,6 @@ export default function ContactForm({ setIsOpen }) {
   // State to handle form submission result
   const [openSnackbar, setOpenSnackbar] = useState(false);
   const [snackbarMessage, setSnackbarMessage] = useState("");
-
-  // Handle input changes
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
 
   // Handle form submission
   const handleSubmit = (e) => {
@@ -66,9 +62,24 @@ export default function ContactForm({ setIsOpen }) {
     setFormData({ name: "", email: "", message: "", projectType: "" });
     setIsOpen(false); // Reset form data
   };
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
 
   return (
-    <Box sx={{ maxWidth: 600, margin: "0 auto", padding: 3, color: "white" }}>
+    <Box
+      sx={{
+        maxWidth: 600,
+        margin: "0 auto",
+        padding: 3,
+        color: "white",
+        zIndex: 5,
+      }}
+    >
       <form onSubmit={handleSubmit}>
         <Grid container spacing={2}>
           {/* Name Input */}
@@ -76,34 +87,33 @@ export default function ContactForm({ setIsOpen }) {
             <TextField
               required
               label="Full Name"
-              variant="outlined"
+              // variant="outlined"
               fullWidth
               name="name"
               value={formData.name}
               onChange={handleInputChange}
-              sx={{
-                color: "white",
-              }}
-              InputLabelProps={{ style: { color: "white" } }} // White label color
-              InputProps={{
-                sx: {
-                  "& .MuiOutlinedInput-root": {
-                    "& fieldset": {
-                      borderColor: "white",
-                      color: "white", // White border color
-                    },
-                    "&:hover fieldset": {
-                      borderColor: "white", // White border on hover
-                    },
-                    "&.Mui-focused fieldset": {
-                      borderColor: "white", // White border when focused
-                    },
-                  },
-                },
-              }} // Apply border color change
+              // sx={{
+              //   color: "white",
+              // }}
+              // InputLabelProps={{ style: { color: "white" } }} // White label color
+              // InputProps={{
+              //   sx: {
+              //     "& .MuiOutlinedInput-root": {
+              //       "& fieldset": {
+              //         borderColor: "white",
+              //         color: "white", // White border color
+              //       },
+              //       "&:hover fieldset": {
+              //         borderColor: "white", // White border on hover
+              //       },
+              //       "&.Mui-focused fieldset": {
+              //         borderColor: "white", // White border when focused
+              //       },
+              //     },
+              //   },
+              // }} // Apply border color change
             />
           </Grid>
-
           {/* Email Input */}
           <Grid item xs={12}>
             <TextField
@@ -114,50 +124,53 @@ export default function ContactForm({ setIsOpen }) {
               value={formData.email}
               onChange={handleInputChange}
               type="email"
-              InputLabelProps={{ sx: { color: "white" } }} // White label color
-              InputProps={{
-                sx: {
-                  "& .MuiOutlinedInput-root": {
-                    "& fieldset": {
-                      borderColor: "white", // White border color
-                    },
-                    "&:hover fieldset": {
-                      borderColor: "white", // White border on hover
-                    },
-                    "&.Mui-focused fieldset": {
-                      borderColor: "white", // White border when focused
-                    },
-                  },
-                },
-              }} // Apply border color change
+              // InputLabelProps={{ sx: { color: "white" } }} // White label color
+              // InputProps={{
+              //   sx: {
+              //     "& .MuiOutlinedInput-root": {
+              //       "& fieldset": {
+              //         borderColor: "white", // White border color
+              //       },
+              //       "&:hover fieldset": {
+              //         borderColor: "white", // White border on hover
+              //       },
+              //       "&.Mui-focused fieldset": {
+              //         borderColor: "white", // White border when focused
+              //       },
+              //     },
+              //   },
+              // }} // Apply border color change
             />
           </Grid>
+
           <Grid item xs={12}>
             <FormControl fullWidth required>
-              <InputLabel sx={{ color: "white" }}>Project Type</InputLabel>
-              <Select
-                label="Project Type"
+              {/* <InputLabel sx={{ color: "white" }}>Project Type</InputLabel> */}
+              <RadioGroup
                 name="projectType"
                 value={formData.projectType}
                 onChange={handleInputChange}
                 sx={{
-                  "& .MuiOutlinedInput-root": {
-                    "& fieldset": {
-                      borderColor: "white", // White border color
-                    },
-                    "&:hover fieldset": {
-                      borderColor: "white", // White border on hover
-                    },
-                    "&.Mui-focused fieldset": {
-                      borderColor: "white", // White border when focused
-                    },
-                  },
-                  color: "white", // White text color for selected value
+                  // color: "white",
+                  display: "flex",
+                  flexDirection: "row",
+                  // justifyContent: "space-around",
+                  // White text color for radio labels
                 }}
               >
-                <MenuItem value="UI/UX Design">UI/UX Design</MenuItem>
-                <MenuItem value="Development">Development</MenuItem>
-              </Select>
+                <FormControlLabel
+                  value="UI/UX Design"
+                  control={<Radio />}
+                  label="UI/UX Design"
+                  sx={{ color: theme.palette.textColor?.secondary }} // White color for the label
+                />
+                <FormControlLabel
+                  value="Development"
+                  control={<Radio />}
+                  label="Development"
+                  sx={{ color: theme.palette.textColor?.secondary }} // White color for the label
+                />
+              </RadioGroup>
             </FormControl>
           </Grid>
           {/* Message Input */}
@@ -171,65 +184,79 @@ export default function ContactForm({ setIsOpen }) {
               onChange={handleInputChange}
               multiline
               rows={4}
-              InputLabelProps={{ style: { color: "white" } }} // White label color
-              InputProps={{
-                sx: {
-                  "& .MuiOutlinedInput-root": {
-                    "& fieldset": {
-                      borderColor: "white", // White border color
-                    },
-                    "&:hover fieldset": {
-                      borderColor: "white", // White border on hover
-                    },
-                    "&.Mui-focused fieldset": {
-                      borderColor: "white", // White border when focused
-                    },
-                  },
-                },
-              }} // Apply border color change
+              // InputLabelProps={{ style: { color: "white" } }} // White label color
+              // InputProps={{
+              //   sx: {
+              //     "& .MuiOutlinedInput-root": {
+              //       "& fieldset": {
+              //         borderColor: "white", // White border color
+              //       },
+              //       "&:hover fieldset": {
+              //         borderColor: "white", // White border on hover
+              //       },
+              //       "&.Mui-focused fieldset": {
+              //         borderColor: "white", // White border when focused
+              //       },
+              //     },
+              //   },
+              // }} // Apply border color change
             />
           </Grid>
-
           {/* Project Type Dropdown */}
-        
-
           {/* Submit and Close Buttons */}
           <Grid item xs={12}>
             <Grid container spacing={2}>
               {/* Close Button */}
-              <Grid item xs={6}>
-                <Button
-                  variant="outlined"
-                  fullWidth
-                  onClick={handleClose}
-                  sx={{
-                    borderColor: "white",
-                    color: "white",
-                    "&:hover": {
-                      borderColor: "#f0f0f0", // Slightly lighter border color on hover
-                    },
-                  }}
-                >
-                  Close
-                </Button>
+              <Grid item xs={12} md={6}>
+     
+                <SecondaryBtn title="Close" handleClick={handleClose} />
               </Grid>
 
               {/* Send Button */}
-              <Grid item xs={6}>
+              <Grid item xs={12} md={6}>
                 <Button
-                  variant="contained"
-                  color="primary"
-                  fullWidth
                   type="submit"
+                  color="inherit"
                   sx={{
-                    backgroundColor: "white",
-                    color: "black", // Button text color black to ensure visibility on white background
+                    color: theme.palette.btnColor?.text,
+                    width: { xs: "100%" },
+                    backgroundColor: theme.palette.btnColor?.main,
+                    transition:
+                      "background-color 0.5s ease, color 0.5s ease, border-radius 0.5s ease",
+                    // display: isMobile ? "none" : "inline-flex",
+                    alignItems: "center",
+                    borderRadius: "30px",
+                    justifyContent: "center",
+                    height: "46px",
+                    padding: "5px 10px 5px 20px",
                     "&:hover": {
-                      backgroundColor: "#f0f0f0", // Slightly darker color on hover
+                      backgroundColor: theme.palette.btnColor?.main,
+                      transition:
+                        "background-color 0.5s ease, color 0.5s ease , border-radius 0.5s ease",
+
+                      // transform: "scale(0.95)",
+                      borderRadius: "0px",
                     },
+                    fontFamily: "Montserrat",
+                    textAlign: "center",
+                    textTransform: "none",
+                    fontSize: "16px",
+
+                    // transition: "transform 0.1s",
                   }}
                 >
-                  Send 
+                  {"Send me message"}
+                  <ArrowForwardIcon
+                    sx={{
+                      backgroundColor: "#fff",
+
+                      color: "#333",
+                      marginLeft: "10px",
+                      padding: "3px",
+                      borderRadius: "50%",
+                      fontSize: { xs: "24px", sm: "28px" },
+                    }}
+                  />
                 </Button>
               </Grid>
             </Grid>

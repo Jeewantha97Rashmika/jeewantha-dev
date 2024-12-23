@@ -11,16 +11,17 @@ export default function SubTilte() {
           sx={{
             color: "#fff",
             fontSize: { xs: "16px", sm: "20px" },
-            border: `3px dashed ${theme.palette.borderColor?.main}`,
+            border: `1px dashed ${theme.palette.borderColor?.main}`,
             display: "inline-block",
             padding: "0px 10px 0px 10px",
             position: "relative",
             backgroundColor: "#FF595A",
             transition: "background-color 0.5s ease, color 0.5s ease",
             transform: "rotate(5deg)",
+            mb:2
           }}
         >
-          UI / UX Designer & Developer
+          UI / UX Engineer + Designer
         </Typography>
       </Grid>
       <Grid>
@@ -33,7 +34,7 @@ export default function SubTilte() {
             
           }}
         >
-          <img src={Designer} alt="Designer" width={"100%"} height={"auto"} />
+          {/* <img src={Designer} alt="Designer" width={"100%"} height={"auto"} /> */}
         </Box>
       </Grid>
     </Grid>

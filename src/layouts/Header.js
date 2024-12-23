@@ -16,13 +16,15 @@ import Logo2 from "../images/mylogo3.svg";
 import MenuIcon from "@mui/icons-material/Menu";
 import Avatar from "@mui/material/Avatar";
 import ProImage from "../images/pro02.png";
-// import MainBtn from "../components/MainBtn";
 import { FiMoon, FiSun } from "react-icons/fi";
-import { motion } from "framer-motion";
+
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import SpringModal from "../components/SpringModal";
 
 export default function Header({ themeMode, toggleTheme }) {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const isMobile = useMediaQuery("(max-width: 1006px)");
+  const [isOpen, setIsOpen] = useState(false);
   const handleDrawerToggle = () => {
     setDrawerOpen(!drawerOpen);
   };
@@ -135,7 +137,7 @@ export default function Header({ themeMode, toggleTheme }) {
           >
             Projects
           </Button>
-          <Button
+          {/* <Button
             color="inherit"
             onClick={handleKnowledgeClick}
             sx={{
@@ -157,7 +159,8 @@ export default function Header({ themeMode, toggleTheme }) {
             }}
           >
             Knowledge Sharing
-          </Button>
+          </Button> */}
+
           <Button
             onClick={handleLinkedinClick}
             color="inherit"
@@ -182,11 +185,76 @@ export default function Header({ themeMode, toggleTheme }) {
           >
             Linkedin
           </Button>
-          {/* <MainBtn
-            handleLinkedinClick={handleLinkedinClick}
-            isMobile={isMobile}
-          /> */}
 
+          <Button
+            color="inherit"
+            onClick={() => setIsOpen(true)}
+            // sx={{
+            //   color: theme.palette.textColor?.main,
+            //   ml: 2,
+            //   display: isMobile ? "none" : "inline",
+            //   justifyContent: "center",
+            //   alignItems: "center",
+            //   "&:hover": {
+            //     // backgroundColor: "#e8f5ff",
+            //     padding: "5px 20px",
+            //     borderRadius: "40px",
+            //     transform: "scale(0.95)",
+            //   },
+            //   fontFamily: "Montserrat",
+            //   textAlign: "center",
+            //   textTransform: "none",
+            //   fontSize: "18px",
+            //   padding: "5px 20px",
+            //   transition: "transform 0.2s",
+            // }}
+            sx={{
+              color: theme.palette.btnColor?.text,
+              width: { xs: "100%", sm: "auto" },
+              backgroundColor: theme.palette.btnColor?.main,
+              transition:
+                "background-color 0.5s ease, color 0.5s ease, border-radius 0.5s ease",
+              display: isMobile ? "none" : "inline-flex",
+              alignItems: "center",
+              borderRadius: "30px",
+              justifyContent: "center",
+              height: "46px",
+              mr: 2,
+              padding: "5px 10px 5px 20px",
+              "&:hover": {
+                backgroundColor: theme.palette.btnColor?.main,
+                transition:
+                  "background-color 0.5s ease, color 0.5s ease , border-radius 0.5s ease",
+
+                // transform: "scale(0.95)",
+                borderRadius: "0px",
+              },
+              fontFamily: "Montserrat",
+              textAlign: "center",
+              textTransform: "none",
+              fontSize: "16px",
+
+              // transition: "transform 0.1s",
+            }}
+          >
+            {"Hire me now"}
+            <ArrowForwardIcon
+              sx={{
+                backgroundColor: "#fff",
+                color: "#333",
+                marginLeft: "10px",
+                padding: "3px",
+                borderRadius: "50%",
+                fontSize: { xs: "24px", sm: "28px" },
+              }}
+            />
+          </Button>
+
+          {/* <MainBtn
+            // handleLinkedinClick={handleLinkedinClick}
+            isMobile={isMobile}
+            title="Hire Me now" 
+          /> */}
           <Button
             // variant="contained"
             onClick={toggleTheme}
@@ -257,6 +325,7 @@ export default function Header({ themeMode, toggleTheme }) {
               <MenuIcon />
             </IconButton>
           </Box>
+          <SpringModal isOpen={isOpen} setIsOpen={setIsOpen} />
         </div>
 
         <Drawer anchor="right" open={drawerOpen} onClose={handleDrawerToggle}>
@@ -302,7 +371,6 @@ export default function Header({ themeMode, toggleTheme }) {
               jeewantharashmika80@gmail.com
             </p>
             <center>
-              
               <Button
                 // variant="contained"
                 onClick={toggleTheme}
@@ -311,11 +379,10 @@ export default function Header({ themeMode, toggleTheme }) {
                   // backgroundColor: theme.palette.btnColor?.main,
                   transition: "background-color 0.5s ease, color 0.5s ease",
                   // position: "fixed",
-               
+
                   borderRadius: "9999px",
                   px: 2,
                   py: 1,
-                 
                 }}
               >
                 {themeMode === "light" ? (
@@ -340,9 +407,7 @@ export default function Header({ themeMode, toggleTheme }) {
                     justifyContent:
                       themeMode === "dark" ? "flex-end" : "flex-start",
                   }}
-                >
-                 
-                </div>
+                ></div>
               </Button>
             </center>
             <br />
@@ -364,14 +429,14 @@ export default function Header({ themeMode, toggleTheme }) {
                   }}
                 />
               </ListItem>
-              <ListItem button component="a" href="/#knowledge-sharing">
+              {/* <ListItem button component="a" href="/#knowledge-sharing">
                 <ListItemText
                   primary="Knowledge Sharing"
                   primaryTypographyProps={{
                     style: { fontFamily: "Montserrat" },
                   }}
                 />
-              </ListItem>
+              </ListItem> */}
               <ListItem
                 button
                 component="a"

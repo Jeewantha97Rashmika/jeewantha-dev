@@ -5,7 +5,7 @@ import PhotoSet from "./PhotoSet";
 export default function FunActivity() {
   return (
     <div>
-      <DescriptionLayout/>
+      {/* <DescriptionLayout/> */}
       <PhotoSet/>
     </div>
   )

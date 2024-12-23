@@ -2,30 +2,34 @@ import * as React from "react";
 import Button from "@mui/material/Button";
 import { Typography } from "@mui/material";
 
-export default function SecondaryBtn({ title,url }) {
+export default function SecondaryBtn({ title, handleClick }) {
   return (
     <Button
       variant="outlined"
-      href={url}
+      onClick={handleClick}
       sx={{
+        width: { xs: "100%" },
         marginRight: "10px",
         borderColor: "black",
         borderRadius: "30px",
-        padding: "10px 40px ",
+        padding: "10px 10px ",
         textTransform: "none",
-        transition: "background-color 0.5s ease, color 0.5s ease",
+        transition:
+          "background-color 0.5s ease, color 0.5s ease , border-radius 0.5s ease",
         "&:hover": {
+          transition:
+            "background-color 0.5s ease, color 0.5s ease , border-radius 0.5s ease",
           backgroundColor: "none",
-          transform: "scale(0.95)",
+          borderRadius: "0px",
           borderColor: "black",
         },
       }}
     >
       <Typography
         sx={{
-          fontSize: { xs: "14px", sm: "20px" },
+          fontSize: "16px",
           fontWeight: 400,
-        fontFamily: "Montserrat",
+          fontFamily: "Montserrat",
           color: "black",
         }}
       >

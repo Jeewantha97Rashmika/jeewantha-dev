@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { Container,useTheme } from "@mui/material";
+import { Container, useTheme } from "@mui/material";
 import ReviewCard from "../../components/ReviewCard";
 import RImage1 from "../../images/review1.png";
 import RImage2 from "../../images/review2.png";
@@ -13,7 +13,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import DescriptionLayout from "./DescriptionLayout";
-import ScrollEffect from "../../components/common/ScrollEffect";
+import { motion } from "framer-motion";
 export default function Testimonials() {
   const testimonials = [
     {
@@ -94,53 +94,56 @@ export default function Testimonials() {
         zIndex: 0,
         backgroundColor: theme.palette.bgColor?.main,
         transition: "background-color 0.5s ease, color 0.5s ease",
-
       }}
     >
       <DescriptionLayout />
-      <ScrollEffect>
-        <Container
-          sx={{
-            zIndex: 5,
-            pb: { xs: 5 },
-            height: {xs:"85vh",md:"95vh", lg:"80vh"},
-          }}
-        >
-          <Swiper
-            spaceBetween={30}
-            centeredSlides={true}
-            autoplay={{
-              delay: 9500,
-              disableOnInteraction: false,
-            }}
-            pagination={{
-              clickable: true,
-            }}
-            navigation={true}
-            modules={[Autoplay, Pagination, Navigation]}
-            onAutoplayTimeLeft={onAutoplayTimeLeft}
-            className="mySwiper"
-          >
-            {testimonials.map((item) => (
-              <SwiperSlide key={item.id}>
-                <ReviewCard
-                  img={item.img}
-                  name={item.name}
-                  review={item.review}
-                  date={item.date}
-                />
-              </SwiperSlide>
-            ))}
 
-            <div className="autoplay-progress" slot="container-end">
-              <svg viewBox="0 0 48 48" ref={progressCircle}>
-                <circle cx="24" cy="24" r="20"></circle>
-              </svg>
-              <span ref={progressContent}></span>
-            </div>
-          </Swiper>
-        </Container>
-      </ScrollEffect>
+      <Container
+        component={motion.div}
+        initial={{ opacity: 0, y: 80 }} // Start with hidden and below position
+        whileInView={{ opacity: 1, y: 0 }} // Animate to full opacity and position
+        viewport={{ amount: 0.2 }} // Only animate once when 20% of the component is in view
+        transition={{ type: "spring", stiffness: 100 }}
+        sx={{
+          zIndex: 5,
+          pb: { xs: 5 },
+          height: { xs: "85vh", md: "95vh", lg: "80vh" },
+        }}
+      >
+        <Swiper
+          spaceBetween={30}
+          centeredSlides={true}
+          autoplay={{
+            delay: 9500,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={true}
+          modules={[Autoplay, Pagination, Navigation]}
+          onAutoplayTimeLeft={onAutoplayTimeLeft}
+          className="mySwiper"
+        >
+          {testimonials.map((item) => (
+            <SwiperSlide key={item.id}>
+              <ReviewCard
+                img={item.img}
+                name={item.name}
+                review={item.review}
+                date={item.date}
+              />
+            </SwiperSlide>
+          ))}
+
+          <div className="autoplay-progress" slot="container-end">
+            <svg viewBox="0 0 48 48" ref={progressCircle}>
+              <circle cx="24" cy="24" r="20"></circle>
+            </svg>
+            <span ref={progressContent}></span>
+          </div>
+        </Swiper>
+      </Container>
     </div>
   );
 }

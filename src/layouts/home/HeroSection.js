@@ -49,12 +49,12 @@ export default function HeroSection() {
               item
               xs={12}
               md={5}
-              sx={{ order: { xs: 1, md: 2 }, mt: { xs: 5, md: 4, lg: 7 } }}
+              sx={{ order: { xs: 1, md: 2 }, mt: { xs: 5, md: 4, lg: 10 } }}
             >
               <motion.div
                 initial={{ opacity: 1, x: 300, rotate: 60 }}
                 animate={{ opacity: 1, x: 0, rotate: 0 }}
-                transition={{ duration: 2, type: "spring" }}
+                transition={{ duration: 1, type: "spring" }}
               >
                 <Box
                   sx={{
@@ -63,13 +63,7 @@ export default function HeroSection() {
                   }}
                 >
                   <SubTilte />
-                  <Box
-                    sx={
-                      {
-                        // backgroundColor: { xs: "none", md: "#f6fafd" },
-                      }
-                    }
-                  >
+                  <Box>
                     <Heading1
                       component={"h1"}
                       text1={"Hello, I'm Jeewantha."}
@@ -106,10 +100,9 @@ export default function HeroSection() {
                   <Typewrite examples={examples} />
                   <br></br>
                   <br />
-                   <MainBtn title={"Hire Me"}/>
+                  <MainBtn title={"Hire me just now"} />
                 </Box>
               </motion.div>
-              
             </Grid>
             <Grid
               item

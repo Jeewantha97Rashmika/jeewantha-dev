@@ -1,10 +1,11 @@
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { FiAlertCircle } from "react-icons/fi";
-import { Box, Typography } from "@mui/material";
+import { FiMessageSquare } from "react-icons/fi";
+import { Box, Typography,useTheme } from "@mui/material";
 import ContactForm from "./ContactForm";
 
 export default function SpringModal({ isOpen, setIsOpen }) {
+  const theme = useTheme();
   return (
     <AnimatePresence>
       {isOpen && (
@@ -32,7 +33,7 @@ export default function SpringModal({ isOpen, setIsOpen }) {
             exit={{ scale: 0, rotate: "0deg" }}
             onClick={(e) => e.stopPropagation()}
             style={{
-              background: "linear-gradient(to bottom right, #7e22ce, #4338ca)",
+              background: "linear-gradient(to bottom right, #FF6A6B, #FF595A )",
               color: "white",
               padding: "10px",
               borderRadius: "12px",
@@ -45,7 +46,7 @@ export default function SpringModal({ isOpen, setIsOpen }) {
               zIndex: 100000, // Modal content should be above the background
             }}
           >
-            <FiAlertCircle
+            <FiMessageSquare 
               style={{
                 color: "rgba(255, 255, 255, 0.1)",
                 transform: "rotate(12.5deg)",
@@ -71,20 +72,29 @@ export default function SpringModal({ isOpen, setIsOpen }) {
                   margin: "0 auto",
                 }}
               >
-                <FiAlertCircle />
+           <FiMessageSquare />
               </div>
               <Typography
                 sx={{
+                  color: theme.palette.textColor?.secondary,
                   fontFamily: "Montserrat",
                   fontSize: "24px",
                   fontWeight: "bold",
                   textAlign: "center",
                   marginBottom: "8px",
+                  mt:2,
                 }}
               >
-          Send me your Enquiry
+                Send me your Enquiry
               </Typography>
-              <Typography sx={{ textAlign: "center", marginBottom: "24px",fontSize:"16px" }}>
+              <Typography
+                sx={{
+                  color: theme.palette.textColor?.secondary,
+                  textAlign: "center",
+             
+                  fontSize: "16px",
+                }}
+              >
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
                 aperiam vitae, sapiente ducimus eveniet in velit.
               </Typography>

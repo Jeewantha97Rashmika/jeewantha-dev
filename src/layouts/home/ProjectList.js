@@ -6,7 +6,6 @@ import Project2 from "../../images/project2.jpg";
 import Project3 from "../../images/project3.jpg";
 import Project4 from "../../images/project4.jpg";
 import Project5 from "../../images/project5.jpg";
-
 import { Box, useMediaQuery, useTheme } from "@mui/material";
 
 export default function ProjectList() {
@@ -22,12 +21,18 @@ export default function ProjectList() {
     >
       <section
         style={{
-        
           transition: "background-color 0.5s ease, color 0.5s ease",
           padding: "1rem",
         }}
       >
-        <div style={{ margin: "0 auto", maxWidth: "72rem" }}>
+        <div
+          component={motion.div}
+          initial={{ opacity: 0, y: 80 }} // Start with hidden and below position
+          whileInView={{ opacity: 1, y: 0 }} // Animate to full opacity and position
+          viewport={{ amount: 0.2 }} // Only animate once when 20% of the component is in view
+          transition={{ type: "spring", stiffness: 100 }}
+          style={{ margin: "0 auto", maxWidth: "72rem" }}
+        >
           <Link
             heading="Shoe Zone App"
             subheading="Modern Shoe Shopping Solutions Mobile App and Web Admin UI/UX Design using figma"

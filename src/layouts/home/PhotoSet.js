@@ -10,6 +10,11 @@ export default function PhotoSet() {
   const theme = useTheme();
   return (
     <section
+      component={motion.section}
+      initial={{ opacity: 0, y: 80 }} // Start with hidden and below position
+      whileInView={{ opacity: 1, y: 0 }} // Animate to full opacity and position
+      viewport={{ amount: 0.2 }} // Only animate once when 20% of the component is in view
+      transition={{ type: "spring", stiffness: 100 }}
       style={{
         position: "relative",
         display: "grid",
@@ -29,7 +34,7 @@ export default function PhotoSet() {
           zIndex: 0,
           fontSize: "20vw",
           fontWeight: "900",
-          color: theme.palette.textColor?.funTextColor ,
+          color: theme.palette.textColor?.funTextColor,
           lineHeight: "1",
           textAlign: "center",
         }}

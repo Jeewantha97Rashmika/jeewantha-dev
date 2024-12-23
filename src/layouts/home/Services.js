@@ -11,7 +11,6 @@ export default function Services() {
   const theme = useTheme();
   return (
     <Box
-    
       id="services"
       sx={{
         zIndex: 5,
@@ -73,244 +72,242 @@ export default function Services() {
           alt="HarlfCircel"
         />
       </Box> */}
-      <ScrollEffect>
-        <Box
-          component={motion.section}
+      {/* <ScrollEffect> */}
+      <Box
+        sx={{
+          margin: "0 auto",
+          maxWidth: "74rem",
+          padding: "3rem 1rem",
+          color: "#334155",
+          pt: { md: 15, xs: 5 },
+          pb: { md: 15, xs: 5 },
+        }}
+      >
+        <Grid
+          container
+          spacing={2}
+          sx={{ marginBottom: "1rem" }}
+          component={motion.div}
           initial={{ opacity: 0, y: 80 }} // Start with hidden and below position
           whileInView={{ opacity: 1, y: 0 }} // Animate to full opacity and position
-          viewport={{ once: true, amount: 0.2 }} // Only animate once when 20% of the component is in view
+          viewport={{ amount: 0.2 }} // Only animate once when 20% of the component is in view
           transition={{ type: "spring", stiffness: 100 }}
-          sx={{
-            margin: "0 auto",
-            maxWidth: "74rem",
-            padding: "3rem 1rem",
-            color: "#334155",
-            pt: { md: 15, xs: 5 },
-            pb: { md: 15, xs: 5 },
-          }}
         >
-          <Grid container spacing={2} sx={{ marginBottom: "1rem" }}>
-            <Grid item xs={12} md={8}>
-              <BounceCard>
-                <Box
-                  sx={{
-                    width: "50px",
-                    margin: "0 auto",
-                    // position: "absolute",
-                  }}
-                >
-                  <img
-                    src={FigmaLogo}
-                    alt="figma"
-                    width={"100%"}
-                    height={"auto"}
-                  />
-                </Box>
-                <CardTitle>UI/ UX Design</CardTitle>
+          <Grid item xs={12} md={8}>
+            <BounceCard>
+              <Box
+                sx={{
+                  width: "50px",
+                  margin: "0 auto",
+                  // position: "absolute",
+                }}
+              >
+                <img
+                  src={FigmaLogo}
+                  alt="figma"
+                  width={"100%"}
+                  height={"auto"}
+                />
+              </Box>
+              <CardTitle>UI/ UX Design</CardTitle>
 
-                <Box
+              <Box
+                align="center"
+                sx={{
+                  position: "absolute",
+                  bottom: 0,
+                  left: "1rem",
+                  right: "1rem",
+                  top: "8rem",
+                  transform: "translateY(2rem)",
+                  borderRadius: "1rem 1rem 0 0",
+                  // backgroundColor: "#5E5E5E",
+                  backgroundImage:
+                    "linear-gradient(to bottom right, #f59e0b, #f97316)",
+                  padding: "1rem",
+                  // transition: "transform 250ms",
+                  // "&:hover": {
+                  //   transform: "rotate(2deg) ",
+                  // },
+                }}
+              >
+                <Typography
                   align="center"
                   sx={{
-                    position: "absolute",
-                    bottom: 0,
-                    left: "1rem",
-                    right: "1rem",
-                    top: "8rem",
-                    transform: "translateY(2rem)",
-                    borderRadius: "1rem 1rem 0 0",
-                    // backgroundColor: "#5E5E5E",
-                    backgroundImage:
-                      "linear-gradient(to bottom right, #f59e0b, #f97316)",
-                    padding: "1rem",
-                    // transition: "transform 250ms",
-                    // "&:hover": {
-                    //   transform: "rotate(2deg) ",
-                    // },
-                  }}
-                >
-                  <Typography
-                    align="center"
-                    sx={{
-                      fontWeight: "400",
-                      color: "#fff",
-                      maxWidth: "450px",
-                      margin: "0 auto",
-                      fontFamily: "Montserrat",
-                      // mb:2,
-                    }}
-                  >
-                    "I specialize in web development and design, creating
-                    visually appealing, user-friendly digital experiences.""
-                  </Typography>
-                  {/* <MainBtn title={"I need this Service"}/> */}
-                </Box>
-              </BounceCard>
-            </Grid>
-
-            <Grid item xs={12} md={4}>
-              <BounceCard>
-                <Box
-                  sx={{
-                    width: "50px",
+                    fontWeight: "400",
+                    color: "#fff",
+                    maxWidth: "450px",
                     margin: "0 auto",
-                    // position: "absolute",
+                    fontFamily: "Montserrat",
+                    // mb:2,
                   }}
                 >
-                  <img
-                    src={UXResearch}
-                    alt="figma"
-                    width={"100%"}
-                    height={"auto"}
-                  />
-                </Box>
-                <CardTitle>UX Research</CardTitle>
-
-                <Box
-                  sx={{
-                    position: "absolute",
-                    bottom: 0,
-                    left: "1rem",
-                    right: "1rem",
-                    top: "8rem",
-                    transform: "translateY(2rem)",
-                    borderRadius: "1rem 1rem 0 0",
-                    // backgroundColor: "#5E5E5E",
-                    backgroundImage:
-                      "linear-gradient(to bottom right, #7c3aed, #4f46e5)",
-                    padding: "1rem",
-                    // transition: "transform 250ms",
-                    // "&:hover": {
-                    //   transform: "rotate(2deg) ",
-                    // },
-                  }}
-                >
-                  <Typography
-                    align="center"
-                    sx={{
-                      fontWeight: "400",
-                      color: "#fff",
-                      fontFamily: "Montserrat",
-                    }}
-                  >
-                    "I specialize in user experience research, collaborating on
-                    web development, and ensuring user-friendly digital
-                    products."
-                  </Typography>
-                </Box>
-              </BounceCard>
-            </Grid>
+                  "I specialize in web development and design, creating visually
+                  appealing, user-friendly digital experiences.""
+                </Typography>
+                {/* <MainBtn title={"I need this Service"}/> */}
+              </Box>
+            </BounceCard>
           </Grid>
 
-          <Grid container spacing={2}>
-            <Grid item xs={12} md={4}>
-              <BounceCard>
-                <Box
-                  sx={{
-                    width: "50px",
-                    margin: "0 auto",
-                    // position: "absolute",
-                  }}
-                >
-                  <img
-                    src={Testing}
-                    alt="figma"
-                    width={"100%"}
-                    height={"auto"}
-                  />
-                </Box>
-                <CardTitle>Usability Testing</CardTitle>
-                <Box
-                  sx={{
-                    position: "absolute",
-                    bottom: 0,
-                    left: "1rem",
-                    right: "1rem",
-                    top: "8rem",
-                    transform: "translateY(2rem)",
-                    borderRadius: "1rem 1rem 0 0",
-                    // backgroundColor: "#5E5E5E",
-                    backgroundImage:
-                      "linear-gradient(to bottom right, #ec4899, #f43f5e)",
-                    padding: "1rem",
-                    // transition: "transform 250ms",
-                    // "&:hover": {
-                    //   transform: "rotate(2deg) ",
-                    // },
-                  }}
-                >
-                  <Typography
-                    align="center"
-                    sx={{
-                      fontWeight: "400",
-                      color: "#fff",
-                      maxWidth: "450px",
-                      margin: "0 auto",
-                      fontFamily: "Montserrat",
-                    }}
-                  >
-                    "I perform usability testing and optimize designs websites
-                    based on real-user feedback for seamless interactions.""
-                  </Typography>
-                </Box>
-              </BounceCard>
-            </Grid>
+          <Grid item xs={12} md={4}>
+            <BounceCard>
+              <Box
+                sx={{
+                  width: "50px",
+                  margin: "0 auto",
+                  // position: "absolute",
+                }}
+              >
+                <img
+                  src={UXResearch}
+                  alt="figma"
+                  width={"100%"}
+                  height={"auto"}
+                />
+              </Box>
+              <CardTitle>UX Research</CardTitle>
 
-            <Grid item xs={12} md={8}>
-              <BounceCard>
-                <Box
+              <Box
+                sx={{
+                  position: "absolute",
+                  bottom: 0,
+                  left: "1rem",
+                  right: "1rem",
+                  top: "8rem",
+                  transform: "translateY(2rem)",
+                  borderRadius: "1rem 1rem 0 0",
+                  // backgroundColor: "#5E5E5E",
+                  backgroundImage:
+                    "linear-gradient(to bottom right, #7c3aed, #4f46e5)",
+                  padding: "1rem",
+                  // transition: "transform 250ms",
+                  // "&:hover": {
+                  //   transform: "rotate(2deg) ",
+                  // },
+                }}
+              >
+                <Typography
+                  align="center"
                   sx={{
-                    width: "50px",
-                    margin: "0 auto",
-                    // position: "absolute",
+                    fontWeight: "400",
+                    color: "#fff",
+                    fontFamily: "Montserrat",
                   }}
                 >
-                  <img
-                    src={Development}
-                    alt="figma"
-                    width={"100%"}
-                    height={"auto"}
-                  />
-                </Box>
-                <CardTitle>Web Development</CardTitle>
-                <Box
-                  sx={{
-                    position: "absolute",
-                    bottom: 0,
-                    left: "1rem",
-                    right: "1rem",
-                    top: "8rem",
-                    transform: "translateY(2rem)",
-
-                    borderRadius: "1rem 1rem 0 0",
-                    // backgroundColor: "#5E5E5E",
-                    backgroundImage:
-                      "linear-gradient(to bottom right, #10b981, #059669)",
-                    padding: "1rem",
-                    // transition: "transform 250ms",
-                    // "&:hover": {
-                    //   transform: "rotate(2deg) ",
-                    // },
-                  }}
-                >
-                  <Typography
-                    align="center"
-                    sx={{
-                      fontWeight: "400",
-                      color: "#fff",
-                      maxWidth: "450px",
-                      margin: "0 auto",
-                      fontFamily: "Montserrat",
-                    }}
-                  >
-                    "I specialize in web development and design, creating
-                    visually appealing, user-friendly digital experiences."
-                  </Typography>
-                </Box>
-              </BounceCard>
-            </Grid>
+                  "I specialize in user experience research, collaborating on
+                  web development, and ensuring user-friendly digital products."
+                </Typography>
+              </Box>
+            </BounceCard>
           </Grid>
-        </Box>
-      </ScrollEffect>
+        </Grid>
+
+        <Grid container spacing={2}>
+          <Grid item xs={12} md={4}>
+            <BounceCard>
+              <Box
+                sx={{
+                  width: "50px",
+                  margin: "0 auto",
+                  // position: "absolute",
+                }}
+              >
+                <img src={Testing} alt="figma" width={"100%"} height={"auto"} />
+              </Box>
+              <CardTitle>Usability Testing</CardTitle>
+              <Box
+                sx={{
+                  position: "absolute",
+                  bottom: 0,
+                  left: "1rem",
+                  right: "1rem",
+                  top: "8rem",
+                  transform: "translateY(2rem)",
+                  borderRadius: "1rem 1rem 0 0",
+                  // backgroundColor: "#5E5E5E",
+                  backgroundImage:
+                    "linear-gradient(to bottom right, #ec4899, #f43f5e)",
+                  padding: "1rem",
+                  // transition: "transform 250ms",
+                  // "&:hover": {
+                  //   transform: "rotate(2deg) ",
+                  // },
+                }}
+              >
+                <Typography
+                  align="center"
+                  sx={{
+                    fontWeight: "400",
+                    color: "#fff",
+                    maxWidth: "450px",
+                    margin: "0 auto",
+                    fontFamily: "Montserrat",
+                  }}
+                >
+                  "I perform usability testing and optimize designs websites
+                  based on real-user feedback for seamless interactions.""
+                </Typography>
+              </Box>
+            </BounceCard>
+          </Grid>
+
+          <Grid item xs={12} md={8}>
+            <BounceCard>
+              <Box
+                sx={{
+                  width: "50px",
+                  margin: "0 auto",
+                  // position: "absolute",
+                }}
+              >
+                <img
+                  src={Development}
+                  alt="figma"
+                  width={"100%"}
+                  height={"auto"}
+                />
+              </Box>
+              <CardTitle>Web Development</CardTitle>
+              <Box
+                sx={{
+                  position: "absolute",
+                  bottom: 0,
+                  left: "1rem",
+                  right: "1rem",
+                  top: "8rem",
+                  transform: "translateY(2rem)",
+
+                  borderRadius: "1rem 1rem 0 0",
+                  // backgroundColor: "#5E5E5E",
+                  backgroundImage:
+                    "linear-gradient(to bottom right, #10b981, #059669)",
+                  padding: "1rem",
+                  // transition: "transform 250ms",
+                  // "&:hover": {
+                  //   transform: "rotate(2deg) ",
+                  // },
+                }}
+              >
+                <Typography
+                  align="center"
+                  sx={{
+                    fontWeight: "400",
+                    color: "#fff",
+                    maxWidth: "450px",
+                    margin: "0 auto",
+                    fontFamily: "Montserrat",
+                  }}
+                >
+                  "I specialize in web development and design, creating visually
+                  appealing, user-friendly digital experiences."
+                </Typography>
+              </Box>
+            </BounceCard>
+          </Grid>
+        </Grid>
+      </Box>
+      {/* </ScrollEffect> */}
     </Box>
   );
 }

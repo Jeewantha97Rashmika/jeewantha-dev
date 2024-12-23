@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Grid, Box, Typography, Button } from "@mui/material";
 import Logo from "../images/mylogo3.svg";
 import { useMediaQuery } from "@mui/material";
+import MainBtn from "../components/MainBtn";
 export default function Footer() {
   const handleLinkedinClick = () => {
     window.location.href =
@@ -36,13 +37,16 @@ export default function Footer() {
           }}
         >
           <img src={Logo} alt="logo" width={200} />
-          <Typography sx={{ color: "white", mt: 2 }}>
+          <Typography sx={{ color: "white", mt: 2, mb: 3 }}>
             {" "}
-            <a href="mailto:jeewantharashmika80@gmail.com" 
-            style={{ color: "#ffff",  }}>
+            <a
+              href="mailto:jeewantharashmika80@gmail.com"
+              style={{ color: "#ffff" }}
+            >
               jeewantharashmika80@gmail.com{" "}
             </a>
           </Typography>
+          <MainBtn title={"Contact Me"} />
         </Box>
         <Box sx={{ mt: { md: 10, xs: 5 } }}>
           <Grid item xs={12}>
@@ -93,7 +97,7 @@ export default function Footer() {
               >
                 Work
               </Button>
-              <Button
+              {/* <Button
                 color="inherit"
                 onClick={handleKnowledgeClick}
                 sx={{
@@ -115,7 +119,7 @@ export default function Footer() {
                 }}
               >
                 Knowledge Sharing
-              </Button>
+              </Button> */}
               <Button
                 onClick={handleLinkedinClick}
                 color="inherit"
@@ -213,13 +217,14 @@ export default function Footer() {
           Knowledge Sharing
         </Button>
       </Box> */}
+      <hr style={{ border: "1px solid #2B2B2B", marginTop: "20px" }} />
       <Box
         sx={{ display: "flex", justifyContent: "center", pb: { md: 3, xs: 3 } }}
       >
         <Typography
           component="h3"
           sx={{
-            mt: { md: 10, xs: 5 },
+            mt: { md: 5, xs: 5 },
             transition: "transform 0.2s",
             color: "#f1f1f1",
             fontSize: { xs: "12px", md: "14px" },

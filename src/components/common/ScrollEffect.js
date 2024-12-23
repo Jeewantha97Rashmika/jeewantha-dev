@@ -1,16 +1,20 @@
-import React from "react";
+import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useTheme } from "@mui/material";
 
 export default function ScrollEffect({ children }) {
+  const theme = useTheme();
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
-    offset: ["end end", "end start"],
+    offset: ["end end", "start end"], // Starts when the top of the element reaches the top of the viewport
   });
+
   const IMG_PADDING = 12;
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.85]);
-  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
+
+  // Animate scale and opacity based on scroll position
+  const scale = useTransform(scrollYProgress, [0, 0.5], [1, 1]);  // Scale the element as you scroll
+  const opacity = useTransform(scrollYProgress, [0, 1], [1, 1]);  // Fade out as you scroll
 
   return (
     <motion.div
@@ -18,20 +22,20 @@ export default function ScrollEffect({ children }) {
       style={{
         backgroundSize: "cover",
         backgroundPosition: "center",
-        // height: `calc(100vh - ${IMG_PADDING * 2}px)`,
         top: IMG_PADDING,
         scale,
+        opacity, // Apply the scroll-triggered opacity here
       }}
     >
       <motion.div
         style={{
-          //   position: "absolute",
           inset: 1,
-
-          //   backgroundColor: "rgba(18, 18, 18, 0.7)", // Neutral color with opacity
+          opacity, // Apply the scroll-triggered opacity to the overlay as well
         }}
       />
-      <div style={{ position: "relative", zIndex: 1, opacity }}>{children}</div>
+      <div style={{ position: "relative", zIndex: 1, opacity, backgroundColor:theme.palette.bgColor?.main }}>
+        {children}
+      </div>
     </motion.div>
   );
 }
