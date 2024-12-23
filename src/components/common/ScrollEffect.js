@@ -33,7 +33,7 @@ export default function ScrollEffect({ children }) {
           opacity, // Apply the scroll-triggered opacity to the overlay as well
         }}
       />
-      <div style={{ position: "relative", zIndex: 1, opacity, backgroundColor:theme.palette.bgColor?.main }}>
+      <div style={{ position: "relative", opacity, backgroundColor:theme.palette.bgColor?.main }}>
         {children}
       </div>
     </motion.div>

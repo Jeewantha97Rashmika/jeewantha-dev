@@ -49,7 +49,7 @@ export default function HeroSection() {
               item
               xs={12}
               md={5}
-              sx={{ order: { xs: 1, md: 2 }, mt: { xs: 5, md: 4, lg: 10 } }}
+              sx={{ order: { xs: 1, md: 2 }, mt: { xs: 5, md: 15, lg: 10 } }}
             >
               <motion.div
                 initial={{ opacity: 1, x: 300, rotate: 60 }}
