@@ -302,36 +302,34 @@ export default function Header({ themeMode, toggleTheme }) {
               jeewantharashmika80@gmail.com
             </p>
             <center>
+              
               <Button
-                variant="contained"
+                // variant="contained"
                 onClick={toggleTheme}
                 sx={{
-                  backgroundColor: theme.palette.btnColor?.main,
+                  color: theme.palette.textColor?.main,
+                  // backgroundColor: theme.palette.btnColor?.main,
                   transition: "background-color 0.5s ease, color 0.5s ease",
                   // position: "fixed",
-                  // display: isMobile ? "none" : "inline",
-
+               
                   borderRadius: "9999px",
                   px: 2,
                   py: 1,
-                  mb: 1,
-                  // top: "80%",
-                  // right: 10,
-                  // zIndex: 1000000,
-                  "&:hover": {
-                    backgroundColor: theme.palette.btnColor?.main,
-                  },
+                 
                 }}
               >
                 {themeMode === "light" ? (
                   <FiSun style={{ fontSize: "1.25rem", zIndex: 10 }} />
                 ) : (
-                  <FiMoon style={{ fontSize: "1.25rem", zIndex: 10 }} />
+                  <FiMoon
+                    style={{
+                      fontSize: "1.25rem",
+                      zIndex: 10,
+                      color: theme.palette.textColor?.main,
+                    }}
+                  />
                 )}
 
-                <span style={{ zIndex: 10 }}>
-                  {themeMode === "dark" ? "Light" : "Dark"}
-                </span>
                 {/* Animated background slider */}
                 <div
                   style={{
@@ -343,16 +341,7 @@ export default function Header({ themeMode, toggleTheme }) {
                       themeMode === "dark" ? "flex-end" : "flex-start",
                   }}
                 >
-                  <motion.span
-                    layout
-                    transition={{ type: "spring", damping: 15, stiffness: 250 }}
-                    style={{
-                      height: "100%",
-                      width: "50%",
-                      borderRadius: "9999px", // Full rounded background
-                      background: "linear-gradient(to right, #7c3aed, #6366f1)", // Gradient from violet to indigo
-                    }}
-                  />
+                 
                 </div>
               </Button>
             </center>

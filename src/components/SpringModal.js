@@ -82,7 +82,7 @@ export default function SpringModal({ isOpen, setIsOpen }) {
                   marginBottom: "8px",
                 }}
               >
-                One more thing!
+          Send me your Enquiry
               </Typography>
               <Typography sx={{ textAlign: "center", marginBottom: "24px",fontSize:"16px" }}>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Id

@@ -81,12 +81,16 @@ export default function ContactForm({ setIsOpen }) {
               name="name"
               value={formData.name}
               onChange={handleInputChange}
-              InputLabelProps={{ sx: { color: "white" } }} // White label color
+              sx={{
+                color: "white",
+              }}
+              InputLabelProps={{ style: { color: "white" } }} // White label color
               InputProps={{
                 sx: {
                   "& .MuiOutlinedInput-root": {
                     "& fieldset": {
-                      borderColor: "white", // White border color
+                      borderColor: "white",
+                      color: "white", // White border color
                     },
                     "&:hover fieldset": {
                       borderColor: "white", // White border on hover
@@ -128,7 +132,34 @@ export default function ContactForm({ setIsOpen }) {
               }} // Apply border color change
             />
           </Grid>
-
+          <Grid item xs={12}>
+            <FormControl fullWidth required>
+              <InputLabel sx={{ color: "white" }}>Project Type</InputLabel>
+              <Select
+                label="Project Type"
+                name="projectType"
+                value={formData.projectType}
+                onChange={handleInputChange}
+                sx={{
+                  "& .MuiOutlinedInput-root": {
+                    "& fieldset": {
+                      borderColor: "white", // White border color
+                    },
+                    "&:hover fieldset": {
+                      borderColor: "white", // White border on hover
+                    },
+                    "&.Mui-focused fieldset": {
+                      borderColor: "white", // White border when focused
+                    },
+                  },
+                  color: "white", // White text color for selected value
+                }}
+              >
+                <MenuItem value="UI/UX Design">UI/UX Design</MenuItem>
+                <MenuItem value="Development">Development</MenuItem>
+              </Select>
+            </FormControl>
+          </Grid>
           {/* Message Input */}
           <Grid item xs={12}>
             <TextField
@@ -160,34 +191,7 @@ export default function ContactForm({ setIsOpen }) {
           </Grid>
 
           {/* Project Type Dropdown */}
-          <Grid item xs={12}>
-            <FormControl fullWidth required>
-              <InputLabel sx={{ color: "white" }}>Project Type</InputLabel>
-              <Select
-                label="Project Type"
-                name="projectType"
-                value={formData.projectType}
-                onChange={handleInputChange}
-                sx={{
-                  "& .MuiOutlinedInput-root": {
-                    "& fieldset": {
-                      borderColor: "white", // White border color
-                    },
-                    "&:hover fieldset": {
-                      borderColor: "white", // White border on hover
-                    },
-                    "&.Mui-focused fieldset": {
-                      borderColor: "white", // White border when focused
-                    },
-                  },
-                  color: "white", // White text color for selected value
-                }}
-              >
-                <MenuItem value="UI/UX Design">UI/UX Design</MenuItem>
-                <MenuItem value="Development">Development</MenuItem>
-              </Select>
-            </FormControl>
-          </Grid>
+        
 
           {/* Submit and Close Buttons */}
           <Grid item xs={12}>
