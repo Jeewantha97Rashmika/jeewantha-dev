@@ -57,7 +57,7 @@ export default function WorkingExperince() {
         component={motion.div}
         initial={{ opacity: 0, y: 80 }} // Start with hidden and below position
         whileInView={{ opacity: 1, y: 0 }} // Animate to full opacity and position
-        viewport={{ amount: 0.2 }} // Only animate once when 20% of the component is in view
+        viewport={{ once: true, amount: 0.2 }} // Only animate once when 20% of the component is in view
         transition={{ type: "spring", stiffness: 100 }}
         sx={{ pt: { md: 10, xs: 5 }, pb: { md: 5, xs: 5 } }}
       >
