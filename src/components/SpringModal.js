@@ -33,7 +33,8 @@ export default function SpringModal({ isOpen, setIsOpen }) {
             exit={{ scale: 0, rotate: "0deg" }}
             onClick={(e) => e.stopPropagation()}
             style={{
-              background: "linear-gradient(to bottom right, #FF6A6B, #FF595A )",
+              backgroundColor: theme.palette.cardBgColor?.main,
+              // background: "linear-gradient(to bottom right,rgb(236, 76, 76),rgb(202, 46, 46) )",
               color: "white",
               padding: "10px",
               borderRadius: "12px",
@@ -60,13 +61,13 @@ export default function SpringModal({ isOpen, setIsOpen }) {
             <div style={{ position: "relative", zIndex: 10 }}>
               <div
                 style={{
-                  backgroundColor: "white",
+                  backgroundColor: "#B5B5B5",
                   width: "64px",
                   height: "64px",
                   marginBottom: "8px",
                   borderRadius: "50%",
                   fontSize: "32px",
-                  color: "#4338ca",
+                  color: "#2B2B2B",
                   display: "grid",
                   placeItems: "center",
                   margin: "0 auto",
@@ -87,7 +88,7 @@ export default function SpringModal({ isOpen, setIsOpen }) {
               >
                 Send me your Enquiry
               </Typography>
-              <Typography
+              {/* <Typography
                 sx={{
                   color: theme.palette.textColor?.secondary,
                   textAlign: "center",
@@ -97,7 +98,7 @@ export default function SpringModal({ isOpen, setIsOpen }) {
               >
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
                 aperiam vitae, sapiente ducimus eveniet in velit.
-              </Typography>
+              </Typography> */}
               <ContactForm setIsOpen={setIsOpen} />
             </div>
           </motion.div>

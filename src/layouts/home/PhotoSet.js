@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import MyImage1 from "../../images/myImages (1).jpg";
 import MyImage2 from "../../images/myImages (2).jpg";
 import MyImage3 from "../../images/myImages (3).jpg";
-import MyImage4 from "../../images/myImages (4).jpg";
+import MyImage6 from "../../images/myImages (6).jpg";
 import MyImage5 from "../../images/myImages (5).jpg";
 import { useMediaQuery, useTheme } from "@mui/material";
 export default function PhotoSet() {
@@ -88,7 +88,7 @@ const Cards = () => {
       />
       <Card
         containerRef={containerRef}
-        src={MyImage4}
+        src={MyImage6}
         alt="Example image"
         rotate="8deg"
         top="50%"
@@ -104,7 +104,7 @@ const Cards = () => {
         left="65%"
         width={isMobile ? "12rem" : "25em"}
       />
-      <Card
+      {/* <Card
         containerRef={containerRef}
         src="https://images.unsplash.com/photo-1622313762347-3c09fe5f2719?q=80&w=2640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         alt="Example image"
@@ -112,7 +112,7 @@ const Cards = () => {
         top="35%"
         left="55%"
         width={isMobile ? "12rem" : "25em"}
-      />
+      /> */}
     </div>
   );
 };

@@ -1,8 +1,9 @@
 import * as React from "react";
 import Button from "@mui/material/Button";
-import { Typography } from "@mui/material";
+import { Typography, useTheme } from "@mui/material";
 
 export default function SecondaryBtn({ title, handleClick }) {
+  const theme = useTheme();
   return (
     <Button
       variant="outlined"
@@ -10,7 +11,7 @@ export default function SecondaryBtn({ title, handleClick }) {
       sx={{
         width: { xs: "100%" },
         marginRight: "10px",
-        borderColor: "black",
+        borderColor: theme.palette.borderColor?.main,
         borderRadius: "30px",
         padding: "10px 10px ",
         textTransform: "none",
@@ -21,7 +22,7 @@ export default function SecondaryBtn({ title, handleClick }) {
             "background-color 0.5s ease, color 0.5s ease , border-radius 0.5s ease",
           backgroundColor: "none",
           borderRadius: "0px",
-          borderColor: "black",
+          borderColor: theme.palette.borderColor?.main,
         },
       }}
     >
@@ -30,7 +31,7 @@ export default function SecondaryBtn({ title, handleClick }) {
           fontSize: "16px",
           fontWeight: 400,
           fontFamily: "Montserrat",
-          color: "black",
+          color: theme.palette.borderColor?.main,
         }}
       >
         {title}

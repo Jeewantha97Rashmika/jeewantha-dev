@@ -11,37 +11,41 @@ export default function DevSkill() {
         "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg",
     },
     {
-      name: "bootstrap",
+      name: "Bootstrap",
       image:
         "https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg",
     },
     {
-      name: "css3",
+      name: "CSS3",
       image:
         "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg",
     },
     {
-      name: "javascript",
+      name: "Javascript",
       image:
         "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
     },
     {
-      name: "react",
+      name: "React JS",
       image:
         "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
     },
     {
-      name: "redux",
+      name: "Redux",
       image:
         "https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg",
     },
     {
-      name: "nodejs",
+      name: "Nodejs",
       image:
         "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg",
     },
     {
-      name: "sass",
+      name: "Gatsby JS",
+      image: "https://cdn.iconscout.com/icon/free/png-512/free-gatsby-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-vol-3-pack-logos-icons-2944886.png?f=webp&w=256",
+    },
+    {
+      name: "Sass",
       image:
         "https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg",
     },
@@ -54,43 +58,44 @@ export default function DevSkill() {
       image: "https://wpapprentice.com/wp-content/uploads/2020/05/wordpress-logo-200x200-1.png",
     },
     {
-      name: "Gatsby JS",
-      image: "https://cdn.iconscout.com/icon/free/png-512/free-gatsby-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-vol-3-pack-logos-icons-2944886.png?f=webp&w=256",
+      name: "Ghost CMS",
+      image: "https://raw.githubusercontent.com/docker-library/docs/c88522f95bebcab2322f3020f2f735210286939b/ghost/logo.png",
     },
+
     {
-      name: "android",
+      name: "Android",
       image:
         "https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original-wordmark.svg",
     },
    
     {
-      name: "dart",
+      name: "Dart",
       image: "https://www.vectorlogo.zone/logos/dartlang/dartlang-icon.svg",
     },
     {
-      name: "flutter",
+      name: "Flutter",
       image: "https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg",
     },
     {
-      name: "firebase",
+      name: "Firebase",
       image: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg",
     },
     {
-      name: "git",
+      name: "Git",
       image: "https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg",
     },
     {
-      name: "mongodb",
+      name: "Mongodb",
       image:
         "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg",
     },
     {
-      name: "mysql",
+      name: "Mysql",
       image:
         "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg",
     },
     {
-      name: "postman",
+      name: "Postman",
       image: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
     },
 
