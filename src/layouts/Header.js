@@ -11,8 +11,8 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import Logo from "../images/mylogo4.svg";
-import Logo2 from "../images/mylogo3.svg";
+import Logo from "../images/JeewanthaLogoblack.svg";
+import Logo2 from "../images/JeewanthaLogowhite.svg";
 import MenuIcon from "@mui/icons-material/Menu";
 import Avatar from "@mui/material/Avatar";
 import ProImage from "../images/pro02.png";
@@ -54,7 +54,7 @@ export default function Header({ themeMode, toggleTheme }) {
       sx={{
         backgroundColor: theme.palette.bgColor?.main,
         transition: "background-color 0.5s ease, color 0.5s ease",
-        boxShadow: theme.palette.shadow?.main,
+        // boxShadow: theme.palette.shadow?.main,
         position: "sticky",
         top: 0,
         zIndex: 10000,
@@ -63,10 +63,11 @@ export default function Header({ themeMode, toggleTheme }) {
     >
       <Container
         sx={{
-          paddingTop: { md: "10px", xs: "10px" },
-          pb: 1,
+          // paddingTop: { md: "10px", xs: "10px" },
+        
           display: "flex",
           justifyContent: "space-between",
+          alignItems: "center",
         }}
       >
         <Box
@@ -86,7 +87,7 @@ export default function Header({ themeMode, toggleTheme }) {
               src={themeMode === "dark" ? Logo2 : Logo}
               alt="logo"
               width={"auto"}
-              height={40}
+              height={60}
             />
           </a>
         </Box>

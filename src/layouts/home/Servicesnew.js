@@ -61,7 +61,7 @@ export default function Servicesnew() {
               container
               sx={{ mt: 3, p: 2, display: { xs: "none", md: "flex" } }}
             >
-              <Grid xs={4} sm={3}>
+              <Grid item xs={4} sm={3}>
                 <Box
                   sx={{
                     width: "100%",
@@ -92,7 +92,7 @@ export default function Servicesnew() {
                   </Typography>
                 </Box>
               </Grid>
-              <Grid xs={4} sm={3}>
+              <Grid item xs={4} sm={3}>
                 <Box
                   sx={{
                     width: "100%",
@@ -121,7 +121,7 @@ export default function Servicesnew() {
                   </Typography>
                 </Box>
               </Grid>
-              <Grid xs={4} sm={3}>
+              <Grid item xs={4} sm={3}>
                 <Box
                   sx={{
                     width: "100%",
@@ -151,6 +151,7 @@ export default function Servicesnew() {
                 </Box>
               </Grid>
               <Grid
+              item
                 xs={12}
                 sm={3}
                 sx={{

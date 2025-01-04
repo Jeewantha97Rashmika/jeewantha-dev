@@ -54,11 +54,11 @@ export default function WorkingExperince() {
 
       {/* <ScrollEffect> */}
       <Container
-        component={motion.div}
-        initial={{ opacity: 0, y: 80 }} // Start with hidden and below position
-        whileInView={{ opacity: 1, y: 0 }} // Animate to full opacity and position
-        viewport={{ once: true, amount: 0.2 }} // Only animate once when 20% of the component is in view
-        transition={{ type: "spring", stiffness: 100 }}
+        // component={motion.div}
+        // initial={{ opacity: 0, y: 80 }} // Start with hidden and below position
+        // whileInView={{ opacity: 1, y: 0 }} // Animate to full opacity and position
+        // viewport={{ once: true, amount: 0.2 }} // Only animate once when 20% of the component is in view
+        // transition={{ type: "spring", stiffness: 100 }}
         sx={{ pt: { md: 10, xs: 5 }, pb: { md: 5, xs: 5 } }}
       >
         <Box sx={{ width: "100%" }}>
@@ -77,7 +77,7 @@ export default function WorkingExperince() {
                   },
                 }}
               >
-                  <TimelineItem>
+                <TimelineItem>
                   <TimelineSeparator>
                     <TimelineDot
                       sx={{
@@ -93,7 +93,7 @@ export default function WorkingExperince() {
                     <TimelineConnector />
                   </TimelineSeparator>
                   <TimelineContent>
-                  <WorkingContent03 />
+                    <WorkingContent03 />
                   </TimelineContent>
                 </TimelineItem>
                 <TimelineItem>
@@ -112,7 +112,7 @@ export default function WorkingExperince() {
                     <TimelineConnector />
                   </TimelineSeparator>
                   <TimelineContent>
-                  <WorkingContent02 />
+                    <WorkingContent02 />
                   </TimelineContent>
                 </TimelineItem>
                 <TimelineItem>
@@ -131,8 +131,7 @@ export default function WorkingExperince() {
                     <TimelineConnector />
                   </TimelineSeparator>
                   <TimelineContent>
-                  <WorkingContent />
-                
+                    <WorkingContent />
                   </TimelineContent>
                 </TimelineItem>
               </Timeline>

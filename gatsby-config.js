@@ -6,8 +6,8 @@
 
 module.exports = {
   siteMetadata: {
-    title: `jeewantha-web`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: `Jeewantha Rashmika | UI/UX Designer`,
+    siteUrl: `https://jeewantharashmika.com`,
   },
   plugins: [
     "gatsby-plugin-image",
@@ -15,7 +15,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/logo.png",
+        icon: "src/images/fav.png",
       },
     },
     "gatsby-plugin-sharp",
@@ -27,6 +27,9 @@ module.exports = {
         path: "./src/images/",
       },
       __key: "images",
+    },
+    {
+      resolve: "gatsby-plugin-no-sourcemaps",
     },
   ],
 };

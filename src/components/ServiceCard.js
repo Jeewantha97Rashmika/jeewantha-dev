@@ -22,8 +22,8 @@ export default function ServiceCard({ title, description, image }) {
           "background-color 0.5s ease, color 0.1s ease ,scale 0.3s ease",
         ":hover": {
           scale: 0.98,
-          backgroundColor: theme.palette.btnColor?.main,
-          color: "#fff",
+        //   backgroundColor: theme.palette.btnColor?.main,
+        //   color: "#fff",
           transition:
             "background-color 0.5s ease, color 0.1s ease ,scale 0.3s ease",
           border: "1px solidrgba(139, 139, 139, 0)",
@@ -32,13 +32,13 @@ export default function ServiceCard({ title, description, image }) {
       }}
     >
       <Grid container gap={3}>
-        <Grid xs={1}>
+        <Grid item xs={1}>
           <div
             dangerouslySetInnerHTML={{ __html: image }}
             style={{ width: "60px", height: "60px" }}
           />
         </Grid>
-        <Grid xs={8}>
+        <Grid item xs={8}>
           <Box sx={{ ml: 2 }}>
             <Typography
               sx={{
@@ -60,7 +60,7 @@ export default function ServiceCard({ title, description, image }) {
             </Typography>
           </Box>
         </Grid>
-        <Grid xs={1} sx={{
+        <Grid item xs={1} sx={{
           display: "flex",
           alignItems: "center",
           justifyContent: "center",

@@ -125,7 +125,7 @@ export default function DevSkill() {
 const theme = useTheme();
   return (
     <Box
-    component={motion.section}
+    component={motion.div}
     initial={{ opacity: 0, y: 80 }} // Start with hidden and below position
     whileInView={{ opacity: 1, y: 0 }} // Animate to full opacity and position
     viewport={{  once :true, amount: 0.2 }} // Only animate once when 20% of the component is in view
@@ -237,7 +237,7 @@ const theme = useTheme();
                 />
               </div>
             </Grid>
-            <Grid xs={12} md={8}>
+            <Grid item xs={12} md={8}>
               <div>
                 <img
                   align="left"

@@ -98,7 +98,7 @@ export default function BannerChips() {
     <div>
       <Grid container spacing={1}>
         {skills.map((val, key) => (
-          <Grid item key={key}>
+          <Grid  item key={key}>
             <Chip
               sx={{
                 p: 3,

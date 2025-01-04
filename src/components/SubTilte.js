@@ -6,7 +6,7 @@ export default function SubTilte() {
   const theme = useTheme();
   return (
     <Grid container>
-      <Grid>
+      <Grid item>
         <Typography
           sx={{
             color: "#fff",
@@ -24,7 +24,7 @@ export default function SubTilte() {
           UI / UX Engineer + Designer
         </Typography>
       </Grid>
-      <Grid>
+      <Grid item>
         <Box
           sx={{
             // position: "",

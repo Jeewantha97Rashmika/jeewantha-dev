@@ -4,9 +4,8 @@ import Box from "@mui/material/Box";
 import { Container, Typography, useTheme } from "@mui/material";
 import CountUp from "react-countup";
 
-
 export default function CountBanner() {
-const theme = useTheme();
+  const theme = useTheme();
   return (
     <Box
       sx={{
@@ -14,21 +13,19 @@ const theme = useTheme();
         transition: "background-color 0.5s ease, color 0.5s ease",
 
         marginTop: "-5px",
-        zIndex:100,
+        zIndex: 100,
 
         // borderRadius: "3rem",
       }}
     >
-   
       <Container>
         <Box
           sx={{
-            
-            py: 3,
+            py: 1,
           }}
         >
           <Grid container>
-            <Grid xs={12} md={4}>
+            <Grid item xs={12} sm={4}>
               <Typography
                 sx={{
                   color: "white",
@@ -53,7 +50,7 @@ const theme = useTheme();
                 Projects Done
               </Typography>
             </Grid>
-            <Grid xs={12} md={4}>
+            <Grid item xs={12} sm={4}>
               <Typography
                 sx={{
                   color: "white",
@@ -78,7 +75,7 @@ const theme = useTheme();
                 Years of Experience
               </Typography>
             </Grid>
-            <Grid xs={12} md={4}>
+            <Grid item xs={12} sm={4}>
               <Typography
                 sx={{
                   color: "white",
@@ -106,7 +103,6 @@ const theme = useTheme();
           </Grid>
         </Box>
       </Container>
-      
     </Box>
   );
 }
