@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 import Heading1 from "../../components/common/Heading1";
 import { Container, Typography } from "@mui/material";
 import GridImage from "../../images/grid.svg";
-import ProfileImage from "../../images/gridux.svg";
+import ProfileImage from "../../images/heroimage.png";
 import MainBtn from "../../components/MainBtn";
 import Typewrite from "../../components/Typewrite";
 import SubTilte from "../../components/SubTilte";

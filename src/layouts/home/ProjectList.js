@@ -1,10 +1,6 @@
 import { useMotionValue, motion, useSpring, useTransform } from "framer-motion";
 import React, { useRef } from "react";
 import { FiArrowRight } from "react-icons/fi";
-import Project1 from "../../images/project1.jpg";
-import Project2 from "../../images/project2.jpg";
-import Project3 from "../../images/project3.jpg";
-import Project4 from "../../images/project4.jpg";
 import Project5 from "../../images/project5.jpg";
 import xcinama from "../../images/xcinama.png";
 import radikadilanka from "../../images/radikadilanka.png";

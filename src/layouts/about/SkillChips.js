@@ -1,20 +1,21 @@
 import React from "react";
-import { Box, Container } from "@mui/material";
-import { motion } from "framer-motion";
+import { Container } from "@mui/material";
+
 import DevSkill from "../../components/about/DevSkill";
 import UiSkill from "../../components/about/UiSkills";
-import HarlfCircel from "../../images/circel.svg";
 
 const SkillsChips = () => {
-
   return (
-    <div style={{
-      position: "relative"
-    }}>
-      <Container sx={{
-        pb: 8,
-
-      }}>
+    <div
+      style={{
+        position: "relative",
+      }}
+    >
+      <Container
+        sx={{
+          pb: 8,
+        }}
+      >
         {/* <Box
           component={motion.div}
           initial={{ opacity: 1, y: 50 }}

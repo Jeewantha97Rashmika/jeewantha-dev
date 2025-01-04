@@ -38,9 +38,9 @@ export default function Header({ themeMode, toggleTheme }) {
   const handleWordClick = () => {
     window.location.href = "/#projects"; // Replace with your desired URL
   };
-  const handleKnowledgeClick = () => {
-    window.location.href = "/#knowledge-sharing"; // Replace with your desired URL
-  };
+  // const handleKnowledgeClick = () => {
+  //   window.location.href = "/#knowledge-sharing"; // Replace with your desired URL
+  // };
   const theme = useTheme();
   // const [themeMode, setThemeMode] = useState("");
   // useEffect(() => {
@@ -240,6 +240,7 @@ export default function Header({ themeMode, toggleTheme }) {
             {"Hire me now"}
             <ArrowForwardIcon
               sx={{
+                rotate: "-45deg",
                 backgroundColor: "#fff",
                 color: "#333",
                 marginLeft: "10px",

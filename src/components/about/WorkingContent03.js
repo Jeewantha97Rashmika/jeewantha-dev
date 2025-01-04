@@ -1,7 +1,8 @@
 import React from "react";
 import Knovik from "../../images/knovik.png";
 import { Typography, useTheme } from "@mui/material";
-export default function WorkingContent02() {
+
+export default function WorkingContent03() {
   const theme = useTheme();
   return (
     <div
@@ -35,7 +36,7 @@ export default function WorkingContent02() {
           fontFamily: "Montserrat",
         }}
       >
-        2023 - 2025 - Colombo Sri Lanka | Hybrid - Full Time
+        2025 - present - Colombo Sri Lanka | Hybrid - Full Time
       </Typography>
       <br></br>
       <Typography
@@ -47,7 +48,7 @@ export default function WorkingContent02() {
           fontFamily: "Montserrat",
         }}
       >
-        Associate UI/UX Engineer
+        UI/UX Engineer
       </Typography>
 
       <Typography
@@ -60,17 +61,17 @@ export default function WorkingContent02() {
           textAlign: "justify",
         }}
       >
-        Designed productive, cooperative, and modern user interfaces for both
-        web and mobile solutions, enhancing user engagement and satisfaction.
-        Developed responsive websites and applications using the MERN stack,
-        Shopify, Wordpress ensuring high performance and scalability.
-        Experienced in developing mobile applications using Flutter, delivering
-        cross-platform solutions with responsive and user-friendly interfaces.
-        Collaborated closely with cross-functional teams to gather requirements
-        and translate them into innovative design concepts. Led a team of
-        juniordesigners and developers, providing mentorship and guidance to
-        foster professional growth. Implemented design best practices and
-        established a cohesive design system across multiple projects.
+        As a UI/UX Engineer, I have designed and developed intuitive,
+        user-friendly interfaces for both web and mobile applications, focusing
+        on enhancing user engagement. I have experience working with the MERN
+        stack, Shopify, and WordPress to create scalable, high-performance
+        solutions. Additionally, I have developed cross-platform mobile apps
+        using Flutter, ensuring responsiveness and seamless user experiences. I
+        have collaborated with cross-functional teams to translate requirements
+        into innovative design concepts and led a team of junior designers and
+        developers, fostering their growth through mentorship. I also
+        implemented design best practices and established cohesive design
+        systems across projects.
       </Typography>
     </div>
   );

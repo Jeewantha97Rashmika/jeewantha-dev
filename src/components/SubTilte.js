@@ -1,6 +1,6 @@
 import { Box, Grid, Typography, useTheme } from "@mui/material";
 import React from "react";
-import Designer from "../images/designer.svg";
+
 export default function SubTilte() {
 
   const theme = useTheme();

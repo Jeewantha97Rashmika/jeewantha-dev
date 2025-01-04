@@ -22,7 +22,7 @@ export default function WorkingContent() {
             backgroundColor: "#fff",
             transition: "background-color 0.5s ease, color 0.5s ease",
             padding: "4px",
-            borderRadius:"5px"
+            borderRadius: "5px",
           }}
           alt="knovik"
         />
@@ -37,7 +37,7 @@ export default function WorkingContent() {
           fontFamily: "Montserrat",
         }}
       >
-        2022-10-01 - 2023-03-01 - Sri Lanka
+        2022 - 2023 - Colombo Sri Lanka | Remote
       </Typography>
       <br></br>
       <Typography
@@ -45,28 +45,31 @@ export default function WorkingContent() {
         sx={{
           color: theme.palette.textColor?.secondary,
           fontSize: "16px",
-          fontWeight: 800,
+          fontWeight: 600,
           fontFamily: "Montserrat",
         }}
       >
-        Mobile developer ( Intern )
+        UI/UX Engineer ( Intern )
       </Typography>
 
       <Typography
         component={"p"}
         sx={{
-          textAlign:"justify",
+          textAlign: "justify",
           color: theme.palette.textColor?.main,
           fontSize: "14px",
           fontWeight: 400,
           fontFamily: "Montserrat",
         }}
       >
-        As a Mobile Developer Intern, I have gained hands-on experience in
-        designing and developing user-friendly mobile applications for both
-        Android and iOS platforms. My work includes crafting intuitive user
-        interfaces with a focus on seamless user experiences (UI/UX design), as
-        well as coding and deploying functional apps.
+        Assisted in designing user-friendly interfaces for web and mobile
+        applications, focusing on enhancing the overall user experience.
+        Collaborated with senior designers to create wireframes, prototypes, and
+        visual designs that align with project goals. Gained proficiency in
+        design tools such as Adobe XD, Figma, and Sketch, as well as front-end
+        technologies like HTML, CSS, and JavaScript ,React JS , Gatsby JS .
+        Developed a strong understanding of responsive design principles and
+        accessibility standards to create inclusive digital experiences..
       </Typography>
     </div>
   );

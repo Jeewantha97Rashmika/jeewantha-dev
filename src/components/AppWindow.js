@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import { Rnd } from "react-rnd";
+
 
 const FullIcon = ({ size }) => (
   <svg

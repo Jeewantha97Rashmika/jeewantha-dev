@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Chip, Grid, Typography, useTheme } from "@mui/material";
+import { Box,  Grid, Typography, useTheme } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { motion } from "framer-motion";
 export default function UiSkill() {
@@ -67,7 +67,7 @@ export default function UiSkill() {
                 // boxShadow: theme.palette.shadow?.main,
                 backgroundColor: theme.palette.cardBgColor?.main,
                 transition: "background-color 0.5s ease, color 0.5s ease",
-                transition: "transform 0.2s",
+              
                 "&:hover": {
                   transform: "scale(0.95)",
                 },
@@ -104,7 +104,7 @@ export default function UiSkill() {
                   <ArrowForwardIcon
                     sx={{
                       backgroundColor: theme.palette.bgColor?.main,
-
+                      rotate: "-45deg",
                       color: theme.palette.textColor?.main,
                       marginLeft: "10px",
                       padding: "3px",

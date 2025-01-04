@@ -12,8 +12,8 @@ import Heading2 from "../../components/common/Heading2";
 import Education01 from "../../components/about/Education1";
 import Education02 from "../../components/about/Education2";
 import { motion } from "framer-motion";
-import HarlfCircel from "../../images/circel.svg";
 import SkillsChips from "./SkillChips";
+import WorkingContent03 from "../../components/about/WorkingContent03";
 export default function WorkingExperince() {
   const theme = useTheme();
   return (
@@ -77,7 +77,7 @@ export default function WorkingExperince() {
                   },
                 }}
               >
-                <TimelineItem>
+                  <TimelineItem>
                   <TimelineSeparator>
                     <TimelineDot
                       sx={{
@@ -93,7 +93,7 @@ export default function WorkingExperince() {
                     <TimelineConnector />
                   </TimelineSeparator>
                   <TimelineContent>
-                    <WorkingContent />
+                  <WorkingContent03 />
                   </TimelineContent>
                 </TimelineItem>
                 <TimelineItem>
@@ -112,7 +112,27 @@ export default function WorkingExperince() {
                     <TimelineConnector />
                   </TimelineSeparator>
                   <TimelineContent>
-                    <WorkingContent02 />
+                  <WorkingContent02 />
+                  </TimelineContent>
+                </TimelineItem>
+                <TimelineItem>
+                  <TimelineSeparator>
+                    <TimelineDot
+                      sx={{
+                        backgroundColor: "#FF595A",
+                        transition:
+                          "background-color 0.5s ease, color 0.5s ease",
+
+                        width: "20px",
+                        height: "20px",
+                        // Set custom color here
+                      }}
+                    />
+                    <TimelineConnector />
+                  </TimelineSeparator>
+                  <TimelineContent>
+                  <WorkingContent />
+                
                   </TimelineContent>
                 </TimelineItem>
               </Timeline>

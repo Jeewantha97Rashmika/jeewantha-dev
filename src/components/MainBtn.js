@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Button, useTheme } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import Arrow from "../images/arrow.svg";
 import SpringModal from "./SpringModal";
 export default function MainBtn({ handleLinkedinClick, isMobile, title }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,7 +43,7 @@ export default function MainBtn({ handleLinkedinClick, isMobile, title }) {
         <ArrowForwardIcon
           sx={{
             backgroundColor: "#fff",
-
+            rotate: "-45deg",
             color: "#333",
             marginLeft: "10px",
             padding: "3px",

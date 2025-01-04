@@ -5,7 +5,7 @@ import FigmaLogo from "../../images/Figma.svg";
 import UXResearch from "../../images/usResearch.svg";
 import Testing from "../../images/testing.svg";
 import Development from "../../images/Development.svg";
-import ScrollEffect from "../../components/common/ScrollEffect";
+
 
 export default function Services() {
   const theme = useTheme();

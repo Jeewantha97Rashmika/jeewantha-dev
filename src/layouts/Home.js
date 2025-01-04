@@ -1,16 +1,15 @@
 import React from "react";
 import HeroSection from "./home/HeroSection";
 import CountBanner from "./home/CountBanner";
-import Services from "./home/Services";
+
 import EduAndExp from "./home/EduAndExp";
-import SkillGrid from "../layouts/home/SkillGrid";
+
 import Projrcts from "./home/Projrcts";
 import FunActivity from "./home/FunActivity";
 import Testimonials from "./home/Testimonials";
-import BlogSection from "./home/BlogSection";
-import Terminal from "./home/Terminal";
-import TerminalLayout from "./home/TerminalLayout";
+
 import ScrollEffect from "../components/common/ScrollEffect";
+import Servicesnew from "./home/Servicesnew";
 
 export default function Home() {
   return (
@@ -20,7 +19,8 @@ export default function Home() {
       {/* <TerminalLayout/> */}
       <CountBanner />
       <ScrollEffect>
-        <Services />
+        {/* <Services /> */}
+        <Servicesnew />
       </ScrollEffect>
       <ScrollEffect>
         <Projrcts />

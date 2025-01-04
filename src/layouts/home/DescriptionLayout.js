@@ -1,6 +1,5 @@
 import { Grid, Typography, Box, Container, useTheme } from "@mui/material";
 import React from "react";
-import { motion } from "framer-motion";
 import MainBtn from "../../components/MainBtn";
 export default function DescriptionLayout({ description, btnTitle }) {
   const theme = useTheme();

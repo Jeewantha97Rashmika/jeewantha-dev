@@ -14,9 +14,9 @@ export default function Footer() {
   const handleWordClick = () => {
     window.location.href = "/#work"; // Replace with your desired URL
   };
-  const handleKnowledgeClick = () => {
-    window.location.href = "/#knowledge-sharing"; // Replace with your desired URL
-  };
+  // const handleKnowledgeClick = () => {
+  //   window.location.href = "/#knowledge-sharing"; // Replace with your desired URL
+  // };
 
   const isMobile = useMediaQuery("(max-width: 920px)");
   return (
