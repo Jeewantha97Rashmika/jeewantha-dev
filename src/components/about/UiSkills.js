@@ -1,5 +1,5 @@
 import React from "react";
-import { Box,  Grid, Typography, useTheme } from "@mui/material";
+import { Box, Grid, Typography, useTheme } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { motion } from "framer-motion";
 export default function UiSkill() {
@@ -33,12 +33,11 @@ export default function UiSkill() {
   const theme = useTheme();
   return (
     <Box
-    
-    component={motion.div}
-    initial={{ opacity: 0, y: 80 }} // Start with hidden and below position
-    whileInView={{ opacity: 1, y: 0 }} // Animate to full opacity and position
-    viewport={{ once :true, amount: 0.2 }} // Only animate once when 20% of the component is in view
-    transition={{ type: "spring", stiffness: 100 }}
+      component={motion.div}
+      initial={{ opacity: 0, y: 80 }} // Start with hidden and below position
+      whileInView={{ opacity: 1, y: 0 }} // Animate to full opacity and position
+      viewport={{ once: true, amount: 0.2 }} // Only animate once when 20% of the component is in view
+      transition={{ type: "spring", stiffness: 100 }}
     >
       <Typography
         component="h3"
@@ -66,10 +65,11 @@ export default function UiSkill() {
                 // border: "1px solid #E3E3E3",
                 // boxShadow: theme.palette.shadow?.main,
                 backgroundColor: theme.palette.cardBgColor?.main,
-                transition: "background-color 0.5s ease, color 0.5s ease",
-              
+                transition: "background-color 0.5s ease, color 0.5s ease ,transform 0.3s ease",
+                transform: "scale(1)",
                 "&:hover": {
                   transform: "scale(0.95)",
+                  transition: "transform 0.3s ease",
                 },
               }}
             >

@@ -35,7 +35,7 @@ export default function CountBanner() {
                   textAlign: "center",
                 }}
               >
-                <CountUp start={0} end={100} />
+                <CountUp start={0} end={150} />
                 {"+"}
               </Typography>
               <Typography
@@ -85,7 +85,7 @@ export default function CountBanner() {
                   textAlign: "center",
                 }}
               >
-                <CountUp start={0} end={198} />
+                <CountUp start={0} end={100} />
                 {"+"}
               </Typography>
               <Typography

@@ -28,7 +28,7 @@ export default function ServiceCard({ title, description, image }) {
             "background-color 0.5s ease, color 0.1s ease ,scale 0.3s ease",
           border: "1px solidrgba(139, 139, 139, 0)",
         },
-        cursor: "pointer",
+        // cursor: "pointer",
       }}
     >
       <Grid container gap={3}>

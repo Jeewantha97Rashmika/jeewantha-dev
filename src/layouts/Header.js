@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect} from "react";
 import {
   Box,
   Button,
@@ -17,7 +17,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Avatar from "@mui/material/Avatar";
 import ProImage from "../images/pro02.png";
 import { FiMoon, FiSun } from "react-icons/fi";
-
+import { motion } from "framer-motion";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import SpringModal from "../components/SpringModal";
 
@@ -49,22 +49,55 @@ export default function Header({ themeMode, toggleTheme }) {
   //   }
   // }, [typeof window !== "undefined" && localStorage.getItem("themeMode")]);
 
+  const [isScrolled, setIsScrolled] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    // Add scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <Box
+    component={motion.div}
+    animate={{
+      backgroundColor: isScrolled
+        ? theme.palette.bgColor?.header // When scrolled
+        : theme.palette.bgColor?.main, // When at top
+    }}
+    transition={{
+      backgroundColor: { duration: 0.3, ease: "easeInOut" }, // Smooth color transition
+    }}
       sx={{
-        backgroundColor: theme.palette.bgColor?.main,
+        // backgroundColor: theme.palette.bgColor?.main,
         transition: "background-color 0.5s ease, color 0.5s ease",
         // boxShadow: theme.palette.shadow?.main,
         position: "sticky",
+        width: "100%",
         top: 0,
         zIndex: 10000,
         overflow: " hidden",
+        backdropFilter: "blur(10px)",
+        WebkitBackdropFilter: "blur(10px)",
+        // opacity: 0.93,
+        
+        // boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
       }}
     >
       <Container
         sx={{
           // paddingTop: { md: "10px", xs: "10px" },
-        
+
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",

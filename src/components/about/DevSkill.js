@@ -55,7 +55,7 @@ export default function DevSkill() {
     },
     {
       name: "Wordpress",
-      image: "https://wpapprentice.com/wp-content/uploads/2020/05/wordpress-logo-200x200-1.png",
+      image: "https://pngimg.com/uploads/wordpress/wordpress_PNG47.png",
     },
     {
       name: "Ghost CMS",
@@ -157,10 +157,11 @@ const theme = useTheme();
              // border: "1px solid #E3E3E3",
              // boxShadow: theme.palette.shadow?.main,
              backgroundColor: theme.palette.cardBgColor?.main,
-             transition: "background-color 0.5s ease, color 0.5s ease",
-           
+             transition: "background-color 0.5s ease, color 0.5s ease ,transform 0.3s ease",
+             transform: "scale(1)",
              "&:hover": {
                transform: "scale(0.95)",
+               transition: "transform 0.3s ease",
              },
            }}
          >
