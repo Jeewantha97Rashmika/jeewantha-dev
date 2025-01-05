@@ -85,7 +85,7 @@ export default function Header({ themeMode, toggleTheme }) {
         position: "sticky",
         width: "100%",
         top: 0,
-        zIndex: 10000,
+        zIndex: 1000,
         overflow: " hidden",
         backdropFilter: "blur(10px)",
         WebkitBackdropFilter: "blur(10px)",
@@ -367,6 +367,7 @@ export default function Header({ themeMode, toggleTheme }) {
           <Container
             sx={{
               mt: 8,
+      
             }}
           >
             <div

@@ -3,9 +3,9 @@ import { Container, useTheme } from "@mui/material";
 import ReviewCard from "../../components/ReviewCard";
 import RImage1 from "../../images/radika_dilanka.png";
 import RImage2 from "../../images/madus.png";
-import RImage3 from "../../images/review3.png";
-import RImage4 from "../../images/review4.png";
-import RImage5 from "../../images/review5.png";
+import RImage3 from "../../images/ishara.jpg";
+import RImage4 from "../../images/iroshana.jpg";
+import RImage5 from "../../images/nishadi.jpg";
 // import RImage6 from "../../images/review6.png";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -23,7 +23,7 @@ export default function Testimonials() {
       id: "1",
       img: RImage1, // Replace with actual image URL
       name: "Radika Dilanka",
-      job: "Web Consultaint",
+      job: "Web Consultaint | MERN stack instuctor",
       socialMedias: [
         {
           name: "Facebook",
@@ -42,7 +42,7 @@ export default function Testimonials() {
         },
       ],
       review:
-        "I had the privilege of managing Jeewantha Rashmika at Knovik, as well as teaching him React when he was the first student in my React course. From the very beginning, it was evident that Jeewantha possesses an extraordinary ability to grasp concepts quickly and apply them effectively. As a UI/UX engineer, Jeewantha consistently demonstrated creativity, attention to detail, and a knack for delivering user-friendly designs. His unique blend of design expertise and coding skills allows him to tackle challenges holistically, producing both aesthetically pleasing and functional results. What stands out about Jeewantha is his reliability and commitment to meeting deadlines while maintaining high standards. Whether it’s coming up with creative solutions or going the extra mile to ensure project success, he’s someone you can always count on.",
+        "As a UI/UX engineer, Jeewantha consistently demonstrated creativity, attention to detail, and a knack for delivering user-friendly designs. His unique blend of design expertise and coding skills allows him to tackle challenges holistically, producing both aesthetically pleasing and functional results. What stands out about Jeewantha is his reliability and commitment to meeting deadlines while maintaining high standards. Whether it’s coming up with creative solutions or going the extra mile to ensure project success, he’s someone you can always count on.",
       date: "2023-05-10",
     },
     {
@@ -74,8 +74,8 @@ export default function Testimonials() {
     {
       id: "3",
       img: RImage3, // Replace with actual image URL
-      name: "Jessica Brown",
-      job: "CEO of Knovik LLC | Enterpreneur",
+      name: "Ishara Fernando",
+      job: "SEO Specialist | Product owner", 
       socialMedias: [
         // {
         //   name: "Facebook",
@@ -100,8 +100,8 @@ export default function Testimonials() {
     {
       id: "4",
       img: RImage4, // Replace with actual image URL
-      name: "Daniel Lee",
-      job: "Web Consultaint",
+      name: "Iroshana Wickramasinghe",
+      job: "Product owner | Software Engineer",
       socialMedias: [
         {
           name: "Facebook",
@@ -124,10 +124,10 @@ export default function Testimonials() {
       date: "2023-06-20",
     },
     {
-      id: "5",
-      img: RImage3, // Replace with actual image URL
-      name: "Sophia Wilson",
-      job: "CEO of Knovik LLC | Enterpreneur",
+      id: "4",
+      img: RImage5, // Replace with actual image URL
+      name: "Nishadi Lakshika",
+      job: "ICT Teacher",
       socialMedias: [
         {
           name: "Facebook",
@@ -146,36 +146,10 @@ export default function Testimonials() {
         },
       ],
       review:
-        "The development process was smooth and collaborative. Jeewantha listened to our needs and delivered a product we love.Jeewantha is a true professional! The website redesign has made it much easier for our clients to navigate and find information.",
-      date: "2023-07-05",
+        "I was thoroughly impressed with the attention to detail in the UI/UX design. Our users have noticed the difference! Jeewantha is a true professional! The website redesign has made it much easier for our clients to navigate and find information.",
+      date: "2023-06-20",
     },
-    {
-      id: "6",
-      img: RImage2, // Replace with actual image URL
-      name: "Ryan Davis",
-      job: "CEO of Knovik LLC | Enterpreneur",
-      socialMedias: [
-        {
-          name: "Facebook",
-          icon: <FaFacebook />,
-          link: "https://www.facebook.com/radikadilanka/",
-        },
-        {
-          name: "linkedin",
-          icon: <FaLinkedin />,
-          link: "https://www.linkedin.com/jeewantherashmika/",
-        },
-        {
-          name: "Website",
-          icon: <TbWorldWww />,
-          link: "https:/radikadilanka.com",
-        },
-      ],
-      review:
-        "Fantastic work on our mobile app! The design is sleek and users find it very engaging and easy to use.Jeewantha is a true professional! The website redesign has made it much easier for our clients to navigate and find information.",
-      date: "2023-07-12",
-    },
-   
+ 
   ];
   const progressCircle = useRef(null);
   const progressContent = useRef(null);
@@ -220,7 +194,7 @@ export default function Testimonials() {
           pagination={{
             clickable: true,
           }}
-          // navigation={true}
+          navigation={true}
           modules={[Autoplay, Pagination, Navigation]}
           onAutoplayTimeLeft={onAutoplayTimeLeft}
           className="mySwiper"

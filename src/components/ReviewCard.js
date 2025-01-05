@@ -21,11 +21,11 @@ export default function ReviewCard({
         justifyContent: "center",
         maxWidth: { xs: "100%", md: "70vw" },
         my: 10,
-       
+
         minHeight: "40rem",
         backgroundColor: theme.palette.cardBgColor?.main,
         gap: 2,
-        padding: { xs: "1rem", md: "3rem" },
+        padding: { xs: "1rem", md: "2rem" },
         borderRadius: "30px",
         // boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
       }}
@@ -96,9 +96,10 @@ export default function ReviewCard({
           fontWeight: 400,
           fontFamily: "Montserrat",
           lineHeight: "1.5rem",
-
+          px: 2,
+          py: 1,
           backgroundColor: theme.palette.bgColor?.secondary,
-          p: 1,
+          // p: 1,
           borderRadius: "30px",
         }}
       >
@@ -122,7 +123,7 @@ export default function ReviewCard({
                     color: "#FF5733",
                     scale: 1.2,
                     transition: "all 0.3s",
-                  }
+                  },
                 }}
               >
                 {val.icon}
