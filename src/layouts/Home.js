@@ -14,26 +14,23 @@ export default function Home() {
       {/* <SkillMarquee/> */}
       {/* <TerminalLayout/> */}
       <CountBanner />
-      <ScrollEffect>
-        {/* <Services /> */}
-        <Servicesnew />
-      </ScrollEffect>
-      <ScrollEffect>
-        <Projrcts />
-      </ScrollEffect>
-      <ScrollEffect>
-        <Testimonials />
-      </ScrollEffect>
-      <ScrollEffect>
-        <EduAndExp />
-      </ScrollEffect>
+
+      {/* <Services /> */}
+      <Servicesnew />
+
+      <Projrcts />
+
+      {/* <Testimonials /> */}
+
+      <EduAndExp />
+
       {/* <SkillAndTech/> */}
 
       {/* <SkillGrid /> */}
       {/* <BlogSection/> */}
-      <ScrollEffect>
-        <FunActivity />
-      </ScrollEffect>
+
+      <FunActivity />
+
       {/* <ExploreWork /> */}
       {/* <CursorOne /> */}
     </>

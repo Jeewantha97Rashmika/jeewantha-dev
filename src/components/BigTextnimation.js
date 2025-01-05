@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { Box ,useTheme} from "@mui/material";
+import { Box, useTheme } from "@mui/material";
 import {
   motion,
   useScroll,
@@ -10,7 +10,7 @@ import {
 
 export default function BigTextnimation() {
   const targetRef = useRef(null);
-const theme= useTheme();
+  const theme = useTheme();
   const { scrollYProgress } = useScroll({
     target: targetRef,
     offset: ["start start", "end start"],
@@ -29,10 +29,10 @@ const theme= useTheme();
   const x = useSpring(xRaw, { mass: 3, stiffness: 400, damping: 50 });
   return (
     <Box
-      component={motion.dev}
+      component={motion.div}
       initial={{ opacity: 1, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ type: "spring", }}
+      transition={{ type: "spring" }}
       ref={targetRef}
       sx={{
         zIndex: 1,
@@ -65,16 +65,16 @@ const theme= useTheme();
             x,
 
             maxWidth: "100%",
-            "@media (min-width: 768px)": {
-              fontSize: "4.5rem",
-              lineHeight: 0.85,
-            },
+            // "@media (min-width: 768px)": {
+            //   fontSize: "4.5rem",
+            //   lineHeight: 0.85,
+            // },
           }}
         >
           <span
             style={{
               color: "transparent",
-              
+
               WebkitTextStroke: `1px ${theme.palette.textColor?.bigText}`,
             }}
           >

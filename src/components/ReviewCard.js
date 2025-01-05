@@ -1,7 +1,6 @@
 import React from "react";
 import { Box, Typography, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
-import { Link } from "gatsby";
 export default function ReviewCard({
   img,
   name,
@@ -109,7 +108,7 @@ export default function ReviewCard({
       <Box>
         {socialMedias.map((val, key) => {
           return (
-            <Link key={key} to={val.link} target="_blank" rel="noreferrer">
+            <a key={key} href={val.link} target="_blank" rel="noreferrer">
               <Typography
                 sx={{
                   color: theme.palette.textColor?.main,
@@ -128,7 +127,7 @@ export default function ReviewCard({
               >
                 {val.icon}
               </Typography>
-            </Link>
+            </a>
           );
         })}
       </Box>

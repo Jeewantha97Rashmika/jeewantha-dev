@@ -86,13 +86,13 @@ export default function ProjectList() {
             tecnology={uidesign}
             href="https://highteclanka.com/"
           />
-          <Link
+          {/* <Link
             heading="Taxi Service"
             subheading="Taxi Service official website UI/UX Design using figma and photoshop."
             imgSrc={Project5}
             tecnology={uidesign}
             href="#"
-          />
+          /> */}
           <Link
             heading="Xiomiband"
             subheading="Xiomiband is official website UI/UX Design using figma and photoshop and develo it using Shopify.- password -12345"

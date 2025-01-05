@@ -1,4 +1,4 @@
-import React, { useState ,useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import {
   Box,
   Button,
@@ -69,15 +69,15 @@ export default function Header({ themeMode, toggleTheme }) {
   }, []);
   return (
     <Box
-    component={motion.div}
-    animate={{
-      backgroundColor: isScrolled
-        ? theme.palette.bgColor?.header // When scrolled
-        : theme.palette.bgColor?.main, // When at top
-    }}
-    transition={{
-      backgroundColor: { duration: 0.3, ease: "easeInOut" }, // Smooth color transition
-    }}
+      component={motion.div}
+      animate={{
+        backgroundColor: isScrolled
+          ? theme.palette.bgColor?.header // When scrolled
+          : theme.palette.bgColor?.main, // When at top
+      }}
+      transition={{
+        backgroundColor: { duration: 0.5, ease: "easeInOut" }, // Smooth color transition
+      }}
       sx={{
         // backgroundColor: theme.palette.bgColor?.main,
         transition: "background-color 0.5s ease, color 0.5s ease",
@@ -90,7 +90,7 @@ export default function Header({ themeMode, toggleTheme }) {
         backdropFilter: "blur(10px)",
         WebkitBackdropFilter: "blur(10px)",
         // opacity: 0.93,
-        
+
         // boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
       }}
     >
@@ -367,7 +367,6 @@ export default function Header({ themeMode, toggleTheme }) {
           <Container
             sx={{
               mt: 8,
-      
             }}
           >
             <div

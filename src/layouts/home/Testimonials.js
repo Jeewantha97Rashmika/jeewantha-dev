@@ -199,8 +199,8 @@ export default function Testimonials() {
           onAutoplayTimeLeft={onAutoplayTimeLeft}
           className="mySwiper"
         >
-          {testimonials.map((item) => (
-            <SwiperSlide key={item.id}>
+          {testimonials.map((item,key) => (
+            <SwiperSlide key={key}>
               <ReviewCard
                 img={item.img}
                 name={item.name}

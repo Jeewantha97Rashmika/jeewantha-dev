@@ -2,7 +2,7 @@ import React from "react";
 
 import { Grid, Box, Typography, useTheme, Container } from "@mui/material";
 import workingdesk from "../../images/workingdesk.png";
-
+import { motion } from "framer-motion";
 import ServiceCard from "../../components/ServiceCard";
 import Star from "../../images/Star.svg";
 
@@ -46,7 +46,13 @@ export default function Servicesnew() {
         py: 10,
       }}
     >
-      <Container>
+      <Container
+        component={motion.div}
+        initial={{ opacity: 0, y: 80 }} // Start with hidden and below position
+        whileInView={{ opacity: 1, y: 0 }} // Animate to full opacity and position
+        viewport={{ once: true, amount: 0.2 }} // Only animate once when 20% of the component is in view
+        transition={{ type: "spring", stiffness: 100 }}
+      >
         <Grid container spacing={3}>
           <Grid item xs={12} md={7}>
             {sercivesData.map((item, index) => (
@@ -151,7 +157,7 @@ export default function Servicesnew() {
                 </Box>
               </Grid>
               <Grid
-              item
+                item
                 xs={12}
                 sm={3}
                 sx={{
