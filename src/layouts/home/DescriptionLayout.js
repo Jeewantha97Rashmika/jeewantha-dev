@@ -13,8 +13,8 @@ export default function DescriptionLayout({ description, btnTitle }) {
       sx={{
         backgroundColor: theme.palette.bgColor?.dec,
         transition: "background-color 0.5s ease, color 0.5s ease",
-
-        height: { xs: "35vh", md: "25vh" },
+        py:5,
+        height: { xs: "100%" },
         display: "flex",
         justifyContent: "center",
         alignItems: "center",

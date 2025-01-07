@@ -181,7 +181,7 @@ export default function Testimonials() {
           alignItems: "center",
           justifyContent: "center",
           height: "auto",
-          minHeight: { xs: "80vh", md: "80vh", lg: "80vh" },
+          minHeight: { xs: "100%", md: "80vh" },
         }}
       >
         <Swiper

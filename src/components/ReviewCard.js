@@ -1,5 +1,5 @@
-import React from "react";
-import { Box, Typography, useTheme } from "@mui/material";
+import React, { useState } from "react";
+import { Box, Typography, useTheme ,Button} from "@mui/material";
 import { motion } from "framer-motion";
 export default function ReviewCard({
   img,
@@ -10,6 +10,12 @@ export default function ReviewCard({
   socialMedias,
 }) {
   const theme = useTheme();
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const toggleExpand = () => {
+    setIsExpanded((prev) => !prev);
+  };
+
   return (
     <Box
       sx={{
@@ -19,7 +25,8 @@ export default function ReviewCard({
         alignItems: "center",
         justifyContent: "center",
         maxWidth: { xs: "100%", md: "50vw" },
-        my: 10,
+        height: "100%",
+        my: 5,
 
         minHeight: "40rem",
         // backgroundColor: theme.palette.cardBgColor?.main,
@@ -131,17 +138,36 @@ export default function ReviewCard({
           );
         })}
       </Box>
-      <Typography
-        sx={{
-          color: theme.palette.textColor?.main,
-          fontSize: { xs: "12px", md: "15px" },
-          fontWeight: 400,
-          fontFamily: "Montserrat",
-          lineHeight: "1.5rem",
-        }}
-      >
-        {review}
-      </Typography>
+      <div>
+        <Typography
+          sx={{
+            color: theme.palette.textColor?.main,
+            fontSize: { xs: "12px", md: "15px" },
+            fontWeight: 400,
+            fontFamily: "Montserrat",
+            lineHeight: "1.5rem",
+            display: "-webkit-box",
+            WebkitBoxOrient: "vertical",
+            overflow: isExpanded ? "visible" : "hidden",
+            textOverflow: "ellipsis",
+            WebkitLineClamp: isExpanded ? "none" : 5, // Limits to 5 lines
+          }}
+        >
+          {review}
+        </Typography>
+        <Button
+          onClick={toggleExpand}
+          sx={{
+            mt: 1,
+            color: "#FF5733",
+            fontSize: "12px",
+            fontWeight: 500,
+            textTransform: "none",
+          }}
+        >
+          {isExpanded ? "Read Less" : "Read More"}
+        </Button>
+      </div>
       <Typography
         sx={{
           color: theme.palette.textColor?.secondary,
