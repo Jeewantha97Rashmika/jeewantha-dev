@@ -188,7 +188,7 @@ const LinkBox = ({ Icon, href, Name }) => {
           inset: 0,
           display: "grid",
           placeContent: "center",
-          backgroundColor: "#FF595A",
+          backgroundColor: "#FF7262",
         transition: "background-color 0.5s ease, color 0.5s ease",
 
           color: "white",

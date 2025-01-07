@@ -81,7 +81,7 @@ export default function WorkingExperince() {
                   <TimelineSeparator>
                     <TimelineDot
                       sx={{
-                        backgroundColor: "#FF595A",
+                        backgroundColor: "#FF7262",
                         transition:
                           "background-color 0.5s ease, color 0.5s ease",
 
@@ -100,7 +100,7 @@ export default function WorkingExperince() {
                   <TimelineSeparator>
                     <TimelineDot
                       sx={{
-                        backgroundColor: "#FF595A",
+                        backgroundColor: "#FF7262",
                         transition:
                           "background-color 0.5s ease, color 0.5s ease",
 
@@ -119,7 +119,7 @@ export default function WorkingExperince() {
                   <TimelineSeparator>
                     <TimelineDot
                       sx={{
-                        backgroundColor: "#FF595A",
+                        backgroundColor: "#FF7262",
                         transition:
                           "background-color 0.5s ease, color 0.5s ease",
 
@@ -150,7 +150,7 @@ export default function WorkingExperince() {
                   <TimelineSeparator>
                     <TimelineDot
                       sx={{
-                        backgroundColor: "#FF595A",
+                        backgroundColor: "#FF7262",
                         transition:
                           "background-color 0.5s ease, color 0.5s ease",
 
@@ -169,7 +169,7 @@ export default function WorkingExperince() {
                   <TimelineSeparator>
                     <TimelineDot
                       sx={{
-                        backgroundColor: "#FF595A",
+                        backgroundColor: "#FF7262",
                         transition:
                           "background-color 0.5s ease, color 0.5s ease",
 

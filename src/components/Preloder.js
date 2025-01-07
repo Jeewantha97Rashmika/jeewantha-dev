@@ -22,7 +22,7 @@ export default function Preloader() {
           fontWeight: "400",
           fontFamily: "Montserrat",
           marginTop: "3rem",
-          background: "linear-gradient(90deg, #ffff, #FF595A, #fff)",
+          background: "linear-gradient(90deg, #ffff, #FF7262, #fff)",
           backgroundClip: "text",
           color: "transparent",
           display: "inline-block",

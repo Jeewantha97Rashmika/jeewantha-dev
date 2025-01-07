@@ -15,7 +15,7 @@ export default function SubTilte() {
             display: "inline-block",
             padding: "0px 10px 0px 10px",
             position: "relative",
-            backgroundColor: "#FF595A",
+            backgroundColor: "#FF7262",
             transition: "background-color 0.5s ease, color 0.5s ease",
             transform: "rotate(5deg)",
             mb:2

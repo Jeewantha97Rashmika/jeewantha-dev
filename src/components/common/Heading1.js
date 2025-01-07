@@ -11,7 +11,7 @@ export default function Heading1({ text1, component }) {
           fontWeight: "bold",
           lineHeight: "1.1",
           fontFamily: "Montserrat",
-          color: "#FF595A",
+          color: "#FF7262",
         }}
       >
         {text1}

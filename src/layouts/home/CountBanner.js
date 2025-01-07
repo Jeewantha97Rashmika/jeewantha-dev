@@ -19,6 +19,32 @@ export default function CountBanner() {
       }}
     >
       <Container>
+        <Box sx={{
+          py: 5,
+          display: "flex",
+          flexDirection: "column",
+          gap: 3,
+          alignItems: "center",
+          justifyContent: "center",
+        }}>
+          <Typography>
+            <span style={{ color: "white", fontSize: "32px", fontWeight: 800 }}>About Me</span>
+          </Typography>
+          <Typography sx={{
+            color: "white",
+            fontSize: "16px",
+            fontWeight: 400,
+            fontFamily: "Montserrat",
+            textAlign: "center",
+            maxWidth: "800px"
+          }}>
+            I'm Sara Jones, a UI/UX designer dedicated to crafting intuitive and
+            visually stunning digital experiences. With a passion for
+            user-centric design, I transform ideas into functional and beautiful
+            interfaces. Let's collaborate and shape the future of design
+            together.
+          </Typography>
+        </Box>
         <Box
           sx={{
             py: 1,

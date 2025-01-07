@@ -5,20 +5,20 @@ import MyImage2 from "../../images/myImages (2).jpg";
 import MyImage3 from "../../images/myImages (3).jpg";
 import MyImage6 from "../../images/myImages (6).jpg";
 import MyImage5 from "../../images/myImages (5).jpg";
-import { useMediaQuery, useTheme } from "@mui/material";
+import { Box, useMediaQuery, useTheme } from "@mui/material";
 export default function PhotoSet() {
   const theme = useTheme();
   return (
-    <section
+    <Box
       component={motion.section}
       initial={{ opacity: 0, y: 80 }} // Start with hidden and below position
       whileInView={{ opacity: 1, y: 0 }} // Animate to full opacity and position
       viewport={{ once :true, amount: 0.2 }} // Only animate once when 20% of the component is in view
       transition={{ type: "spring", stiffness: 100 }}
-      style={{
+      sx={{
         position: "relative",
         display: "grid",
-        minHeight: "100vh",
+        minHeight: {xs:"80vh",md:"100vh"},
         width: "100%",
         placeContent: "center",
         overflow: "hidden",
@@ -32,18 +32,18 @@ export default function PhotoSet() {
         style={{
           position: "relative",
           zIndex: 0,
-          fontSize: "20vw",
+          fontSize: "18vw",
           fontWeight: "900",
           color: theme.palette.textColor?.funTextColor,
           lineHeight: "1",
           textAlign: "center",
         }}
       >
-        Play Now
+        Fav Memo
         <span style={{ color: theme.palette.textColor?.funTextColor }}>.</span>
       </h2>
       <Cards />
-    </section>
+    </Box>
   );
 }
 

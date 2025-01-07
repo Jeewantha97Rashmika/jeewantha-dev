@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Grid, Box, Typography, Button } from "@mui/material";
-import Logo from "../images/mylogo3.svg";
+
+import Logo2 from "../images/JeewanthaLogowhite.svg";
 import { useMediaQuery } from "@mui/material";
 import MainBtn from "../components/MainBtn";
-import Pattern from "../images/pattern.png";
+import GridImage from "../images/grid.svg";
+import { FaLinkedin } from "react-icons/fa";
+import { FaSquareGithub } from "react-icons/fa6";
+import { MdAttachEmail } from "react-icons/md";
+import { FaSquareInstagram } from "react-icons/fa6";
+import { FaFacebookSquare } from "react-icons/fa";
+
 export default function Footer() {
   const handleLinkedinClick = () => {
     window.location.href =
@@ -18,24 +25,73 @@ export default function Footer() {
   // const handleKnowledgeClick = () => {
   //   window.location.href = "/#knowledge-sharing"; // Replace with your desired URL
   // };
+  //time now
 
+  const [times, setTimes] = useState({
+    colombo: "",
+    usa: "",
+  });
+
+  useEffect(() => {
+    const updateTimes = () => {
+      const colomboTime = new Intl.DateTimeFormat("en-US", {
+        timeZone: "Asia/Colombo",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+      }).format(new Date());
+
+      const usaTime = new Intl.DateTimeFormat("en-US", {
+        timeZone: "America/New_York", // Change to another timezone if needed
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+      }).format(new Date());
+
+      setTimes({ colombo: colomboTime, usa: usaTime });
+    };
+
+    updateTimes(); // Set time immediately
+    const intervalId = setInterval(updateTimes, 1000); // Update every second
+
+    return () => clearInterval(intervalId); // Cleanup interval on unmount
+  }, []);
+
+  //social links
+  const socialLinks = [
+    {
+      name: "Linkedin",
+      icon: <FaLinkedin />,
+      link: "https://www.linkedin.com/in/jeewantha-rashmika-b5a56820a/",
+    },
+    {
+      name: "Github",
+      icon: <FaSquareGithub />,
+      link: "https://github.com/Jeewantha97Rashmika",
+    },
+    {
+      name: "Email",
+      icon: <MdAttachEmail />,
+      link: "mailto:jeewantharashmika80@gmail.com",
+    },
+    {
+      name: "instagram",
+      icon: <FaSquareInstagram />,
+      link: "https://www.instagram.com/jeewantha_rashmika97/",
+    },
+    {
+      name: "facebook",
+      icon: <FaFacebookSquare />,
+      link: "https://www.facebook.com/jeewatharashmika.calyso",
+    },
+  ];
   const isMobile = useMediaQuery("(max-width: 920px)");
   return (
     <div
       style={{
         backgroundColor: "#1F1F1F",
         transition: "background-color 0.5s ease, color 0.5s ease",
-        mask: `url(${Pattern}) repeat-x`,
-        // backgroundImage: `url(${Pattern})`,
-        // maskImage: `url(${Pattern})`,
-        maskSize: "auto",
-        maskRepeat: "repeat-x",
-        maskOrigin: "border-box",
-        maskClip: "border-box",
-        maskComposite: "add",
-        maskMode: "match-source",
-        WebkitMaskPositionX: "0%", // CamelCase for Webkit properties
-        WebkitMaskPositionY: "0%",
+        backgroundImage: `url(${GridImage})`,
       }}
     >
       <Container sx={{ pt: { xs: 10 } }}>
@@ -48,19 +104,59 @@ export default function Footer() {
             alignItems: "center",
           }}
         >
-          <img src={Logo} alt="logo" width={200} />
-          <Typography sx={{ color: "white", mt: 2, mb: 3 }}>
-            {" "}
-            <a
-              href="mailto:jeewantharashmika80@gmail.com"
-              style={{ color: "#ffff" }}
-            >
-              jeewantharashmika80@gmail.com{" "}
-            </a>
+          <img src={Logo2} alt="logo" width={200} />
+        </Box>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            mt: 3,
+            color: "white",
+          }}
+        >
+          {socialLinks.map((val, key) => {
+            return (
+              <a href={val.link} target="_blank" rel="noreferrer" key={key}>
+                <Typography
+                  sx={{
+                    color: "white",
+                    mx: 2,
+                    "&:hover": {
+                      color: "#FF7262",
+                      scale: 0.95,
+                      transition: "color 0.2s ease, scale 0.2s ease",
+                    },
+                    cursor: "pointer",
+                    transition: "color 0.2s ease , scale 0.2s ease",
+                    fontSize: "40px",
+                  }}
+                >
+                  {val.icon}
+                </Typography>
+              </a>
+            );
+          })}
+        </Box>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: {xs: "column", md: "row"},
+            justifyContent: "center",
+            alignItems: "center",
+            mt: 3,
+            color: "white",
+          }}
+        >
+          <Typography sx={{ color: "white", mx: 2, my:2, fontSize: "20px" }}>
+            SL : {times.colombo}
           </Typography>
           <MainBtn title={"Contact Me"} />
+          <Typography sx={{ color: "white", mx: 2,my:2, fontSize: "20px" }}>
+            USA : {times.usa}
+          </Typography>
         </Box>
-        <Box sx={{ mt: { md: 10, xs: 5 } }}>
+        <Box sx={{ mt: { md: 5, xs: 5 } }}>
           <Grid item xs={12}>
             <div style={{ display: "flex", justifyContent: "center" }}>
               <Button

@@ -83,14 +83,14 @@ export default function Servicesnew() {
                     alt="star"
                     style={{
                       width: "30px",
-                      fill: "#FF595A",
+                      fill: "#FF7262",
                     }}
                   />
                   <Typography
                     sx={{
                       fontSize: { xs: "12px", md: "16px" },
                       fontWeight: "bold",
-                      color: "#FF595A",
+                      color: "#FF7262",
                       fontFamily: "Montserrat",
                     }}
                   >
@@ -119,7 +119,7 @@ export default function Servicesnew() {
                     sx={{
                       fontSize: { xs: "12px", md: "16px" },
                       fontWeight: "bold",
-                      color: "#FF595A",
+                      color: "#FF7262",
                       fontFamily: "Montserrat",
                     }}
                   >
@@ -148,7 +148,7 @@ export default function Servicesnew() {
                     sx={{
                       fontSize: { xs: "12px", md: "16px" },
                       fontWeight: "bold",
-                      color: "#FF595A",
+                      color: "#FF7262",
                       fontFamily: "Montserrat",
                     }}
                   >
@@ -186,7 +186,7 @@ export default function Servicesnew() {
                     sx={{
                       fontSize: { xs: "12px", md: "16px" },
                       fontWeight: "bold",
-                      color: "#FF595A",
+                      color: "#FF7262",
                       fontFamily: "Montserrat",
                     }}
                   >
@@ -201,7 +201,7 @@ export default function Servicesnew() {
               sx={{
                 fontSize: { xs: "30px", md: "40px" },
                 fontWeight: "bold",
-                color: "#FF595A",
+                color: "#FF7262",
                 fontFamily: "Montserrat",
               }}
             >

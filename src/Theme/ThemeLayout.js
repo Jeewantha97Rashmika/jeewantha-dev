@@ -11,7 +11,7 @@ const lightTheme = createTheme({
       offBlack: "#333",
     },
     secondary: {
-      main: "#FF595A",
+      main: "#FF7262",
     },
     btnColor: {
       main: "#2E90FA",
@@ -28,8 +28,8 @@ const lightTheme = createTheme({
       main: "#707070",
       svg:"#333",
       secondary: "#333",
-      decText: "#FF595A",
-      funTextColor: "#6366F1",
+      decText: "#FF7262",
+      funTextColor: "#FF7262",
       bigText: "#AAAAAA",
     },
     borderColor: {
@@ -58,7 +58,7 @@ const darkTheme = createTheme({
       offBlack: "#333",
     },
     secondary: {
-      main: "#FF595A",
+      main: "#FF7262",
     },
     btnColor: {
       main: "#2E90FA",
