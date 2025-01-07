@@ -87,7 +87,7 @@ export default function UiSkill() {
                       width="25"
                       height="25"
                     />
-                    <Typography sx={{ fontWeight: "600", fontSize: "16px" }}>
+                    <Typography sx={{ fontWeight: "600", fontSize: "16px",  color: theme.palette.textColor?.secondary, }}>
                       {val.name}
                     </Typography>
                   </Box>

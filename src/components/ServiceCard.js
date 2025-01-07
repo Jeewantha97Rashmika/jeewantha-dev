@@ -42,6 +42,7 @@ export default function ServiceCard({ title, description, image }) {
           <Box sx={{ ml: 2 }}>
             <Typography
               sx={{
+                color: theme.palette.textColor?.secondary,
                 fontSize: "1rem",
                 fontWeight: 600,
                 fontFamily: "Montserrat",
@@ -51,6 +52,7 @@ export default function ServiceCard({ title, description, image }) {
             </Typography>
             <Typography
               sx={{
+                color: theme.palette.textColor?.main,
                 fontSize: "12PX",
                 fontWeight: 500,
                 fontFamily: "Montserrat",

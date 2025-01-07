@@ -63,13 +63,10 @@ export default function WorkingContent() {
         }}
       >
         Assisted in designing user-friendly interfaces for web and mobile
-        applications, focusing on enhancing the overall user experience.
-        Collaborated with senior designers to create wireframes, prototypes, and
-        visual designs that align with project goals. Gained proficiency in
-        design tools such as Adobe XD, Figma, and Sketch, as well as front-end
-        technologies like HTML, CSS, and JavaScript ,React JS , Gatsby JS .
-        Developed a strong understanding of responsive design principles and
-        accessibility standards to create inclusive digital experiences..
+        applications, focusing on enhancing the overall user experience.It was
+        great to explore and discover new opportunities and to be able to make
+        some improvements in new projects. Team work with seniors, made me to
+        inherit more knowledge and wisdom.
       </Typography>
     </div>
   );

@@ -18,11 +18,11 @@ export default function ReviewCard({
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        maxWidth: { xs: "100%", md: "70vw" },
+        maxWidth: { xs: "100%", md: "50vw" },
         my: 10,
 
         minHeight: "40rem",
-        backgroundColor: theme.palette.cardBgColor?.main,
+        // backgroundColor: theme.palette.cardBgColor?.main,
         gap: 2,
         padding: { xs: "1rem", md: "2rem" },
         borderRadius: "30px",
@@ -144,7 +144,7 @@ export default function ReviewCard({
       </Typography>
       <Typography
         sx={{
-          color: theme.palette.textColor?.main,
+          color: theme.palette.textColor?.secondary,
           fontSize: "16px",
           fontWeight: 400,
           fontFamily: "Montserrat",

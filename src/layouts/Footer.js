@@ -3,6 +3,7 @@ import { Container, Grid, Box, Typography, Button } from "@mui/material";
 import Logo from "../images/mylogo3.svg";
 import { useMediaQuery } from "@mui/material";
 import MainBtn from "../components/MainBtn";
+import Pattern from "../images/pattern.png";
 export default function Footer() {
   const handleLinkedinClick = () => {
     window.location.href =
@@ -24,6 +25,17 @@ export default function Footer() {
       style={{
         backgroundColor: "#1F1F1F",
         transition: "background-color 0.5s ease, color 0.5s ease",
+        mask: `url(${Pattern}) repeat-x`,
+        // backgroundImage: `url(${Pattern})`,
+        // maskImage: `url(${Pattern})`,
+        maskSize: "auto",
+        maskRepeat: "repeat-x",
+        maskOrigin: "border-box",
+        maskClip: "border-box",
+        maskComposite: "add",
+        maskMode: "match-source",
+        WebkitMaskPositionX: "0%", // CamelCase for Webkit properties
+        WebkitMaskPositionY: "0%",
       }}
     >
       <Container sx={{ pt: { xs: 10 } }}>
@@ -219,7 +231,13 @@ export default function Footer() {
       </Box> */}
       <hr style={{ border: "1px solid #2B2B2B", marginTop: "20px" }} />
       <Box
-        sx={{ display: "flex", justifyContent: "center", pb: { md: 3, xs: 3 } }}
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          pb: { md: 3, xs: 3 },
+        }}
       >
         <Typography
           component="h3"
@@ -228,11 +246,23 @@ export default function Footer() {
             transition: "transform 0.2s",
             color: "#f1f1f1",
             fontSize: { xs: "12px", md: "14px" },
+            fontWeight: 600,
+            fontFamily: "Montserrat",
+          }}
+        >
+          Copyright © 2025 Jeewantha Rashmika. All rights reserved.
+        </Typography>
+        <Typography
+          component="h3"
+          sx={{
+            transition: "transform 0.2s",
+            color: "#f1f1f1",
+            fontSize: { xs: "10px", md: "12px" },
             fontWeight: 400,
             fontFamily: "Montserrat",
           }}
         >
-          Designed by Jeewantha, built using Gatsby-Js in 2025.
+          Designed & developed by Jeewantha Rashmika
         </Typography>
       </Box>
     </div>

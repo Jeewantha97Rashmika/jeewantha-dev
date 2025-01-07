@@ -1,10 +1,10 @@
 import { useMotionValue, motion, useSpring, useTransform } from "framer-motion";
 import React, { useRef } from "react";
 import { FiArrowRight } from "react-icons/fi";
-import Project5 from "../../images/project5.jpg";
 import xcinama from "../../images/xcinama.png";
 import radikadilanka from "../../images/radikadilanka.png";
 import photographer from "../../images/photographer.png";
+import Flo from "../../images/flo.jpg";
 import hightec from "../../images/hightec.png";
 import xiomiband from "../../images/xiomiband.png";
 import ezivizhub from "../../images/ezivizhub.png";
@@ -63,6 +63,13 @@ export default function ProjectList() {
             imgSrc={photographer}
             tecnology={uidesign}
             href="https://www.figma.com/proto/aSWFsx4n0Z6J9HYVKLdLcZ/photography-site?page-id=115%3A293&node-id=129-2&viewport=4358%2C1087%2C0.13&t=v7NnYf6IZuxd6W10-1&scaling=min-zoom&content-scaling=fixed"
+          />
+            <Link
+            heading="FLO-Shop"
+            subheading="Modern Flower shop oficial web site UI/UX Design using figma and photoshop"
+            imgSrc={Flo}
+            tecnology={uidesign}
+            href="https://www.figma.com/proto/QbC5mD6qjy6RwzQLSC8u0y/Flower-shop?page-id=56%3A28&node-id=56-30&viewport=711%2C499%2C0.13&t=8PwO1w6oawXkaXYC-1&scaling=min-zoom&content-scaling=fixed"
           />
           <Link
             heading="Radikadilanka"

@@ -66,11 +66,6 @@ export default function WorkingContent02() {
         Shopify, Wordpress ensuring high performance and scalability.
         Experienced in developing mobile applications using Flutter, delivering
         cross-platform solutions with responsive and user-friendly interfaces.
-        Collaborated closely with cross-functional teams to gather requirements
-        and translate them into innovative design concepts. Led a team of
-        juniordesigners and developers, providing mentorship and guidance to
-        foster professional growth. Implemented design best practices and
-        established a cohesive design system across multiple projects.
       </Typography>
     </div>
   );

@@ -63,15 +63,9 @@ export default function WorkingContent03() {
       >
         As a UI/UX Engineer, I have designed and developed intuitive,
         user-friendly interfaces for both web and mobile applications, focusing
-        on enhancing user engagement. I have experience working with the MERN
-        stack, Shopify, and WordPress to create scalable, high-performance
-        solutions. Additionally, I have developed cross-platform mobile apps
-        using Flutter, ensuring responsiveness and seamless user experiences. I
-        have collaborated with cross-functional teams to translate requirements
-        into innovative design concepts and led a team of junior designers and
-        developers, fostering their growth through mentorship. I also
-        implemented design best practices and established cohesive design
-        systems across projects.
+        on enhancing user engagement. Mentored junior developers, fostering growth and knowledge sharing.
+        Collaborated with senior stakeholders to align technical solutions with business objectives.
+        Integrated emerging technologies to enhance project efficiency and innovation.
       </Typography>
     </div>
   );
