@@ -14,31 +14,38 @@ export default function CountBanner() {
 
         marginTop: "-5px",
         zIndex: 100,
-
+        pb: 3,
         // borderRadius: "3rem",
       }}
     >
       <Container>
-        <Box sx={{
-          py: 5,
-          display: "flex",
-          flexDirection: "column",
-          gap: 3,
-          alignItems: "center",
-          justifyContent: "center",
-        }}>
-          <Typography>
-            <span style={{ color: "white", fontSize: "32px", fontWeight: 800 }}>About Me</span>
+        <Box
+          sx={{
+            py: 5,
+            display: "flex",
+            flexDirection: "column",
+            gap: 3,
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Typography
+           sx={{ color: "#FFF", fontSize: "40px", fontWeight: 800 , fontFamily: "Montserrat"}}>
+            
+              About Me
+          
           </Typography>
-          <Typography sx={{
-            color: "white",
-            fontSize: "16px",
-            fontWeight: 400,
-            fontFamily: "Montserrat",
-            textAlign: "center",
-            maxWidth: "800px"
-          }}>
-            I'm Sara Jones, a UI/UX designer dedicated to crafting intuitive and
+          <Typography
+            sx={{
+              color: "white",
+              fontSize: "16px",
+              fontWeight: 400,
+              fontFamily: "Montserrat",
+              textAlign: "center",
+              maxWidth: "800px",
+            }}
+          >
+            I'm Jeewantha Rashmika, a UI/UX designer dedicated to crafting intuitive and
             visually stunning digital experiences. With a passion for
             user-centric design, I transform ideas into functional and beautiful
             interfaces. Let's collaborate and shape the future of design

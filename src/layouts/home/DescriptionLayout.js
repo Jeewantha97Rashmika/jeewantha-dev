@@ -28,6 +28,7 @@ export default function DescriptionLayout({ description, btnTitle }) {
                 fontSize: { xs: "30px", md: "40px" },
                 fontWeight: "bold",
                 color: "#0B0C0C",
+                fontFamily: "Montserrat"
               }}
             >
               Why you should{" "}
@@ -36,6 +37,7 @@ export default function DescriptionLayout({ description, btnTitle }) {
               sx={{
                 fontSize: { xs: "30px", md: "40px" },
                 fontWeight: "bold",
+                fontFamily: "Montserrat",
                 color: theme.palette.textColor?.decText,
               }}
             >
@@ -49,6 +51,7 @@ export default function DescriptionLayout({ description, btnTitle }) {
                 color: "#1F1F1F",
                 fontWeight: 400,
                 mb: 3,
+                fontFamily: "Montserrat"
               }}
             >
               Explore my design services, from user interface and experience to
