@@ -31,7 +31,7 @@ export default function HeroSection() {
       <Container
         sx={{
           position: "relative",
-          zIndex: 10,
+          // zIndex: 10,
         }}
       >
         <Box
@@ -128,6 +128,7 @@ export default function HeroSection() {
                     maxWidth: "100%",
                     height: "auto",
                     position: "relative",
+                    zIndex: 2,
                   }}
                   alt="knovik"
                 />

@@ -38,16 +38,8 @@ export default function Header({ themeMode, toggleTheme }) {
   const handleWordClick = () => {
     window.location.href = "/#projects"; // Replace with your desired URL
   };
-  // const handleKnowledgeClick = () => {
-  //   window.location.href = "/#knowledge-sharing"; // Replace with your desired URL
-  // };
+
   const theme = useTheme();
-  // const [themeMode, setThemeMode] = useState("");
-  // useEffect(() => {
-  //   if (typeof window !== "undefined") {
-  //     setThemeMode(localStorage.getItem("themeMode"));
-  //   }
-  // }, [typeof window !== "undefined" && localStorage.getItem("themeMode")]);
 
   const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {
@@ -85,13 +77,8 @@ export default function Header({ themeMode, toggleTheme }) {
         position: "sticky",
         width: "100%",
         top: 0,
-        zIndex: 1000,
+        zIndex: 10,
         overflow: " hidden",
-        backdropFilter: "blur(10px)",
-        WebkitBackdropFilter: "blur(10px)",
-        // opacity: 0.93,
-
-        // boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
       }}
     >
       <Container
@@ -223,25 +210,6 @@ export default function Header({ themeMode, toggleTheme }) {
           <Button
             color="inherit"
             onClick={() => setIsOpen(true)}
-            // sx={{
-            //   color: theme.palette.textColor?.main,
-            //   ml: 2,
-            //   display: isMobile ? "none" : "inline",
-            //   justifyContent: "center",
-            //   alignItems: "center",
-            //   "&:hover": {
-            //     // backgroundColor: "#e8f5ff",
-            //     padding: "5px 20px",
-            //     borderRadius: "40px",
-            //     transform: "scale(0.95)",
-            //   },
-            //   fontFamily: "Montserrat",
-            //   textAlign: "center",
-            //   textTransform: "none",
-            //   fontSize: "18px",
-            //   padding: "5px 20px",
-            //   transition: "transform 0.2s",
-            // }}
             sx={{
               color: theme.palette.btnColor?.text,
               width: { xs: "100%", sm: "auto" },

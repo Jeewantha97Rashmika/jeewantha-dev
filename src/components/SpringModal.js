@@ -20,7 +20,7 @@ export default function SpringModal({ isOpen, setIsOpen }) {
             padding: "15px",
             position: "fixed",
             inset: 0,
-            zIndex: 999999, // Ensure this is at the highest layer
+            zIndex: 100000, // Ensure this is at the highest layer
             display: "grid",
             placeItems: "center",
             overflowY: "scroll",
