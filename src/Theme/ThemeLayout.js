@@ -8,7 +8,7 @@ const lightTheme = createTheme({
     mode: "light",
     primary: {
       main: "#333",
-      offBlack: "#333",
+      offBlack: "#1D1D1E",
     },
     secondary: {
       main: "#FF7262",
@@ -55,7 +55,7 @@ const darkTheme = createTheme({
     mode: "dark",
     primary: {
       main: "#fff",
-      offBlack: "#333",
+      offBlack: "#1D1D1E",
     },
     secondary: {
       main: "#FF7262",
@@ -66,8 +66,8 @@ const darkTheme = createTheme({
          secondary:"#fff"
     },
     bgColor: {
-      main: "#2C2B2E",
-      secondary: "#191919",
+      main: "#171718",
+      secondary: "#1A1A1B",
       dec: "#FF8081",
       header: "#212121",
     },
@@ -83,7 +83,7 @@ const darkTheme = createTheme({
       main: "#fff",
     },
     cardBgColor: {
-      main: "#333",
+      main: "#1D1D1E",
     },
 
     blogCardBgColor: {

@@ -21,12 +21,25 @@ export default function HeroSection() {
   return (
     <Box
       sx={{
-        backgroundColor: bgColor,
+        // backgroundColor: bgColor,
         transition: "background-color 0.5s ease, color 0.5s ease",
-
         backgroundImage: `url(${GridImage})`,
       }}
     >
+      <Box
+        sx={{
+          position: "absolute",
+          top: {xs:520,md:120},
+          left: {xs:"50%",md:"40%"},
+          transform: "translateX(-50%)",
+          width: { xs: "300px", md: "600px" },
+          height: { xs: "300px", md: "600px" },
+          borderRadius: "50%",
+          backgroundColor: "rgba(255, 0, 0, 0.2)",
+          filter: "blur(120px)",
+          pointerEvents: "none",
+        }}
+      ></Box>
       {/* <ScrollEffect> */}
       <Container
         sx={{
@@ -73,13 +86,13 @@ export default function HeroSection() {
                   <Typography
                     component={"p"}
                     sx={{
-                      color: theme.palette.textColor?.main,
+                      color: theme.palette.textColor?.secondary,
                       fontSize: { xs: "16px", sm: "18px" },
                       textAlign: "justify",
                       fontFamily: "Montserrat",
                       fontWeight: 500,
                       lineHeight: 1.6,
-                      backgroundColor: theme.palette.bgColor?.main,
+                      // backgroundColor: theme.palette.bgColor?.main,
                       transition: "background-color 0.5s ease, color 0.5s ease",
                     }}
                   >

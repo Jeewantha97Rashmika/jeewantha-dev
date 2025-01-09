@@ -89,11 +89,26 @@ export default function Footer() {
   return (
     <div
       style={{
-        backgroundColor: "#1F1F1F",
+        backgroundColor: "#1D1D1E",
         transition: "background-color 0.5s ease, color 0.5s ease",
         backgroundImage: `url(${GridImage})`,
+        position: "relative",
       }}
     >
+      <Box
+        sx={{
+          position: "absolute",
+          bottom: 0,
+          left: "50%",
+          transform: "translateX(-50%)",
+          width: {xs:"300px",md:"600px"},
+          height:{xs:"300px",md:"600px"},
+          borderRadius: "50%",
+          backgroundColor: "rgba(255, 0, 0, 0.2)",
+          filter: "blur(120px)",
+          pointerEvents: "none",
+        }}
+      ></Box>
       <Container sx={{ pt: { xs: 10 } }}>
         <Box
           sx={{
@@ -141,18 +156,18 @@ export default function Footer() {
         <Box
           sx={{
             display: "flex",
-            flexDirection: {xs: "column", md: "row"},
+            flexDirection: { xs: "column", md: "row" },
             justifyContent: "center",
             alignItems: "center",
             mt: 3,
             color: "white",
           }}
         >
-          <Typography sx={{ color: "white", mx: 2, my:2, fontSize: "20px" }}>
+          <Typography sx={{ color: "white", mx: 2, my: 2, fontSize: "20px" }}>
             SL : {times.colombo}
           </Typography>
           <MainBtn title={"Contact Me"} />
-          <Typography sx={{ color: "white", mx: 2,my:2, fontSize: "20px" }}>
+          <Typography sx={{ color: "white", mx: 2, my: 2, fontSize: "20px" }}>
             USA : {times.usa}
           </Typography>
         </Box>

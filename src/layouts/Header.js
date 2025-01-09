@@ -65,7 +65,9 @@ export default function Header({ themeMode, toggleTheme }) {
       animate={{
         backgroundColor: isScrolled
           ? theme.palette.bgColor?.header // When scrolled
-          : theme.palette.bgColor?.main, // When at top
+          : "rgba(0, 0, 0, 0)",
+
+        boxShadow: isScrolled ? theme.palette.shadow?.main : "none",
       }}
       transition={{
         backgroundColor: { duration: 0.5, ease: "easeInOut" }, // Smooth color transition
@@ -73,7 +75,7 @@ export default function Header({ themeMode, toggleTheme }) {
       sx={{
         // backgroundColor: theme.palette.bgColor?.main,
         transition: "background-color 0.5s ease, color 0.5s ease",
-        // boxShadow: theme.palette.shadow?.main,
+
         position: "sticky",
         width: "100%",
         top: 0,
