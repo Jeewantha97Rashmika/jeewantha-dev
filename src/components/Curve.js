@@ -1,6 +1,8 @@
 import React from "react";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
+import { useTheme } from "@mui/material";
 export default function Curve() {
+    const theme = useTheme();
   const initialPath = `M100 0 L100 ${window.innerHeight} Q-100 ${
     window.innerHeight / 2
   } 100 0`;
@@ -28,10 +30,12 @@ export default function Curve() {
     left: "-99px",
     width: "100px",
     height: "100%",
-    fill: "rgb(41, 41, 41)",
+    fill: theme.palette.bgColor?.nav,
+    // backgroundColor: theme.palette.bgColor?.nav,
     stroke: "none",
   };
   return (
+    
     <svg style={svgStyles}>
       <motion.path
         variants={curve}
