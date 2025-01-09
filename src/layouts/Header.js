@@ -17,9 +17,10 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Avatar from "@mui/material/Avatar";
 import ProImage from "../images/pro02.png";
 import { FiMoon, FiSun } from "react-icons/fi";
-import { motion } from "framer-motion";
+import { motion, transform, AnimatePresence } from "framer-motion";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import SpringModal from "../components/SpringModal";
+import Nav from "../components/Nav";
 
 export default function Header({ themeMode, toggleTheme }) {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -36,7 +37,7 @@ export default function Header({ themeMode, toggleTheme }) {
     window.location.href = "/#services"; // Replace with your desired URL
   };
   const handleWordClick = () => {
-    window.location.href = "/#projects"; // Replace with your desired URL
+    window.location.href = "/#work"; // Replace with your desired URL
   };
 
   const theme = useTheme();
@@ -59,6 +60,59 @@ export default function Header({ themeMode, toggleTheme }) {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  //
+
+  const styles = {
+    button: {
+      position: "fixed",
+      right: "15px",
+      top: "10px",
+      // margin: "20px",
+      zIndex: 5,
+      width: "40px",
+      height: "40px",
+      // transform: "translate(-50%, -50%)",
+      borderRadius: "50%",
+      backgroundColor: theme.palette.secondary?.main,
+      cursor: "pointer",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    burger: {
+      width: "100%",
+      position: "relative",
+      display: "block",
+    },
+    burgerBeforeAfter: {
+      // content: '""',
+      display: "block",
+      height: "1px",
+      width: "40%",
+      margin: "auto",
+      backgroundColor: "white",
+      // marginTop: "5px",
+      // marginBottom: "5px",
+      position: "relative",
+      transition: "transform 0.3s",
+    },
+    burgerBefore: {
+      top: "5px",
+    },
+    burgerAfter: {
+      top: "-5px",
+    },
+    burgerActiveBefore: {
+      transform: "rotate(-45deg)",
+      top: "0px",
+    },
+    burgerActiveAfter: {
+      transform: "rotate(45deg)",
+      top: "-1px",
+    },
+  };
+  const [isActive, setIsActive] = useState(false);
   return (
     <Box
       component={motion.div}
@@ -158,7 +212,7 @@ export default function Header({ themeMode, toggleTheme }) {
               transition: "transform 0.2s",
             }}
           >
-            Projects
+            Work
           </Button>
           {/* <Button
             color="inherit"
@@ -255,11 +309,6 @@ export default function Header({ themeMode, toggleTheme }) {
             />
           </Button>
 
-          {/* <MainBtn
-            // handleLinkedinClick={handleLinkedinClick}
-            isMobile={isMobile}
-            title="Hire Me now" 
-          /> */}
           <Button
             // variant="contained"
             onClick={toggleTheme}
@@ -272,12 +321,6 @@ export default function Header({ themeMode, toggleTheme }) {
               borderRadius: "9999px",
               px: 2,
               py: 1,
-              // top: "80%",
-              // right: 10,
-              // zIndex: 1000000,
-              // "&:hover": {
-              //   backgroundColor: theme.palette.btnColor?.main,
-              // },
             }}
           >
             {themeMode === "light" ? (
@@ -292,10 +335,6 @@ export default function Header({ themeMode, toggleTheme }) {
               />
             )}
 
-            {/* <span style={{ zIndex: 10 }}>
-              {themeMode === "dark" ? "Light" : "Dark"}
-            </span> */}
-            {/* Animated background slider */}
             <div
               style={{
                 position: "absolute",
@@ -305,21 +344,10 @@ export default function Header({ themeMode, toggleTheme }) {
                 justifyContent:
                   themeMode === "dark" ? "flex-end" : "flex-start",
               }}
-            >
-              {/* <motion.span
-                layout
-                transition={{ type: "spring", damping: 15, stiffness: 250 }}
-                style={{
-                  height: "100%",
-                  width: "50%",
-                  borderRadius: "9999px", // Full rounded background
-                  // background: "linear-gradient(to right, #7c3aed, #6366f1)", // Gradient from violet to indigo
-                }}
-              /> */}
-            </div>
+            ></div>
           </Button>
 
-          <Box>
+          {/* <Box>
             <IconButton
               color="black"
               aria-label="toggle menu"
@@ -329,134 +357,38 @@ export default function Header({ themeMode, toggleTheme }) {
             >
               <MenuIcon />
             </IconButton>
-          </Box>
+          </Box> */}
+
           <SpringModal isOpen={isOpen} setIsOpen={setIsOpen} />
         </div>
 
-        <Drawer anchor="right" open={drawerOpen} onClose={handleDrawerToggle}>
-          <Container
-            sx={{
-              mt: 8,
-            }}
-          >
-            <div
-              style={{
-                padding: "16px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <Avatar
-                src={ProImage}
-                alt="Profile Picture"
-                sx={{ width: 150, height: 150 }}
-              />
-            </div>
-            <p
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                fontFamily: "Montserrat",
-              }}
-            >
-              Jeewantha Rashmika
-            </p>
-            <p
-              style={{
-                marginBottom: "20px",
-                fontSize: "13px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                fontFamily: "Montserrat",
-              }}
-            >
-              jeewantharashmika80@gmail.com
-            </p>
-            <center>
-              <Button
-                // variant="contained"
-                onClick={toggleTheme}
-                sx={{
-                  color: theme.palette.textColor?.main,
-                  // backgroundColor: theme.palette.btnColor?.main,
-                  transition: "background-color 0.5s ease, color 0.5s ease",
-                  // position: "fixed",
-
-                  borderRadius: "9999px",
-                  px: 2,
-                  py: 1,
-                }}
-              >
-                {themeMode === "light" ? (
-                  <FiSun style={{ fontSize: "1.25rem", zIndex: 10 }} />
-                ) : (
-                  <FiMoon
-                    style={{
-                      fontSize: "1.25rem",
-                      zIndex: 10,
-                      color: theme.palette.textColor?.main,
-                    }}
-                  />
-                )}
-
-                {/* Animated background slider */}
-                <div
+        {isMobile && (
+          <Box>
+            <div onClick={() => setIsActive(!isActive)} style={styles.button}>
+              <div style={styles.burger}>
+                <span
                   style={{
-                    position: "absolute",
-                    inset: 0,
-                    zIndex: 0,
-                    display: "flex",
-                    justifyContent:
-                      themeMode === "dark" ? "flex-end" : "flex-start",
+                    ...styles.burgerBeforeAfter,
+                    ...styles.burgerBefore,
+                    ...(isActive ? styles.burgerActiveBefore : {}),
                   }}
-                ></div>
-              </Button>
-            </center>
-            <br />
-            <hr></hr>
-            <List sx={{ width: 260 }} onClick={handleDrawerToggle}>
-              <ListItem button component="a" href="/#services">
-                <ListItemText
-                  primary="Services"
-                  primaryTypographyProps={{
-                    style: { fontFamily: "Montserrat" },
+                ></span>
+                <span
+                  style={{
+                    ...styles.burgerBeforeAfter,
+                    ...styles.burgerAfter,
+                    ...(isActive ? styles.burgerActiveAfter : {}),
                   }}
-                />
-              </ListItem>
-              <ListItem button component="a" href="/#projects">
-                <ListItemText
-                  primary="Projects"
-                  primaryTypographyProps={{
-                    style: { fontFamily: "Montserrat" },
-                  }}
-                />
-              </ListItem>
-              {/* <ListItem button component="a" href="/#knowledge-sharing">
-                <ListItemText
-                  primary="Knowledge Sharing"
-                  primaryTypographyProps={{
-                    style: { fontFamily: "Montserrat" },
-                  }}
-                />
-              </ListItem> */}
-              <ListItem
-                button
-                component="a"
-                href="https://www.linkedin.com/in/jeewantha-rashmika-b5a56820a/"
-              >
-                <ListItemText
-                  primary="LinkedIn"
-                  primaryTypographyProps={{
-                    style: { fontFamily: "Montserrat" },
-                  }}
-                />
-              </ListItem>
-            </List>
-          </Container>
-        </Drawer>
+                ></span>
+              </div>
+            </div>
+            <AnimatePresence mode="wait">
+              {isActive && (
+                <Nav themeMode={themeMode} toggleTheme={toggleTheme} setIsActive={setIsActive} />
+              )}
+            </AnimatePresence>
+          </Box>
+        )}
         {/* </Toolbar>
         </AppBar> */}
       </Container>

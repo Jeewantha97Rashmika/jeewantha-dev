@@ -23,6 +23,7 @@ const lightTheme = createTheme({
       secondary: "#2C2B2E",
       dec: "#FFD3D0",
       header: "#F3F3F3",
+      nav:"rgb(58, 58, 58)",
     },
     textColor: {
       main: "#707070",
@@ -70,6 +71,7 @@ const darkTheme = createTheme({
       secondary: "#1A1A1B",
       dec: "#FF8081",
       header: "#212121",
+         nav:"rgb(41, 41, 41)",
     },
     textColor: {
       main: "#ffffff",

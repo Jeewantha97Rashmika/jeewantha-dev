@@ -16,7 +16,6 @@ export default function HeroSection() {
   const theme = useTheme();
 
   const examples = [" Hello , How are you?", " Contact me to know more"];
-  const bgColor = theme.palette.bgColor?.main;
 
   return (
     <Box
@@ -29,8 +28,8 @@ export default function HeroSection() {
       <Box
         sx={{
           position: "absolute",
-          top: {xs:520,md:120},
-          left: {xs:"50%",md:"40%"},
+          top: { xs: 520, md: 120 },
+          left: { xs: "50%", md: "40%" },
           transform: "translateX(-50%)",
           width: { xs: "300px", md: "600px" },
           height: { xs: "300px", md: "600px" },

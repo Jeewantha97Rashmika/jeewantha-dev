@@ -31,7 +31,7 @@ const theme = useTheme();
         fontFamily: "Montserrat",
         color: theme.palette.textColor?.main,
         // border: "3px dashed rgba(112, 112, 112, 1)",
-        padding: "0.5rem",
+        // padding: "0.5rem",
         borderRadius: "0.25rem",
         display: "inline-flex",
         alignItems: "center",

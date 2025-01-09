@@ -4,7 +4,7 @@ import ProjectList from "./ProjectList";
 
 export default function Projrcts() {
   return (
-    <div id="projects">
+    <div id="work">
       <DescriptionLayout />
       {/* <ScrollEffect> */}
       <ProjectList />

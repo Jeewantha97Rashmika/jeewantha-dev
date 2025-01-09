@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Container, Grid, Box, Typography, Button } from "@mui/material";
+import {
+  Container,
+  Grid,
+  Box,
+  Typography,
+  Button,
+  useTheme,
+} from "@mui/material";
 
 import Logo2 from "../images/JeewanthaLogowhite.svg";
 import { useMediaQuery } from "@mui/material";
@@ -10,6 +17,7 @@ import { FaSquareGithub } from "react-icons/fa6";
 import { MdAttachEmail } from "react-icons/md";
 import { FaSquareInstagram } from "react-icons/fa6";
 import { FaFacebookSquare } from "react-icons/fa";
+import { FaSquareBehance } from "react-icons/fa6";
 
 export default function Footer() {
   const handleLinkedinClick = () => {
@@ -84,12 +92,20 @@ export default function Footer() {
       icon: <FaFacebookSquare />,
       link: "https://www.facebook.com/jeewatharashmika.calyso",
     },
+    {
+      name: "Behance",
+      icon: <FaSquareBehance />,
+      link: "https://www.behance.net/jeewantharashmika",
+    },
   ];
   const isMobile = useMediaQuery("(max-width: 920px)");
+  const theme = useTheme();
   return (
     <div
       style={{
         backgroundColor: "#1D1D1E",
+        // backgroundColor:theme.palette.bgColor.main,
+
         transition: "background-color 0.5s ease, color 0.5s ease",
         backgroundImage: `url(${GridImage})`,
         position: "relative",
@@ -101,8 +117,8 @@ export default function Footer() {
           bottom: 0,
           left: "50%",
           transform: "translateX(-50%)",
-          width: {xs:"300px",md:"600px"},
-          height:{xs:"300px",md:"600px"},
+          width: { xs: "300px", md: "400px" },
+          height: { xs: "300px", md: "400px" },
           borderRadius: "50%",
           backgroundColor: "rgba(255, 0, 0, 0.2)",
           filter: "blur(120px)",
@@ -136,7 +152,7 @@ export default function Footer() {
                 <Typography
                   sx={{
                     color: "white",
-                    mx: 2,
+                    mx: 1.5,
                     "&:hover": {
                       color: "#FF7262",
                       scale: 0.95,
@@ -144,7 +160,7 @@ export default function Footer() {
                     },
                     cursor: "pointer",
                     transition: "color 0.2s ease , scale 0.2s ease",
-                    fontSize: "40px",
+                    fontSize: {xs:"30px",md:"40px"},
                   }}
                 >
                   {val.icon}
