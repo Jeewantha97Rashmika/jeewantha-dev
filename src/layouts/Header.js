@@ -2,20 +2,11 @@ import React, { useState, useEffect } from "react";
 import {
   Box,
   Button,
-  IconButton,
-  Drawer,
-  List,
-  ListItem,
-  ListItemText,
   Container,
-  useMediaQuery,
   useTheme,
 } from "@mui/material";
 import Logo from "../images/JeewanthaLogoblack.svg";
 import Logo2 from "../images/JeewanthaLogowhite.svg";
-import MenuIcon from "@mui/icons-material/Menu";
-import Avatar from "@mui/material/Avatar";
-import ProImage from "../images/pro02.png";
 import { FiMoon, FiSun } from "react-icons/fi";
 import { motion, transform, AnimatePresence } from "framer-motion";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";

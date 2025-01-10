@@ -31,5 +31,15 @@ module.exports = {
     {
       resolve: "gatsby-plugin-no-sourcemaps",
     },
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-TH73QWLG",
+
+        includeInDevelopment: false,
+
+        defaultDataLayer: { platform: "gatsby" },
+      },
+    },
   ],
 };
