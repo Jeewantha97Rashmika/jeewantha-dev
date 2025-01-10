@@ -119,7 +119,7 @@ export default function Header({ themeMode, toggleTheme }) {
       animate={{
         backgroundColor: isScrolled
           ? theme.palette.bgColor?.header // When scrolled
-          : "rgba(0, 0, 0, 0)",
+          : theme.palette.bgColor?.fixHeader,
 
         boxShadow: isScrolled ? theme.palette.shadow?.main : "none",
       }}
@@ -384,7 +384,11 @@ export default function Header({ themeMode, toggleTheme }) {
             </div>
             <AnimatePresence mode="wait">
               {isActive && (
-                <Nav themeMode={themeMode} toggleTheme={toggleTheme} setIsActive={setIsActive} />
+                <Nav
+                  themeMode={themeMode}
+                  toggleTheme={toggleTheme}
+                  setIsActive={setIsActive}
+                />
               )}
             </AnimatePresence>
           </Box>
