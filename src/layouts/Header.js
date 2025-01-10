@@ -22,9 +22,9 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import SpringModal from "../components/SpringModal";
 import Nav from "../components/Nav";
 
-export default function Header({ themeMode, toggleTheme }) {
+export default function Header({ themeMode, toggleTheme ,isMobile}) {
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const isMobile = useMediaQuery("(max-width: 1006px)");
+
   const [isOpen, setIsOpen] = useState(false);
   const handleDrawerToggle = () => {
     setDrawerOpen(!drawerOpen);

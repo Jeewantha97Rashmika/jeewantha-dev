@@ -4,7 +4,7 @@ import Home from "../layouts/Home";
 import "../global.css";
 import Footer from "../layouts/Footer";
 import { Helmet } from "react-helmet";
-import { Box } from "@mui/material";
+import { Box,useMediaQuery } from "@mui/material";
 
 import ThemeLayout from "../Theme/ThemeLayout";
 const IndexPage = () => {
@@ -21,7 +21,7 @@ const IndexPage = () => {
   const toggleTheme = () => {
     setThemeMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
   };
-
+  const isMobile = useMediaQuery("(max-width: 1006px)");
   return (
     <>
       <Helmet>
@@ -37,7 +37,7 @@ const IndexPage = () => {
 
       <ThemeLayout themeMode={themeMode}>
         <Box>
-          <Header themeMode={themeMode} toggleTheme={toggleTheme} />
+          <Header themeMode={themeMode} toggleTheme={toggleTheme} isMobile={isMobile} />
           <Home />
           <Footer />
         </Box>
