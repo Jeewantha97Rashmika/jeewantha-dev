@@ -26,12 +26,12 @@ export default function Curve() {
 
   const svgStyles = {
     position: "absolute",
+    zIndex: 10,
     top: 0,
     left: "-99px",
     width: "100px",
     height: "100%",
     fill: theme.palette.bgColor?.nav,
-    // backgroundColor: theme.palette.bgColor?.nav,
     stroke: "none",
   };
   return (

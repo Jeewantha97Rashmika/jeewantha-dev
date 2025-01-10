@@ -67,7 +67,7 @@ const darkTheme = createTheme({
          secondary:"#fff"
     },
     bgColor: {
-      main: "#171718",
+      main: "#121212",
       secondary: "#1A1A1B",
       dec: "#FF8081",
       header: "#212121",
