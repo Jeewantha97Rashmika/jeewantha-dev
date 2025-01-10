@@ -1,10 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  Box,
-  Button,
-  Container,
-  useTheme,
-} from "@mui/material";
+import { Box, Button, Container, useTheme } from "@mui/material";
 import Logo from "../images/JeewanthaLogoblack.svg";
 import Logo2 from "../images/JeewanthaLogowhite.svg";
 import { FiMoon, FiSun } from "react-icons/fi";
@@ -13,7 +8,7 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import SpringModal from "../components/SpringModal";
 import Nav from "../components/Nav";
 
-export default function Header({ themeMode, toggleTheme ,isMobile}) {
+export default function Header({ themeMode, toggleTheme, isMobile }) {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const [isOpen, setIsOpen] = useState(false);
@@ -66,6 +61,7 @@ export default function Header({ themeMode, toggleTheme ,isMobile}) {
       // transform: "translate(-50%, -50%)",
       borderRadius: "50%",
       backgroundColor: theme.palette.secondary?.main,
+      transition: "background-color 0.3s ease, color 0.5s ease",
       cursor: "pointer",
       display: "flex",
       alignItems: "center",
@@ -115,11 +111,11 @@ export default function Header({ themeMode, toggleTheme ,isMobile}) {
         boxShadow: isScrolled ? theme.palette.shadow?.main : "none",
       }}
       transition={{
-        backgroundColor: { duration: 0.5, ease: "easeInOut" }, // Smooth color transition
+        backgroundColor: { duration: 0.1, ease: "easeInOut" }, // Smooth color transition
       }}
       sx={{
         // backgroundColor: theme.palette.bgColor?.main,
-        transition: "background-color 0.5s ease, color 0.5s ease",
+        transition: "background-color 0.1s ease, color 0.5s ease",
 
         position: "sticky",
         width: "100%",
