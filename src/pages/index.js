@@ -13,7 +13,7 @@ const IndexPage = () => {
       ? localStorage.getItem("themeMode") || "light"
       : "light";
   });
-  const theme = useTheme();
+  // const theme = useTheme();
 
   useEffect(() => {
     localStorage.setItem("themeMode", themeMode);
@@ -32,7 +32,6 @@ const IndexPage = () => {
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
- 
     },
     body: {
       width: "80%",
@@ -61,12 +60,6 @@ const IndexPage = () => {
   useEffect(() => {
     setPath(initialCurve);
   }, []);
-
-  // const loaderHeight = () => {
-  //   const loaderBounds = loader.current.getBoundingClientRect();
-
-  //   return loaderBounds.height;
-  // };
 
   const setPath = (curve) => {
     const width = window.innerWidth;
@@ -107,7 +100,7 @@ const IndexPage = () => {
     }
 
     const elapsed = timestamp - start;
-    const newCurve = easeOutQuad(elapsed, initialCurve, -50, duration);
+    const newCurve = easeOutQuad(elapsed, initialCurve, -200, duration);
 
     setPath(newCurve);
     loader.current.style.top =
@@ -129,6 +122,11 @@ const IndexPage = () => {
   };
   return (
     <>
+      <div ref={loader} style={styles.loader}>
+        <svg style={styles.svg}>
+          <path ref={path} style={styles.path}></path>
+        </svg>
+      </div>
       <Helmet>
         <title>Jeewantha Rashmika | UI/UX Designer</title>
 
@@ -136,16 +134,9 @@ const IndexPage = () => {
           name="description"
           content="UI/UX designer who is interested in solving complex problems through designing and mobile app/web development"
         />
-
-        <link rel="canonical" href="" />
       </Helmet>
 
       <ThemeLayout themeMode={themeMode}>
-        <div ref={loader} style={styles.loader}>
-          <svg style={styles.svg}>
-            <path ref={path} style={styles.path}></path>
-          </svg>
-        </div>
         <Box>
           <Header
             themeMode={themeMode}

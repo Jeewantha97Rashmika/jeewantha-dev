@@ -3,7 +3,7 @@ import { Box, Button, Container, useTheme } from "@mui/material";
 import Logo from "../images/JeewanthaLogoblack.svg";
 import Logo2 from "../images/JeewanthaLogowhite.svg";
 import { FiMoon, FiSun } from "react-icons/fi";
-import { motion, transform, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import SpringModal from "../components/SpringModal";
 import Nav from "../components/Nav";
@@ -12,9 +12,7 @@ export default function Header({ themeMode, toggleTheme, isMobile }) {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const [isOpen, setIsOpen] = useState(false);
-  const handleDrawerToggle = () => {
-    setDrawerOpen(!drawerOpen);
-  };
+
   const handleLinkedinClick = () => {
     window.location.href =
       "https://www.linkedin.com/in/jeewantha-rashmika-b5a56820a/"; // Replace with your desired URL
@@ -126,8 +124,6 @@ export default function Header({ themeMode, toggleTheme, isMobile }) {
     >
       <Container
         sx={{
-          // paddingTop: { md: "10px", xs: "10px" },
-
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
@@ -154,54 +150,55 @@ export default function Header({ themeMode, toggleTheme, isMobile }) {
             />
           </a>
         </Box>
-        <div>
-          <Button
-            onClick={handleAboutClick}
-            color="inherit"
-            sx={{
-              color: theme.palette.textColor?.main,
-              ml: 2,
-              display: isMobile ? "none" : "inline",
-              "&:hover": {
-                // backgroundColor: "#e8f5ff",
+        {!isMobile && (
+          <div>
+            <Button
+              onClick={handleAboutClick}
+              color="inherit"
+              sx={{
+                color: theme.palette.textColor?.main,
+                ml: 2,
+                display: isMobile ? "none" : "inline",
+                "&:hover": {
+                  // backgroundColor: "#e8f5ff",
+                  padding: "5px 20px",
+                  borderRadius: "40px",
+                  transform: "scale(0.95)",
+                },
+                fontFamily: "Montserrat",
+                textAlign: "center",
+                textTransform: "none",
+                fontSize: "18px",
                 padding: "5px 20px",
-                borderRadius: "40px",
-                transform: "scale(0.95)",
-              },
-              fontFamily: "Montserrat",
-              textAlign: "center",
-              textTransform: "none",
-              fontSize: "18px",
-              padding: "5px 20px",
-              transition: "transform 0.2s",
-            }}
-          >
-            Services
-          </Button>
-          <Button
-            onClick={handleWordClick}
-            color="inherit"
-            sx={{
-              color: theme.palette.textColor?.main,
-              ml: 2,
-              display: isMobile ? "none" : "inline",
-              "&:hover": {
-                // backgroundColor: "#e8f5ff",
+                transition: "transform 0.2s",
+              }}
+            >
+              Services
+            </Button>
+            <Button
+              onClick={handleWordClick}
+              color="inherit"
+              sx={{
+                color: theme.palette.textColor?.main,
+                ml: 2,
+                display: isMobile ? "none" : "inline",
+                "&:hover": {
+                  // backgroundColor: "#e8f5ff",
+                  padding: "5px 20px",
+                  borderRadius: "40px",
+                  transform: "scale(0.95)",
+                },
+                fontFamily: "Montserrat",
+                textAlign: "center",
+                textTransform: "none",
+                fontSize: "18px",
                 padding: "5px 20px",
-                borderRadius: "40px",
-                transform: "scale(0.95)",
-              },
-              fontFamily: "Montserrat",
-              textAlign: "center",
-              textTransform: "none",
-              fontSize: "18px",
-              padding: "5px 20px",
-              transition: "transform 0.2s",
-            }}
-          >
-            Work
-          </Button>
-          {/* <Button
+                transition: "transform 0.2s",
+              }}
+            >
+              Work
+            </Button>
+            {/* <Button
             color="inherit"
             onClick={handleKnowledgeClick}
             sx={{
@@ -225,116 +222,116 @@ export default function Header({ themeMode, toggleTheme, isMobile }) {
             Knowledge Sharing
           </Button> */}
 
-          <Button
-            onClick={handleLinkedinClick}
-            color="inherit"
-            sx={{
-              color: theme.palette.textColor?.main,
-              ml: 2,
-              mr: 2,
-              display: isMobile ? "none" : "inline",
-              "&:hover": {
-                // backgroundColor: "#e8f5ff",
+            <Button
+              onClick={handleLinkedinClick}
+              color="inherit"
+              sx={{
+                color: theme.palette.textColor?.main,
+                ml: 2,
+                mr: 2,
+                display: isMobile ? "none" : "inline",
+                "&:hover": {
+                  // backgroundColor: "#e8f5ff",
+                  padding: "5px 20px",
+                  borderRadius: "40px",
+                  transform: "scale(0.95)",
+                },
+                fontFamily: "Montserrat",
+                textAlign: "center",
+                textTransform: "none",
+                fontSize: "18px",
                 padding: "5px 20px",
-                borderRadius: "40px",
-                transform: "scale(0.95)",
-              },
-              fontFamily: "Montserrat",
-              textAlign: "center",
-              textTransform: "none",
-              fontSize: "18px",
-              padding: "5px 20px",
-              transition: "transform 0.2s",
-            }}
-          >
-            Linkedin
-          </Button>
+                transition: "transform 0.2s",
+              }}
+            >
+              Linkedin
+            </Button>
 
-          <Button
-            color="inherit"
-            onClick={() => setIsOpen(true)}
-            sx={{
-              color: theme.palette.btnColor?.text,
-              width: { xs: "100%", sm: "auto" },
-              backgroundColor: theme.palette.btnColor?.main,
-              transition:
-                "background-color 0.5s ease, color 0.5s ease, border-radius 0.5s ease",
-              display: isMobile ? "none" : "inline-flex",
-              alignItems: "center",
-              borderRadius: "30px",
-              justifyContent: "center",
-              height: "46px",
-              mr: 2,
-              padding: "5px 10px 5px 20px",
-              "&:hover": {
+            <Button
+              color="inherit"
+              onClick={() => setIsOpen(true)}
+              sx={{
+                color: theme.palette.btnColor?.text,
+                width: { xs: "100%", sm: "auto" },
                 backgroundColor: theme.palette.btnColor?.main,
                 transition:
-                  "background-color 0.5s ease, color 0.5s ease , border-radius 0.5s ease",
+                  "background-color 0.5s ease, color 0.5s ease, border-radius 0.5s ease",
+                display: isMobile ? "none" : "inline-flex",
+                alignItems: "center",
+                borderRadius: "30px",
+                justifyContent: "center",
+                height: "46px",
+                mr: 2,
+                padding: "5px 10px 5px 20px",
+                "&:hover": {
+                  backgroundColor: theme.palette.btnColor?.main,
+                  transition:
+                    "background-color 0.5s ease, color 0.5s ease , border-radius 0.5s ease",
 
-                // transform: "scale(0.95)",
-                borderRadius: "0px",
-              },
-              fontFamily: "Montserrat",
-              textAlign: "center",
-              textTransform: "none",
-              fontSize: "16px",
+                  // transform: "scale(0.95)",
+                  borderRadius: "0px",
+                },
+                fontFamily: "Montserrat",
+                textAlign: "center",
+                textTransform: "none",
+                fontSize: "16px",
 
-              // transition: "transform 0.1s",
-            }}
-          >
-            {"Hire me now"}
-            <ArrowForwardIcon
-              sx={{
-                rotate: "-45deg",
-                backgroundColor: "#fff",
-                color: "#333",
-                marginLeft: "10px",
-                padding: "3px",
-                borderRadius: "50%",
-                fontSize: { xs: "24px", sm: "28px" },
+                // transition: "transform 0.1s",
               }}
-            />
-          </Button>
-
-          <Button
-            // variant="contained"
-            onClick={toggleTheme}
-            sx={{
-              color: theme.palette.textColor?.main,
-              // backgroundColor: theme.palette.btnColor?.main,
-              transition: "background-color 0.5s ease, color 0.5s ease",
-              // position: "fixed",
-              display: isMobile && "none",
-              borderRadius: "9999px",
-              px: 2,
-              py: 1,
-            }}
-          >
-            {themeMode === "light" ? (
-              <FiSun style={{ fontSize: "1.25rem", zIndex: 10 }} />
-            ) : (
-              <FiMoon
-                style={{
-                  fontSize: "1.25rem",
-                  zIndex: 10,
-                  color: theme.palette.textColor?.main,
+            >
+              {"Hire me now"}
+              <ArrowForwardIcon
+                sx={{
+                  rotate: "-45deg",
+                  backgroundColor: "#fff",
+                  color: "#333",
+                  marginLeft: "10px",
+                  padding: "3px",
+                  borderRadius: "50%",
+                  fontSize: { xs: "24px", sm: "28px" },
                 }}
               />
-            )}
+            </Button>
 
-            <div
-              style={{
-                position: "absolute",
-                inset: 0,
-                zIndex: 0,
-                display: "flex",
-                justifyContent:
-                  themeMode === "dark" ? "flex-end" : "flex-start",
+            <Button
+              // variant="contained"
+              onClick={toggleTheme}
+              sx={{
+                color: theme.palette.textColor?.main,
+                // backgroundColor: theme.palette.btnColor?.main,
+                transition: "background-color 0.5s ease, color 0.5s ease",
+                // position: "fixed",
+                display: isMobile && "none",
+                borderRadius: "9999px",
+                px: 2,
+                py: 1,
               }}
-            ></div>
-          </Button>
+            >
+              {themeMode === "light" ? (
+                <FiSun style={{ fontSize: "1.25rem", zIndex: 10 }} />
+              ) : (
+                <FiMoon
+                  style={{
+                    fontSize: "1.25rem",
+                    zIndex: 10,
+                    color: theme.palette.textColor?.main,
+                  }}
+                />
+              )}
 
-          {/* <Box>
+              <div
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  zIndex: 0,
+                  display: "flex",
+                  justifyContent:
+                    themeMode === "dark" ? "flex-end" : "flex-start",
+                }}
+              ></div>
+            </Button>
+
+            {/* <Box>
             <IconButton
               color="black"
               aria-label="toggle menu"
@@ -346,8 +343,9 @@ export default function Header({ themeMode, toggleTheme, isMobile }) {
             </IconButton>
           </Box> */}
 
-          <SpringModal isOpen={isOpen} setIsOpen={setIsOpen} />
-        </div>
+            <SpringModal isOpen={isOpen} setIsOpen={setIsOpen} />
+          </div>
+        )}
 
         {isMobile && (
           <Box>
