@@ -64,9 +64,9 @@ export default function HeroSection() {
               sx={{ order: { xs: 1, md: 2 }, mt: { xs: 5, md: 15, lg: 10 } }}
             >
               <motion.div
-                initial={{ opacity: 1, x: 300, rotate: 60 }}
-                animate={{ opacity: 1, x: 0, rotate: 0 }}
-                transition={{ duration: 1, type: "spring" }}
+                // initial={{ opacity: 1, x: 300, rotate: 60 }}
+                // animate={{ opacity: 1, x: 0, rotate: 0 }}
+                // transition={{ duration: 1, type: "spring" }}
               >
                 <Box
                   sx={{
