@@ -71,7 +71,7 @@ const darkTheme = createTheme({
       main: "#121212",
       secondary: "#1A1A1B",
       dec: "#FF8081",
-      fixHeader: "transparent",
+      fixHeader: "rgb(18 18 18)",
       header: "#121212",
       nav: "rgb(41, 41, 41)",
     },

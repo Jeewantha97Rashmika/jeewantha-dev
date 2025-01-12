@@ -28,11 +28,11 @@ export default function HeroSection() {
       <Box
         sx={{
           position: "absolute",
-          top: { xs: 520, md: 120 },
+          top: { xs: 520, md: 250 },
           left: { xs: "50%", md: "40%" },
           transform: "translateX(-50%)",
-          width: { xs: "300px", md: "600px" },
-          height: { xs: "300px", md: "600px" },
+          width: { xs: "300px", md: "800px" },
+          height: { xs: "300px", md: "400px" },
           borderRadius: "50%",
           backgroundColor: "rgba(255, 0, 0, 0.2)",
           filter: "blur(120px)",
