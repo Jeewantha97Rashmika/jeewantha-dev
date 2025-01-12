@@ -16,19 +16,19 @@ const lightTheme = createTheme({
     btnColor: {
       main: "#2E90FA",
       text: "#fff",
-      secondary:"#212121"
+      secondary: "#212121",
     },
     bgColor: {
       main: "#ffffff",
       secondary: "#2C2B2E",
       dec: "#FFD3D0",
       header: "#fff",
-      fixHeader: "rgba(255, 255, 255, 0)",
-      nav:"rgb(58, 58, 58)",
+      fixHeader: "transparent",
+      nav: "rgb(58, 58, 58)",
     },
     textColor: {
       main: "#707070",
-      svg:"#333",
+      svg: "#333",
       secondary: "#333",
       decText: "#FF7262",
       funTextColor: "#FF7262",
@@ -43,8 +43,8 @@ const lightTheme = createTheme({
     blogCardBgColor: {
       main: "#fff",
     },
-    arrowColor:{
-      main:"#fff"
+    arrowColor: {
+      main: "#fff",
     },
     shadow: {
       main: "0px 2px 6px rgba(0, 0, 0, 0.03)",
@@ -65,19 +65,19 @@ const darkTheme = createTheme({
     btnColor: {
       main: "#2E90FA",
       text: "#fff",
-         secondary:"#fff"
+      secondary: "#fff",
     },
     bgColor: {
       main: "#121212",
       secondary: "#1A1A1B",
       dec: "#FF8081",
-      fixHeader: "rgba(0, 0, 0, 0)",
-      header:"#121212",
-      nav:"rgb(41, 41, 41)",
+      fixHeader: "transparent",
+      header: "#121212",
+      nav: "rgb(41, 41, 41)",
     },
     textColor: {
       main: "#ffffff",
-      svg:"#fff",
+      svg: "#fff",
       secondary: "#fff",
       decText: "#fff",
       funTextColor: "#C3C4FF",
@@ -93,8 +93,8 @@ const darkTheme = createTheme({
     blogCardBgColor: {
       main: "#333",
     },
-    arrowColor:{
-      main:"#333"
+    arrowColor: {
+      main: "#333",
     },
     shadow: {
       main: "0px 2px 6px rgba(255, 255, 255, 0.1)",
