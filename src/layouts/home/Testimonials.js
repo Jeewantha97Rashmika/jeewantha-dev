@@ -45,58 +45,58 @@ export default function Testimonials() {
         "As a UI/UX engineer, Jeewantha consistently demonstrated creativity, attention to detail, and a knack for delivering user-friendly designs. His unique blend of design expertise and coding skills allows him to tackle challenges holistically, producing both aesthetically pleasing and functional results. What stands out about Jeewantha is his reliability and commitment to meeting deadlines while maintaining high standards. Whether it’s coming up with creative solutions or going the extra mile to ensure project success, he’s someone you can always count on.",
       date: "2023-05-10",
     },
-    {
-      id: "2",
-      img: RImage2, // Replace with actual image URL
-      name: "Madusanka Premarathne",
-      job: "Founder & CEO of Knovik LLC | Enterpreneur",
-      socialMedias: [
-        {
-          name: "Facebook",
-          icon: <FaFacebook />,
-          link: "https://www.facebook.com/radikadilanka/",
-        },
-        {
-          name: "linkedin",
-          icon: <FaLinkedin />,
-          link: "https://www.linkedin.com/jeewantherashmika/",
-        },
-        {
-          name: "Website",
-          icon: <TbWorldWww />,
-          link: "https:/radikadilanka.com",
-        },
-      ],
-      review:
-        "Outstanding work on our e-commerce platform! The design not only looks great but also improves our conversion rates significantly.Jeewantha is a true professional! The website redesign has made it much easier for our clients to navigate and find information.",
-      date: "2023-05-15",
-    },
-    {
-      id: "3",
-      img: RImage3, // Replace with actual image URL
-      name: "Ishara Fernando",
-      job: "SEO Specialist | Product owner", 
-      socialMedias: [
-        // {
-        //   name: "Facebook",
-        //   icon: <FaFacebook />,
-        //   link: "https://www.facebook.com/radikadilanka/",
-        // },
-        {
-          name: "linkedin",
-          icon: <FaLinkedin />,
-          link: "https://www.linkedin.com/jeewantherashmika/",
-        },
-        {
-          name: "Website",
-          icon: <TbWorldWww />,
-          link: "https:/radikadilanka.com",
-        },
-      ],
-      review:
-        "Jeewantha is a true professional! The website redesign has made it much easier for our clients to navigate and find information. Jeewantha is a true professional! The website redesign has made it much easier for our clients to navigate and find information.",
-      date: "2023-06-01",
-    },
+    // {
+    //   id: "2",
+    //   img: RImage2, // Replace with actual image URL
+    //   name: "Madusanka Premarathne",
+    //   job: "Founder & CEO of Knovik LLC | Enterpreneur",
+    //   socialMedias: [
+    //     {
+    //       name: "Facebook",
+    //       icon: <FaFacebook />,
+    //       link: "https://www.facebook.com/radikadilanka/",
+    //     },
+    //     {
+    //       name: "linkedin",
+    //       icon: <FaLinkedin />,
+    //       link: "https://www.linkedin.com/jeewantherashmika/",
+    //     },
+    //     {
+    //       name: "Website",
+    //       icon: <TbWorldWww />,
+    //       link: "https:/radikadilanka.com",
+    //     },
+    //   ],
+    //   review:
+    //     "Outstanding work on our e-commerce platform! The design not only looks great but also improves our conversion rates significantly.Jeewantha is a true professional! The website redesign has made it much easier for our clients to navigate and find information.",
+    //   date: "2023-05-15",
+    // },
+    // {
+    //   id: "3",
+    //   img: RImage3, // Replace with actual image URL
+    //   name: "Ishara Fernando",
+    //   job: "SEO Specialist | Product owner", 
+    //   socialMedias: [
+    //     // {
+    //     //   name: "Facebook",
+    //     //   icon: <FaFacebook />,
+    //     //   link: "https://www.facebook.com/radikadilanka/",
+    //     // },
+    //     {
+    //       name: "linkedin",
+    //       icon: <FaLinkedin />,
+    //       link: "https://www.linkedin.com/jeewantherashmika/",
+    //     },
+    //     {
+    //       name: "Website",
+    //       icon: <TbWorldWww />,
+    //       link: "https:/radikadilanka.com",
+    //     },
+    //   ],
+    //   review:
+    //     "Jeewantha is a true professional! The website redesign has made it much easier for our clients to navigate and find information. Jeewantha is a true professional! The website redesign has made it much easier for our clients to navigate and find information.",
+    //   date: "2023-06-01",
+    // },
     {
       id: "4",
       img: RImage4, // Replace with actual image URL
@@ -123,32 +123,32 @@ export default function Testimonials() {
         "Jeewantha is a software engineer, but he also happens to be exceptionally gifted. No one can beat his capabilities when it comes to UI/UX, software architecture, and product design. These are the two most important qualities that our projects constantly need, innovation and detail orientation. Since we worked together on many projects, I can say that he has an outstanding ability to change complicated requirements into beautiful solutions. He would be a great asset to any team because of his dedication, professionalism, and innovative mindset. Besides technical skills, Jeewantha makes the team work in a collaborative atmosphere that encourages people to share ideas and think creatively about solutions for problems at hand. Projects with his contributions are not only delivered but also exceed client expectations and leave an impressive signature on every piece of work undertaken. I recommend him without any reservations.",
       date: "2023-06-20",
     },
-    {
-      id: "4",
-      img: RImage5, // Replace with actual image URL
-      name: "Nishadi Lakshika",
-      job: "ICT Teacher",
-      socialMedias: [
-        {
-          name: "Facebook",
-          icon: <FaFacebook />,
-          link: "https://www.facebook.com/radikadilanka/",
-        },
-        {
-          name: "linkedin",
-          icon: <FaLinkedin />,
-          link: "https://www.linkedin.com/jeewantherashmika/",
-        },
-        {
-          name: "Website",
-          icon: <TbWorldWww />,
-          link: "https:/radikadilanka.com",
-        },
-      ],
-      review:
-        "I was thoroughly impressed with the attention to detail in the UI/UX design. Our users have noticed the difference! Jeewantha is a true professional! The website redesign has made it much easier for our clients to navigate and find information.",
-      date: "2023-06-20",
-    },
+    // {
+    //   id: "4",
+    //   img: RImage5, // Replace with actual image URL
+    //   name: "Nishadi Lakshika",
+    //   job: "ICT Teacher",
+    //   socialMedias: [
+    //     {
+    //       name: "Facebook",
+    //       icon: <FaFacebook />,
+    //       link: "https://www.facebook.com/radikadilanka/",
+    //     },
+    //     {
+    //       name: "linkedin",
+    //       icon: <FaLinkedin />,
+    //       link: "https://www.linkedin.com/jeewantherashmika/",
+    //     },
+    //     {
+    //       name: "Website",
+    //       icon: <TbWorldWww />,
+    //       link: "https:/radikadilanka.com",
+    //     },
+    //   ],
+    //   review:
+    //     "I was thoroughly impressed with the attention to detail in the UI/UX design. Our users have noticed the difference! Jeewantha is a true professional! The website redesign has made it much easier for our clients to navigate and find information.",
+    //   date: "2023-06-20",
+    // },
  
   ];
   const progressCircle = useRef(null);
