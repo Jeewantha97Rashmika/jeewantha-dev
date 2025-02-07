@@ -11,10 +11,13 @@ import SubTilte from "../../components/SubTilte";
 import BigTextnimation from "../../components/BigTextnimation";
 import { motion } from "framer-motion";
 import { useTheme } from "@mui/material/styles"; // Import useTheme
+import SecondaryBtn from "../../components/common/SecondaryBtn";
 
 export default function HeroSection() {
   const theme = useTheme();
-
+  const handleClick = () => {
+    window.location.href = "/#work";
+  };
   const examples = [" Hello , How are you?", " Contact me to know more"];
 
   return (
@@ -64,9 +67,9 @@ export default function HeroSection() {
               sx={{ order: { xs: 1, md: 2 }, mt: { xs: 5, md: 15, lg: 10 } }}
             >
               <motion.div
-                // initial={{ opacity: 1, x: 300, rotate: 60 }}
-                // animate={{ opacity: 1, x: 0, rotate: 0 }}
-                // transition={{ duration: 1, type: "spring" }}
+              // initial={{ opacity: 1, x: 300, rotate: 60 }}
+              // animate={{ opacity: 1, x: 0, rotate: 0 }}
+              // transition={{ duration: 1, type: "spring" }}
               >
                 <Box
                   sx={{
@@ -78,7 +81,8 @@ export default function HeroSection() {
                   <Box>
                     <Heading1
                       component={"h1"}
-                      text1={"Hello, I'm Jeewantha."}
+                      text1={"Hello, I'm "}
+                      text2={"Jeewantha"}
                     />
                   </Box>
                   <br></br>
@@ -112,7 +116,19 @@ export default function HeroSection() {
                   <Typewrite examples={examples} />
                   <br></br>
                   <br />
-                  <MainBtn title={"Hire me just now"} />
+                  <Grid
+                    container
+                    spacing={2}
+                    alignItems="flex-start"
+                    justifyContent={{ xs: "center", md: "flex-start" }}
+                  >
+                    <Grid item xs={12} md={6}>
+                      <MainBtn title={"Let’s Collaborate"} />
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                      <SecondaryBtn title={"Look Work"} handleClick = {handleClick} />
+                    </Grid>
+                  </Grid>
                 </Box>
               </motion.div>
             </Grid>

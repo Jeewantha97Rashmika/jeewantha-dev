@@ -24,6 +24,13 @@ export default function Footer() {
     window.location.href =
       "https://www.linkedin.com/in/jeewantha-rashmika-b5a56820a/"; // Replace with your desired URL
   };
+
+  const handleBlogClick = () => {
+    window.location.href = "/#knowledge-sharing"; // Replace with your desired URL
+  };
+  const handleAboutClick = () => {
+    window.location.href = "/#about"; // Replace with your desired URL
+  };
   const handleServicesClick = () => {
     window.location.href = "/#services"; // Replace with your desired URL
   };
@@ -182,7 +189,7 @@ export default function Footer() {
           <Typography sx={{ color: "white", mx: 2, my: 2, fontSize: "20px" }}>
             SL : {times.colombo}
           </Typography>
-          <MainBtn title={"Contact Me"} />
+          <MainBtn title={"Contact Me"} color={"#FF7262"}/>
           <Typography sx={{ color: "white", mx: 2, my: 2, fontSize: "20px" }}>
             USA : {times.usa}
           </Typography>
@@ -260,7 +267,7 @@ export default function Footer() {
                 Knowledge Sharing
               </Button> */}
               <Button
-                onClick={handleLinkedinClick}
+                onClick={handleBlogClick}
                 color="inherit"
                 sx={{
                   color: "white",
@@ -280,7 +287,7 @@ export default function Footer() {
                   transition: "transform 0.2s",
                 }}
               >
-                Linkedin
+                Blog
               </Button>
             </div>
           </Grid>
@@ -377,7 +384,7 @@ export default function Footer() {
             fontFamily: "Montserrat",
           }}
         >
-          Copyright © 2025 Jeewantha Rashmika. All rights reserved.
+          Copyright © {new Date().getFullYear()} Jeewantha Rashmika. All rights reserved.
         </Typography>
         <Typography
           component="h3"

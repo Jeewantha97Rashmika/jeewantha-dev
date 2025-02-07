@@ -66,7 +66,7 @@ export default function Nav({ themeMode, toggleTheme ,setIsActive}) {
   console.log(selectedIndicator);
   const styles = {
     menu: {
-      height: "100vh",
+      height: "100%",
       width: "100%",
       backgroundColor: theme.palette.bgColor?.nav,
       transition: "background-color 0.3s ease, color 0.5s ease",

@@ -56,21 +56,24 @@ export default function UiSkill() {
         {uiSkills.map((val, key) => (
           <Grid item xs={12} md={4} key={key}>
             <Box
+              component={motion.div}
+              initial={{ opacity: 0, y: 80 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ scale: 0.95 }} // Framer Motion hover effect
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{
+                type: "spring",
+                stiffness: 100,
+                duration: 0.3,
+              }}
               sx={{
                 p: 2,
                 display: "flex",
                 gap: 1,
                 borderRadius: "10px",
                 width: "100%",
-                // border: "1px solid #E3E3E3",
-                // boxShadow: theme.palette.shadow?.main,
                 backgroundColor: theme.palette.cardBgColor?.main,
-                transition: "background-color 0.5s ease, color 0.5s ease ,transform 0.3s ease",
-                transform: "scale(1)",
-                "&:hover": {
-                  transform: "scale(0.95)",
-                  transition: "transform 0.3s ease",
-                },
+                transition: "background-color 0.5s ease, color 0.5s ease",
               }}
             >
               <Grid container>
@@ -87,7 +90,14 @@ export default function UiSkill() {
                       width="25"
                       height="25"
                     />
-                    <Typography sx={{ fontWeight: "600", fontSize: "16px", fontFamily: "Montserrat", color: theme.palette.textColor?.secondary, }}>
+                    <Typography
+                      sx={{
+                        fontWeight: "600",
+                        fontSize: "16px",
+                        fontFamily: "Montserrat",
+                        color: theme.palette.textColor?.secondary,
+                      }}
+                    >
                       {val.name}
                     </Typography>
                   </Box>

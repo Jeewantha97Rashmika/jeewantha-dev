@@ -42,7 +42,8 @@ export default function DevSkill() {
     },
     {
       name: "Gatsby JS",
-      image: "https://cdn.iconscout.com/icon/free/png-512/free-gatsby-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-vol-3-pack-logos-icons-2944886.png?f=webp&w=256",
+      image:
+        "https://cdn.iconscout.com/icon/free/png-512/free-gatsby-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-vol-3-pack-logos-icons-2944886.png?f=webp&w=256",
     },
     {
       name: "Sass",
@@ -51,7 +52,8 @@ export default function DevSkill() {
     },
     {
       name: "Shopify",
-      image: "https://www.realisable.co.uk/wp-content/themes/realisable/images/logos/shopify.svg",
+      image:
+        "https://www.realisable.co.uk/wp-content/themes/realisable/images/logos/shopify.svg",
     },
     {
       name: "Wordpress",
@@ -59,7 +61,8 @@ export default function DevSkill() {
     },
     {
       name: "Ghost CMS",
-      image: "https://raw.githubusercontent.com/docker-library/docs/c88522f95bebcab2322f3020f2f735210286939b/ghost/logo.png",
+      image:
+        "https://raw.githubusercontent.com/docker-library/docs/c88522f95bebcab2322f3020f2f735210286939b/ghost/logo.png",
     },
 
     {
@@ -67,7 +70,7 @@ export default function DevSkill() {
       image:
         "https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original-wordmark.svg",
     },
-   
+
     {
       name: "Dart",
       image: "https://www.vectorlogo.zone/logos/dartlang/dartlang-icon.svg",
@@ -99,8 +102,6 @@ export default function DevSkill() {
       image: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
     },
 
-
-    
     // {
     //   name: "postman",
     //   image: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
@@ -122,15 +123,9 @@ export default function DevSkill() {
     //   image: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
     // },
   ];
-const theme = useTheme();
+  const theme = useTheme();
   return (
-    <Box
-    component={motion.div}
-    initial={{ opacity: 0, y: 80 }} // Start with hidden and below position
-    whileInView={{ opacity: 1, y: 0 }} // Animate to full opacity and position
-    viewport={{  once :true, amount: 0.2 }} // Only animate once when 20% of the component is in view
-    transition={{ type: "spring", stiffness: 100 }}
-    >
+    <Box>
       <Typography
         component="h3"
         sx={{
@@ -138,7 +133,7 @@ const theme = useTheme();
           color: theme.palette.textColor?.secondary,
           fontSize: "30px",
           fontWeight: 600,
-        fontFamily: "Montserrat",
+          fontFamily: "Montserrat",
         }}
       >
         Development Tools and Technologies
@@ -146,68 +141,78 @@ const theme = useTheme();
       <br />
       <Grid container spacing={1}>
         {skills.map((val, key) => (
-         <Grid item xs={12} md={4} key={key}>
-         <Box
-           sx={{
-             p: 2,
-             display: "flex",
-             gap: 1,
-             borderRadius: "10px",
-             width: "100%",
-             // border: "1px solid #E3E3E3",
-             // boxShadow: theme.palette.shadow?.main,
-             backgroundColor: theme.palette.cardBgColor?.main,
-             transition: "background-color 0.5s ease, color 0.5s ease ,transform 0.3s ease",
-             transform: "scale(1)",
-             "&:hover": {
-               transform: "scale(0.95)",
-               transition: "transform 0.3s ease",
-             },
-           }}
-         >
-           <Grid container>
-             <Grid item xs={8}>
-               <Box
-                 sx={{
-                   display: "flex",
-                   gap: 2,
-                 }}
-               >
-                 <img
-                   src={val.image}
-                   alt={val.name}
-                   width="25"
-                   height="25"
-                 />
-                 <Typography sx={{ fontWeight: "600", fontSize: "16px" , fontFamily: "Montserrat", color: theme.palette.textColor?.secondary,}}>
-                   {val.name}
-                 </Typography>
-               </Box>
-             </Grid>
-             <Grid
-               item
-               xs={4}
-               sx={{
-                 display: "flex",
-                 alignItems: "rigth",
-                 justifyContent: "end",
-               }}
-             >
-               <ArrowForwardIcon
-                 sx={{
-                  rotate: "-45deg",
-                   backgroundColor: theme.palette.bgColor?.main,
-                   color: theme.palette.textColor?.main,
-                   marginLeft: "10px",
-                   padding: "3px",
-                   borderRadius: "50%",
-                   fontSize: { xs: "28px", sm: "28px" },
-                 }}
-               />
-             </Grid>
-           </Grid>
-         </Box>
-       </Grid>
+          <Grid item xs={12} md={4} key={key}>
+            <Box
+              component={motion.div}
+              initial={{ opacity: 0, y: 80 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ scale: 0.95 }} // Framer Motion hover effect
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{
+                type: "spring",
+                stiffness: 100,
+                duration: 0.3,
+              }}
+              sx={{
+                p: 2,
+                display: "flex",
+                gap: 1,
+                borderRadius: "10px",
+                width: "100%",
+                backgroundColor: theme.palette.cardBgColor?.main,
+                transition: "background-color 0.5s ease, color 0.5s ease",
+              }}
+            >
+              <Grid container>
+                <Grid item xs={8}>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      gap: 2,
+                    }}
+                  >
+                    <img
+                      src={val.image}
+                      alt={val.name}
+                      width="25"
+                      height="25"
+                    />
+                    <Typography
+                      sx={{
+                        fontWeight: "600",
+                        fontSize: "16px",
+                        fontFamily: "Montserrat",
+                        color: theme.palette.textColor?.secondary,
+                      }}
+                    >
+                      {val.name}
+                    </Typography>
+                  </Box>
+                </Grid>
+                <Grid
+                  item
+                  xs={4}
+                  sx={{
+                    display: "flex",
+                    alignItems: "rigth",
+                    justifyContent: "end",
+                  }}
+                >
+                  <ArrowForwardIcon
+                    sx={{
+                      rotate: "-45deg",
+                      backgroundColor: theme.palette.bgColor?.main,
+                      color: theme.palette.textColor?.main,
+                      marginLeft: "10px",
+                      padding: "3px",
+                      borderRadius: "50%",
+                      fontSize: { xs: "28px", sm: "28px" },
+                    }}
+                  />
+                </Grid>
+              </Grid>
+            </Box>
+          </Grid>
         ))}
       </Grid>
       <br />

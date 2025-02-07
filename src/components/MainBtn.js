@@ -2,7 +2,12 @@ import React, { useState } from "react";
 import { Button, useTheme } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import SpringModal from "./SpringModal";
-export default function MainBtn({ handleLinkedinClick, isMobile, title }) {
+export default function MainBtn({
+  handleLinkedinClick,
+  isMobile,
+  title,
+  color,
+}) {
   const [isOpen, setIsOpen] = useState(false);
   const theme = useTheme();
   return (
@@ -13,8 +18,8 @@ export default function MainBtn({ handleLinkedinClick, isMobile, title }) {
         color="inherit"
         sx={{
           color: theme.palette.btnColor?.text,
-          width: { xs: "100%", sm: "auto" },
-          backgroundColor: theme.palette.btnColor?.main,
+          width: { xs: "100%", md: "auto" },
+          backgroundColor: !color ? theme.palette.btnColor?.main : color,
           transition:
             "background-color 0.5s ease, color 0.5s ease, border-radius 0.5s ease",
           display: isMobile ? "none" : "inline-flex",
@@ -24,7 +29,7 @@ export default function MainBtn({ handleLinkedinClick, isMobile, title }) {
           height: "46px",
           padding: "5px 10px 5px 20px",
           "&:hover": {
-            backgroundColor: theme.palette.btnColor?.main,
+            backgroundColor: !color ? theme.palette.btnColor?.main : color,
             transition:
               "background-color 0.5s ease, color 0.5s ease , border-radius 0.5s ease",
 

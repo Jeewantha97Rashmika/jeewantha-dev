@@ -4,13 +4,15 @@ import { Typography, useTheme } from "@mui/material";
 
 export default function SecondaryBtn({ title, handleClick }) {
   const theme = useTheme();
+
   return (
     <Button
       variant="outlined"
       onClick={handleClick}
       sx={{
         width: { xs: "100%" },
-        marginRight: "10px",
+
+        mt: { xs: 2, md: 0 },
         borderColor: theme.palette.borderColor?.main,
         borderRadius: "30px",
         padding: "10px 10px ",

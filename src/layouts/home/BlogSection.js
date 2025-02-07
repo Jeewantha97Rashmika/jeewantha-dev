@@ -26,24 +26,24 @@ export default function BlogSection() {
       dec: "To use color variables across your entire application in a single file (e.g., to ensure consistency in your theme or style), you can centralize your color palette in a separate file and then import those values wherever you need them.",
       link: "",
     },
-    {
-      img: Blog1,
-      title: "How to make Responsive web design",
-      dec: "To use color variables across your entire application in a single file (e.g., to ensure consistency in your theme or style), you can centralize your color palette in a separate file and then import those values wherever you need them.",
-      link: "",
-    },
-    {
-      img: Blog2,
-      title: "How to make Responsive web design",
-      dec: "To use color variables across your entire application in a single file (e.g., to ensure consistency in your theme or style), you can centralize your color palette in a separate file and then import those values wherever you need them.",
-      link: "",
-    },
-    {
-      img: Blog3,
-      title: "How to make Responsive web design",
-      dec: "To use color variables across your entire application in a single file (e.g., to ensure consistency in your theme or style), you can centralize your color palette in a separate file and then import those values wherever you need them.",
-      link: "",
-    },
+  //   {
+  //     img: Blog1,
+  //     title: "How to make Responsive web design",
+  //     dec: "To use color variables across your entire application in a single file (e.g., to ensure consistency in your theme or style), you can centralize your color palette in a separate file and then import those values wherever you need them.",
+  //     link: "",
+  //   },
+  //   {
+  //     img: Blog2,
+  //     title: "How to make Responsive web design",
+  //     dec: "To use color variables across your entire application in a single file (e.g., to ensure consistency in your theme or style), you can centralize your color palette in a separate file and then import those values wherever you need them.",
+  //     link: "",
+  //   },
+  //   {
+  //     img: Blog3,
+  //     title: "How to make Responsive web design",
+  //     dec: "To use color variables across your entire application in a single file (e.g., to ensure consistency in your theme or style), you can centralize your color palette in a separate file and then import those values wherever you need them.",
+  //     link: "",
+  //   },
   ];
   const theme = useTheme();
   return (

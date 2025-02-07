@@ -1,10 +1,15 @@
 import React from "react";
 import UOJ from "../../images/uoj_logo.png";
 import { Typography, useTheme } from "@mui/material";
+import { motion } from "framer-motion";
 export default function Education01() {
   const theme = useTheme();
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, y: 80 }} // Start with hidden and below position
+      whileInView={{ opacity: 1, y: 0 }} // Animate to full opacity and position
+      viewport={{ once: true, amount: 0.2 }} // Only animate once when 20% of the component is in view
+      transition={{ type: "spring", stiffness: 100 }}
       style={{
         marginTop: "10px",
         // backgroundColor: theme.palette.cardBgColor?.main,
@@ -68,13 +73,12 @@ export default function Education01() {
           fontSize: "14px",
           fontWeight: 400,
           fontFamily: "Montserrat",
-          
         }}
       >
         Consisting with the modules are Applied and Software Engineering, Java,
         C++, Mobile Computing, HTML, CSS, JS, React Native, UI/UX Designing ,
         etc.
       </Typography>
-    </div>
+    </motion.div>
   );
 }

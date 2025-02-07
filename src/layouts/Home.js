@@ -7,6 +7,9 @@ import FunActivity from "./home/FunActivity";
 import Testimonials from "./home/Testimonials";
 import Servicesnew from "./home/Servicesnew";
 import { Box, useTheme } from "@mui/material";
+import BlogSection from "./home/BlogSection";
+import PaintReveal from "./home/PaintReveal";
+import Sreen from "./home/Sreen";
 
 export default function Home() {
   const theme = useTheme();
@@ -23,6 +26,7 @@ export default function Home() {
         <Projrcts />
         <Testimonials />
         <EduAndExp />
+        {/* <Sreen /> */}
         {/* <SkillAndTech/> */}
         {/* <SkillGrid /> */}
         {/* <BlogSection/> */}

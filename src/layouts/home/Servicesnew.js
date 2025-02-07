@@ -38,7 +38,7 @@ export default function Servicesnew() {
 
   const serviceTag = [
     {
-      title: "Cretive",
+      title: "Creative",
       img: Star,
     },
     {

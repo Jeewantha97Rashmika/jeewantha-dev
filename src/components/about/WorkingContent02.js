@@ -1,10 +1,15 @@
 import React from "react";
 import Knovik from "../../images/knovik.png";
 import { Typography, useTheme } from "@mui/material";
+import { motion } from "framer-motion";
 export default function WorkingContent02() {
   const theme = useTheme();
   return (
-    <div
+    <motion.div
+    initial={{ opacity: 0, y: 80 }} // Start with hidden and below position
+    whileInView={{ opacity: 1, y: 0 }} // Animate to full opacity and position
+    viewport={{ once: true, amount: 0.2 }} // Only animate once when 20% of the component is in view
+    transition={{ type: "spring", stiffness: 100 }}
       style={{
         marginTop: "10px",
         // backgroundColor: theme.palette.cardBgColor?.main,
@@ -67,6 +72,6 @@ export default function WorkingContent02() {
         Experienced in developing mobile applications using Flutter, delivering
         cross-platform solutions with responsive and user-friendly interfaces.
       </Typography>
-    </div>
+    </motion.div>
   );
 }

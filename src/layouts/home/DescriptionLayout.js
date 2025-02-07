@@ -58,7 +58,7 @@ export default function DescriptionLayout({ description, btnTitle }) {
               prototyping and testing. Let's craft exceptional digital
               experiences together.
             </Typography>
-            <MainBtn title={"Hire Me"} />
+            <MainBtn title={"Let’s Talk"} color="#333333"/>
           </Grid>
         </Grid>
       </Container>

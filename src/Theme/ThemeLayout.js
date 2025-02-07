@@ -14,7 +14,8 @@ const lightTheme = createTheme({
       main: "#FF7262",
     },
     btnColor: {
-      main: "#2E90FA",
+      // main: "#2E90FA",
+      main: "#333333",
       text: "#fff",
       secondary: "#212121",
     },
@@ -63,7 +64,7 @@ const darkTheme = createTheme({
       main: "#FF7262",
     },
     btnColor: {
-      main: "#2E90FA",
+      main: "#FF7262",
       text: "#fff",
       secondary: "#fff",
     },

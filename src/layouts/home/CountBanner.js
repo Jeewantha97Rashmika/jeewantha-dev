@@ -30,10 +30,14 @@ export default function CountBanner() {
           }}
         >
           <Typography
-           sx={{ color: "#FFF", fontSize: "40px", fontWeight: 800 , fontFamily: "Montserrat"}}>
-            
-              About Me
-          
+            sx={{
+              color: "#FFF",
+              fontSize: "40px",
+              fontWeight: 800,
+              fontFamily: "Montserrat",
+            }}
+          >
+            About Me
           </Typography>
           <Typography
             sx={{
@@ -45,11 +49,28 @@ export default function CountBanner() {
               maxWidth: "800px",
             }}
           >
-            I'm Jeewantha Rashmika, a UI/UX designer dedicated to crafting intuitive and
-            visually stunning digital experiences. With a passion for
-            user-centric design, I transform ideas into functional and beautiful
-            interfaces. Let's collaborate and shape the future of design
+            I’m a UI/UX Engineer and Designer passionate about creating
+            intuitive digital experiences. With{" "}
+            {new Date().getFullYear() - 2021} years of experience in web design
+            and user experience engineering, I bridge the gap between
+            functionality and creativity to deliver impactful solutions
             together.
+          </Typography>
+          <Typography
+            sx={{
+              color: "white",
+              fontSize: "16px",
+              fontWeight: 400,
+              fontFamily: "Montserrat",
+              textAlign: "center",
+              maxWidth: "800px",
+            }}
+          >
+            From interactive prototypes to pixel-perfect designs, I strive to
+            craft experiences that not only look stunning but also feel
+            seamless. My approach blends technical expertise with a deep
+            understanding of user needs, ensuring that every project is as
+            functional as it is beautiful.
           </Typography>
         </Box>
         <Box
@@ -61,7 +82,7 @@ export default function CountBanner() {
             <Grid item xs={12} sm={4}>
               <Typography
                 sx={{
-                  color: "white",
+                  color: "#FF7262",
                   fontSize: "64px",
                   fontWeight: 800,
                   fontFamily: "Montserrat",
@@ -73,7 +94,7 @@ export default function CountBanner() {
               </Typography>
               <Typography
                 sx={{
-                  color: "white",
+                  color: "#fff",
                   fontSize: "16px",
                   fontWeight: 400,
                   fontFamily: "Montserrat",
@@ -86,7 +107,7 @@ export default function CountBanner() {
             <Grid item xs={12} sm={4}>
               <Typography
                 sx={{
-                  color: "white",
+                  color: "#FF7262",
                   fontSize: "64px",
                   fontWeight: 800,
                   fontFamily: "inter",
@@ -98,7 +119,7 @@ export default function CountBanner() {
               </Typography>
               <Typography
                 sx={{
-                  color: "white",
+                  color: "#fff",
                   fontSize: "16px",
                   fontWeight: 400,
                   fontFamily: "inter",
@@ -111,7 +132,7 @@ export default function CountBanner() {
             <Grid item xs={12} sm={4}>
               <Typography
                 sx={{
-                  color: "white",
+                  color: "#FF7262",
                   fontSize: "64px",
                   fontWeight: 800,
                   fontFamily: "inter",
@@ -123,7 +144,7 @@ export default function CountBanner() {
               </Typography>
               <Typography
                 sx={{
-                  color: "white",
+                  color: "#fff",
                   fontSize: "16px",
                   fontWeight: 400,
                   fontFamily: "inter",

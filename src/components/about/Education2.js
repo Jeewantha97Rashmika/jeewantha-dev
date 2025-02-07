@@ -1,10 +1,16 @@
 import React from "react";
 import School from "../../images/school.png";
 import { Typography, useTheme } from "@mui/material";
+import { motion } from "framer-motion";
 export default function Education02() {
   const theme = useTheme();
   return (
-    <div
+    <motion.div
+    
+      initial={{ opacity: 0, y: 80 }} // Start with hidden and below position
+      whileInView={{ opacity: 1, y: 0 }} // Animate to full opacity and position
+      viewport={{ once: true, amount: 0.2 }} // Only animate once when 20% of the component is in view
+      transition={{ type: "spring", stiffness: 100 }}
       style={{
         marginTop: "10px",
         // backgroundColor: theme.palette.cardBgColor?.main,
@@ -61,6 +67,6 @@ export default function Education02() {
         Passed Technology Stream with Information and Communication Technology
       </Typography>{" "}
       <br></br>
-    </div>
+    </motion.div>
   );
 }

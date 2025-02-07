@@ -253,7 +253,7 @@ export default function Header({ themeMode, toggleTheme, isMobile }) {
               sx={{
                 color: theme.palette.btnColor?.text,
                 width: { xs: "100%", sm: "auto" },
-                backgroundColor: theme.palette.btnColor?.main,
+                backgroundColor: "#FF7262",
                 transition:
                   "background-color 0.5s ease, color 0.5s ease, border-radius 0.5s ease",
                 display: isMobile ? "none" : "inline-flex",
@@ -264,7 +264,7 @@ export default function Header({ themeMode, toggleTheme, isMobile }) {
                 mr: 2,
                 padding: "5px 10px 5px 20px",
                 "&:hover": {
-                  backgroundColor: theme.palette.btnColor?.main,
+                  backgroundColor: "#FF7262",
                   transition:
                     "background-color 0.5s ease, color 0.5s ease , border-radius 0.5s ease",
 
@@ -279,7 +279,7 @@ export default function Header({ themeMode, toggleTheme, isMobile }) {
                 // transition: "transform 0.1s",
               }}
             >
-              {"Hire me now"}
+              {"Let’s Talk"}
               <ArrowForwardIcon
                 sx={{
                   rotate: "-45deg",
