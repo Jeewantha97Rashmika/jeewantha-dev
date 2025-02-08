@@ -2,6 +2,13 @@ import React, { useState, useEffect } from "react";
 import { useLottie } from "lottie-react";
 import { Box, Container, Grid, Typography, useTheme } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import Photographer from '../../images/Photographer.json'
+import Radika from '../../images/radika.json'
+import Xcinama from '../../images/movie.json'
+import Flo from '../../images/flo.json'
+import Taxi from '../../images/taxi.json'
+
+
 const ProjectItem = ({ project }) => {
   const [isHovered, setIsHovered] = useState(false);
   const theme = useTheme();
@@ -112,7 +119,7 @@ export default function ProjectGrid() {
       tools: uidesign,
       subheading:
         "Modern Photographer official web site UI/UX Design using figma and photoshop",
-      imgSrc: require("../../images/photographer.json"),
+      imgSrc: Photographer,
       technology: "uidesign",
       href: "https://www.figma.com/proto/aSWFsx4n0Z6J9HYVKLdLcZ/photography-site?page-id=115%3A293&node-id=129-2&viewport=4358%2C1087%2C0.13&t=v7NnYf6IZuxd6W10-1&scaling=min-zoom&content-scaling=fixed",
     },
@@ -122,7 +129,7 @@ export default function ProjectGrid() {
       tools: uidesign,
       subheading:
         "Radikadilanka's official website UI/UX Design using figma and photoshop.",
-      imgSrc: require("../../images/radika.json"),
+      imgSrc: Radika,
       technology: "uidesign",
       href: "https://radikadilanka.com/",
     },
@@ -131,17 +138,17 @@ export default function ProjectGrid() {
       tools: uidesign,
       subheading:
         "Xcinama is movie ticket booking website UI/UX Design using figma",
-      imgSrc: require("../../images/movie.json"),
+      imgSrc: Xcinama,
       technology: "uidesign",
       href: "https://www.figma.com/proto/NUO6CLqeR6HbAIVjMyXZEp/Movies?page-id=199%3A4683&node-id=199-4684&viewport=1171%2C907%2C0.32&t=dmZ0byNEKBuimxLD-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=199%3A4684",
     },
 
     {
-      heading: "XCINAMA",
+      heading: "Taxi Service",
       tools: uidesign,
       subheading:
         "Xcinama is movie ticket booking website UI/UX Design using figma",
-      imgSrc: require("../../images/taxi.json"),
+      imgSrc: Taxi,
       technology: "uidesign",
       href: "https://www.figma.com/proto/NUO6CLqeR6HbAIVjMyXZEp/Movies?page-id=199%3A4683&node-id=199-4684&viewport=1171%2C907%2C0.32&t=dmZ0byNEKBuimxLD-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=199%3A4684",
     },
@@ -150,7 +157,7 @@ export default function ProjectGrid() {
       tools: uidesign,
       subheading:
         "Modern Flower shop official web site UI/UX Design using figma and photoshop",
-      imgSrc: require("../../images/flo.json"),
+      imgSrc: Flo,
       technology: "uidesign",
       href: "https://www.figma.com/proto/QbC5mD6qjy6RwzQLSC8u0y/Flower-shop?page-id=56%3A28&node-id=56-30&viewport=711%2C499%2C0.13&t=8PwO1w6oawXkaXYC-1&scaling=min-zoom&content-scaling=fixed",
     },
