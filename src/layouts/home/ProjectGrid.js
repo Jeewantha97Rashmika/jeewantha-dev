@@ -112,7 +112,7 @@ export default function ProjectGrid() {
       tools: uidesign,
       subheading:
         "Modern Photographer official web site UI/UX Design using figma and photoshop",
-      imgSrc: require("../../images/lottie/photographer.json"),
+      imgSrc: require("../../images/photographer.json"),
       technology: "uidesign",
       href: "https://www.figma.com/proto/aSWFsx4n0Z6J9HYVKLdLcZ/photography-site?page-id=115%3A293&node-id=129-2&viewport=4358%2C1087%2C0.13&t=v7NnYf6IZuxd6W10-1&scaling=min-zoom&content-scaling=fixed",
     },
@@ -122,7 +122,7 @@ export default function ProjectGrid() {
       tools: uidesign,
       subheading:
         "Radikadilanka's official website UI/UX Design using figma and photoshop.",
-      imgSrc: require("../../images/lottie/radika.json"),
+      imgSrc: require("../../images/radika.json"),
       technology: "uidesign",
       href: "https://radikadilanka.com/",
     },
@@ -131,7 +131,7 @@ export default function ProjectGrid() {
       tools: uidesign,
       subheading:
         "Xcinama is movie ticket booking website UI/UX Design using figma",
-      imgSrc: require("../../images/lottie/movie.json"),
+      imgSrc: require("../../images/movie.json"),
       technology: "uidesign",
       href: "https://www.figma.com/proto/NUO6CLqeR6HbAIVjMyXZEp/Movies?page-id=199%3A4683&node-id=199-4684&viewport=1171%2C907%2C0.32&t=dmZ0byNEKBuimxLD-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=199%3A4684",
     },
@@ -141,7 +141,7 @@ export default function ProjectGrid() {
       tools: uidesign,
       subheading:
         "Xcinama is movie ticket booking website UI/UX Design using figma",
-      imgSrc: require("../../images/lottie/taxi.json"),
+      imgSrc: require("../../images/taxi.json"),
       technology: "uidesign",
       href: "https://www.figma.com/proto/NUO6CLqeR6HbAIVjMyXZEp/Movies?page-id=199%3A4683&node-id=199-4684&viewport=1171%2C907%2C0.32&t=dmZ0byNEKBuimxLD-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=199%3A4684",
     },
@@ -150,7 +150,7 @@ export default function ProjectGrid() {
       tools: uidesign,
       subheading:
         "Modern Flower shop official web site UI/UX Design using figma and photoshop",
-      imgSrc: require("../../images/lottie/flo.json"),
+      imgSrc: require("../../images/flo.json"),
       technology: "uidesign",
       href: "https://www.figma.com/proto/QbC5mD6qjy6RwzQLSC8u0y/Flower-shop?page-id=56%3A28&node-id=56-30&viewport=711%2C499%2C0.13&t=8PwO1w6oawXkaXYC-1&scaling=min-zoom&content-scaling=fixed",
     },
