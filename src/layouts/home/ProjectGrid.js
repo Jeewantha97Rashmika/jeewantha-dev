@@ -112,7 +112,7 @@ export default function ProjectGrid() {
       tools: uidesign,
       subheading:
         "Modern Photographer official web site UI/UX Design using figma and photoshop",
-      imgSrc: require("../../images/lottie/photographer.json"),
+      imgSrc: require("../../images/lottie/Photographer.json"),
       technology: "uidesign",
       href: "https://www.figma.com/proto/aSWFsx4n0Z6J9HYVKLdLcZ/photography-site?page-id=115%3A293&node-id=129-2&viewport=4358%2C1087%2C0.13&t=v7NnYf6IZuxd6W10-1&scaling=min-zoom&content-scaling=fixed",
     },
