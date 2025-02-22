@@ -9,8 +9,6 @@ import SpringModal from "../components/SpringModal";
 import Nav from "../components/Nav";
 
 export default function Header({ themeMode, toggleTheme, isMobile }) {
-  const [drawerOpen, setDrawerOpen] = useState(false);
-
   const [isOpen, setIsOpen] = useState(false);
 
   const handleLinkedinClick = () => {
@@ -98,8 +96,6 @@ export default function Header({ themeMode, toggleTheme, isMobile }) {
     },
   };
   const [isActive, setIsActive] = useState(false);
-
-
 
   return (
     <Box
@@ -201,7 +197,7 @@ export default function Header({ themeMode, toggleTheme, isMobile }) {
             >
               Work
             </Button>
-          
+
             <Button
               onClick={handleLinkedinClick}
               color="inherit"
@@ -287,7 +283,7 @@ export default function Header({ themeMode, toggleTheme, isMobile }) {
                 py: 1,
               }}
             >
-              {themeMode === "light" ? (
+              {themeMode === "dark" ? (
                 <FiSun style={{ fontSize: "1.25rem", zIndex: 10 }} />
               ) : (
                 <FiMoon
@@ -310,18 +306,6 @@ export default function Header({ themeMode, toggleTheme, isMobile }) {
                 }}
               ></div>
             </Button>
-
-            {/* <Box>
-            <IconButton
-              color="black"
-              aria-label="toggle menu"
-              edge="end"
-              onClick={handleDrawerToggle}
-              sx={{ display: isMobile ? "block" : "none" }}
-            >
-              <MenuIcon />
-            </IconButton>
-          </Box> */}
 
             <SpringModal isOpen={isOpen} setIsOpen={setIsOpen} />
           </div>
