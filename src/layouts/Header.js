@@ -98,6 +98,9 @@ export default function Header({ themeMode, toggleTheme, isMobile }) {
     },
   };
   const [isActive, setIsActive] = useState(false);
+
+
+
   return (
     <Box
       component={motion.div}
@@ -198,30 +201,7 @@ export default function Header({ themeMode, toggleTheme, isMobile }) {
             >
               Work
             </Button>
-            {/* <Button
-            color="inherit"
-            onClick={handleKnowledgeClick}
-            sx={{
-              color: theme.palette.textColor?.main,
-              ml: 2,
-              display: isMobile ? "none" : "inline",
-              "&:hover": {
-                // backgroundColor: "#e8f5ff",
-                padding: "5px 20px",
-                borderRadius: "40px",
-                transform: "scale(0.95)",
-              },
-              fontFamily: "Montserrat",
-              textAlign: "center",
-              textTransform: "none",
-              fontSize: "18px",
-              padding: "5px 20px",
-              transition: "transform 0.2s",
-            }}
-          >
-            Knowledge Sharing
-          </Button> */}
-
+          
             <Button
               onClick={handleLinkedinClick}
               color="inherit"

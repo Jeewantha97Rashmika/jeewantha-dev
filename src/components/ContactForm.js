@@ -92,26 +92,6 @@ export default function ContactForm({ setIsOpen }) {
               name="name"
               value={formData.name}
               onChange={handleInputChange}
-              // sx={{
-              //   color: "white",
-              // }}
-              // InputLabelProps={{ style: { color: "white" } }} // White label color
-              // InputProps={{
-              //   sx: {
-              //     "& .MuiOutlinedInput-root": {
-              //       "& fieldset": {
-              //         borderColor: "white",
-              //         color: "white", // White border color
-              //       },
-              //       "&:hover fieldset": {
-              //         borderColor: "white", // White border on hover
-              //       },
-              //       "&.Mui-focused fieldset": {
-              //         borderColor: "white", // White border when focused
-              //       },
-              //     },
-              //   },
-              // }} // Apply border color change
             />
           </Grid>
           {/* Email Input */}
@@ -124,22 +104,6 @@ export default function ContactForm({ setIsOpen }) {
               value={formData.email}
               onChange={handleInputChange}
               type="email"
-              // InputLabelProps={{ sx: { color: "white" } }} // White label color
-              // InputProps={{
-              //   sx: {
-              //     "& .MuiOutlinedInput-root": {
-              //       "& fieldset": {
-              //         borderColor: "white", // White border color
-              //       },
-              //       "&:hover fieldset": {
-              //         borderColor: "white", // White border on hover
-              //       },
-              //       "&.Mui-focused fieldset": {
-              //         borderColor: "white", // White border when focused
-              //       },
-              //     },
-              //   },
-              // }} // Apply border color change
             />
           </Grid>
 
@@ -184,22 +148,6 @@ export default function ContactForm({ setIsOpen }) {
               onChange={handleInputChange}
               multiline
               rows={4}
-              // InputLabelProps={{ style: { color: "white" } }} // White label color
-              // InputProps={{
-              //   sx: {
-              //     "& .MuiOutlinedInput-root": {
-              //       "& fieldset": {
-              //         borderColor: "white", // White border color
-              //       },
-              //       "&:hover fieldset": {
-              //         borderColor: "white", // White border on hover
-              //       },
-              //       "&.Mui-focused fieldset": {
-              //         borderColor: "white", // White border when focused
-              //       },
-              //     },
-              //   },
-              // }} // Apply border color change
             />
           </Grid>
           {/* Project Type Dropdown */}
@@ -208,7 +156,6 @@ export default function ContactForm({ setIsOpen }) {
             <Grid container spacing={2}>
               {/* Close Button */}
               <Grid item xs={12} md={6}>
-     
                 <SecondaryBtn title="Close" handleClick={handleClose} />
               </Grid>
 
