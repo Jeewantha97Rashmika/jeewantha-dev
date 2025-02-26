@@ -8,7 +8,7 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import SpringModal from "../components/SpringModal";
 import Nav from "../components/Nav";
 
-export default function Header({ themeMode, toggleTheme, isMobile }) {
+export default function Header({ themeMode, toggleTheme }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleLinkedinClick = () => {
@@ -149,199 +149,215 @@ export default function Header({ themeMode, toggleTheme, isMobile }) {
             />
           </a>
         </Box>
-        {!isMobile && (
-          <div>
-            <Button
-              onClick={handleAboutClick}
-              color="inherit"
-              sx={{
-                color: theme.palette.textColor?.main,
-                ml: 2,
-                display: isMobile ? "none" : "inline",
-                "&:hover": {
-                  // backgroundColor: "#e8f5ff",
-                  padding: "5px 20px",
-                  borderRadius: "40px",
-                  transform: "scale(0.95)",
-                },
-                fontFamily: "Montserrat",
-                textAlign: "center",
-                textTransform: "none",
-                fontSize: "18px",
-                padding: "5px 20px",
-                transition: "transform 0.2s",
-              }}
-            >
-              Services
-            </Button>
-            <Button
-              onClick={handleWordClick}
-              color="inherit"
-              sx={{
-                color: theme.palette.textColor?.main,
-                ml: 2,
-                display: isMobile ? "none" : "inline",
-                "&:hover": {
-                  // backgroundColor: "#e8f5ff",
-                  padding: "5px 20px",
-                  borderRadius: "40px",
-                  transform: "scale(0.95)",
-                },
-                fontFamily: "Montserrat",
-                textAlign: "center",
-                textTransform: "none",
-                fontSize: "18px",
-                padding: "5px 20px",
-                transition: "transform 0.2s",
-              }}
-            >
-              Work
-            </Button>
 
-            <Button
-              onClick={handleLinkedinClick}
-              color="inherit"
-              sx={{
-                color: theme.palette.textColor?.main,
-                ml: 2,
-                mr: 2,
-                display: isMobile ? "none" : "inline",
-                "&:hover": {
-                  // backgroundColor: "#e8f5ff",
-                  padding: "5px 20px",
-                  borderRadius: "40px",
-                  transform: "scale(0.95)",
-                },
-                fontFamily: "Montserrat",
-                textAlign: "center",
-                textTransform: "none",
-                fontSize: "18px",
-                padding: "5px 20px",
-                transition: "transform 0.2s",
-              }}
-            >
-              Linkedin
-            </Button>
+        <Box
+          sx={{
+            display: {
+              xs: "none",
+              md: "flex",
+            },
 
-            <Button
-              color="inherit"
-              onClick={() => setIsOpen(true)}
-              sx={{
-                color: theme.palette.btnColor?.text,
-                width: { xs: "100%", sm: "auto" },
+          }}
+        >
+          <Button
+            onClick={handleAboutClick}
+            color="inherit"
+            sx={{
+              color: theme.palette.textColor?.main,
+              ml: 2,
+              display:{ xs : "none" , md: "block"},
+              "&:hover": {
+                // backgroundColor: "#e8f5ff",
+                padding: "5px 20px",
+                borderRadius: "40px",
+                transform: "scale(0.95)",
+              },
+              fontFamily: "Montserrat",
+              textAlign: "center",
+              textTransform: "none",
+              fontSize: "18px",
+              padding: "5px 20px",
+              transition: "transform 0.2s",
+            }}
+          >
+            Services
+          </Button>
+          <Button
+            onClick={handleWordClick}
+            color="inherit"
+            sx={{
+              color: theme.palette.textColor?.main,
+              ml: 2,
+              display:{ xs : "none" , md: "block"},
+              "&:hover": {
+                // backgroundColor: "#e8f5ff",
+                padding: "5px 20px",
+                borderRadius: "40px",
+                transform: "scale(0.95)",
+              },
+              fontFamily: "Montserrat",
+              textAlign: "center",
+              textTransform: "none",
+              fontSize: "18px",
+              padding: "5px 20px",
+              transition: "transform 0.2s",
+            }}
+          >
+            Work
+          </Button>
+
+          <Button
+            onClick={handleLinkedinClick}
+            color="inherit"
+            sx={{
+              color: theme.palette.textColor?.main,
+              ml: 2,
+              mr: 2,
+              display:{ xs : "none" , md: "block"},
+              "&:hover": {
+                // backgroundColor: "#e8f5ff",
+                padding: "5px 20px",
+                borderRadius: "40px",
+                transform: "scale(0.95)",
+              },
+              fontFamily: "Montserrat",
+              textAlign: "center",
+              textTransform: "none",
+              fontSize: "18px",
+              padding: "5px 20px",
+              transition: "transform 0.2s",
+            }}
+          >
+            Linkedin
+          </Button>
+
+          <Button
+            color="inherit"
+            onClick={() => setIsOpen(true)}
+            sx={{
+              color: theme.palette.btnColor?.text,
+              width: { xs: "100%", sm: "auto" },
+              backgroundColor: "#FF7262",
+              transition:
+                "background-color 0.5s ease, color 0.5s ease, border-radius 0.5s ease",
+                display:{ xs : "none" , md: "inline-flex"},
+              alignItems: "center",
+              borderRadius: "30px",
+              justifyContent: "center",
+              height: "46px",
+              mr: 2,
+              padding: "5px 10px 5px 20px",
+              "&:hover": {
                 backgroundColor: "#FF7262",
                 transition:
-                  "background-color 0.5s ease, color 0.5s ease, border-radius 0.5s ease",
-                display: isMobile ? "none" : "inline-flex",
-                alignItems: "center",
-                borderRadius: "30px",
-                justifyContent: "center",
-                height: "46px",
-                mr: 2,
-                padding: "5px 10px 5px 20px",
-                "&:hover": {
-                  backgroundColor: "#FF7262",
-                  transition:
-                    "background-color 0.5s ease, color 0.5s ease , border-radius 0.5s ease",
+                  "background-color 0.5s ease, color 0.5s ease , border-radius 0.5s ease",
 
-                  // transform: "scale(0.95)",
-                  borderRadius: "0px",
-                },
-                fontFamily: "Montserrat",
-                textAlign: "center",
-                textTransform: "none",
-                fontSize: "16px",
+                // transform: "scale(0.95)",
+                borderRadius: "0px",
+              },
+              fontFamily: "Montserrat",
+              textAlign: "center",
+              textTransform: "none",
+              fontSize: "16px",
 
-                // transition: "transform 0.1s",
+              // transition: "transform 0.1s",
+            }}
+          >
+            {"Let’s Talk"}
+            <ArrowForwardIcon
+              sx={{
+                rotate: "-45deg",
+                backgroundColor: "#fff",
+                color: "#333",
+                marginLeft: "10px",
+                padding: "3px",
+                borderRadius: "50%",
+                fontSize: { xs: "24px", sm: "28px" },
               }}
-            >
-              {"Let’s Talk"}
-              <ArrowForwardIcon
-                sx={{
-                  rotate: "-45deg",
-                  backgroundColor: "#fff",
-                  color: "#333",
-                  marginLeft: "10px",
-                  padding: "3px",
-                  borderRadius: "50%",
-                  fontSize: { xs: "24px", sm: "28px" },
+            />
+          </Button>
+
+          <Button
+            // variant="contained"
+            onClick={toggleTheme}
+            sx={{
+              alignItems: "center",
+              justifyContent: "center",
+              color: theme.palette.textColor?.main,
+              // backgroundColor: theme.palette.btnColor?.main,
+              transition: "background-color 0.5s ease, color 0.5s ease",
+              // position: "fixed",
+              display:{ xs : "none" , md: "inline-flex"},
+           
+              borderRadius: "9999px",
+              px: 2,
+              py: 1,
+            }}
+          >
+            {themeMode === "dark" ? (
+              <FiSun style={{ fontSize: "1.25rem", zIndex: 10 }} />
+            ) : (
+              <FiMoon
+                style={{
+                  fontSize: "1.25rem",
+                  zIndex: 10,
+                  color: theme.palette.textColor?.main,
                 }}
               />
-            </Button>
+            )}
 
-            <Button
-              // variant="contained"
-              onClick={toggleTheme}
-              sx={{
-                color: theme.palette.textColor?.main,
-                // backgroundColor: theme.palette.btnColor?.main,
-                transition: "background-color 0.5s ease, color 0.5s ease",
-                // position: "fixed",
-                display: isMobile && "none",
-                borderRadius: "9999px",
-                px: 2,
-                py: 1,
+            <div
+              style={{
+                position: "absolute",
+                inset: 0,
+                zIndex: 0,
+                display: "flex",
+                justifyContent:
+                  themeMode === "dark" ? "flex-end" : "flex-start",
               }}
-            >
-              {themeMode === "dark" ? (
-                <FiSun style={{ fontSize: "1.25rem", zIndex: 10 }} />
-              ) : (
-                <FiMoon
-                  style={{
-                    fontSize: "1.25rem",
-                    zIndex: 10,
-                    color: theme.palette.textColor?.main,
-                  }}
-                />
-              )}
+            ></div>
+          </Button>
 
-              <div
+          <SpringModal isOpen={isOpen} setIsOpen={setIsOpen} />
+        </Box>
+
+        <Box
+          sx={{
+            display: {
+              xs: "block",
+              md: "none",
+            },
+          }}
+        >
+          <div onClick={() => setIsActive(!isActive)} style={styles.button}>
+            <div style={styles.burger}>
+              <span
                 style={{
-                  position: "absolute",
-                  inset: 0,
-                  zIndex: 0,
-                  display: "flex",
-                  justifyContent:
-                    themeMode === "dark" ? "flex-end" : "flex-start",
+                  ...styles.burgerBeforeAfter,
+                  ...styles.burgerBefore,
+                  ...(isActive ? styles.burgerActiveBefore : {}),
                 }}
-              ></div>
-            </Button>
-
-            <SpringModal isOpen={isOpen} setIsOpen={setIsOpen} />
-          </div>
-        )}
-
-        {isMobile && (
-          <Box>
-            <div onClick={() => setIsActive(!isActive)} style={styles.button}>
-              <div style={styles.burger}>
-                <span
-                  style={{
-                    ...styles.burgerBeforeAfter,
-                    ...styles.burgerBefore,
-                    ...(isActive ? styles.burgerActiveBefore : {}),
-                  }}
-                ></span>
-                <span
-                  style={{
-                    ...styles.burgerBeforeAfter,
-                    ...styles.burgerAfter,
-                    ...(isActive ? styles.burgerActiveAfter : {}),
-                  }}
-                ></span>
-              </div>
+              ></span>
+              <span
+                style={{
+                  ...styles.burgerBeforeAfter,
+                  ...styles.burgerAfter,
+                  ...(isActive ? styles.burgerActiveAfter : {}),
+                }}
+              ></span>
             </div>
-            <AnimatePresence mode="wait">
-              {isActive && (
-                <Nav
-                  themeMode={themeMode}
-                  toggleTheme={toggleTheme}
-                  setIsActive={setIsActive}
-                />
-              )}
-            </AnimatePresence>
-          </Box>
-        )}
+          </div>
+          <AnimatePresence mode="wait">
+            {isActive && (
+              <Nav
+                themeMode={themeMode}
+                toggleTheme={toggleTheme}
+                setIsActive={setIsActive}
+              />
+            )}
+          </AnimatePresence>
+        </Box>
+
         {/* </Toolbar>
         </AppBar> */}
       </Container>

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { color, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { menuSlide } from "./anim";
 import LinkList from "./LinkList";
 import Curve from "./Curve";
-import { FiMoon, FiSun } from "react-icons/fi";
+
 import { FaLinkedin } from "react-icons/fa";
 import { FaSquareGithub } from "react-icons/fa6";
 import { MdAttachEmail } from "react-icons/md";
@@ -44,19 +44,18 @@ const socialLinks = [
     link: "https://www.behance.net/jeewantharashmika",
   },
 ];
-export default function Nav({ themeMode, toggleTheme ,setIsActive}) {
+export default function Nav({ themeMode, toggleTheme, setIsActive }) {
   const theme = useTheme();
 
   const navItems = [
-  
     { title: "Home", href: "/#" },
     { title: "Services", href: "/#services" },
     { title: "Work", href: "/#work" },
     { title: "Education", href: "/#education" },
     {
-        title: themeMode === "light" ? "Dark Mode" : "Light Mode",
-        href: toggleTheme,
-      },
+      title: themeMode === "light" ? "Dark Mode" : "Light Mode",
+      href: toggleTheme,
+    },
     // { title: "Favourites", href: "/#favourites" },
   ];
   const path = window.location.pathname;
@@ -173,7 +172,7 @@ export default function Nav({ themeMode, toggleTheme ,setIsActive}) {
           </Box>
           {navItems.map((data, index) => (
             <LinkList
-            setIsActive={setIsActive}
+              setIsActive={setIsActive}
               key={index}
               data={{ ...data, index }}
               isActive={selectedIndicator === data.href}
