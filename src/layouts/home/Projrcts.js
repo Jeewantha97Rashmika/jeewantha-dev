@@ -1,7 +1,8 @@
 import React from "react";
 import DescriptionLayout from "./DescriptionLayout";
+import loadable from "@loadable/component";
 
-import ProjectGrid from "./ProjectGrid";
+const ProjectGrid = loadable(() => import("./ProjectGrid"));
 
 export default function Projrcts() {
   return (
@@ -9,7 +10,7 @@ export default function Projrcts() {
       <DescriptionLayout />
       {/* <ScrollEffect> */}
       {/* <ProjectList /> */}
-      <ProjectGrid/>
+      <ProjectGrid />
       {/* </ScrollEffect> */}
     </div>
   );
