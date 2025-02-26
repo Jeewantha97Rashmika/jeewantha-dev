@@ -7,6 +7,7 @@ export default function MainBtn({
   isMobile,
   title,
   color,
+  size
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const theme = useTheme();
@@ -18,7 +19,7 @@ export default function MainBtn({
         color="inherit"
         sx={{
           color: theme.palette.btnColor?.text,
-          width: { xs: "100%", md: "auto" },
+          width: { xs: "100%", md:size ? size : "auto" },
           backgroundColor: !color ? theme.palette.btnColor?.main : color,
           transition:
             "background-color 0.5s ease, color 0.5s ease, border-radius 0.5s ease",
