@@ -11,7 +11,7 @@ import WorkingContent02 from "../../components/about/WorkingContent02";
 import Heading2 from "../../components/common/Heading2";
 import Education01 from "../../components/about/Education1";
 import Education02 from "../../components/about/Education2";
-import { motion } from "framer-motion";
+
 import SkillsChips from "./SkillChips";
 import WorkingContent03 from "../../components/about/WorkingContent03";
 export default function WorkingExperince() {

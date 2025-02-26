@@ -122,10 +122,10 @@ export default function HeroSection() {
                     alignItems="flex-start"
                     justifyContent={{ xs: "center", md: "flex-start" }}
                   >
-                    <Grid item xs={12} md={6}>
-                      <MainBtn title={"Let’s Collaborate"} />
+                    <Grid item xs={12} lg={6}>
+                      <MainBtn title={"Let’s Collaborate"} size={"100%"}/>
                     </Grid>
-                    <Grid item xs={12} md={6}>
+                    <Grid item xs={12} lg={6}>
                       <SecondaryBtn title={"Look Work"} handleClick = {handleClick} />
                     </Grid>
                   </Grid>

@@ -5,7 +5,6 @@ import {
   Box,
   Typography,
   Button,
-  useTheme,
 } from "@mui/material";
 
 import Logo2 from "../images/JeewanthaLogowhite.svg";
@@ -20,17 +19,17 @@ import { FaFacebookSquare } from "react-icons/fa";
 import { FaSquareBehance } from "react-icons/fa6";
 
 export default function Footer() {
-  const handleLinkedinClick = () => {
-    window.location.href =
-      "https://www.linkedin.com/in/jeewantha-rashmika-b5a56820a/"; // Replace with your desired URL
-  };
+  // const handleLinkedinClick = () => {
+  //   window.location.href =
+  //     "https://www.linkedin.com/in/jeewantha-rashmika-b5a56820a/"; // Replace with your desired URL
+  // };
 
   const handleBlogClick = () => {
     window.location.href = "/#knowledge-sharing"; // Replace with your desired URL
   };
-  const handleAboutClick = () => {
-    window.location.href = "/#about"; // Replace with your desired URL
-  };
+  // const handleAboutClick = () => {
+  //   window.location.href = "/#about"; // Replace with your desired URL
+  // };
   const handleServicesClick = () => {
     window.location.href = "/#services"; // Replace with your desired URL
   };
@@ -106,7 +105,7 @@ export default function Footer() {
     },
   ];
   const isMobile = useMediaQuery("(max-width: 920px)");
-  const theme = useTheme();
+
   return (
     <div
       style={{
