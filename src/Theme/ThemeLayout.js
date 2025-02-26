@@ -4,6 +4,17 @@ import React from "react";
 import { ThemeProvider, createTheme, CssBaseline } from "@mui/material";
 
 const lightTheme = createTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 900,
+      lg: 1200,
+      xl: 1536,
+      isDesktop: 1024,
+    },
+  },
+
   palette: {
     mode: "light",
     primary: {
@@ -54,6 +65,16 @@ const lightTheme = createTheme({
 });
 
 const darkTheme = createTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 900,
+      lg: 1200,
+      xl: 1536,
+      isDesktop: 1024,
+    },
+  },
   palette: {
     mode: "dark",
     primary: {
