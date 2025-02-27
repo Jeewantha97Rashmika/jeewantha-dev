@@ -10,7 +10,7 @@
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
-    "build": "NODE_OPTIONS='--max-old-space-size=4096' gatsby build",
+    "build": "GATSBY_CPU_COUNT=2 NODE_OPTIONS='--max_old_space_size=4096' gatsby clean && gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   },

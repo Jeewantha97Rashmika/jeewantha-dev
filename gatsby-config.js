@@ -21,6 +21,17 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`auto`, `webp`], // Convert images to WebP for smaller file sizes
+          quality: 75, // Reduce image quality slightly
+          breakpoints: [750, 1080, 1366, 1920], // Limit breakpoints
+        },
+        failOnError: false, // Prevent the build from crashing on image errors
+      },
+    },
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
