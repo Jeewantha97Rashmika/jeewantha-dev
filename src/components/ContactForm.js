@@ -11,9 +11,12 @@ import {
   Radio,
   RadioGroup,
   useTheme,
+  Typography,
 } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import SecondaryBtn from "./common/SecondaryBtn";
+import MainBtn from "./MainBtn";
+import SheduleMeting from "./SheduleMeting";
 
 export default function ContactForm({ setIsOpen }) {
   const theme = useTheme();
@@ -80,6 +83,7 @@ export default function ContactForm({ setIsOpen }) {
         zIndex: 5,
       }}
     >
+   <SheduleMeting/>
       <form onSubmit={handleSubmit}>
         <Grid container spacing={2}>
           {/* Name Input */}

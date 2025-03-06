@@ -1,16 +1,23 @@
-<svg width="792" height="711" viewBox="0 0 792 711" fill="none" xmlns="http://www.w3.org/2000/svg">
-<line y1="88.9531" x2="791.2" y2="88.9531" stroke="#636161" stroke-opacity="0.17"/>
-<line x1="702.246" y1="1.79946e-08" x2="702.246" y2="711" stroke="#636161" stroke-opacity="0.17"/>
-<line y1="178.407" x2="791.2" y2="178.407" stroke="#636161" stroke-opacity="0.17"/>
-<line x1="598.141" y1="1.79946e-08" x2="598.141" y2="711" stroke="#636161" stroke-opacity="0.17"/>
-<line y1="267.86" x2="791.2" y2="267.86" stroke="#636161" stroke-opacity="0.17"/>
-<line x1="494.035" y1="1.79946e-08" x2="494.035" y2="711" stroke="#636161" stroke-opacity="0.17"/>
-<line y1="357.313" x2="791.2" y2="357.313" stroke="#636161" stroke-opacity="0.17"/>
-<line x1="389.93" y1="1.79946e-08" x2="389.93" y2="711" stroke="#636161" stroke-opacity="0.17"/>
-<line y1="446.767" x2="791.2" y2="446.767" stroke="#636161" stroke-opacity="0.17"/>
-<line x1="285.826" y1="1.79946e-08" x2="285.826" y2="711" stroke="#636161" stroke-opacity="0.17"/>
-<line y1="536.22" x2="791.2" y2="536.22" stroke="#636161" stroke-opacity="0.17"/>
-<line x1="181.721" y1="1.79946e-08" x2="181.721" y2="711" stroke="#636161" stroke-opacity="0.17"/>
-<line y1="625.674" x2="791.2" y2="625.674" stroke="#636161" stroke-opacity="0.17"/>
-<line x1="77.6152" y1="1.79946e-08" x2="77.6152" y2="711" stroke="#636161" stroke-opacity="0.17"/>
+<svg width="1629" height="711" viewBox="0 0 1629 711" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_517_20)">
+<path d="M0 88.9531H774.093" stroke="#636161" stroke-opacity="0.17"/>
+<path d="M687.062 0V711" stroke="#636161" stroke-opacity="0.17"/>
+<path d="M0 178.407H774.093" stroke="#636161" stroke-opacity="0.17"/>
+<path d="M585.208 0V711" stroke="#636161" stroke-opacity="0.17"/>
+<path d="M0 267.86H774.093" stroke="#636161" stroke-opacity="0.17"/>
+<path d="M483.353 0V711" stroke="#636161" stroke-opacity="0.17"/>
+<path d="M0 357.313H774.093" stroke="#636161" stroke-opacity="0.17"/>
+<path d="M381.499 0V711" stroke="#636161" stroke-opacity="0.17"/>
+<path d="M0 446.767H774.093" stroke="#636161" stroke-opacity="0.17"/>
+<path d="M279.646 0V711" stroke="#636161" stroke-opacity="0.17"/>
+<path d="M0 536.22H774.093" stroke="#636161" stroke-opacity="0.17"/>
+<path d="M177.792 0V711" stroke="#636161" stroke-opacity="0.17"/>
+<path d="M0 625.674H774.093" stroke="#636161" stroke-opacity="0.17"/>
+<path d="M75.937 0V711" stroke="#636161" stroke-opacity="0.17"/>
+</g>
+<defs>
+<clipPath id="clip0_517_20">
+<rect width="1629" height="711" fill="white"/>
+</clipPath>
+</defs>
 </svg>

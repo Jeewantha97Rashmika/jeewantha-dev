@@ -10,7 +10,7 @@ import {
 import Logo2 from "../images/JeewanthaLogowhite.svg";
 import { useMediaQuery } from "@mui/material";
 import MainBtn from "../components/MainBtn";
-import GridImage from "../images/grid.svg";
+import GridImage from "../images/grid2.svg";
 import { FaLinkedin } from "react-icons/fa";
 import { FaSquareGithub } from "react-icons/fa6";
 import { MdAttachEmail } from "react-icons/md";

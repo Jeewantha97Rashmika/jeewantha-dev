@@ -36,24 +36,24 @@ export default function Servicesnew() {
     },
   ];
 
-  const serviceTag = [
-    {
-      title: "Creative",
-      img: Star,
-    },
-    {
-      title: "Satisfaction",
-      img: Star,
-    },
-    {
-      title: "On-Time",
-      img: Star,
-    },
-    {
-      title: "24/7 Support",
-      img: Star,
-    },
-  ];
+  // const serviceTag = [
+  //   {
+  //     title: "Creative",
+  //     img: Star,
+  //   },
+  //   {
+  //     title: "Satisfaction",
+  //     img: Star,
+  //   },
+  //   {
+  //     title: "On-Time",
+  //     img: Star,
+  //   },
+  //   {
+  //     title: "24/7 Support",
+  //     img: Star,
+  //   },
+  // ];
   return (
     <Box
       id="services"
@@ -86,7 +86,7 @@ export default function Servicesnew() {
               container
               sx={{ mt: 3, p: 2, display: { xs: "none", md: "flex" } }}
             >
-              {serviceTag.map((item, index) => (
+              {/* {serviceTag.map((item, index) => (
                 <Grid item xs={4} sm={3} key={index}>
                   <Box
                     sx={{
@@ -116,7 +116,7 @@ export default function Servicesnew() {
                     </Typography>
                   </Box>
                 </Grid>
-              ))}
+              ))} */}
             </Grid>
           </Grid>
           <Grid item xs={12} md={5}>
@@ -143,11 +143,15 @@ export default function Servicesnew() {
               prototyping and testing. Let's craft exceptional digital
               experiences together.
             </Typography>
-            <img
-              src={workingdesk}
-              alt="workingdesk"
-              style={{ width: "100%" }}
-            />
+            <div style={{ overflow: "hidden", width: "100%" ,borderRadius:"15px" }}>
+              <motion.img
+                src={workingdesk}
+                alt="workingdesk"
+                style={{ width: "100%", display: "block" }}
+                whileHover={{ scale: 1.2 }}
+                transition={{ duration: 0.5 }}
+              />
+            </div>
           </Grid>
         </Grid>
       </Container>

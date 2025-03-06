@@ -34,7 +34,7 @@ const lightTheme = createTheme({
       main: "#ffffff",
       secondary: "#2C2B2E",
       dec: "#FFD3D0",
-      header: "#fff",
+      header: "rgba(255, 255, 255, 0.8)",
       fixHeader: "transparent",
       nav: "rgb(58, 58, 58)",
     },
@@ -59,7 +59,7 @@ const lightTheme = createTheme({
       main: "#fff",
     },
     shadow: {
-      main: "0px 2px 6px rgba(0, 0, 0, 0.03)",
+      main: "0px 0px 50px rgba(0, 0, 0, 0.2)",
     },
   },
 });
@@ -94,7 +94,7 @@ const darkTheme = createTheme({
       secondary: "#1A1A1B",
       dec: "#FF8081",
       fixHeader: "rgb(18 18 18)",
-      header: "#121212",
+      header: "rgba(58, 58, 58, 0.8)",
       nav: "rgb(41, 41, 41)",
     },
     textColor: {
@@ -119,7 +119,7 @@ const darkTheme = createTheme({
       main: "#333",
     },
     shadow: {
-      main: "0px 2px 6px rgba(255, 255, 255, 0.1)",
+      main: "0px 2px 6px rgba(255, 255, 255, 0.5)",
     },
   },
 });

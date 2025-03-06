@@ -1,8 +1,9 @@
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { FiMessageSquare } from "react-icons/fi";
-import {  Typography,useTheme } from "@mui/material";
+import { Box, Typography, useTheme } from "@mui/material";
 import ContactForm from "./ContactForm";
+import MainBtn from "./MainBtn";
 
 export default function SpringModal({ isOpen, setIsOpen }) {
   const theme = useTheme();
@@ -47,7 +48,7 @@ export default function SpringModal({ isOpen, setIsOpen }) {
               zIndex: 100000, // Modal content should be above the background
             }}
           >
-            <FiMessageSquare 
+            <FiMessageSquare
               style={{
                 color: "rgba(255, 255, 255, 0.1)",
                 transform: "rotate(12.5deg)",
@@ -59,7 +60,7 @@ export default function SpringModal({ isOpen, setIsOpen }) {
               }}
             />
             <div style={{ position: "relative", zIndex: 10 }}>
-              <div
+              {/* <div
                 style={{
                   backgroundColor: "#B5B5B5",
                   width: "64px",
@@ -73,8 +74,8 @@ export default function SpringModal({ isOpen, setIsOpen }) {
                   margin: "0 auto",
                 }}
               >
-           <FiMessageSquare />
-              </div>
+                <FiMessageSquare />
+              </div> */}
               <Typography
                 sx={{
                   color: theme.palette.textColor?.secondary,
@@ -82,23 +83,22 @@ export default function SpringModal({ isOpen, setIsOpen }) {
                   fontSize: "24px",
                   fontWeight: "bold",
                   textAlign: "center",
-                  marginBottom: "8px",
-                  mt:2,
+
+                  mt: 2,
                 }}
               >
                 Send me your Enquiry
               </Typography>
-              {/* <Typography
+              <Typography
                 sx={{
-                  color: theme.palette.textColor?.secondary,
+                  color: theme.palette.textColor?.main,
                   textAlign: "center",
-             
                   fontSize: "16px",
                 }}
               >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
-                aperiam vitae, sapiente ducimus eveniet in velit.
-              </Typography> */}
+                Shechedule a call with me or send me a message
+              </Typography>
+
               <ContactForm setIsOpen={setIsOpen} />
             </div>
           </motion.div>

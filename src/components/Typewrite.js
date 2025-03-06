@@ -20,12 +20,11 @@ export default function Typewrite({ examples }) {
 
     return () => clearInterval(intervalId);
   }, []);
-const theme = useTheme();
+  const theme = useTheme();
   return (
     <Typography
-      
       sx={{
-        // marginBottom: "0.625rem",
+        marginBottom: "0.625rem",
         fontSize: { xs: "16px", md: "18px" },
         fontWeight: 400,
         fontFamily: "Montserrat",

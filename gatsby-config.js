@@ -18,7 +18,7 @@ module.exports = {
         icon: "src/images/fav.png",
       },
     },
-    "gatsby-plugin-sharp",
+
     "gatsby-transformer-sharp",
     {
       resolve: `gatsby-plugin-sharp`,

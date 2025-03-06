@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import SpringModal from "../components/SpringModal";
 import Nav from "../components/Nav";
+import RevealLinks from "../components/animationComponents/RevealLinks";
 
 export default function Header({ themeMode, toggleTheme }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,18 +44,14 @@ export default function Header({ themeMode, toggleTheme }) {
     };
   }, []);
 
-  //
-
   const styles = {
     button: {
       position: "fixed",
       right: "15px",
-      top: "10px",
-      // margin: "20px",
-      zIndex: 5,
+      top: "20px",
+      zIndex: 20, // Increased z-index to be above header
       width: "40px",
       height: "40px",
-      // transform: "translate(-50%, -50%)",
       borderRadius: "50%",
       backgroundColor: theme.palette.secondary?.main,
       transition: "background-color 0.3s ease, color 0.5s ease",
@@ -69,14 +66,11 @@ export default function Header({ themeMode, toggleTheme }) {
       display: "block",
     },
     burgerBeforeAfter: {
-      // content: '""',
       display: "block",
       height: "1px",
       width: "40%",
       margin: "auto",
       backgroundColor: "white",
-      // marginTop: "5px",
-      // marginBottom: "5px",
       position: "relative",
       transition: "transform 0.3s",
     },
@@ -98,269 +92,224 @@ export default function Header({ themeMode, toggleTheme }) {
   const [isActive, setIsActive] = useState(false);
 
   return (
-    <Box
-      component={motion.div}
-      animate={{
-        backgroundColor: isScrolled
-          ? theme.palette.bgColor?.header // When scrolled
-          : theme.palette.bgColor?.fixHeader,
-
-        boxShadow: isScrolled ? theme.palette.shadow?.main : "none",
-      }}
-      transition={{
-        backgroundColor: { duration: 0.1, ease: "easeInOut" }, // Smooth color transition
-      }}
-      sx={{
-        // backgroundColor: theme.palette.bgColor?.main,
-        transition: "background-color 0.1s ease, color 0.5s ease",
-
-        position: "sticky",
-        width: "100%",
-        top: 0,
-        zIndex: 10,
-        overflow: " hidden",
-      }}
-    >
-      <Container
+    <>
+      {/* Separate the backdrop blur to its own element */}
+      <Box
         sx={{
+          position: "sticky",
+
+          top: { xs: 10, md: isScrolled ? 10 : 0 },
+          zIndex: 10, // Lower than the burger button but higher than content
+          maxWidth: "1200px",
           display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
+          justifyContent: "center",
+         margin: "0 auto",
         }}
       >
         <Box
+          component={motion.div}
+          animate={{
+            backgroundColor: isScrolled
+              ? theme.palette.bgColor?.header // When scrolled
+              : theme.palette.bgColor?.fixHeader,
+            backdropFilter: isScrolled ? "blur(12px)" : "none",
+            width: isScrolled ? "53rem" : "100%",
+            borderRadius: isScrolled ? "60px" : "0px",
+            // boxShadow: isScrolled ? theme.palette.shadow?.main : "none",
+            border: !isScrolled ? "none" : "1px solid #E5E5E5",
+          }}
+          transition={{
+
+            backgroundColor: { duration: 0.1, ease: "easeInOut" },
+            backdropFilter: { duration: 0.1, ease: "easeInOut" },
+            width: { duration: 0.1, ease: "easeInOut" },
+            borderRadius: { duration: 0.1, ease: "easeInOut" },
+            border: { duration: 0.1, ease: "easeInOut" },
+            
+          }}
           sx={{
-            color: "black",
-            "&:hover": {
-              transform: "scale(0.95)",
-            },
-            transition: "transform 0.2s",
-            display: "flex",
-            justifyContent: "start",
-            alignItems: "center",
+            transition: "background-color 0.1s ease, color 0.5s ease   ",
+            margin: "0 auto",
+            overflow: "hidden",
           }}
         >
-          <a href="/">
-            <img
-              src={themeMode === "dark" ? Logo2 : Logo}
-              alt="logo"
-              width={"auto"}
-              height={60}
-            />
-          </a>
-        </Box>
-
-        <Box
-          sx={{
-            display: {
-              xs: "none",
-              md: "flex",
-            },
-
-          }}
-        >
-          <Button
-            onClick={handleAboutClick}
-            color="inherit"
+          <Container
             sx={{
-              color: theme.palette.textColor?.main,
-              ml: 2,
-              display:{ xs : "none" , md: "block"},
-              "&:hover": {
-                // backgroundColor: "#e8f5ff",
-                padding: "5px 20px",
-                borderRadius: "40px",
-                transform: "scale(0.95)",
-              },
-              fontFamily: "Montserrat",
-              textAlign: "center",
-              textTransform: "none",
-              fontSize: "18px",
-              padding: "5px 20px",
-              transition: "transform 0.2s",
-            }}
-          >
-            Services
-          </Button>
-          <Button
-            onClick={handleWordClick}
-            color="inherit"
-            sx={{
-              color: theme.palette.textColor?.main,
-              ml: 2,
-              display:{ xs : "none" , md: "block"},
-              "&:hover": {
-                // backgroundColor: "#e8f5ff",
-                padding: "5px 20px",
-                borderRadius: "40px",
-                transform: "scale(0.95)",
-              },
-              fontFamily: "Montserrat",
-              textAlign: "center",
-              textTransform: "none",
-              fontSize: "18px",
-              padding: "5px 20px",
-              transition: "transform 0.2s",
-            }}
-          >
-            Work
-          </Button>
-
-          <Button
-            onClick={handleLinkedinClick}
-            color="inherit"
-            sx={{
-              color: theme.palette.textColor?.main,
-              ml: 2,
-              mr: 2,
-              display:{ xs : "none" , md: "block"},
-              "&:hover": {
-                // backgroundColor: "#e8f5ff",
-                padding: "5px 20px",
-                borderRadius: "40px",
-                transform: "scale(0.95)",
-              },
-              fontFamily: "Montserrat",
-              textAlign: "center",
-              textTransform: "none",
-              fontSize: "18px",
-              padding: "5px 20px",
-              transition: "transform 0.2s",
-            }}
-          >
-            Linkedin
-          </Button>
-
-          <Button
-            color="inherit"
-            onClick={() => setIsOpen(true)}
-            sx={{
-              color: theme.palette.btnColor?.text,
-              width: { xs: "100%", sm: "auto" },
-              backgroundColor: "#FF7262",
-              transition:
-                "background-color 0.5s ease, color 0.5s ease, border-radius 0.5s ease",
-                display:{ xs : "none" , md: "inline-flex"},
+              display: "flex",
+              justifyContent: "space-between",
               alignItems: "center",
-              borderRadius: "30px",
-              justifyContent: "center",
-              height: "46px",
-              mr: 2,
-              padding: "5px 10px 5px 20px",
-              "&:hover": {
-                backgroundColor: "#FF7262",
-                transition:
-                  "background-color 0.5s ease, color 0.5s ease , border-radius 0.5s ease",
-
-                // transform: "scale(0.95)",
-                borderRadius: "0px",
-              },
-              fontFamily: "Montserrat",
-              textAlign: "center",
-              textTransform: "none",
-              fontSize: "16px",
-
-              // transition: "transform 0.1s",
             }}
           >
-            {"Let’s Talk"}
-            <ArrowForwardIcon
+            <Box
               sx={{
-                rotate: "-45deg",
-                backgroundColor: "#fff",
-                color: "#333",
-                marginLeft: "10px",
-                padding: "3px",
-                borderRadius: "50%",
-                fontSize: { xs: "24px", sm: "28px" },
-              }}
-            />
-          </Button>
-
-          <Button
-            // variant="contained"
-            onClick={toggleTheme}
-            sx={{
-              alignItems: "center",
-              justifyContent: "center",
-              color: theme.palette.textColor?.main,
-              // backgroundColor: theme.palette.btnColor?.main,
-              transition: "background-color 0.5s ease, color 0.5s ease",
-              // position: "fixed",
-              display:{ xs : "none" , md: "inline-flex"},
-           
-              borderRadius: "9999px",
-              px: 2,
-              py: 1,
-            }}
-          >
-            {themeMode === "dark" ? (
-              <FiSun style={{ fontSize: "1.25rem", zIndex: 10 }} />
-            ) : (
-              <FiMoon
-                style={{
-                  fontSize: "1.25rem",
-                  zIndex: 10,
-                  color: theme.palette.textColor?.main,
-                }}
-              />
-            )}
-
-            <div
-              style={{
-                position: "absolute",
-                inset: 0,
-                zIndex: 0,
+                color: "black",
+                "&:hover": {
+                  transform: "scale(0.95)",
+                },
+                transition: "transform 0.2s",
                 display: "flex",
-                justifyContent:
-                  themeMode === "dark" ? "flex-end" : "flex-start",
+                justifyContent: "start",
+                alignItems: "center",
               }}
-            ></div>
-          </Button>
+            >
+              <a href="/">
+                <img
+                  src={themeMode === "dark" ? Logo2 : Logo}
+                  alt="logo"
+                  width={"auto"}
+                  height={60}
+                />
+              </a>
+            </Box>
 
-          <SpringModal isOpen={isOpen} setIsOpen={setIsOpen} />
+            <Box
+              sx={{
+                display: {
+                  xs: "none",
+                  md: "flex",
+                },
+              }}
+            >
+              <RevealLinks title={"Services"} link="/#services" />
+              <RevealLinks title={"Work"} link="/#work" />
+              <RevealLinks title={"Education"} link="/#services" />
+
+              <Button
+                color="inherit"
+                onClick={() => setIsOpen(true)}
+                sx={{
+                  color: theme.palette.btnColor?.text,
+                  width: { xs: "100%", sm: "auto" },
+                  backgroundColor: "#FF7262",
+                  transition:
+                    "background-color 0.5s ease, color 0.5s ease, border-radius 0.5s ease",
+                  display: { xs: "inline-flex" },
+                  alignItems: "center",
+                  borderRadius: "30px",
+                  justifyContent: "center",
+                  height: "46px",
+                  mr: 2,
+                  padding: "5px 10px 5px 20px",
+                  "&:hover": {
+                    backgroundColor: "#FF7262",
+                    transition:
+                      "background-color 0.5s ease, color 0.5s ease, border-radius 0.5s ease",
+                    borderRadius: "0px",
+                  },
+                  fontFamily: "Montserrat",
+                  textAlign: "center",
+                  textTransform: "none",
+                  fontSize: "16px",
+                }}
+              >
+                {"Let's Talk"}
+                <ArrowForwardIcon
+                  sx={{
+                    rotate: "-45deg",
+                    backgroundColor: "#fff",
+                    color: "#333",
+                    marginLeft: "10px",
+                    padding: "3px",
+                    borderRadius: "50%",
+                    fontSize: { xs: "24px", sm: "28px" },
+                  }}
+                />
+              </Button>
+
+              <Button
+                onClick={toggleTheme}
+                sx={{
+                  alignItems: "center",
+                  justifyContent: "center",
+                  color: theme.palette.textColor?.main,
+                  transition: "background-color 0.5s ease, color 0.5s ease",
+                  display: { xs: "inline-flex" },
+                  borderRadius: "9999px",
+                  px: 2,
+                  py: 1,
+                }}
+              >
+                {themeMode === "dark" ? (
+                  <FiSun style={{ fontSize: "1.25rem", zIndex: 10 }} />
+                ) : (
+                  <FiMoon
+                    style={{
+                      fontSize: "1.25rem",
+                      zIndex: 10,
+                      color: theme.palette.textColor?.main,
+                    }}
+                  />
+                )}
+
+                <div
+                  style={{
+                    position: "absolute",
+                    inset: 0,
+                    zIndex: 0,
+                    display: "flex",
+                    justifyContent:
+                      themeMode === "dark" ? "flex-end" : "flex-start",
+                  }}
+                ></div>
+              </Button>
+
+              <SpringModal isOpen={isOpen} setIsOpen={setIsOpen} />
+            </Box>
+
+            <Box
+              sx={{
+                display: {
+                  xs: "block",
+                  md: "none",
+                },
+              }}
+            >
+              {/* Empty Box to maintain layout, actual burger menu is outside */}
+            </Box>
+          </Container>
         </Box>
+      </Box>
 
-        <Box
-          sx={{
-            display: {
-              xs: "block",
-              md: "none",
-            },
-          }}
-        >
-          <div onClick={() => setIsActive(!isActive)} style={styles.button}>
-            <div style={styles.burger}>
-              <span
-                style={{
-                  ...styles.burgerBeforeAfter,
-                  ...styles.burgerBefore,
-                  ...(isActive ? styles.burgerActiveBefore : {}),
-                }}
-              ></span>
-              <span
-                style={{
-                  ...styles.burgerBeforeAfter,
-                  ...styles.burgerAfter,
-                  ...(isActive ? styles.burgerActiveAfter : {}),
-                }}
-              ></span>
-            </div>
+      {/* Move the burger menu and mobile navigation outside of the header */}
+      <Box
+        sx={{
+          display: {
+            xs: "block",
+            md: "none",
+          },
+          position: "fixed", // Fixed position for the burger menu
+
+          zIndex: 20, // Higher z-index to be above the header
+        }}
+      >
+        <div onClick={() => setIsActive(!isActive)} style={styles.button}>
+          <div style={styles.burger}>
+            <span
+              style={{
+                ...styles.burgerBeforeAfter,
+                ...styles.burgerBefore,
+                ...(isActive ? styles.burgerActiveBefore : {}),
+              }}
+            ></span>
+            <span
+              style={{
+                ...styles.burgerBeforeAfter,
+                ...styles.burgerAfter,
+                ...(isActive ? styles.burgerActiveAfter : {}),
+              }}
+            ></span>
           </div>
-          <AnimatePresence mode="wait">
-            {isActive && (
-              <Nav
-                themeMode={themeMode}
-                toggleTheme={toggleTheme}
-                setIsActive={setIsActive}
-              />
-            )}
-          </AnimatePresence>
-        </Box>
-
-        {/* </Toolbar>
-        </AppBar> */}
-      </Container>
-    </Box>
+        </div>
+        <AnimatePresence mode="wait">
+          {isActive && (
+            <Nav
+              themeMode={themeMode}
+              toggleTheme={toggleTheme}
+              setIsActive={setIsActive}
+            />
+          )}
+        </AnimatePresence>
+      </Box>
+    </>
   );
 }

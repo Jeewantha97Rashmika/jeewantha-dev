@@ -12,6 +12,7 @@ import BigTextnimation from "../../components/BigTextnimation";
 import { motion } from "framer-motion";
 import { useTheme } from "@mui/material/styles"; // Import useTheme
 import SecondaryBtn from "../../components/common/SecondaryBtn";
+import ShinyText from "../../components/animationComponents/ShinyText";
 
 export default function HeroSection() {
   const theme = useTheme();
@@ -72,6 +73,10 @@ export default function HeroSection() {
               // transition={{ duration: 1, type: "spring" }}
               >
                 <Box
+                  component={motion.div}
+                  initial={{ opacity: 1, y: -50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ type: "spring" }}
                   sx={{
                     paddingLeft: { xs: 0, md: "15px" },
                     position: "relative",
@@ -123,10 +128,13 @@ export default function HeroSection() {
                     justifyContent={{ xs: "center", md: "flex-start" }}
                   >
                     <Grid item xs={12} lg={6}>
-                      <MainBtn title={"Let’s Collaborate"} size={"100%"}/>
+                      <MainBtn title={"Let’s Collaborate"} size={"100%"} />
                     </Grid>
                     <Grid item xs={12} lg={6}>
-                      <SecondaryBtn title={"Look Work"} handleClick = {handleClick} />
+                      <SecondaryBtn
+                        title={"Look Work"}
+                        handleClick={handleClick}
+                      />
                     </Grid>
                   </Grid>
                 </Box>
