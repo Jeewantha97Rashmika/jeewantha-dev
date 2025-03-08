@@ -1,13 +1,14 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../../layouts/Header";
-
+import ScrollToTop from "react-scroll-to-top";
 import "../../global.css";
 import Footer from "../../layouts/Footer";
 import { Helmet } from "react-helmet";
 import { Box } from "@mui/material";
 import ThemeLayout from "../../Theme/ThemeLayout";
 import Layout from "../../layouts/xCamera/Layout";
-
+import Cover from "../../images/x_camera_cover.png";
+import Xcamera from "../../images/xcamera.png";
 const IndexPage = () => {
   const [themeMode, setThemeMode] = useState(() => {
     return typeof window !== "undefined"
@@ -36,9 +37,29 @@ const IndexPage = () => {
       </Helmet>
 
       <ThemeLayout themeMode={themeMode}>
-        <Box>
+        <Box
+          sx={{
+            backgroundColor: themeMode === "light" ? "#f7f8fa" : "#0b0b0d",
+            transition: "background-color 0.3s ease, color 0.3s ease",
+          }}
+        >
           <Header themeMode={themeMode} toggleTheme={toggleTheme} />
-          <Layout />
+          <ScrollToTop
+            top={900}
+            smooth
+            color="#333"
+            style={{
+              zIndex: 100000,
+            }}
+          />
+          <Layout
+            cover={Cover}
+            projectImage={Xcamera}
+            title="X Camera"
+            roles={"UI/UX Designer"}
+            description="Modern Photographer oficial web site UI/UX Design using figma and photoshop"
+            client="Personal Project"
+          />
           <Footer />
         </Box>
       </ThemeLayout>

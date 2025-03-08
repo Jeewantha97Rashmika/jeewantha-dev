@@ -60,7 +60,14 @@ export default function ProjectItem({ project }) {
               justifyContent: "space-between",
             }}
           >
-            <Typography variant="h6">{project.heading}</Typography>
+            <Typography
+              sx={{
+                fontSize: "2rem",
+                color: theme.palette.textColor?.main,
+              }}
+            >
+              {project.heading}
+            </Typography>
             <ArrowForwardIcon
               sx={{
                 backgroundColor: "#FF7262",
@@ -83,7 +90,14 @@ export default function ProjectItem({ project }) {
               />
             );
           })}
-          <Typography variant="body2">{project.subheading}</Typography>
+          <Typography
+            sx={{
+              fontSize: "1rem",
+              color: theme.palette.textColor?.main,
+            }}
+          >
+            {project.subheading}
+          </Typography>
         </Box>
       </Link>
     </Grid>

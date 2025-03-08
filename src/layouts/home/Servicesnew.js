@@ -1,10 +1,9 @@
 import React from "react";
-
 import { Grid, Box, Typography, useTheme, Container } from "@mui/material";
 import workingdesk from "../../images/workingdesk.png";
 import { motion } from "framer-motion";
 import ServiceCard from "../../components/ServiceCard";
-import Star from "../../images/Star.svg";
+
 
 export default function Servicesnew() {
   const theme = useTheme();
@@ -36,24 +35,7 @@ export default function Servicesnew() {
     },
   ];
 
-  // const serviceTag = [
-  //   {
-  //     title: "Creative",
-  //     img: Star,
-  //   },
-  //   {
-  //     title: "Satisfaction",
-  //     img: Star,
-  //   },
-  //   {
-  //     title: "On-Time",
-  //     img: Star,
-  //   },
-  //   {
-  //     title: "24/7 Support",
-  //     img: Star,
-  //   },
-  // ];
+
   return (
     <Box
       id="services"

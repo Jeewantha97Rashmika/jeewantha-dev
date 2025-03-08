@@ -25,7 +25,7 @@ export default function Footer() {
   // };
 
   const handleBlogClick = () => {
-    window.location.href = "/#knowledge-sharing"; // Replace with your desired URL
+    window.location.href = "/#testimonials"; // Replace with your desired URL
   };
   // const handleAboutClick = () => {
   //   window.location.href = "/#about"; // Replace with your desired URL
@@ -286,82 +286,13 @@ export default function Footer() {
                   transition: "transform 0.2s",
                 }}
               >
-                Blog
+          Testimonials
               </Button>
             </div>
           </Grid>
         </Box>
       </Container>
-      {/* <Box>
-        <Button
-          onClick={handleServicesClick}
-          color="inherit"
-          sx={{
-            color: "white",
-            ml: 2,
-
-            "&:hover": {
-              // backgroundColor: "#e8f5ff",
-              padding: "5px 20px",
-              borderRadius: "40px",
-              transform: "scale(0.95)",
-            },
-            fontFamily: "Montserrat",
-            textAlign: "center",
-            textTransform: "none",
-            fontSize: "14px",
-            padding: "5px 20px",
-            transition: "transform 0.2s",
-          }}
-        >
-          Services
-        </Button>
-        <Button
-          onClick={handleWordClick}
-          color="inherit"
-          sx={{
-            color: "white",
-            ml: 2,
-
-            "&:hover": {
-              // backgroundColor: "#e8f5ff",
-              padding: "5px 20px",
-              borderRadius: "40px",
-              transform: "scale(0.95)",
-            },
-            fontFamily: "Montserrat",
-            textAlign: "center",
-            textTransform: "none",
-            fontSize: "14px",
-            padding: "5px 20px",
-            transition: "transform 0.2s",
-          }}
-        >
-          Work
-        </Button>
-        <Button
-          color="inherit"
-          onClick={handleKnowledgeClick}
-          sx={{
-            color: "white",
-            ml: 2,
-            "&:hover": {
-              // backgroundColor: "#e8f5ff",
-              padding: "5px 20px",
-              borderRadius: "40px",
-              transform: "scale(0.95)",
-            },
-            fontFamily: "Montserrat",
-            textAlign: "center",
-            textTransform: "none",
-            fontSize: "14px",
-            padding: "5px 20px",
-            transition: "transform 0.2s",
-          }}
-        >
-          Knowledge Sharing
-        </Button>
-      </Box> */}
+     
       <hr style={{ border: "1px solid #2B2B2B", marginTop: "20px" }} />
       <Box
         sx={{

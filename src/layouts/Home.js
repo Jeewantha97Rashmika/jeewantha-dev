@@ -7,8 +7,6 @@ import FunActivity from "./home/FunActivity";
 import Testimonials from "./home/Testimonials";
 import Servicesnew from "./home/Servicesnew";
 import { Box, useTheme } from "@mui/material";
-import SplashCursor from "../components/animationComponents/SplashCursor";
-
 
 export default function Home() {
   const theme = useTheme();
@@ -16,7 +14,6 @@ export default function Home() {
     <>
       <Box sx={{ backgroundColor: theme.palette.bgColor?.main }}>
         {" "}
-
         <HeroSection />
         {/* <SkillMarquee/> */}
         {/* <TerminalLayout/> */}

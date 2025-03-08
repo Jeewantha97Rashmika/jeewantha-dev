@@ -12,7 +12,7 @@ import BigTextnimation from "../../components/BigTextnimation";
 import { motion } from "framer-motion";
 import { useTheme } from "@mui/material/styles"; // Import useTheme
 import SecondaryBtn from "../../components/common/SecondaryBtn";
-import ShinyText from "../../components/animationComponents/ShinyText";
+
 
 export default function HeroSection() {
   const theme = useTheme();
@@ -25,7 +25,7 @@ export default function HeroSection() {
     <Box
       sx={{
         backgroundColor: theme.palette.bgColor?.main,
-        transition: "background-color 0.5s ease, color 0.5s ease",
+        transition: "background-color 0.3s ease, color 0.3s ease",
         backgroundImage: `url(${GridImage})`,
       }}
     >

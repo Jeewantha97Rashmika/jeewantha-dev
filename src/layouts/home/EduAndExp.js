@@ -4,7 +4,7 @@ import WorkingExperince from "../about/WorkingExperince";
 
 export default function EduAndExp() {
   return (
-    <div>
+    <div id="education">
       <DescriptionLayout />
 
       <WorkingExperince />

@@ -1,5 +1,5 @@
 import React from "react";
-import { color, m, motion } from "framer-motion";
+import {  motion } from "framer-motion";
 import { useTheme } from "@mui/material";
 export const RevealLinks = ({ title, link }) => {
 

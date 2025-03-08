@@ -11,11 +11,11 @@ import {
   Radio,
   RadioGroup,
   useTheme,
-  Typography,
+
 } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import SecondaryBtn from "./common/SecondaryBtn";
-import MainBtn from "./MainBtn";
+
 import SheduleMeting from "./SheduleMeting";
 
 export default function ContactForm({ setIsOpen }) {
@@ -114,7 +114,7 @@ export default function ContactForm({ setIsOpen }) {
           <Grid item xs={12}>
             <FormControl fullWidth required>
               {/* <InputLabel sx={{ color: "white" }}>Project Type</InputLabel> */}
-              <RadioGroup
+              {/* <RadioGroup
                 name="projectType"
                 value={formData.projectType}
                 onChange={handleInputChange}
@@ -138,7 +138,7 @@ export default function ContactForm({ setIsOpen }) {
                   label="Development"
                   sx={{ color: theme.palette.textColor?.secondary }} // White color for the label
                 />
-              </RadioGroup>
+              </RadioGroup> */}
             </FormControl>
           </Grid>
           {/* Message Input */}

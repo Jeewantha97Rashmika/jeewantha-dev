@@ -48,10 +48,10 @@ export default function Nav({ themeMode, toggleTheme, setIsActive }) {
   const theme = useTheme();
 
   const navItems = [
-    { title: "Home", href: "/#" },
+    { title: "Home", href: "/" },
     { title: "Services", href: "/#services" },
     { title: "Work", href: "/#work" },
-    { title: "Education", href: "/#education" },
+    { title: "Testimonials", href: "/#testimonials" },
     {
       title: themeMode === "light" ? "Dark Mode" : "Light Mode",
       href: toggleTheme,

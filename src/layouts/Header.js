@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Box, Button, Container, useTheme } from "@mui/material";
+import { Box, Button, Container, useTheme,useMediaQuery } from "@mui/material";
 import Logo from "../images/JeewanthaLogoblack.svg";
-import Logo2 from "../images/JeewanthaLogowhite.svg";
+import Logo2 from "../images/logo.svg";
 import { FiMoon, FiSun } from "react-icons/fi";
 import { motion, AnimatePresence } from "framer-motion";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
@@ -11,17 +11,6 @@ import RevealLinks from "../components/animationComponents/RevealLinks";
 
 export default function Header({ themeMode, toggleTheme }) {
   const [isOpen, setIsOpen] = useState(false);
-
-  const handleLinkedinClick = () => {
-    window.location.href =
-      "https://www.linkedin.com/in/jeewantha-rashmika-b5a56820a/"; // Replace with your desired URL
-  };
-  const handleAboutClick = () => {
-    window.location.href = "/#services"; // Replace with your desired URL
-  };
-  const handleWordClick = () => {
-    window.location.href = "/#work"; // Replace with your desired URL
-  };
 
   const theme = useTheme();
 
@@ -49,7 +38,7 @@ export default function Header({ themeMode, toggleTheme }) {
       position: "fixed",
       right: "15px",
       top: "20px",
-      zIndex: 20, // Increased z-index to be above header
+      zIndex: 100, // Increased z-index to be above header
       width: "40px",
       height: "40px",
       borderRadius: "50%",
@@ -90,20 +79,19 @@ export default function Header({ themeMode, toggleTheme }) {
     },
   };
   const [isActive, setIsActive] = useState(false);
-
+const isMobile = useMediaQuery("(max-width: 900px)");
   return (
     <>
       {/* Separate the backdrop blur to its own element */}
       <Box
         sx={{
           position: "sticky",
-
-          top: { xs: 10, md: isScrolled ? 10 : 0 },
+          top: 10,
           zIndex: 10, // Lower than the burger button but higher than content
           maxWidth: "1200px",
           display: "flex",
           justifyContent: "center",
-         margin: "0 auto",
+          margin: "0 auto",
         }}
       >
         <Box
@@ -111,25 +99,25 @@ export default function Header({ themeMode, toggleTheme }) {
           animate={{
             backgroundColor: isScrolled
               ? theme.palette.bgColor?.header // When scrolled
-              : theme.palette.bgColor?.fixHeader,
+              : "transparent",
             backdropFilter: isScrolled ? "blur(12px)" : "none",
             width: isScrolled ? "53rem" : "100%",
-            borderRadius: isScrolled ? "60px" : "0px",
+            // borderRadius: isScrolled ? "60px" : "60px",
+            borderRadius: 
+            isScrolled ? isMobile ? "0px" : "60px" : isMobile ? "0px" : "60px",
             // boxShadow: isScrolled ? theme.palette.shadow?.main : "none",
-            border: !isScrolled ? "none" : "1px solid #E5E5E5",
+            // border: !isScrolled ? "none" : "1px solid #E5E5E5",
           }}
           transition={{
-
             backgroundColor: { duration: 0.1, ease: "easeInOut" },
             backdropFilter: { duration: 0.1, ease: "easeInOut" },
             width: { duration: 0.1, ease: "easeInOut" },
             borderRadius: { duration: 0.1, ease: "easeInOut" },
-            border: { duration: 0.1, ease: "easeInOut" },
-            
+            // border: { duration: 0.1, ease: "easeInOut" },
           }}
           sx={{
-            transition: "background-color 0.1s ease, color 0.5s ease   ",
-            margin: "0 auto",
+            transition: "background-color 0.3s ease, color 0.3s ease   ",
+            //  mx:"10px",
             overflow: "hidden",
           }}
         >
@@ -150,14 +138,15 @@ export default function Header({ themeMode, toggleTheme }) {
                 display: "flex",
                 justifyContent: "start",
                 alignItems: "center",
+                minHeight: "60px",
               }}
             >
               <a href="/">
                 <img
-                  src={themeMode === "dark" ? Logo2 : Logo}
+                  src={Logo2}
                   alt="logo"
                   width={"auto"}
-                  height={60}
+                  height={20}
                 />
               </a>
             </Box>
@@ -172,7 +161,7 @@ export default function Header({ themeMode, toggleTheme }) {
             >
               <RevealLinks title={"Services"} link="/#services" />
               <RevealLinks title={"Work"} link="/#work" />
-              <RevealLinks title={"Education"} link="/#services" />
+              <RevealLinks title={"Testimonials"} link="/#testimonials" />
 
               <Button
                 color="inherit"
@@ -252,8 +241,6 @@ export default function Header({ themeMode, toggleTheme }) {
                   }}
                 ></div>
               </Button>
-
-              <SpringModal isOpen={isOpen} setIsOpen={setIsOpen} />
             </Box>
 
             <Box
@@ -310,6 +297,7 @@ export default function Header({ themeMode, toggleTheme }) {
           )}
         </AnimatePresence>
       </Box>
+      <SpringModal isOpen={isOpen} setIsOpen={setIsOpen} />
     </>
   );
 }

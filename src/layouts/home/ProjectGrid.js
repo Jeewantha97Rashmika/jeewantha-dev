@@ -1,11 +1,18 @@
 import React from "react";
-import { Container, Grid } from "@mui/material";
+import {
+  Box,
+  Button,
+  Container,
+  Grid,
+  Typography,
+  useTheme,
+} from "@mui/material";
 import Photographer from "../../images/Photographer.json";
 import Radika from "../../images/radika.json";
-import Xcinama from "../../images/movie.json";
-import Flo from "../../images/flo.json";
-import Taxi from "../../images/taxi.json";
 import ProjectItem from "./ProjectItem";
+import DesignSystem from "../../images/design_system.json";
+import AppleVisionPro from "../../images/apple_vision_pro.json";
+import { FaBehanceSquare } from "react-icons/fa";
 
 export default function ProjectGrid() {
   const shopifyDevelopment = [
@@ -50,33 +57,32 @@ export default function ProjectGrid() {
       href: "https://radikadilanka.com/",
     },
     {
-      heading: "XCINAMA",
+      heading: "DesignSystem",
       tools: uidesign,
       subheading:
         "Xcinama is movie ticket booking website UI/UX Design using figma",
-      imgSrc: Xcinama,
+      imgSrc: DesignSystem,
       technology: "uidesign",
-      href: "https://www.figma.com/proto/NUO6CLqeR6HbAIVjMyXZEp/Movies?page-id=199%3A4683&node-id=199-4684&viewport=1171%2C907%2C0.32&t=dmZ0byNEKBuimxLD-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=199%3A4684",
+      href: "/design-system",
     },
-
     {
-      heading: "Taxi Service",
+      heading: "Apple Vision pro",
       tools: uidesign,
       subheading:
         "Xcinama is movie ticket booking website UI/UX Design using figma",
-      imgSrc: Taxi,
+      imgSrc: AppleVisionPro,
       technology: "uidesign",
-      href: "https://www.figma.com/proto/NUO6CLqeR6HbAIVjMyXZEp/Movies?page-id=199%3A4683&node-id=199-4684&viewport=1171%2C907%2C0.32&t=dmZ0byNEKBuimxLD-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=199%3A4684",
+      href: "/apple-vision-pro",
     },
-    {
-      heading: "FLO-Shop",
-      tools: uidesign,
-      subheading:
-        "Modern Flower shop official web site UI/UX Design using figma and photoshop",
-      imgSrc: Flo,
-      technology: "uidesign",
-      href: "https://www.figma.com/proto/QbC5mD6qjy6RwzQLSC8u0y/Flower-shop?page-id=56%3A28&node-id=56-30&viewport=711%2C499%2C0.13&t=8PwO1w6oawXkaXYC-1&scaling=min-zoom&content-scaling=fixed",
-    },
+    // {
+    //   heading: "FLO-Shop",
+    //   tools: uidesign,
+    //   subheading:
+    //     "Modern Flower shop official web site UI/UX Design using figma and photoshop",
+    //   imgSrc: Flo,
+    //   technology: "uidesign",
+    //   href: "https://www.figma.com/proto/QbC5mD6qjy6RwzQLSC8u0y/Flower-shop?page-id=56%3A28&node-id=56-30&viewport=711%2C499%2C0.13&t=8PwO1w6oawXkaXYC-1&scaling=min-zoom&content-scaling=fixed",
+    // },
     // {
     //   heading: "Highteclanka",
     //   subheading:
@@ -102,20 +108,54 @@ export default function ProjectGrid() {
     //   href: "https://ezvizhub.myshopify.com/",
     // },
   ];
+  const theme = useTheme();
   return (
-    <Container>
-      <Grid
-        container
-        spacing={4}
-        sx={{
-          pt: { md: 10, xs: 5 },
-          pb: { md: 10, xs: 5 },
-        }}
-      >
+    <Container
+      sx={{
+        py: { md: 10, xs: 5 },
+      }}
+    >
+      <Grid container spacing={4}>
         {projectData.map((project, key) => (
           <ProjectItem key={key} project={project} />
         ))}
       </Grid>
+      <Box sx={{ display: "flex", justifyContent: "center",mt:10 }}>
+        <Button
+        href="https://www.behance.net/jeewantharashmika"
+        target="_blank"
+          variant="outlined"
+          sx={{
+            width: { xs: "100%", md: "auto" },
+            mt: { xs: 2, md: 0 },
+            borderColor: theme.palette.borderColor?.main,
+            borderRadius: "30px",
+            padding: "10px 20px ",
+            textTransform: "none",
+            transition:
+              "background-color 0.5s ease, color 0.5s ease , border-radius 0.5s ease",
+            "&:hover": {
+              transition:
+                "background-color 0.5s ease, color 0.5s ease , border-radius 0.5s ease",
+              backgroundColor: "none",
+              borderRadius: "0px",
+              borderColor: theme.palette.borderColor?.main,
+            },
+          }}
+        >
+          <Typography
+            sx={{
+              fontSize: "16px",
+              fontWeight: 400,
+              fontFamily: "Montserrat",
+              color: theme.palette.borderColor?.main,
+            }}
+          >
+            View more in Behance
+          </Typography>
+          <FaBehanceSquare size={20} style={{ marginLeft: "10px" , color: theme.palette.borderColor?.main ,backgroundColor:theme.palette.cardBgColor?.main}} />
+        </Button>
+      </Box>
     </Container>
   );
 }

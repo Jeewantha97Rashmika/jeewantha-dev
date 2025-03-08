@@ -3,7 +3,7 @@ import { Container, useTheme } from "@mui/material";
 import ReviewCard from "../../components/ReviewCard";
 import RImage1 from "../../images/radika_dilanka.png";
 import RImage4 from "../../images/iroshana.jpg";
-
+import IsharaImage from "../../images/isharaimage.png";
 // import RImage6 from "../../images/review6.png";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -69,32 +69,32 @@ export default function Testimonials() {
     //     "Outstanding work on our e-commerce platform! The design not only looks great but also improves our conversion rates significantly.Jeewantha is a true professional! The website redesign has made it much easier for our clients to navigate and find information.",
     //   date: "2023-05-15",
     // },
-    // {
-    //   id: "3",
-    //   img: RImage3, // Replace with actual image URL
-    //   name: "Ishara Fernando",
-    //   job: "SEO Specialist | Product owner", 
-    //   socialMedias: [
-    //     // {
-    //     //   name: "Facebook",
-    //     //   icon: <FaFacebook />,
-    //     //   link: "https://www.facebook.com/radikadilanka/",
-    //     // },
-    //     {
-    //       name: "linkedin",
-    //       icon: <FaLinkedin />,
-    //       link: "https://www.linkedin.com/jeewantherashmika/",
-    //     },
-    //     {
-    //       name: "Website",
-    //       icon: <TbWorldWww />,
-    //       link: "https:/radikadilanka.com",
-    //     },
-    //   ],
-    //   review:
-    //     "Jeewantha is a true professional! The website redesign has made it much easier for our clients to navigate and find information. Jeewantha is a true professional! The website redesign has made it much easier for our clients to navigate and find information.",
-    //   date: "2023-06-01",
-    // },
+    {
+      id: "3",
+      img: IsharaImage, // Replace with actual image URL
+      name: "Ishara Fernando",
+      job: "Product Owner | Lead Marketing Analyst", 
+      socialMedias: [
+        // {
+        //   name: "Facebook",
+        //   icon: <FaFacebook />,
+        //   link: "https://www.facebook.com/radikadilanka/",
+        // },
+        {
+          name: "linkedin",
+          icon: <FaLinkedin />,
+          link: "https://www.linkedin.com/isharafernando/",
+        },
+        {
+          name: "Website",
+          icon: <TbWorldWww />,
+          link: "https:/isharafernando.com",
+        },
+      ],
+      review:
+        "I am delighted to share my experience working with Jeewantha, a talented software engineer and UI/UX developer. We have been collaborating in our project, and his contributions have been invaluable.Jeewantha excels in creating beautiful and user-friendly designs, enhancing the overall user experience. His expertise in building Shopify stores has made our e-commerce solutions both effective and engaging for our clients.Beyond his technical skills, Jeewantha is a dedicated and supportive team member. He consistently offers valuable insights and assistance, ensuring the success of our project. His positive attitude and collaborative spirit make him a pleasure to work with. In short, Jeewantha is a skilled software engineer and UI/UX developer whose work has greatly benefited our project. I am confident he will continue to excel in his career.",
+      date: "2025-02-07",
+    },
     {
       id: "4",
       img: RImage4, // Replace with actual image URL
@@ -158,6 +158,7 @@ export default function Testimonials() {
   const theme = useTheme();
   return (
     <div
+    id="testimonials"
       style={{
         zIndex: 0,
         backgroundColor: theme.palette.bgColor?.main,
