@@ -38,7 +38,7 @@ export default function ProjectGrid() {
   ];
   const projectData = [
     {
-      heading: "Xcamera",
+      heading: "Photographer Portfolio Website ",
       tools: uidesign,
       subheading:
         "Modern Photographer official web site UI/UX Design using figma and photoshop",
@@ -48,7 +48,7 @@ export default function ProjectGrid() {
     },
 
     {
-      heading: "Radikadilanka",
+      heading: "Radikadilanka Official Website",
       tools: uidesign,
       subheading:
         "Radikadilanka's official website UI/UX Design using figma and photoshop.",
@@ -57,7 +57,7 @@ export default function ProjectGrid() {
       href: "https://radikadilanka.com/",
     },
     {
-      heading: "DesignSystem",
+      heading: "Comprehensive Design System",
       tools: uidesign,
       subheading:
         "Xcinama is movie ticket booking website UI/UX Design using figma",
@@ -66,7 +66,7 @@ export default function ProjectGrid() {
       href: "/design-system",
     },
     {
-      heading: "Apple Vision pro",
+      heading: "Apple Vision Pro UI Reimagined",
       tools: uidesign,
       subheading:
         "Xcinama is movie ticket booking website UI/UX Design using figma",

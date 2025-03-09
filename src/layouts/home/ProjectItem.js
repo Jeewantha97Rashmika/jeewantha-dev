@@ -62,7 +62,7 @@ export default function ProjectItem({ project }) {
           >
             <Typography
               sx={{
-                fontSize: "2rem",
+                fontSize: "1.8rem",
                 color: theme.palette.textColor?.main,
               }}
             >
@@ -80,7 +80,7 @@ export default function ProjectItem({ project }) {
               }}
             />
           </Box>
-          {project.tools.map((val, key) => {
+          {/* {project.tools.map((val, key) => {
             return (
               <img
                 src={val}
@@ -97,7 +97,7 @@ export default function ProjectItem({ project }) {
             }}
           >
             {project.subheading}
-          </Typography>
+          </Typography> */}
         </Box>
       </Link>
     </Grid>

@@ -54,11 +54,11 @@ const IndexPage = () => {
             }}
           />
           <Layout
-            cover={Cover}
-            projectImage={DesignSystem}
-            title="X Camera"
+            cover={"https://cdn.jeewantharashmika.com/projects/design_system_cover.png"}
+            projectImage={"https://cdn.jeewantharashmika.com/projects/design_system.png"}
+            title="Comprehensive Figma Design System for a Client"
             roles={"UI/UX Designer"}
-            description="Modern Photographer oficial web site UI/UX Design using figma and photoshop"
+            description="My latest project involved creating a complete, customized design system for a client, built entirely in Figma. This system serves as the single source of truth for the client's digital products, ensuring consistency across all platforms while accelerating their development workflow."
             client="Personal Project"
           />
           <Footer />

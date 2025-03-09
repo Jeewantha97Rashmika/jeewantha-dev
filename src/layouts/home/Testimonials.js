@@ -19,7 +19,7 @@ export default function Testimonials() {
   const testimonials = [
     {
       id: "1",
-      img: RImage1, // Replace with actual image URL
+      img: "https://cdn.jeewantharashmika.com/testimonials/radikadilanka.png", // Replace with actual image URL
       name: "Radika Dilanka",
       job: "Web Consultaint | MERN stack instuctor",
       socialMedias: [
@@ -71,7 +71,7 @@ export default function Testimonials() {
     // },
     {
       id: "3",
-      img: IsharaImage, // Replace with actual image URL
+      img: "https://cdn.jeewantharashmika.com/testimonials/isharaimage.png", // Replace with actual image URL
       name: "Ishara Fernando",
       job: "Product Owner | Lead Marketing Analyst", 
       socialMedias: [
@@ -97,7 +97,7 @@ export default function Testimonials() {
     },
     {
       id: "4",
-      img: RImage4, // Replace with actual image URL
+      img: "https://cdn.jeewantharashmika.com/testimonials/iroshana.jpg", // Replace with actual image URL
       name: "Iroshana Wickramasinghe",
       job: "Product owner | Software Engineer",
       socialMedias: [

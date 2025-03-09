@@ -1,6 +1,5 @@
 import React from "react";
 import { Grid, Box, Typography, useTheme, Container } from "@mui/material";
-import workingdesk from "../../images/workingdesk.png";
 import { motion } from "framer-motion";
 import ServiceCard from "../../components/ServiceCard";
 
@@ -127,7 +126,7 @@ export default function Servicesnew() {
             </Typography>
             <div style={{ overflow: "hidden", width: "100%" ,borderRadius:"15px" }}>
               <motion.img
-                src={workingdesk}
+                src={"https://cdn.jeewantharashmika.com/section_images/workingdesk.png"}
                 alt="workingdesk"
                 style={{ width: "100%", display: "block" }}
                 whileHover={{ scale: 1.2 }}

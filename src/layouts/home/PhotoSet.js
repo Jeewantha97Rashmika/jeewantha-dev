@@ -61,7 +61,7 @@ const Cards = () => {
     >
       <Card
         containerRef={containerRef}
-        src={MyImage1}
+        src={"https://cdn.jeewantharashmika.com/fun_activity_images/traveling_image_01-min.jpg"}
         alt="Example image"
         rotate="6deg"
         top="20%"
@@ -70,7 +70,7 @@ const Cards = () => {
       />
       <Card
         containerRef={containerRef}
-        src={MyImage2}
+        src={"https://cdn.jeewantharashmika.com/fun_activity_images/traveling_image_02-min.jpg"}
         alt="Example image"
         rotate="12deg"
         top="45%"
@@ -79,7 +79,7 @@ const Cards = () => {
       />
       <Card
         containerRef={containerRef}
-        src={MyImage3}
+        src={"https://cdn.jeewantharashmika.com/fun_activity_images/traveling_image_03-min.jpg"}
         alt="Example image"
         rotate="-6deg"
         top="20%"
@@ -88,7 +88,7 @@ const Cards = () => {
       />
       <Card
         containerRef={containerRef}
-        src={MyImage6}
+        src={"https://cdn.jeewantharashmika.com/fun_activity_images/traveling_image_04-min.jpg"}
         alt="Example image"
         rotate="8deg"
         top="50%"
@@ -97,7 +97,7 @@ const Cards = () => {
       />
       <Card
         containerRef={containerRef}
-        src={MyImage5}
+        src={"https://cdn.jeewantharashmika.com/fun_activity_images/traveling_image_07-min.jpg"}
         alt="Example image"
         rotate="18deg"
         top="20%"

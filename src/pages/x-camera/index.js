@@ -53,11 +53,11 @@ const IndexPage = () => {
             }}
           />
           <Layout
-            cover={Cover}
-            projectImage={Xcamera}
-            title="X Camera"
+            cover={"https://cdn.jeewantharashmika.com/projects/x_camera_cover.png"}
+            projectImage={"https://cdn.jeewantharashmika.com/projects/xcamera.png"}
+            title="Photographer Portfolio Website Design" 
             roles={"UI/UX Designer"}
-            description="Modern Photographer oficial web site UI/UX Design using figma and photoshop"
+            description="My recent UI design project showcases a sophisticated digital platform for a professional photographer, creating a visual narrative that elevates their brand while highlighting their exceptional photography skills. The interface serves as an elegant canvas that complements the photographer's work without overshadowing it."
             client="Personal Project"
           />
           <Footer />

@@ -16,7 +16,9 @@ export default function TitleDesc({ title, description, roles, client }) {
       >
         {title}
       </Typography>
-      <Grid container gap={2}>
+      <Grid container gap={2} sx={{
+        my:4
+      }}>
         <Grid item xs={12} md={8}>
           <Typography
             sx={{

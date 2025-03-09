@@ -4,7 +4,6 @@ import Box from "@mui/material/Box";
 import Heading1 from "../../components/common/Heading1";
 import { Container, Typography } from "@mui/material";
 import GridImage from "../../images/grid.svg";
-import ProfileImage from "../../images/heroimage.png";
 import MainBtn from "../../components/MainBtn";
 import Typewrite from "../../components/Typewrite";
 import SubTilte from "../../components/SubTilte";
@@ -159,7 +158,7 @@ export default function HeroSection() {
                 }}
               >
                 <img
-                  src={ProfileImage}
+                  src={"https://cdn.jeewantharashmika.com/section_images/heroimage.png"}
                   style={{
                     maxWidth: "100%",
                     height: "auto",

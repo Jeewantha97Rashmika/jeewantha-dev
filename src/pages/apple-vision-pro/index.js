@@ -54,11 +54,11 @@ const IndexPage = () => {
             }}
           />
           <Layout
-            cover={Cover}
-            projectImage={VisionPro}
-            title="Apple Vision Pro"
+            cover={"https://cdn.jeewantharashmika.com/projects/vision_pro_cover.png"}
+            projectImage={"https://cdn.jeewantharashmika.com/projects/vision-pro-design.png"}
+            title="Apple Vision Pro UI Reimagined: Facebook & TikTok"
             roles={"UI/UX Designer"}
-            description="Modern Photographer oficial web site UI/UX Design using figma and photoshop"
+            description="My latest Figma design project explores how popular social media platforms might evolve in Apple's spatial computing environment. These conceptual interfaces for Facebook and TikTok are crafted specifically for the Apple Vision Pro, embracing the device's unique capabilities while maintaining the core functionality users expect."
             client="Personal Project"
           />
           <Footer />
