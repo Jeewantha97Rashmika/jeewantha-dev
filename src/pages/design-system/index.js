@@ -7,8 +7,7 @@ import { Helmet } from "react-helmet";
 import { Box } from "@mui/material";
 import ThemeLayout from "../../Theme/ThemeLayout";
 import Layout from "../../layouts/xCamera/Layout";
-import Cover from "../../images/design_system_cover.png";
-import DesignSystem from "../../images/design_system.png";
+
 
 const IndexPage = () => {
   const [themeMode, setThemeMode] = useState(() => {

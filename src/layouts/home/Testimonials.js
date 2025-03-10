@@ -1,10 +1,6 @@
 import React, { useRef } from "react";
 import { Container, useTheme } from "@mui/material";
 import ReviewCard from "../../components/ReviewCard";
-import RImage1 from "../../images/radika_dilanka.png";
-import RImage4 from "../../images/iroshana.jpg";
-import IsharaImage from "../../images/isharaimage.png";
-// import RImage6 from "../../images/review6.png";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
