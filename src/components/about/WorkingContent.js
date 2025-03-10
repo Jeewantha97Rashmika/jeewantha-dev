@@ -1,46 +1,78 @@
 import React from "react";
 import Knovik from "../../images/knovik.png";
-import { Typography } from "@mui/material";
+import { Box, Typography, useTheme } from "@mui/material";
+import { motion } from "framer-motion";
 export default function WorkingContent() {
+  const theme = useTheme();
   return (
-    <div style={{marginTop:"30px"}}>
-      <img src={Knovik} style={{ maxWidth: "20%", height: "auto" }} alt="knovik"/>
+    <motion.div
+    initial={{ opacity: 0, y: 80 }} // Start with hidden and below position
+    whileInView={{ opacity: 1, y: 0 }} // Animate to full opacity and position
+    viewport={{ once: true, amount: 0.2 }} // Only animate once when 20% of the component is in view
+    transition={{ type: "spring", stiffness: 100 }}
+      style={{
+        marginTop: "10px",
+        // backgroundColor: theme.palette.cardBgColor?.main,
+        transition: "background-color 0.5s ease, color 0.5s ease",
+        padding: "1rem 1rem",
+        borderRadius: "1rem",
+      }}
+    >
+      <Box>
+        <img
+          src={Knovik}
+          style={{
+            maxWidth: "120px",
+            height: "auto",
+            backgroundColor: "#fff",
+            transition: "background-color 0.5s ease, color 0.5s ease",
+            padding: "4px",
+            borderRadius: "5px",
+          }}
+          alt="knovik"
+        />
+      </Box>
       <br></br>
       <Typography
         component={"p"}
         sx={{
-          color: "rgba(112, 112, 112, 1)",
-          fontSize: "16px",
+          color: theme.palette.textColor?.main,
+          fontSize: "14px",
           fontWeight: 400,
-          fontFamily: "Work Sans",
+          fontFamily: "Montserrat",
         }}
       >
-        2022-10-01 - 2023-03-01 - Sri Lanka
+        2022 - 2023 - Colombo Sri Lanka | Remote
       </Typography>
       <br></br>
       <Typography
         component={"p"}
         sx={{
-          color: "black",
+          color: theme.palette.textColor?.secondary,
           fontSize: "16px",
-          fontWeight: 800,
-          fontFamily: "Work Sans",
+          fontWeight: 600,
+          fontFamily: "Montserrat",
         }}
       >
-       Mobile developer ( Intern )
+        UI/UX Engineer ( Intern )
       </Typography>
-   
+
       <Typography
         component={"p"}
         sx={{
-          color: "rgba(112, 112, 112, 1)",
-          fontSize: "16px",
+          textAlign: "justify",
+          color: theme.palette.textColor?.main,
+          fontSize: "14px",
           fontWeight: 400,
-          fontFamily: "Work Sans",
+          fontFamily: "Montserrat",
         }}
       >
-        Android apps and IOS apps
+        Assisted in designing user-friendly interfaces for web and mobile
+        applications, focusing on enhancing the overall user experience.It was
+        great to explore and discover new opportunities and to be able to make
+        some improvements in new projects. Team work with seniors, made me to
+        inherit more knowledge and wisdom.
       </Typography>
-    </div>
+    </motion.div>
   );
 }

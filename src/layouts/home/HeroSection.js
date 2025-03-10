@@ -3,122 +3,176 @@ import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Heading1 from "../../components/common/Heading1";
 import { Container, Typography } from "@mui/material";
-import ProImage from "../../images/proImage03.jpg";
-import PrimaryBtn from "../../components/common/Primarybtn";
+import GridImage from "../../images/grid.svg";
+import MainBtn from "../../components/MainBtn";
+import Typewrite from "../../components/Typewrite";
+import SubTilte from "../../components/SubTilte";
+import BigTextnimation from "../../components/BigTextnimation";
+import { motion } from "framer-motion";
+import { useTheme } from "@mui/material/styles"; // Import useTheme
 import SecondaryBtn from "../../components/common/SecondaryBtn";
-import Marquee from "react-fast-marquee";
-import UiSkill from "../../components/about/UiSkills";
-import BannerChips from "../../components/BannerChips";
+
 
 export default function HeroSection() {
+  const theme = useTheme();
+  const handleClick = () => {
+    window.location.href = "/#work";
+  };
+  const examples = [" Hello , How are you?", " Contact me to know more"];
+
   return (
-    <div style={{ backgroundColor: "#f6fafd", minHeight: "670px" }}>
-      <Container>
+    <Box
+      sx={{
+        backgroundColor: theme.palette.bgColor?.main,
+        transition: "background-color 0.3s ease, color 0.3s ease",
+        backgroundImage: `url(${GridImage})`,
+      }}
+    >
+      <Box
+        sx={{
+          position: "absolute",
+          top: { xs: 520, md: 250 },
+          left: { xs: "50%", md: "40%" },
+          transform: "translateX(-50%)",
+          width: { xs: "300px", md: "800px" },
+          height: { xs: "300px", md: "400px" },
+          borderRadius: "50%",
+          backgroundColor: "rgba(255, 0, 0, 0.2)",
+          filter: "blur(120px)",
+          pointerEvents: "none",
+        }}
+      ></Box>
+      {/* <ScrollEffect> */}
+      <Container
+        sx={{
+          position: "relative",
+          // zIndex: 10,
+        }}
+      >
         <Box
           sx={{
             width: "100%",
-            paddingTop: { xs: "10px", md: "100px" },
-            pb: { md: 5, xs: 15 },
+            paddingLeft: { xs: 0, md: "15px" },
           }}
         >
           <Grid
             container
             rowSpacing={1}
             columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-            justifyContent={"center"}
-            alignItems={"center"}
           >
-            <Grid item xs={12} md={7} sx={{ order: { xs: 2, md: 1 } }}>
-              <Heading1 component={"h1"} text1={"Hello, I'm Jeewantha."} />
-              <br></br>
-              <Typography
-                component={"p"}
-                sx={{
-                  color: "rgba(112, 112, 112, 1)",
-                  fontSize: { xs: "16px", sm: "20px" },
-                  fontWeight: 400,
-                  fontFamily: "Work Sans",
-                }}
-              >
-                {
-                  <span>
-                    I am a passionate <b> UI/UX designer</b> who is interested
-                    in solving complex problems through designing and
-                    <b> mobile app/web development </b> dedicated to crafting
-                    exceptional digital experiences.
-                  </span>
-                }
-              </Typography>
-              <br></br>
-              <br />
-              <PrimaryBtn title={"Explore work"} id="work" />
-              {/* <SecondaryBtn title={"View my CV"} /> */}
-            </Grid>
             <Grid
               item
               xs={12}
               md={5}
+              sx={{ order: { xs: 1, md: 2 }, mt: { xs: 5, md: 15, lg: 10 } }}
+            >
+              <motion.div
+              // initial={{ opacity: 1, x: 300, rotate: 60 }}
+              // animate={{ opacity: 1, x: 0, rotate: 0 }}
+              // transition={{ duration: 1, type: "spring" }}
+              >
+                <Box
+                  component={motion.div}
+                  initial={{ opacity: 1, y: -50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ type: "spring" }}
+                  sx={{
+                    paddingLeft: { xs: 0, md: "15px" },
+                    position: "relative",
+                  }}
+                >
+                  <SubTilte />
+                  <Box>
+                    <Heading1
+                      component={"h1"}
+                      text1={"Hello, I'm "}
+                      text2={"Jeewantha"}
+                    />
+                  </Box>
+                  <br></br>
+                  <Typography
+                    component={"p"}
+                    sx={{
+                      color: theme.palette.textColor?.secondary,
+                      fontSize: { xs: "16px", sm: "18px" },
+                      textAlign: "justify",
+                      fontFamily: "Montserrat",
+                      fontWeight: 500,
+                      lineHeight: 1.6,
+                      // backgroundColor: theme.palette.bgColor?.main,
+                      transition: "background-color 0.5s ease, color 0.5s ease",
+                    }}
+                  >
+                    {
+                      <span>
+                        {/* I am a passionate <b> UI/UX designer</b> who is
+                        interested in solving complex problems through designing
+                        and
+                        <b> mobile app/web development </b> dedicated to
+                        crafting exceptional digital experiences. */}
+                        Welcome to my portfolio of captivating digital
+                        experiences. Explore my work and let's create something
+                        extraordinary together.
+                      </span>
+                    }
+                  </Typography>
+                  <br />
+                  <Typewrite examples={examples} />
+                  <br></br>
+                  <br />
+                  <Grid
+                    container
+                    spacing={2}
+                    alignItems="flex-start"
+                    justifyContent={{ xs: "center", md: "flex-start" }}
+                  >
+                    <Grid item xs={12} lg={6}>
+                      <MainBtn title={"Let’s Collaborate"} size={"100%"} />
+                    </Grid>
+                    <Grid item xs={12} lg={6}>
+                      <SecondaryBtn
+                        title={"Look Work"}
+                        handleClick={handleClick}
+                      />
+                    </Grid>
+                  </Grid>
+                </Box>
+              </motion.div>
+            </Grid>
+            <Grid
+              item
+              xs={12}
+              md={7}
               sx={{
-                order: { xs: 1, md: 2 },
+                order: { xs: 2, md: 1 },
                 display: "flex",
-                alignItems: { xs: "left", md: "right" },
-                justifyContent: { xs: "left", md: "right" },
-               
+                justifyContent: "start",
+                alignItems: "left",
               }}
             >
-              <img
-                src={ProImage}
-                width="340px" height="450px"
-                alt=""
-                style={{
-                  borderRadius: "10px",
-                  boxShadow: "0 5px 15px rgba(0,0,0,.1)",
+              <Box
+                sx={{
+                  width: "100%",
+                  // marginTop: "20px",
+                  pt: { md: 10, lg: 0, xl: 5 },
                 }}
-              />
+              >
+                <img
+                  src={"https://cdn.jeewantharashmika.com/section_images/heroimage.png"}
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto",
+                    position: "relative",
+                    zIndex: 2,
+                  }}
+                  alt="knovik"
+                />
+              </Box>
             </Grid>
           </Grid>
         </Box>
       </Container>
-      {/* <Box
-        sx={{
-          backgroundColor: "white",
-          width: "100%",
-          height: "4rem",
-          transform: "rotate(-1deg)",
-          boxShadow: "0 5px 15px rgba(0,0,0,.1)",
-          position: "absolute",
-          bottom: { md: 100, xs: 10 },
-        }}
-      >
-        <Marquee>
-          <BannerChips />
-        </Marquee>
-      </Box> */}
-      <Box
-        sx={{
-          backgroundColor: "white",
-          width: "100%",
-          height: "4rem",
-          marginTop: "65px",
-          boxShadow: "0 5px 15px rgba(0,0,0,.1)",
-          position: "absolute",
-          // bottom:{md:100 ,xs:10}
-        }}
-      >
-        <Marquee direction="right" autoFill="true">
-          <Typography
-            sx={{
-              color: "rgba(112, 112, 112, 1)",
-              fontSize: { xs: "14px", sm: "42px" },
-              fontWeight: 600,
-              fontFamily: "Work Sans",
-            }}
-          >
-            | UI/UX Designer || Web Developer || Mobile Developer || Graphic
-            Designer || Content Creator |
-          </Typography>
-        </Marquee>
-      </Box>
-    </div>
+      <BigTextnimation />
+    </Box>
   );
 }

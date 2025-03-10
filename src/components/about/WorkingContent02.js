@@ -1,71 +1,77 @@
 import React from "react";
 import Knovik from "../../images/knovik.png";
-import { Typography } from "@mui/material";
+import { Typography, useTheme } from "@mui/material";
+import { motion } from "framer-motion";
 export default function WorkingContent02() {
+  const theme = useTheme();
   return (
-    <div style={{marginTop:"30px"}}>
-      <img src={Knovik} style={{ maxWidth: "20%", height: "auto" }} alt="knovik" />
+    <motion.div
+    initial={{ opacity: 0, y: 80 }} // Start with hidden and below position
+    whileInView={{ opacity: 1, y: 0 }} // Animate to full opacity and position
+    viewport={{ once: true, amount: 0.2 }} // Only animate once when 20% of the component is in view
+    transition={{ type: "spring", stiffness: 100 }}
+      style={{
+        marginTop: "10px",
+        // backgroundColor: theme.palette.cardBgColor?.main,
+        transition: "background-color 0.5s ease, color 0.5s ease",
+        padding: "1rem 1rem",
+        borderRadius: "1rem",
+      }}
+    >
+      <img
+        src={Knovik}
+        style={{
+          maxWidth: "120px",
+          height: "auto",
+          backgroundColor: "#fff",
+          transition: "background-color 0.5s ease, color 0.5s ease",
+          padding: "4px",
+          borderRadius: "5px",
+        }}
+        alt="knovik"
+      />
       <br></br>
       <Typography
         component={"p"}
         sx={{
-          color: "rgba(112, 112, 112, 1)",
-          fontSize: "16px",
+          color: theme.palette.textColor?.main,
+          fontSize: "14px",
           fontWeight: 400,
-          fontFamily: "Work Sans",
+          fontFamily: "Montserrat",
         }}
       >
-        2023-03-01 - present - Sri Lanka
+        2023 - 2025 - Colombo Sri Lanka | Hybrid - Full Time
       </Typography>
       <br></br>
       <Typography
         component={"p"}
         sx={{
-          color: "black",
+          color: theme.palette.textColor?.secondary,
           fontSize: "16px",
-          fontWeight: 800,
-          fontFamily: "Work Sans",
+          fontWeight: 600,
+          fontFamily: "Montserrat",
         }}
       >
-        Associate Software Engineer
+        Associate UI/UX Engineer
       </Typography>
 
       <Typography
         component={"p"}
         sx={{
-          color: "rgba(112, 112, 112, 1)",
-          fontSize: "16px",
+          color: theme.palette.textColor?.main,
+          fontSize: "14px",
           fontWeight: 400,
-          fontFamily: "Work Sans",
+          fontFamily: "Montserrat",
+          textAlign: "justify",
         }}
       >
-        Mobile App development and web app develpment
+        Designed productive, cooperative, and modern user interfaces for both
+        web and mobile solutions, enhancing user engagement and satisfaction.
+        Developed responsive websites and applications using the MERN stack,
+        Shopify, Wordpress ensuring high performance and scalability.
+        Experienced in developing mobile applications using Flutter, delivering
+        cross-platform solutions with responsive and user-friendly interfaces.
       </Typography>
-      <br></br>
-      <Typography
-        component={"p"}
-        sx={{
-          color: "black",
-          fontSize: "16px",
-          fontWeight: 800,
-          fontFamily: "Work Sans",
-        }}
-      >
-        Supporting roles
-      </Typography>
-
-      <Typography
-        component={"p"}
-        sx={{
-          color: "rgba(112, 112, 112, 1)",
-          fontSize: "16px",
-          fontWeight: 400,
-          fontFamily: "Work Sans",
-        }}
-      >
-        UI/UX Designer (Web apps, Mobile apps ,IOS apps , and Desktop
-        applications)
-      </Typography>
-    </div>
+    </motion.div>
   );
 }

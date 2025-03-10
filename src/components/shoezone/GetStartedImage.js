@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import GetStarted01 from "../../images/shoezone/1.png";
@@ -31,6 +31,8 @@ export default function GetStartedImage() {
     <div
       style={{
         backgroundColor: "#f6fafd",
+        transition: "background-color 0.5s ease, color 0.5s ease",
+
       }}
     >
       <Container>

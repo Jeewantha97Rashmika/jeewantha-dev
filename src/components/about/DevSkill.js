@@ -1,95 +1,139 @@
 import React from "react";
-import { Chip, Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography, useTheme } from "@mui/material";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import { motion } from "framer-motion";
 
 export default function DevSkill() {
   const skills = [
-    {
-      name: "android",
-      image:
-        "https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original-wordmark.svg",
-    },
     {
       name: "html5",
       image:
         "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg",
     },
     {
-      name: "bootstrap",
+      name: "Bootstrap",
       image:
-        "https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg",
+        "https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg",
     },
     {
-      name: "css3",
+      name: "CSS3",
       image:
         "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg",
     },
     {
-      name: "javascript",
+      name: "Javascript",
       image:
         "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
     },
     {
-      name: "react",
+      name: "React JS",
       image:
         "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
     },
     {
-      name: "redux",
+      name: "Redux",
       image:
         "https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg",
     },
     {
-      name: "nodejs",
+      name: "Nodejs",
       image:
         "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg",
     },
     {
-      name: "sass",
+      name: "Gatsby JS",
+      image:
+        "https://cdn.iconscout.com/icon/free/png-512/free-gatsby-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-vol-3-pack-logos-icons-2944886.png?f=webp&w=256",
+    },
+    {
+      name: "Sass",
       image:
         "https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg",
     },
     {
-      name: "dart",
+      name: "Shopify",
+      image:
+        "https://www.realisable.co.uk/wp-content/themes/realisable/images/logos/shopify.svg",
+    },
+    {
+      name: "Wordpress",
+      image: "https://pngimg.com/uploads/wordpress/wordpress_PNG47.png",
+    },
+    {
+      name: "Ghost CMS",
+      image:
+        "https://raw.githubusercontent.com/docker-library/docs/c88522f95bebcab2322f3020f2f735210286939b/ghost/logo.png",
+    },
+
+    {
+      name: "Android",
+      image:
+        "https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original-wordmark.svg",
+    },
+
+    {
+      name: "Dart",
       image: "https://www.vectorlogo.zone/logos/dartlang/dartlang-icon.svg",
     },
     {
-      name: "flutter",
+      name: "Flutter",
       image: "https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg",
     },
     {
-      name: "firebase",
+      name: "Firebase",
       image: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg",
     },
     {
-      name: "git",
+      name: "Git",
       image: "https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg",
     },
     {
-      name: "mongodb",
+      name: "Mongodb",
       image:
         "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg",
     },
     {
-      name: "mysql",
+      name: "Mysql",
       image:
         "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg",
     },
     {
-      name: "postman",
+      name: "Postman",
       image: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
     },
-  ];
 
+    // {
+    //   name: "postman",
+    //   image: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
+    // },
+    // {
+    //   name: "postman",
+    //   image: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
+    // },
+    // {
+    //   name: "postman",
+    //   image: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
+    // },
+    // {
+    //   name: "postman",
+    //   image: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
+    // },
+    // {
+    //   name: "postman",
+    //   image: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
+    // },
+  ];
+  const theme = useTheme();
   return (
-    <div>
+    <Box>
       <Typography
         component="h3"
         sx={{
           mt: 5,
-          color: "black",
-          fontSize: "20px",
+          color: theme.palette.textColor?.secondary,
+          fontSize: "30px",
           fontWeight: 600,
-          fontFamily: "Work Sans",
+          fontFamily: "Montserrat",
         }}
       >
         Development Tools and Technologies
@@ -97,22 +141,77 @@ export default function DevSkill() {
       <br />
       <Grid container spacing={1}>
         {skills.map((val, key) => (
-          <Grid item key={key}>
-            <Chip
-              sx={{
-                p: 3,
-                m: 1,
-                backgroundColor: "#e8f5ff",
-                transition: "transform 0.2s",
-                "&:hover": {
-                  transform: "scale(0.95)",
-                },
+          <Grid item xs={12} md={4} key={key}>
+            <Box
+              component={motion.div}
+              initial={{ opacity: 0, y: 80 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ scale: 0.95 }} // Framer Motion hover effect
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{
+                type: "spring",
+                stiffness: 100,
+                duration: 0.3,
               }}
-              label={<Typography sx={{fontWeight:"600"}}>{val.name}</Typography>}
-              avatar={
-                <img src={val.image} alt={val.name} width="25" height="25" />
-              }
-            />
+              sx={{
+                p: 2,
+                display: "flex",
+                gap: 1,
+                borderRadius: "10px",
+                width: "100%",
+                backgroundColor: theme.palette.cardBgColor?.main,
+                transition: "background-color 0.5s ease, color 0.5s ease",
+              }}
+            >
+              <Grid container>
+                <Grid item xs={8}>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      gap: 2,
+                    }}
+                  >
+                    <img
+                      src={val.image}
+                      alt={val.name}
+                      width="25"
+                      height="25"
+                    />
+                    <Typography
+                      sx={{
+                        fontWeight: "600",
+                        fontSize: "16px",
+                        fontFamily: "Montserrat",
+                        color: theme.palette.textColor?.secondary,
+                      }}
+                    >
+                      {val.name}
+                    </Typography>
+                  </Box>
+                </Grid>
+                <Grid
+                  item
+                  xs={4}
+                  sx={{
+                    display: "flex",
+                    alignItems: "rigth",
+                    justifyContent: "end",
+                  }}
+                >
+                  <ArrowForwardIcon
+                    sx={{
+                      rotate: "-45deg",
+                      backgroundColor: theme.palette.bgColor?.main,
+                      color: theme.palette.textColor?.main,
+                      marginLeft: "10px",
+                      padding: "3px",
+                      borderRadius: "50%",
+                      fontSize: { xs: "28px", sm: "28px" },
+                    }}
+                  />
+                </Grid>
+              </Grid>
+            </Box>
           </Grid>
         ))}
       </Grid>
@@ -144,7 +243,7 @@ export default function DevSkill() {
                 />
               </div>
             </Grid>
-            <Grid xs={12} md={8}>
+            <Grid item xs={12} md={8}>
               <div>
                 <img
                   align="left"
@@ -157,6 +256,6 @@ export default function DevSkill() {
           </Grid>
         </Box>
       </div> */}
-    </div>
+    </Box>
   );
 }

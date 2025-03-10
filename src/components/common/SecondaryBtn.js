@@ -1,32 +1,39 @@
 import * as React from "react";
 import Button from "@mui/material/Button";
-import { Typography } from "@mui/material";
+import { Typography, useTheme } from "@mui/material";
 
-export default function SecondaryBtn({ title,url }) {
+export default function SecondaryBtn({ title, handleClick }) {
+  const theme = useTheme();
+
   return (
     <Button
       variant="outlined"
-      href={url}
+      onClick={handleClick}
       sx={{
-        marginRight: "10px",
-        borderColor: "black",
+        width: { xs: "100%" },
+
+        mt: { xs: 2, md: 0 },
+        borderColor: theme.palette.borderColor?.main,
         borderRadius: "30px",
-        padding: "10px 40px ",
+        padding: "10px 10px ",
         textTransform: "none",
-        transition: "background-color 0.3s, transform 0.3s",
+        transition:
+          "background-color 0.5s ease, color 0.5s ease , border-radius 0.5s ease",
         "&:hover": {
+          transition:
+            "background-color 0.5s ease, color 0.5s ease , border-radius 0.5s ease",
           backgroundColor: "none",
-          transform: "scale(0.95)",
-          borderColor: "black",
+          borderRadius: "0px",
+          borderColor: theme.palette.borderColor?.main,
         },
       }}
     >
       <Typography
         sx={{
-          fontSize: { xs: "14px", sm: "20px" },
+          fontSize: "16px",
           fontWeight: 400,
-          fontFamily: "Work Sans",
-          color: "black",
+          fontFamily: "Montserrat",
+          color: theme.palette.borderColor?.main,
         }}
       >
         {title}

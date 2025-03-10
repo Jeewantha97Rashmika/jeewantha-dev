@@ -1,6 +1,7 @@
 import React from "react";
-import { Chip, Grid, Typography } from "@mui/material";
-
+import { Box, Grid, Typography, useTheme } from "@mui/material";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import { motion } from "framer-motion";
 export default function UiSkill() {
   const uiSkills = [
     {
@@ -9,12 +10,13 @@ export default function UiSkill() {
     },
     {
       name: "xd",
-      image: "https://cdn.worldvectorlogo.com/logos/adobe-xd.svg",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/c/c2/Adobe_XD_CC_icon.svg",
     },
     {
       name: "photoshop",
       image:
-        "https://raw.githubusercontent.com/devicons/devicon/master/icons/photoshop/photoshop-line.svg",
+        "https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg",
     },
 
     {
@@ -22,18 +24,29 @@ export default function UiSkill() {
       image:
         "https://www.vectorlogo.zone/logos/adobe_illustrator/adobe_illustrator-icon.svg",
     },
+    {
+      name: "Sketch",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/5/59/Sketch_Logo.svg",
+    },
   ];
-
+  const theme = useTheme();
   return (
-    <div>
+    <Box
+      component={motion.div}
+      initial={{ opacity: 0, y: 80 }} // Start with hidden and below position
+      whileInView={{ opacity: 1, y: 0 }} // Animate to full opacity and position
+      viewport={{ once: true, amount: 0.2 }} // Only animate once when 20% of the component is in view
+      transition={{ type: "spring", stiffness: 100 }}
+    >
       <Typography
         component="h3"
         sx={{
-          mt:{md:10 ,xs:1},
-          color: "black",
-          fontSize: "20px",
+          mt: { md: 10, xs: 1 },
+          color: theme.palette.textColor?.secondary,
+          fontSize: "30px",
           fontWeight: 600,
-          fontFamily: "Work Sans",
+          fontFamily: "Montserrat",
         }}
       >
         UI/UX Design Tools
@@ -41,26 +54,81 @@ export default function UiSkill() {
       <br />
       <Grid container spacing={1}>
         {uiSkills.map((val, key) => (
-          <Grid item key={key}>
-            <Chip
-              sx={{
-                p: 3,
-                m: 1,
-                backgroundColor: "#e8f5ff",
-                transition: "transform 0.2s",
-                "&:hover": {
-                  transform: "scale(0.95)",
-                },
+          <Grid item xs={12} md={4} key={key}>
+            <Box
+              component={motion.div}
+              initial={{ opacity: 0, y: 80 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ scale: 0.95 }} // Framer Motion hover effect
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{
+                type: "spring",
+                stiffness: 100,
+                duration: 0.3,
               }}
-              label={<Typography sx={{fontWeight:"600"}}>{val.name}</Typography>}
-              avatar={
-                <img src={val.image} alt={val.name} width="25" height="25" />
-              }
-            />
+              sx={{
+                p: 2,
+                display: "flex",
+                gap: 1,
+                borderRadius: "10px",
+                width: "100%",
+                backgroundColor: theme.palette.cardBgColor?.main,
+                transition: "background-color 0.5s ease, color 0.5s ease",
+              }}
+            >
+              <Grid container>
+                <Grid item xs={8}>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      gap: 2,
+                    }}
+                  >
+                    <img
+                      src={val.image}
+                      alt={val.name}
+                      width="25"
+                      height="25"
+                    />
+                    <Typography
+                      sx={{
+                        fontWeight: "600",
+                        fontSize: "16px",
+                        fontFamily: "Montserrat",
+                        color: theme.palette.textColor?.secondary,
+                      }}
+                    >
+                      {val.name}
+                    </Typography>
+                  </Box>
+                </Grid>
+                <Grid
+                  item
+                  xs={4}
+                  sx={{
+                    display: "flex",
+                    alignItems: "rigth",
+                    justifyContent: "end",
+                  }}
+                >
+                  <ArrowForwardIcon
+                    sx={{
+                      backgroundColor: theme.palette.bgColor?.main,
+                      rotate: "-45deg",
+                      color: theme.palette.textColor?.main,
+                      marginLeft: "10px",
+                      padding: "3px",
+                      borderRadius: "50%",
+                      fontSize: { xs: "28px", sm: "28px" },
+                    }}
+                  />
+                </Grid>
+              </Grid>
+            </Box>
           </Grid>
         ))}
       </Grid>
       <br />
-    </div>
+    </Box>
   );
 }

@@ -10,7 +10,7 @@ export default function Heading3({ text, component }) {
           fontSize: "26px",
           fontWeight: 800,
           lineHeight: "1.2",
-          fontFamily: "Work Sans",
+        fontFamily: "Montserrat",
         }}
       >
         {text}
