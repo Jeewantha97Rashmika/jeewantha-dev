@@ -1,10 +1,5 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import MyImage1 from "../../images/myImages (1).jpg";
-import MyImage2 from "../../images/myImages (2).jpg";
-import MyImage3 from "../../images/myImages (3).jpg";
-import MyImage6 from "../../images/myImages (6).jpg";
-import MyImage5 from "../../images/myImages (5).jpg";
 import { Box, useMediaQuery, useTheme } from "@mui/material";
 export default function PhotoSet() {
   const theme = useTheme();

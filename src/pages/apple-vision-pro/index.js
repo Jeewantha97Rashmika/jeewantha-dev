@@ -7,8 +7,7 @@ import { Helmet } from "react-helmet";
 import { Box } from "@mui/material";
 import ThemeLayout from "../../Theme/ThemeLayout";
 import Layout from "../../layouts/xCamera/Layout";
-import Cover from "../../images/vision_pro_cover.png";
-import VisionPro from '../../images/vision-pro-design.png'
+
 
 const IndexPage = () => {
   const [themeMode, setThemeMode] = useState(() => {

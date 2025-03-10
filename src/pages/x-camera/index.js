@@ -7,8 +7,7 @@ import { Helmet } from "react-helmet";
 import { Box } from "@mui/material";
 import ThemeLayout from "../../Theme/ThemeLayout";
 import Layout from "../../layouts/xCamera/Layout";
-import Cover from "../../images/x_camera_cover.png";
-import Xcamera from "../../images/xcamera.png";
+
 const IndexPage = () => {
   const [themeMode, setThemeMode] = useState(() => {
     return typeof window !== "undefined"
