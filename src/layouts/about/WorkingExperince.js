@@ -14,7 +14,7 @@ import Education02 from "../../components/about/Education2";
 
 import SkillsChips from "./SkillChips";
 import WorkingContent03 from "../../components/about/WorkingContent03";
-import Spacing from "../../components/common/Spacing";
+
 import HalfSpacing from "../../components/common/HalfSpacing";
 import TitleDescription from "../../components/common/TitleDescription";
 export default function WorkingExperince() {
@@ -35,7 +35,7 @@ export default function WorkingExperince() {
       // transition={{ type: "spring", stiffness: 100 }}
       // sx={{ pt: { md: 10, xs: 5 }, pb: { md: 5, xs: 5 } }}
       >
-        <Spacing />
+        <HalfSpacing />
         <TitleDescription
           title={"Working Exp & Academic Milestones"}
           description={
