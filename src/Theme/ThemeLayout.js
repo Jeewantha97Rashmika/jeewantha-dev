@@ -40,7 +40,7 @@ const lightTheme = createTheme({
       nav: "rgb(58, 58, 58)",
     },
     textColor: {
-      main: "#707070",
+      main: "rgb(141, 141, 141)",
       svg: "#333",
       secondary: "#333",
       decText: "#FF7262",
@@ -61,6 +61,7 @@ const lightTheme = createTheme({
     },
     shadow: {
       main: "0px 0px 50px rgba(0, 0, 0, 0.2)",
+      secondary: "0 10px 20px rgba(151, 151, 151, 0.2)",
     },
   },
 });
@@ -100,7 +101,7 @@ const darkTheme = createTheme({
       nav: "rgb(41, 41, 41)",
     },
     textColor: {
-      main: "#ffffff",
+      main: "rgb(170, 170, 170)",
       svg: "#fff",
       secondary: "#fff",
       decText: "#fff",
@@ -122,6 +123,7 @@ const darkTheme = createTheme({
     },
     shadow: {
       main: "0px 2px 6px rgba(255, 255, 255, 0.5)",
+      secondary: "0 10px 20px rgba(168, 168, 168, 0.28)",
     },
   },
 });

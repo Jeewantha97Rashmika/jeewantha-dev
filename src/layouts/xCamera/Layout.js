@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Box } from "@mui/material";
 import TitleDesc from "../../components/ProjectDetails/TitleDesc";
 import ContactBox from "../../components/ProjectDetails/ContactBox";
+import SecondaryBtn from "../../components/common/SecondaryBtn";
 
 export default function Layout({
   cover,
@@ -9,7 +10,8 @@ export default function Layout({
   description,
   roles,
   client,
-projectImage,
+  checkLive,
+  projectImage,
 }) {
   return (
     <Container>
@@ -32,11 +34,30 @@ projectImage,
         client={client}
       />
 
+      {/* Container for aligning the SecondaryBtn to the right */}
+      <Box
+        sx={{
+          display: checkLive ? "flex" : "none",  // Show the button only when checkLive is true"flex",
+          justifyContent: "flex-end",  // Aligns the button to the right
+          my: 2,  // Adds vertical margin around the button
+        }}
+      >
+        <SecondaryBtn
+          title="Check Live"
+        href={checkLive}
+          width="240px"
+         
+        />
+      </Box>
+
       <Box
         sx={{
           width: "100%",
           my: 5,
           borderRadius: { xs: "1rem", md: "3rem" },
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
         }}
       >
         <img

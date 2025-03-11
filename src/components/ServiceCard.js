@@ -31,6 +31,7 @@ export default function ServiceCard({ title, description, image }) {
             "background-color 0.5s ease, color 0.1s ease ,scale 0.3s ease",
           ":hover": {
             scale: 0.98,
+            boxShadow: theme.palette.shadow?.secondary,
             transition:
               "background-color 0.5s ease, color 0.1s ease ,scale 0.3s ease",
             border: "1px solidrgba(139, 139, 139, 0)",
@@ -79,13 +80,13 @@ export default function ServiceCard({ title, description, image }) {
             sx={{
               display: "flex",
               alignItems: "center",
-              justifyContent: "center",
+              justifyContent: "flex-end",
             }}
           >
             <ArrowForwardIcon
               sx={{
-                backgroundColor: theme.palette.bgColor?.graybg,
-                color: theme.palette.textColor?.main,
+                backgroundColor: "#FF7262",
+                color: "#fff",
                 marginLeft: "10px",
                 padding: "3px",
                 borderRadius: "50%",
