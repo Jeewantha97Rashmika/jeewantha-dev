@@ -14,6 +14,7 @@ import TitleDescription from "../../components/common/TitleDescription";
 import HalfSpacing from "../../components/common/HalfSpacing";
 import Spacing from "../../components/common/Spacing";
 import Background from '../../images/worldBg.png'
+import DescriptionLayout from "./DescriptionLayout";
 export default function Testimonials() {
   const testimonials = [
     {
@@ -160,7 +161,7 @@ export default function Testimonials() {
         backgroundImage: `url(${Background})`,
       }}
     >
-      {/* <DescriptionLayout /> */}
+      <DescriptionLayout />
       
       <Container
         component={motion.div}
