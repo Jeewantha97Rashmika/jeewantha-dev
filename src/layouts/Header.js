@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Box, Button, Container, useTheme,useMediaQuery } from "@mui/material";
+import { Box, Button, Container, useTheme, useMediaQuery } from "@mui/material";
 import Logo from "../images/JeewanthaLogoblack.svg";
 import Logo2 from "../images/logo.svg";
 import { FiMoon, FiSun } from "react-icons/fi";
@@ -11,17 +11,32 @@ import RevealLinks from "../components/animationComponents/RevealLinks";
 
 export default function Header({ themeMode, toggleTheme }) {
   const [isOpen, setIsOpen] = useState(false);
-
   const theme = useTheme();
 
+  // Add these state variables for scroll detection
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
+      const currentScrollPos = window.scrollY;
+
+      // Determine if we're scrolled down enough to apply styles
+      if (currentScrollPos > 50) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
       }
+
+      // Determine scroll direction and visibility
+      // Show header when scrolling up or at top
+      // Hide header when scrolling down (but not at top)
+      const isScrollingUp = prevScrollPos > currentScrollPos;
+      const isAtTop = currentScrollPos < 10;
+
+      setIsVisible(isScrollingUp || isAtTop);
+      setPrevScrollPos(currentScrollPos);
     };
 
     // Add scroll event listener
@@ -31,7 +46,7 @@ export default function Header({ themeMode, toggleTheme }) {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [prevScrollPos]); // Add prevScrollPos as dependency
 
   const styles = {
     button: {
@@ -79,7 +94,8 @@ export default function Header({ themeMode, toggleTheme }) {
     },
   };
   const [isActive, setIsActive] = useState(false);
-const isMobile = useMediaQuery("(max-width: 900px)");
+  const isMobile = useMediaQuery("(max-width: 900px)");
+
   return (
     <>
       {/* Separate the backdrop blur to its own element */}
@@ -89,9 +105,12 @@ const isMobile = useMediaQuery("(max-width: 900px)");
           top: 10,
           zIndex: 10, // Lower than the burger button but higher than content
           maxWidth: "1200px",
-          display: "flex",
+          display: { xs: "none", md: "flex" },
           justifyContent: "center",
           margin: "0 auto",
+          // Add transform for header show/hide animation
+          transform: isVisible ? "translateY(0)" : "translateY(-110%)",
+          transition: "transform 0.3s ease",
         }}
       >
         <Box
@@ -103,9 +122,14 @@ const isMobile = useMediaQuery("(max-width: 900px)");
             backdropFilter: isScrolled ? "blur(12px)" : "none",
             width: isScrolled ? "53rem" : "100%",
             // borderRadius: isScrolled ? "60px" : "60px",
-            borderRadius: 
-            isScrolled ? isMobile ? "0px" : "60px" : isMobile ? "0px" : "60px",
-            // boxShadow: isScrolled ? theme.palette.shadow?.main : "none",
+            borderRadius: isScrolled
+              ? isMobile
+                ? "0px"
+                : "60px"
+              : isMobile
+              ? "0px"
+              : "60px",
+            boxShadow: isScrolled ? theme.palette.shadow?.main : "none",
             // border: !isScrolled ? "none" : "1px solid #E5E5E5",
           }}
           transition={{
@@ -116,7 +140,7 @@ const isMobile = useMediaQuery("(max-width: 900px)");
             // border: { duration: 0.1, ease: "easeInOut" },
           }}
           sx={{
-            transition: "background-color 0.3s ease, color 0.3s ease   ",
+            transition: "background-color 0.3s ease, color 0.3s ease",
             //  mx:"10px",
             overflow: "hidden",
           }}
@@ -142,12 +166,7 @@ const isMobile = useMediaQuery("(max-width: 900px)");
               }}
             >
               <a href="/">
-                <img
-                  src={Logo2}
-                  alt="logo"
-                  width={"auto"}
-                  height={20}
-                />
+                <img src={Logo2} alt="logo" width={"auto"} height={20} />
               </a>
             </Box>
 
@@ -265,7 +284,6 @@ const isMobile = useMediaQuery("(max-width: 900px)");
             md: "none",
           },
           position: "fixed", // Fixed position for the burger menu
-
           zIndex: 20, // Higher z-index to be above the header
         }}
       >
