@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet";
 import { Box } from "@mui/material";
 import ThemeLayout from "../../Theme/ThemeLayout";
 import Layout from "../../layouts/xCamera/Layout";
-
+import DesignImage from "../../images/vision-pro-design.png";
 
 const IndexPage = () => {
   const [themeMode, setThemeMode] = useState(() => {
@@ -54,7 +54,7 @@ const IndexPage = () => {
           />
           <Layout
             cover={"https://cdn.jeewantharashmika.com/projects/vision_pro_cover.png"}
-            projectImage={"https://cdn.jeewantharashmika.com/projects/vision-pro-design.png"}
+            projectImage={DesignImage}
             title="Apple Vision Pro UI Reimagined: Facebook & TikTok"
             roles={"UI/UX Designer"}
             description="My latest Figma design project explores how popular social media platforms might evolve in Apple's spatial computing environment. These conceptual interfaces for Facebook and TikTok are crafted specifically for the Apple Vision Pro, embracing the device's unique capabilities while maintaining the core functionality users expect."

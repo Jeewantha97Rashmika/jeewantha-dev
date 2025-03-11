@@ -17,7 +17,8 @@ export default function TitleDesc({ title, description, roles, client }) {
         {title}
       </Typography>
       <Grid container gap={2} sx={{
-        my:4
+        my:4,
+        justifyContent: "space-between",
       }}>
         <Grid item xs={12} md={8}>
           <Typography
@@ -32,7 +33,12 @@ export default function TitleDesc({ title, description, roles, client }) {
           </Typography>
         </Grid>
 
-        <Grid>
+        <Grid  sx={{
+                display: "flex",
+                flexDirection: "column",
+            
+                alignItems: "start",
+              }}>
           <Box
             sx={{
               display: "flex",

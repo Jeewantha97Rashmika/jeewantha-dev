@@ -26,12 +26,15 @@ export default function ProjectItem({ project }) {
   }, [isHovered, animationItem]);
 
   return (
-    <Grid container item xs={12} md={6}>
+    <Grid container item xs={12} md={6} sx={{
+
+    }}>
       <Link to={project.href} style={{ textDecoration: "none" }}>
         <Box
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
           sx={{
+            boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
             transition:
               "transform 0.3s ease, border 0.5s ease, color 0.5s ease, background-color 0.5s ease",
             // boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
@@ -54,7 +57,7 @@ export default function ProjectItem({ project }) {
           </Box>
           <Box
             sx={{
-              my: 2,
+              my: 1,
               display: "flex",
               alignItems: "center",
               justifyContent: "space-between",
@@ -62,8 +65,9 @@ export default function ProjectItem({ project }) {
           >
             <Typography
               sx={{
-                fontSize: "1.8rem",
-                color: theme.palette.textColor?.main,
+                fontSize: "1.5rem",
+                fontWeight: 500,
+                color: theme.palette.textColor?.secondary,
               }}
             >
               {project.heading}
@@ -80,6 +84,17 @@ export default function ProjectItem({ project }) {
               }}
             />
           </Box>
+         
+          <Typography
+            sx={{
+              fontSize: "1rem",
+              color: theme.palette.textColor?.main,
+              mb:1,
+              fontWeight: 400,
+            }}
+          >
+            {project.subheading}
+          </Typography>
           {/* {project.tools.map((val, key) => {
             return (
               <img
@@ -89,15 +104,7 @@ export default function ProjectItem({ project }) {
                 alt={`Image representing a link for `}
               />
             );
-          })}
-          <Typography
-            sx={{
-              fontSize: "1rem",
-              color: theme.palette.textColor?.main,
-            }}
-          >
-            {project.subheading}
-          </Typography> */}
+          })} */}
         </Box>
       </Link>
     </Grid>

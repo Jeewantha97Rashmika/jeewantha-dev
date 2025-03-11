@@ -6,11 +6,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import DescriptionLayout from "./DescriptionLayout";
 import { motion } from "framer-motion";
 import { FaFacebook } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { TbWorldWww } from "react-icons/tb";
+import TitleDescription from "../../components/common/TitleDescription";
+import HalfSpacing from "../../components/common/HalfSpacing";
+import Spacing from "../../components/common/Spacing";
+import Background from '../../images/worldBg.png'
 export default function Testimonials() {
   const testimonials = [
     {
@@ -27,7 +30,7 @@ export default function Testimonials() {
         {
           name: "linkedin",
           icon: <FaLinkedin />,
-          link: "https://www.linkedin.com/jeewantherashmika/",
+          link: "https://www.linkedin.com/in/radikadilanka",
         },
         {
           name: "Website",
@@ -69,7 +72,7 @@ export default function Testimonials() {
       id: "3",
       img: "https://cdn.jeewantharashmika.com/testimonials/isharaimage.png", // Replace with actual image URL
       name: "Ishara Fernando",
-      job: "Product Owner | Lead Marketing Analyst", 
+      job: "Product Owner | Lead Marketing Analyst",
       socialMedias: [
         // {
         //   name: "Facebook",
@@ -81,11 +84,7 @@ export default function Testimonials() {
           icon: <FaLinkedin />,
           link: "https://www.linkedin.com/isharafernando/",
         },
-        {
-          name: "Website",
-          icon: <TbWorldWww />,
-          link: "https:/isharafernando.com",
-        },
+       
       ],
       review:
         "I am delighted to share my experience working with Jeewantha, a talented software engineer and UI/UX developer. We have been collaborating in our project, and his contributions have been invaluable.Jeewantha excels in creating beautiful and user-friendly designs, enhancing the overall user experience. His expertise in building Shopify stores has made our e-commerce solutions both effective and engaging for our clients.Beyond his technical skills, Jeewantha is a dedicated and supportive team member. He consistently offers valuable insights and assistance, ensuring the success of our project. His positive attitude and collaborative spirit make him a pleasure to work with. In short, Jeewantha is a skilled software engineer and UI/UX developer whose work has greatly benefited our project. I am confident he will continue to excel in his career.",
@@ -143,7 +142,6 @@ export default function Testimonials() {
     //     "I was thoroughly impressed with the attention to detail in the UI/UX design. Our users have noticed the difference! Jeewantha is a true professional! The website redesign has made it much easier for our clients to navigate and find information.",
     //   date: "2023-06-20",
     // },
- 
   ];
   const progressCircle = useRef(null);
   const progressContent = useRef(null);
@@ -154,15 +152,16 @@ export default function Testimonials() {
   const theme = useTheme();
   return (
     <div
-    id="testimonials"
+      id="testimonials"
       style={{
         zIndex: 0,
         backgroundColor: theme.palette.bgColor?.main,
         transition: "background-color 0.5s ease, color 0.5s ease",
+        backgroundImage: `url(${Background})`,
       }}
     >
-      <DescriptionLayout />
-
+      {/* <DescriptionLayout /> */}
+      
       <Container
         component={motion.div}
         initial={{ opacity: 0, y: 80 }} // Start with hidden and below position
@@ -171,7 +170,7 @@ export default function Testimonials() {
         transition={{ type: "spring", stiffness: 100 }}
         sx={{
           zIndex: 5,
-          pb: { xs: 5 },
+       
           // height: { xs: "85vh", md: "95vh", lg: "80vh" },
           alignItems: "center",
           justifyContent: "center",
@@ -179,6 +178,13 @@ export default function Testimonials() {
           minHeight: { xs: "100%", md: "80vh" },
         }}
       >
+        <HalfSpacing/>
+        <TitleDescription
+        align
+        title="What others say"
+        description="I've worked with some amazing people over the years, here is what they have to say about me."
+      />
+       <HalfSpacing/>
         <Swiper
           spaceBetween={30}
           centeredSlides={true}
@@ -194,7 +200,7 @@ export default function Testimonials() {
           onAutoplayTimeLeft={onAutoplayTimeLeft}
           className="mySwiper"
         >
-          {testimonials.map((item,key) => (
+          {testimonials.map((item, key) => (
             <SwiperSlide key={key}>
               <ReviewCard
                 img={item.img}
@@ -215,6 +221,7 @@ export default function Testimonials() {
           </div>
         </Swiper>
       </Container>
+      <Spacing/>
     </div>
   );
 }

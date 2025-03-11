@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Grid, Typography, useTheme } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { motion } from "framer-motion";
+import HalfSpacing from "../common/HalfSpacing";
 
 export default function DevSkill() {
   const skills = [
@@ -138,7 +139,7 @@ export default function DevSkill() {
       >
         Development Tools and Technologies
       </Typography>
-      <br />
+    <HalfSpacing/>
       <Grid container spacing={1}>
         {skills.map((val, key) => (
           <Grid item xs={12} md={4} key={key}>

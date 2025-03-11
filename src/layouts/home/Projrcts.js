@@ -9,7 +9,7 @@ const ProjectGrid = loadable(() => import("./ProjectGrid"),{
 export default function Projrcts() {
   return (
     <div id="work">
-      <DescriptionLayout />
+      {/* <DescriptionLayout /> */}
       {/* <ScrollEffect> */}
       {/* <ProjectList /> */}
       <ProjectGrid />

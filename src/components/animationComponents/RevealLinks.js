@@ -1,8 +1,7 @@
 import React from "react";
-import {  motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useTheme } from "@mui/material";
 export const RevealLinks = ({ title, link }) => {
-
   return (
     <section
       style={{
@@ -34,7 +33,7 @@ const FlipLink = ({ children, href }) => {
     fontWeight: "500", // Equivalent to font-black
     lineHeight: 0.75,
     textDecoration: "none",
-    color: theme.palette.textColor?.main,
+    color: theme.palette.textColor?.secondary,
     cursor: "pointer",
     marginRight: "50px",
   };

@@ -14,53 +14,35 @@ import Education02 from "../../components/about/Education2";
 
 import SkillsChips from "./SkillChips";
 import WorkingContent03 from "../../components/about/WorkingContent03";
+import Spacing from "../../components/common/Spacing";
+import HalfSpacing from "../../components/common/HalfSpacing";
+import TitleDescription from "../../components/common/TitleDescription";
 export default function WorkingExperince() {
   const theme = useTheme();
   return (
     <Box
       sx={{
-        backgroundColor: theme.palette.bgColor?.main,
+        backgroundColor: theme.palette.bgColor?.graybg,
         transition: "background-color 0.5s ease, color 0.5s ease",
         position: "relative",
       }}
     >
-      {/* <Box
-        component={motion.div}
-        initial={{ opacity: 1, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 2, type: "spring" }}
-        sx={{
-          position: "absolute",
-          top: { xs: 100, md: 100 }, // Align to top
-          right: { xs: 0, md: 0 }, // Align to rightZ
-          width: "auto",
-          height: "auto",
-          display: { xs: "none", lg: "block" },
-          overflow: "hidden",
-        }}
-      >
-        <img
-          src={HarlfCircel}
-          style={{
-            transform: "rotate(180deg)",
-            overflow: "hidden",
-          }}
-          alt="HarlfCircel"
-        />
-      </Box> */}
-
-      {/* Bottom HarlfCircel */}
-
-      {/* <ScrollEffect> */}
       <Container
-        // component={motion.div}
-        // initial={{ opacity: 0, y: 80 }} // Start with hidden and below position
-        // whileInView={{ opacity: 1, y: 0 }} // Animate to full opacity and position
-        // viewport={{ once: true, amount: 0.2 }} // Only animate once when 20% of the component is in view
-        // transition={{ type: "spring", stiffness: 100 }}
-        sx={{ pt: { md: 10, xs: 5 }, pb: { md: 5, xs: 5 } }}
+      // component={motion.div}
+      // initial={{ opacity: 0, y: 80 }} // Start with hidden and below position
+      // whileInView={{ opacity: 1, y: 0 }} // Animate to full opacity and position
+      // viewport={{ once: true, amount: 0.2 }} // Only animate once when 20% of the component is in view
+      // transition={{ type: "spring", stiffness: 100 }}
+      // sx={{ pt: { md: 10, xs: 5 }, pb: { md: 5, xs: 5 } }}
       >
+        <Spacing />
+        <TitleDescription
+          title={"Working Exp & Academic Milestones"}
+          description={
+            "My journey combines technical expertise with formal education, work experience, and community involvement. Each element has contributed something valuable to who I am professionally and personally today."
+          }
+        />
+        <HalfSpacing />
         <Box sx={{ width: "100%" }}>
           <Grid
             container
@@ -68,7 +50,6 @@ export default function WorkingExperince() {
             columnSpacing={{ xs: 1, sm: 2, md: 3 }}
           >
             <Grid item xs={12} md={6}>
-              <Heading2 component={"h2"} text={"Work experience"} />
               <Timeline
                 sx={{
                   [`& .${timelineItemClasses.root}:before`]: {
@@ -137,7 +118,6 @@ export default function WorkingExperince() {
               </Timeline>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Heading2 component={"h2"} text={"Education"} />
               <Timeline
                 sx={{
                   [`& .${timelineItemClasses.root}:before`]: {
@@ -189,6 +169,7 @@ export default function WorkingExperince() {
           </Grid>
         </Box>
       </Container>
+      <HalfSpacing />
       <SkillsChips />
       {/* </ScrollEffect> */}
     </Box>

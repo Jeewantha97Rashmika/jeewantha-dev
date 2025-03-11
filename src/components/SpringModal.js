@@ -1,11 +1,10 @@
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { FiMessageSquare } from "react-icons/fi";
-import {  Typography, useTheme } from "@mui/material";
+import { Typography, useTheme } from "@mui/material";
 import ContactForm from "./ContactForm";
 
-
-export default function SpringModal({ isOpen, setIsOpen }) {
+export default function SpringModal({ isOpen, setIsOpen, title }) {
   const theme = useTheme();
   return (
     <AnimatePresence>
@@ -96,7 +95,14 @@ export default function SpringModal({ isOpen, setIsOpen }) {
                   fontSize: "16px",
                 }}
               >
-                Shechedule a call with me or send me a message
+                {title ? (
+                  <>
+                    Shedule a meeting to make{" "}
+                    <span style={{ color: "#FF7262",fontWeight:600 }}>{title}</span>
+                  </>
+                ) : (
+                  ""
+                )}
               </Typography>
 
               <ContactForm setIsOpen={setIsOpen} />

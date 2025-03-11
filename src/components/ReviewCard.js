@@ -27,13 +27,13 @@ export default function ReviewCard({
         maxWidth: { xs: "100%", md: "50vw" },
         height: "100%",
         my: 5,
-
+        backgroundColor: theme.palette.cardBgColor?.main,
         minHeight: "40rem",
         // backgroundColor: theme.palette.cardBgColor?.main,
         gap: 2,
         padding: { xs: "1rem", md: "2rem" },
         borderRadius: "30px",
-        // boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
+        boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
       }}
     >
       {/* Rotating border container */}
@@ -141,6 +141,8 @@ export default function ReviewCard({
       <div>
         <Typography
           sx={{
+          
+            padding: "1rem",
             color: theme.palette.textColor?.main,
             fontSize: { xs: "12px", md: "15px" },
             fontWeight: 400,

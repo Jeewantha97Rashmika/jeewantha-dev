@@ -314,7 +314,7 @@ export default function Footer() {
             fontFamily: "Montserrat",
           }}
         >
-          Copyright © {new Date().getFullYear()} Jeewantha Rashmika. All rights reserved.
+          Copyright © {new Date().getFullYear()} Jeewantha Rashmika. 
         </Typography>
         <Typography
           component="h3"
@@ -326,7 +326,8 @@ export default function Footer() {
             fontFamily: "Montserrat",
           }}
         >
-          Designed & developed by Jeewantha Rashmika
+          All rights reserved.
+          {/* Designed & developed by Jeewantha Rashmika */}
         </Typography>
       </Box>
     </div>
