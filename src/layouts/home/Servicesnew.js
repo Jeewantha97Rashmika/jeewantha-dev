@@ -69,13 +69,13 @@ export default function Servicesnew() {
       id="services"
       sx={{
         zIndex: 5,
-        // backgroundColor: theme.palette.bgColor?.graybg,
+        backgroundColor: theme.palette.bgColor?.main,
         transition: "background-color 0.5s ease, color 0.5s ease",
         position: "relative",
        
       }}
     >
-      <Spacing/>
+      <Spacing color={theme.palette.bgColor?.main}/>
       <Container
         component={motion.div}
         initial={{ opacity: 0, y: 80 }} // Start with hidden and below position
@@ -144,7 +144,7 @@ export default function Servicesnew() {
             "I have worked with some of the most innovative industry leaders to help build their top-notch products."
           }
         />
-         <HalfSpacing/>
+         <HalfSpacing color={theme.palette.bgColor?.main}/>
         <DesignProcess/>
       </Container>
     </Box>

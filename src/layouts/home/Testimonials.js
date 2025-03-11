@@ -30,7 +30,7 @@ export default function Testimonials() {
         {
           name: "linkedin",
           icon: <FaLinkedin />,
-          link: "https://www.linkedin.com/jeewantherashmika/",
+          link: "https://www.linkedin.com/in/radikadilanka",
         },
         {
           name: "Website",
@@ -84,11 +84,7 @@ export default function Testimonials() {
           icon: <FaLinkedin />,
           link: "https://www.linkedin.com/isharafernando/",
         },
-        {
-          name: "Website",
-          icon: <TbWorldWww />,
-          link: "https:/isharafernando.com",
-        },
+       
       ],
       review:
         "I am delighted to share my experience working with Jeewantha, a talented software engineer and UI/UX developer. We have been collaborating in our project, and his contributions have been invaluable.Jeewantha excels in creating beautiful and user-friendly designs, enhancing the overall user experience. His expertise in building Shopify stores has made our e-commerce solutions both effective and engaging for our clients.Beyond his technical skills, Jeewantha is a dedicated and supportive team member. He consistently offers valuable insights and assistance, ensuring the success of our project. His positive attitude and collaborative spirit make him a pleasure to work with. In short, Jeewantha is a skilled software engineer and UI/UX developer whose work has greatly benefited our project. I am confident he will continue to excel in his career.",

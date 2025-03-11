@@ -12,7 +12,7 @@ export default function Home() {
   const theme = useTheme();
   return (
     <>
-      <Box sx={{ backgroundColor: theme.palette.bgColor?.graybg }}>
+      <Box>
         {" "}
         <HeroSection />
         {/* <SkillMarquee/> */}

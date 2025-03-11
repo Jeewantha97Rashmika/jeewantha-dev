@@ -17,6 +17,7 @@ import { FaBehanceSquare } from "react-icons/fa";
 import Background from "../../images/WireframeBg.svg";
 import TitleDescription from "../../components/common/TitleDescription";
 import Spacing from "../../components/common/Spacing";
+import HalfSpacing from "../../components/common/HalfSpacing";
 
 // Create a placeholder component for ProjectItem
 const ProjectItemPlaceholder = () => {
@@ -168,8 +169,14 @@ export default function ProjectGrid() {
   }, []);
 
   return (
-    <div>
-      <Spacing/>
+    <div
+      style={{
+        marginTop: "4rem",
+        backgroundColor: theme.palette.bgColor?.graybg,
+      }}
+    >
+      {/* <Spacing /> */}
+      <HalfSpacing/>
       <Container>
         <TitleDescription
           title={"Selected Projects"}
@@ -276,7 +283,7 @@ export default function ProjectGrid() {
           </Grid>
         </Box>
       </Container>
-      <Spacing/>
+      <Spacing />
     </div>
   );
 }
