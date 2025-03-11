@@ -33,6 +33,7 @@ const lightTheme = createTheme({
     bgColor: {
       main: "#ffffff",
       secondary: "#2C2B2E",
+      graybg:"#f7f8fa",
       dec: "#FFD3D0",
       header: "rgba(255, 255, 255, 0.8)",
       fixHeader: "transparent",
@@ -47,10 +48,10 @@ const lightTheme = createTheme({
       bigText: "#AAAAAA",
     },
     borderColor: {
-      main: "#333",
+      main:"rgb(196, 196, 196)",
     },
     cardBgColor: {
-      main: "#F1F5F9",
+      main: "#fff",
     },
     blogCardBgColor: {
       main: "#fff",
@@ -92,6 +93,7 @@ const darkTheme = createTheme({
     bgColor: {
       main: "#121212",
       secondary: "#1A1A1B",
+      graybg:"#0b0b0d",
       dec: "#FF8081",
       fixHeader: "rgb(18 18 18)",
       header: "rgba(58, 58, 58, 0.8)",
@@ -106,10 +108,10 @@ const darkTheme = createTheme({
       bigText: "#AAAAAA",
     },
     borderColor: {
-      main: "#fff",
+      main:"rgb(63, 63, 63)",
     },
     cardBgColor: {
-      main: "#1D1D1E",
+      main: "#333",
     },
 
     blogCardBgColor: {

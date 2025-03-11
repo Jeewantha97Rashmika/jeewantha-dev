@@ -13,7 +13,7 @@ export default function SecondaryBtn({ title, handleClick }) {
         width: { xs: "100%" },
 
         mt: { xs: 2, md: 0 },
-        borderColor: theme.palette.borderColor?.main,
+        borderColor: theme.palette.borderColor?.graybg,
         borderRadius: "30px",
         padding: "10px 10px ",
         textTransform: "none",
@@ -24,7 +24,7 @@ export default function SecondaryBtn({ title, handleClick }) {
             "background-color 0.5s ease, color 0.5s ease , border-radius 0.5s ease",
           backgroundColor: "none",
           borderRadius: "0px",
-          borderColor: theme.palette.borderColor?.main,
+          borderColor: theme.palette.borderColor?.graybg,
         },
       }}
     >
@@ -33,7 +33,7 @@ export default function SecondaryBtn({ title, handleClick }) {
           fontSize: "16px",
           fontWeight: 400,
           fontFamily: "Montserrat",
-          color: theme.palette.borderColor?.main,
+          color: theme.palette.textColor?.main,
         }}
       >
         {title}

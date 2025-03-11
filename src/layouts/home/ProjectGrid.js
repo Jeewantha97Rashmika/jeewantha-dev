@@ -13,6 +13,7 @@ import ProjectItem from "./ProjectItem";
 import DesignSystem from "../../images/design_system.json";
 import AppleVisionPro from "../../images/apple_vision_pro.json";
 import { FaBehanceSquare } from "react-icons/fa";
+import Background from "../../images/WireframeBg.svg";
 
 export default function ProjectGrid() {
   const shopifyDevelopment = [
@@ -48,7 +49,7 @@ export default function ProjectGrid() {
     },
 
     {
-      heading: "Radikadilanka Official Website",
+      heading: "Radika dilanka Official Website",
       tools: uidesign,
       subheading:
         "Radikadilanka's official website UI/UX Design using figma and photoshop.",
@@ -60,7 +61,7 @@ export default function ProjectGrid() {
       heading: "Comprehensive Design System",
       tools: uidesign,
       subheading:
-        "Xcinama is movie ticket booking website UI/UX Design using figma",
+        "creating a complete, customized design system for a client, built entirely in Figma",
       imgSrc: DesignSystem,
       technology: "uidesign",
       href: "/design-system",
@@ -69,7 +70,7 @@ export default function ProjectGrid() {
       heading: "Apple Vision Pro UI Reimagined",
       tools: uidesign,
       subheading:
-        "Xcinama is movie ticket booking website UI/UX Design using figma",
+        "Figma design project explores how popular social media platforms might evolve in Apple's spatial computing environment",
       imgSrc: AppleVisionPro,
       technology: "uidesign",
       href: "/apple-vision-pro",
@@ -110,52 +111,113 @@ export default function ProjectGrid() {
   ];
   const theme = useTheme();
   return (
-    <Container
-      sx={{
-        py: { md: 10, xs: 5 },
-      }}
+    <div
+      style={
+        {
+          // backgroundImage: `url(${Background})`,
+        }
+      }
     >
-      <Grid container spacing={4}>
-        {projectData.map((project, key) => (
-          <ProjectItem key={key} project={project} />
-        ))}
-      </Grid>
-      <Box sx={{ display: "flex", justifyContent: "center",mt:10 }}>
-        <Button
-        href="https://www.behance.net/jeewantharashmika"
-        target="_blank"
-          variant="outlined"
+      <Container
+        sx={{
+          py: { md: 15, xs: 5 },
+        }}
+      >
+        <Grid container spacing={4}>
+          {projectData.map((project, key) => (
+            <ProjectItem key={key} project={project} />
+          ))}
+        </Grid>
+        <Box
           sx={{
-            width: { xs: "100%", md: "auto" },
-            mt: { xs: 2, md: 0 },
-            borderColor: theme.palette.borderColor?.main,
-            borderRadius: "30px",
-            padding: "10px 20px ",
-            textTransform: "none",
-            transition:
-              "background-color 0.5s ease, color 0.5s ease , border-radius 0.5s ease",
-            "&:hover": {
-              transition:
-                "background-color 0.5s ease, color 0.5s ease , border-radius 0.5s ease",
-              backgroundColor: "none",
-              borderRadius: "0px",
-              borderColor: theme.palette.borderColor?.main,
-            },
+            display: "flex",
+            justifyContent: "center",
+            mt: 10,
+            boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
+            backgroundColor: theme.palette.cardBgColor?.main,
+            padding: "30px 30px",
+            borderRadius: "10px",
           }}
         >
-          <Typography
-            sx={{
-              fontSize: "16px",
-              fontWeight: 400,
-              fontFamily: "Montserrat",
-              color: theme.palette.borderColor?.main,
-            }}
-          >
-            View more in Behance
-          </Typography>
-          <FaBehanceSquare size={20} style={{ marginLeft: "10px" , color: theme.palette.borderColor?.main ,backgroundColor:theme.palette.cardBgColor?.main}} />
-        </Button>
-      </Box>
-    </Container>
+          <Grid container>
+            <Grid
+              item
+              xs={12}
+              md={6}
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Typography
+                sx={{
+                  fontSize: "23px",
+                  fontWeight: 600,
+                  color: theme.palette.textColor?.Secondary,
+                  fontFamily: "Montserrat",
+                  lineHeight: "24px",
+                }}
+              >
+                See More UI/UX design projects on Behance
+              </Typography>
+            </Grid>
+            <Grid
+              item
+              xs={12}
+              md={6}
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Button
+                href="https://www.behance.net/jeewantharashmika"
+                target="_blank"
+                // variant="outlined"
+                sx={{
+                  backgroundColor: "#0057ff",
+                  width: { xs: "100%", md: "auto" },
+                  mt: { xs: 2, md: 0 },
+                  borderColor: theme.palette.btnColor?.main,
+                  borderRadius: "30px",
+                  padding: "10px 20px ",
+                  textTransform: "none",
+                  transition:
+                    "background-color 0.5s ease, color 0.5s ease , border-radius 0.5s ease",
+                  "&:hover": {
+                    transition:
+                      "background-color 0.5s ease, color 0.5s ease , border-radius 0.5s ease",
+                    backgroundColor: "#0057ff",
+                    borderRadius: "0px",
+                    borderColor: theme.palette.borderColor?.graybg,
+                  },
+                }}
+              >
+                <Typography
+                  sx={{
+                    fontSize: "16px",
+                    fontWeight: 400,
+                    fontFamily: "Montserrat",
+                    color: theme.palette.btnColor?.text,
+                  }}
+                >
+                  View more in Behance
+                </Typography>
+                <FaBehanceSquare
+                  size={20}
+                  style={{
+                    marginLeft: "10px",
+                    color: "#fff",
+                    // backgroundColor: theme.palette.bgColor?.secondary,
+                  }}
+                />
+              </Button>
+            </Grid>
+          </Grid>
+        </Box>
+      </Container>
+    </div>
   );
 }

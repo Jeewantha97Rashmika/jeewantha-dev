@@ -14,14 +14,14 @@ export default function CountBanner() {
 
         marginTop: "-5px",
         zIndex: 100,
-        pb: 3,
+        py: 6,
         // borderRadius: "3rem",
       }}
     >
       <Container>
         <Box
           sx={{
-            py: 5,
+            // py: 5,
             display: "flex",
             flexDirection: "column",
             gap: 3,
@@ -31,7 +31,7 @@ export default function CountBanner() {
         >
           <Typography
             sx={{
-              color: "#FFF",
+              color:"rgb(255, 255, 255)",
               fontSize: "40px",
               fontWeight: 800,
               fontFamily: "Montserrat",
@@ -41,7 +41,7 @@ export default function CountBanner() {
           </Typography>
           <Typography
             sx={{
-              color: "white",
+              color:"rgba(218, 218, 218, 0.8)",
               fontSize: "16px",
               fontWeight: 400,
               fontFamily: "Montserrat",
@@ -58,7 +58,7 @@ export default function CountBanner() {
           </Typography>
           <Typography
             sx={{
-              color: "white",
+              color:"rgba(218, 218, 218, 0.8)",
               fontSize: "16px",
               fontWeight: 400,
               fontFamily: "Montserrat",

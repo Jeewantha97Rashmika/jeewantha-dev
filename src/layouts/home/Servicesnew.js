@@ -3,7 +3,6 @@ import { Grid, Box, Typography, useTheme, Container } from "@mui/material";
 import { motion } from "framer-motion";
 import ServiceCard from "../../components/ServiceCard";
 
-
 export default function Servicesnew() {
   const theme = useTheme();
   const sercivesData = [
@@ -27,23 +26,22 @@ export default function Servicesnew() {
       image: `<svg viewBox="0 0 515 515" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M167 416C163 416 160 413 160 409V103C160 99 163 96 167 96C171 96 174 99 174 103V409C174 413 171 416 167 416ZM256 416C252 416 249 413 249 409V103C249 99 252 96 256 96C260 96 263 99 263 103V409C263 413 260 416 256 416ZM345 416C341 416 338 413 338 409V103C338 99 341 96 345 96C349 96 352 99 352 103V409C352 413 349 416 345 416Z" fill="${theme.palette.textColor?.svg}"/><path fill-rule="evenodd" clip-rule="evenodd" d="M409 179H103C99 179 96 176 96 172C96 168 99 165 103 165H409C413 165 416 168 416 172C416 176 413 179 409 179ZM409 263H103C99 263 96 260 96 256C96 252 99 249 103 249H409C413 249 416 252 416 256C416 260 413 263 409 263ZM409 347H103C99 347 96 344 96 340C96 336 99 333 103 333H409C413 333 416 336 416 340C416 344 413 347 409 347Z" fill="${theme.palette.textColor?.svg}"/><path fill-rule="evenodd" clip-rule="evenodd" d="M256 512C187 512 123 485 75 437C27 389 0 325 0 256C0 187 27 123 75 75C123 27 187 0 256 0C325 0 389 27 437 75C485 123 512 187 512 256C512 325 485 389 437 437C389 485 325 512 256 512ZM256 14C123 14 14 123 14 256C14 389 123 498 256 498C389 498 498 389 498 256C498 123 389 14 256 14Z" fill="${theme.palette.textColor?.svg}"/></svg>`,
     },
     {
-      title: "Frontend Collaboration",
+      title: "Front-end Collaboration",
       description:
         "Bridging the gap between design and development for seamless execution.",
       image: `<svg   viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="${theme.palette.textColor?.svg}" d="M439.438 86.177H381.01C396.944 69.807 397.498 43.314 380.052 26.584C362.975 10.207 335.124 10.261 317.973 26.709L260.774 81.557L197.608 21.517C188.17 12.545 172.814 12.546 163.378 21.517L125.668 57.36C115.125 67.381 118.083 80.325 121.553 86.177H72.562C54.922 86.177 40.571 100.528 40.571 118.168V378.715C40.571 396.355 54.922 410.706 72.562 410.706H201.535V477.714H167.07C161.547 477.714 157.07 482.192 157.07 487.714C157.07 493.236 161.547 497.714 167.07 497.714H344.93C350.452 497.714 354.93 493.236 354.93 487.714C354.93 482.192 350.452 477.714 344.93 477.714H310.465V410.706H439.438C457.078 410.706 471.429 396.354 471.429 378.715V118.168C471.429 100.528 457.077 86.177 439.438 86.177ZM451.429 378.715C451.429 385.327 446.05 390.706 439.438 390.706H72.562C65.95 390.706 60.571 385.327 60.571 378.715V367.202H451.428L451.429 378.715ZM290.465 477.714H221.535V410.706H290.465V477.714ZM60.571 347.202V118.168C60.571 111.556 65.95 106.177 72.562 106.177H141.283L188.396 150.959L140.62 196.772C139.411 197.925 138.535 199.387 138.009 200.962L119.835 255.314C117.802 261.39 119.332 268.026 123.826 272.631C130.948 279.93 139.807 277.746 141.752 277.149L198.414 259.729C199.962 259.266 201.392 258.453 202.567 257.336L251.224 210.679L314.391 270.72C322.808 278.719 338.24 280.586 348.62 270.719L386.33 234.876C394.804 226.821 397.38 211.41 386.33 200.902L323.601 141.277L360.205 106.178H439.436C446.048 106.178 451.427 111.557 451.427 118.169V347.203H60.571V347.202ZM139.447 76.838C137.863 74.968 137.862 73.727 139.447 71.857L177.156 36.014C178.933 34.325 182.051 34.324 183.828 36.014L218.276 68.757L203.175 83.111C199.172 86.916 199.011 93.245 202.816 97.248C206.608 101.237 212.937 101.425 216.953 97.607L232.791 82.553L246.322 95.414L202.848 137.101L139.447 76.838ZM366.21 41.02C374.581 49.046 376.076 63.252 366.078 72.839L358.427 80.176L324.769 47.901L331.814 41.145C341.333 32.017 356.763 31.962 366.21 41.02ZM310.321 61.755L320.642 71.652L171.663 213.265L161.99 203.989L310.321 61.755ZM343.979 94.03L195.647 236.263L186.114 227.122L335.093 85.509L343.979 94.03ZM307.641 196.885C311.432 200.874 317.763 201.062 321.779 197.243L337.616 182.189L372.552 215.396C374.137 217.267 374.137 218.508 372.553 220.379L334.843 256.222C333.066 257.911 329.948 257.911 328.171 256.222L265.677 196.821L309.151 155.134L323.1 168.393L307.999 182.747C303.996 186.552 303.836 192.881 307.641 196.885ZM152.019 222.136L176.445 245.559L140.49 256.613L152.019 222.136Z" fill="black"/></svg>`,
     },
   ];
 
-
   return (
     <Box
       id="services"
       sx={{
         zIndex: 5,
-        backgroundColor: theme.palette.bgColor?.main,
+        // backgroundColor: theme.palette.bgColor?.graybg,
         transition: "background-color 0.5s ease, color 0.5s ease",
         position: "relative",
-        py: 10,
+        py: 12
       }}
     >
       <Container
@@ -63,42 +61,6 @@ export default function Servicesnew() {
                 image={item.image}
               />
             ))}
-            <Grid
-              container
-              sx={{ mt: 3, p: 2, display: { xs: "none", md: "flex" } }}
-            >
-              {/* {serviceTag.map((item, index) => (
-                <Grid item xs={4} sm={3} key={index}>
-                  <Box
-                    sx={{
-                      width: "100%",
-                      display: "flex",
-                      alignItems: "right",
-                      gap: 1,
-                    }}
-                  >
-                    <img
-                      src={item.img}
-                      alt="star"
-                      style={{
-                        width: "30px",
-                        fill: "#FF7262",
-                      }}
-                    />
-                    <Typography
-                      sx={{
-                        fontSize: { xs: "12px", md: "16px" },
-                        fontWeight: "bold",
-                        color: "#FF7262",
-                        fontFamily: "Montserrat",
-                      }}
-                    >
-                      {item.title}
-                    </Typography>
-                  </Box>
-                </Grid>
-              ))} */}
-            </Grid>
           </Grid>
           <Grid item xs={12} md={5}>
             <Typography
@@ -124,9 +86,17 @@ export default function Servicesnew() {
               prototyping and testing. Let's craft exceptional digital
               experiences together.
             </Typography>
-            <div style={{ overflow: "hidden", width: "100%" ,borderRadius:"15px" }}>
+            <div
+              style={{
+                overflow: "hidden",
+                width: "100%",
+                borderRadius: "15px",
+              }}
+            >
               <motion.img
-                src={"https://cdn.jeewantharashmika.com/section_images/workingdesk.png"}
+                src={
+                  "https://cdn.jeewantharashmika.com/section_images/workingdesk.png"
+                }
                 alt="workingdesk"
                 style={{ width: "100%", display: "block" }}
                 whileHover={{ scale: 1.2 }}
