@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import { Typography, useTheme } from "@mui/material";
+import React, { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
+import { Typography, useTheme } from '@mui/material';
 
 export default function Typewrite({ examples }) {
   const [exampleIndex, setExampleIndex] = useState(0);
@@ -24,16 +24,16 @@ export default function Typewrite({ examples }) {
   return (
     <Typography
       sx={{
-        marginBottom: "0.625rem",
-        fontSize: { xs: "16px", md: "18px" },
+        marginBottom: '0.625rem',
+        fontSize: { xs: '16px', md: '18px' },
         fontWeight: 400,
-        fontFamily: "Montserrat",
+        fontFamily: 'Montserrat',
         color: theme.palette.textColor?.main,
         // border: "3px dashed rgba(112, 112, 112, 1)",
         // padding: "0.5rem",
-        borderRadius: "0.25rem",
-        display: "inline-flex",
-        alignItems: "center",
+        borderRadius: '0.25rem',
+        display: 'inline-flex',
+        alignItems: 'center',
         // backgroundColor: "#f6fafd",
 
         // textTransform: "uppercase",
@@ -41,16 +41,15 @@ export default function Typewrite({ examples }) {
     >
       <span
         style={{
-          display: "inline-block",
+          display: 'inline-block',
           backgroundColor: theme.palette.textColor.main,
-          transition: "background-color 0.5s ease, color 0.5s ease",
-          width: "10px",
-          height: "10px",
+          transition: 'background-color 0.5s ease, color 0.5s ease',
+          width: '10px',
+          height: '10px',
         }}
       />
-      <span style={{ marginLeft: "0.75rem" }}>
-        FAQ:
-        {examples[exampleIndex].split("").map((l, i) => (
+      <span style={{ marginLeft: '0.75rem' }}>
+        {examples[exampleIndex].split('').map((l, i) => (
           <motion.span
             initial={{
               opacity: 1,
@@ -61,10 +60,10 @@ export default function Typewrite({ examples }) {
             transition={{
               delay: FADE_DELAY,
               duration: MAIN_FADE_DURATION,
-              ease: "easeInOut",
+              ease: 'easeInOut',
             }}
             key={`${exampleIndex}-${i}`}
-            style={{ position: "relative" }}
+            style={{ position: 'relative' }}
           >
             <motion.span
               initial={{
@@ -91,16 +90,16 @@ export default function Typewrite({ examples }) {
                 delay: i * LETTER_DELAY,
                 times: [0, 0.1, 1],
                 duration: BOX_FADE_DURATION,
-                ease: "easeInOut",
+                ease: 'easeInOut',
               }}
               style={{
-                position: "absolute",
-                bottom: "3px",
-                left: "1px",
-                right: "0",
-                top: "3px",
-                backgroundColor: "#111111",
-                transition: "background-color 0.5s ease, color 0.5s ease",
+                position: 'absolute',
+                bottom: '3px',
+                left: '1px',
+                right: '0',
+                top: '3px',
+                backgroundColor: '#111111',
+                transition: 'background-color 0.5s ease, color 0.5s ease',
               }}
             />
           </motion.span>
