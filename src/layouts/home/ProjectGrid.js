@@ -171,7 +171,7 @@ export default function ProjectGrid() {
   return (
     <div
       style={{
-        marginTop: "4rem",
+  
         backgroundColor: theme.palette.bgColor?.graybg,
       }}
     >
