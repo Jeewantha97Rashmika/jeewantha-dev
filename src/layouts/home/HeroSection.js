@@ -1,58 +1,63 @@
-import React from "react";
-import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
-import Heading1 from "../../components/common/Heading1";
-import { Container, Typography } from "@mui/material";
-import GridImage from "../../images/grid.svg";
-import MainBtn from "../../components/MainBtn";
-import Typewrite from "../../components/Typewrite";
-import SubTilte from "../../components/SubTilte";
-import BigTextnimation from "../../components/BigTextnimation";
-import { motion } from "framer-motion";
-import { useTheme } from "@mui/material/styles"; // Import useTheme
-import SecondaryBtn from "../../components/common/SecondaryBtn";
-
+import React from 'react';
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
+import Heading1 from '../../components/common/Heading1';
+import { Container, Typography } from '@mui/material';
+import GridImage from '../../images/grid.svg';
+import MainBtn from '../../components/MainBtn';
+import Typewrite from '../../components/Typewrite';
+import SubTilte from '../../components/SubTilte';
+import BigTextnimation from '../../components/BigTextnimation';
+import { motion } from 'framer-motion';
+import { useTheme } from '@mui/material/styles'; // Import useTheme
+import SecondaryBtn from '../../components/common/SecondaryBtn';
 
 export default function HeroSection() {
   const theme = useTheme();
   const handleClick = () => {
-    window.location.href = "/#work";
+    window.location.href = '/#work';
   };
-  const examples = [" Hello , How are you?", " Contact me to know more"];
+  const examples = [
+    'Crafting Seamless Experiences',
+    'Designing with Purpose',
+    'Building Intuitive Interfaces',
+    'Bridging Design & Code',
+    'Pixel-Perfect. User-Focused.',
+  ];
 
   return (
     <Box
       sx={{
         backgroundColor: theme.palette.bgColor?.main,
-        transition: "background-color 0.3s ease, color 0.3s ease",
+        transition: 'background-color 0.3s ease, color 0.3s ease',
         backgroundImage: `url(${GridImage})`,
       }}
     >
       <Box
         sx={{
-          position: "absolute",
+          position: 'absolute',
           top: { xs: 520, md: 250 },
-          left: { xs: "50%", md: "40%" },
-          transform: "translateX(-50%)",
-          width: { xs: "300px", md: "800px" },
-          height: { xs: "300px", md: "400px" },
-          borderRadius: "50%",
-          backgroundColor: "rgba(255, 0, 0, 0.2)",
-          filter: "blur(120px)",
-          pointerEvents: "none",
+          left: { xs: '50%', md: '40%' },
+          transform: 'translateX(-50%)',
+          width: { xs: '300px', md: '800px' },
+          height: { xs: '300px', md: '400px' },
+          borderRadius: '50%',
+          backgroundColor: 'rgba(255, 0, 0, 0.2)',
+          filter: 'blur(120px)',
+          pointerEvents: 'none',
         }}
       ></Box>
       {/* <ScrollEffect> */}
       <Container
         sx={{
-          position: "relative",
+          position: 'relative',
           // zIndex: 10,
         }}
       >
         <Box
           sx={{
-            width: "100%",
-            paddingLeft: { xs: 0, md: "15px" },
+            width: '100%',
+            paddingLeft: { xs: 0, md: '15px' },
           }}
         >
           <Grid
@@ -75,32 +80,32 @@ export default function HeroSection() {
                   component={motion.div}
                   initial={{ opacity: 1, y: -50 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ type: "spring" }}
+                  transition={{ type: 'spring' }}
                   sx={{
-                    paddingLeft: { xs: 0, md: "15px" },
-                    position: "relative",
+                    paddingLeft: { xs: 0, md: '15px' },
+                    position: 'relative',
                   }}
                 >
                   <SubTilte />
                   <Box>
                     <Heading1
-                      component={"h1"}
+                      component={'h1'}
                       text1={"Hello, I'm "}
-                      text2={"Jeewantha"}
+                      text2={'Jeewantha'}
                     />
                   </Box>
                   <br></br>
                   <Typography
-                    component={"p"}
+                    component={'p'}
                     sx={{
                       color: theme.palette.textColor?.secondary,
-                      fontSize: { xs: "16px", sm: "18px" },
-                      textAlign: "justify",
-                      fontFamily: "Montserrat",
+                      fontSize: { xs: '16px', sm: '18px' },
+                      textAlign: 'justify',
+                      fontFamily: 'Montserrat',
                       fontWeight: 500,
                       lineHeight: 1.6,
                       // backgroundColor: theme.palette.bgColor?.main,
-                      transition: "background-color 0.5s ease, color 0.5s ease",
+                      transition: 'background-color 0.5s ease, color 0.5s ease',
                     }}
                   >
                     {
@@ -110,9 +115,9 @@ export default function HeroSection() {
                         and
                         <b> mobile app/web development </b> dedicated to
                         crafting exceptional digital experiences. */}
-                        Welcome to my portfolio of captivating digital
-                        experiences. Explore my work and let's create something
-                        extraordinary together.
+                        Welcome to my portfolio, where creativity meets
+                        functionality. Explore my UI/UX design work and let's
+                        craft outstanding digital experiences together.
                       </span>
                     }
                   </Typography>
@@ -123,15 +128,15 @@ export default function HeroSection() {
                   <Grid
                     container
                     spacing={2}
-                    alignItems="flex-start"
-                    justifyContent={{ xs: "center", md: "flex-start" }}
+                    alignItems='flex-start'
+                    justifyContent={{ xs: 'center', md: 'flex-start' }}
                   >
                     <Grid item xs={12} lg={6}>
-                      <MainBtn title={"Let’s Collaborate"} size={"100%"} />
+                      <MainBtn title={'Let’s Collaborate'} size={'100%'} />
                     </Grid>
                     <Grid item xs={12} lg={6}>
                       <SecondaryBtn
-                        title={"Look Work"}
+                        title={'Explore My Work'}
                         handleClick={handleClick}
                       />
                     </Grid>
@@ -145,27 +150,29 @@ export default function HeroSection() {
               md={7}
               sx={{
                 order: { xs: 2, md: 1 },
-                display: "flex",
-                justifyContent: "start",
-                alignItems: "left",
+                display: 'flex',
+                justifyContent: 'start',
+                alignItems: 'left',
               }}
             >
               <Box
                 sx={{
-                  width: "100%",
+                  width: '100%',
                   // marginTop: "20px",
                   pt: { md: 10, lg: 0, xl: 5 },
                 }}
               >
                 <img
-                  src={"https://cdn.jeewantharashmika.com/section_images/heroimage.png"}
+                  src={
+                    'https://cdn.jeewantharashmika.com/section_images/heroimage.png'
+                  }
                   style={{
-                    maxWidth: "100%",
-                    height: "auto",
-                    position: "relative",
+                    maxWidth: '100%',
+                    height: 'auto',
+                    position: 'relative',
                     zIndex: 2,
                   }}
-                  alt="knovik"
+                  alt='Jeewantha Rashmika'
                 />
               </Box>
             </Grid>

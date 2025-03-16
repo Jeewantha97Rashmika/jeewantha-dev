@@ -1,30 +1,30 @@
-import * as React from "react";
-import { Box, Container, Grid, useTheme } from "@mui/material";
-import Timeline from "@mui/lab/Timeline";
-import TimelineItem, { timelineItemClasses } from "@mui/lab/TimelineItem";
-import TimelineSeparator from "@mui/lab/TimelineSeparator";
-import TimelineConnector from "@mui/lab/TimelineConnector";
-import TimelineContent from "@mui/lab/TimelineContent";
-import TimelineDot from "@mui/lab/TimelineDot";
-import WorkingContent from "../../components/about/WorkingContent";
-import WorkingContent02 from "../../components/about/WorkingContent02";
-import Heading2 from "../../components/common/Heading2";
-import Education01 from "../../components/about/Education1";
-import Education02 from "../../components/about/Education2";
+import * as React from 'react';
+import { Box, Container, Grid, useTheme } from '@mui/material';
+import Timeline from '@mui/lab/Timeline';
+import TimelineItem, { timelineItemClasses } from '@mui/lab/TimelineItem';
+import TimelineSeparator from '@mui/lab/TimelineSeparator';
+import TimelineConnector from '@mui/lab/TimelineConnector';
+import TimelineContent from '@mui/lab/TimelineContent';
+import TimelineDot from '@mui/lab/TimelineDot';
+import WorkingContent from '../../components/about/WorkingContent';
+import WorkingContent02 from '../../components/about/WorkingContent02';
+import Heading2 from '../../components/common/Heading2';
+import Education01 from '../../components/about/Education1';
+import Education02 from '../../components/about/Education2';
 
-import SkillsChips from "./SkillChips";
-import WorkingContent03 from "../../components/about/WorkingContent03";
+import SkillsChips from './SkillChips';
+import WorkingContent03 from '../../components/about/WorkingContent03';
 
-import HalfSpacing from "../../components/common/HalfSpacing";
-import TitleDescription from "../../components/common/TitleDescription";
+import HalfSpacing from '../../components/common/HalfSpacing';
+import TitleDescription from '../../components/common/TitleDescription';
 export default function WorkingExperince() {
   const theme = useTheme();
   return (
     <Box
       sx={{
         backgroundColor: theme.palette.bgColor?.graybg,
-        transition: "background-color 0.5s ease, color 0.5s ease",
-        position: "relative",
+        transition: 'background-color 0.5s ease, color 0.5s ease',
+        position: 'relative',
       }}
     >
       <Container
@@ -37,13 +37,13 @@ export default function WorkingExperince() {
       >
         <HalfSpacing />
         <TitleDescription
-          title={"Working Exp & Academic Milestones"}
+          title={'Working Exp & Academic Milestones'}
           description={
-            "My journey combines technical expertise with formal education, work experience, and community involvement. Each element has contributed something valuable to who I am professionally and personally today."
+            'My journey blends technical expertise, formal education, and hands-on experience, shaping me into the professional I am today.'
           }
         />
         <HalfSpacing />
-        <Box sx={{ width: "100%" }}>
+        <Box sx={{ width: '100%' }}>
           <Grid
             container
             rowSpacing={1}
@@ -62,12 +62,12 @@ export default function WorkingExperince() {
                   <TimelineSeparator>
                     <TimelineDot
                       sx={{
-                        backgroundColor: "#FF7262",
+                        backgroundColor: '#FF7262',
                         transition:
-                          "background-color 0.5s ease, color 0.5s ease",
+                          'background-color 0.5s ease, color 0.5s ease',
 
-                        width: "20px",
-                        height: "20px",
+                        width: '20px',
+                        height: '20px',
                         // Set custom color here
                       }}
                     />
@@ -81,12 +81,12 @@ export default function WorkingExperince() {
                   <TimelineSeparator>
                     <TimelineDot
                       sx={{
-                        backgroundColor: "#FF7262",
+                        backgroundColor: '#FF7262',
                         transition:
-                          "background-color 0.5s ease, color 0.5s ease",
+                          'background-color 0.5s ease, color 0.5s ease',
 
-                        width: "20px",
-                        height: "20px",
+                        width: '20px',
+                        height: '20px',
                         // Set custom color here
                       }}
                     />
@@ -100,12 +100,12 @@ export default function WorkingExperince() {
                   <TimelineSeparator>
                     <TimelineDot
                       sx={{
-                        backgroundColor: "#FF7262",
+                        backgroundColor: '#FF7262',
                         transition:
-                          "background-color 0.5s ease, color 0.5s ease",
+                          'background-color 0.5s ease, color 0.5s ease',
 
-                        width: "20px",
-                        height: "20px",
+                        width: '20px',
+                        height: '20px',
                         // Set custom color here
                       }}
                     />
@@ -130,12 +130,12 @@ export default function WorkingExperince() {
                   <TimelineSeparator>
                     <TimelineDot
                       sx={{
-                        backgroundColor: "#FF7262",
+                        backgroundColor: '#FF7262',
                         transition:
-                          "background-color 0.5s ease, color 0.5s ease",
+                          'background-color 0.5s ease, color 0.5s ease',
 
-                        width: "20px",
-                        height: "20px",
+                        width: '20px',
+                        height: '20px',
                         // Set custom color here
                       }}
                     />
@@ -149,12 +149,12 @@ export default function WorkingExperince() {
                   <TimelineSeparator>
                     <TimelineDot
                       sx={{
-                        backgroundColor: "#FF7262",
+                        backgroundColor: '#FF7262',
                         transition:
-                          "background-color 0.5s ease, color 0.5s ease",
+                          'background-color 0.5s ease, color 0.5s ease',
 
-                        width: "20px",
-                        height: "20px",
+                        width: '20px',
+                        height: '20px',
                         // Set custom color here
                       }}
                     />

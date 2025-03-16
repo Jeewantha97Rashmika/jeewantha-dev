@@ -1,6 +1,6 @@
-import { Grid, Typography, Box, Container, useTheme } from "@mui/material";
-import React from "react";
-import MainBtn from "../../components/MainBtn";
+import { Grid, Typography, Box, Container, useTheme } from '@mui/material';
+import React from 'react';
+import MainBtn from '../../components/MainBtn';
 export default function DescriptionLayout({ description, btnTitle }) {
   const theme = useTheme();
   return (
@@ -12,12 +12,12 @@ export default function DescriptionLayout({ description, btnTitle }) {
       // transition={{ type: "spring", stiffness: 100 }}
       sx={{
         backgroundColor: theme.palette.bgColor?.dec,
-        transition: "background-color 0.5s ease, color 0.5s ease",
-        py:5,
-        height: { xs: "100%" },
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
+        transition: 'background-color 0.5s ease, color 0.5s ease',
+        py: 5,
+        height: { xs: '100%' },
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
       }}
     >
       <Container>
@@ -25,40 +25,40 @@ export default function DescriptionLayout({ description, btnTitle }) {
           <Grid item xs={12} md={5}>
             <Typography
               sx={{
-                fontSize: { xs: "30px", md: "40px" },
-                fontWeight: "bold",
-                color: "#0B0C0C",
-                fontFamily: "Montserrat"
+                fontSize: { xs: '30px', md: '40px' },
+                fontWeight: 'bold',
+                color: '#0B0C0C',
+                fontFamily: 'Montserrat',
               }}
             >
-              Why you should{" "}
+              Why I’m the
             </Typography>
             <Typography
               sx={{
-                fontSize: { xs: "30px", md: "40px" },
-                fontWeight: "bold",
-                fontFamily: "Montserrat",
+                fontSize: { xs: '30px', md: '40px' },
+                fontWeight: 'bold',
+                fontFamily: 'Montserrat',
                 color: theme.palette.textColor?.decText,
               }}
             >
-              hire me Now?
+              Right Choice?
             </Typography>
           </Grid>
           <Grid item xs={12} md={7}>
             <Typography
               sx={{
-                fontSize: { xs: "16px" },
-                color: "#1F1F1F",
+                fontSize: { xs: '16px' },
+                color: '#1F1F1F',
                 fontWeight: 400,
                 mb: 3,
-                fontFamily: "Montserrat"
+                fontFamily: 'Montserrat',
               }}
             >
-              Explore my design services, from user interface and experience to
-              prototyping and testing. Let's craft exceptional digital
-              experiences together.
+              I specialize in UI/UX design, prototyping, and usability testing
+              to create seamless digital experiences. Let’s build something
+              innovative together!
             </Typography>
-            <MainBtn title={"Let’s Talk"} color="#333333"/>
+            <MainBtn title={'Let’s Talk'} color='#333333' />
           </Grid>
         </Grid>
       </Container>
