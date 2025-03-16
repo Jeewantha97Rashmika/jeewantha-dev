@@ -8,7 +8,6 @@ import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import WorkingContent from '../../components/about/WorkingContent';
 import WorkingContent02 from '../../components/about/WorkingContent02';
-import Heading2 from '../../components/common/Heading2';
 import Education01 from '../../components/about/Education1';
 import Education02 from '../../components/about/Education2';
 

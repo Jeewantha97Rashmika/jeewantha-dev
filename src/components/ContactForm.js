@@ -7,9 +7,9 @@ import {
   Snackbar,
   Alert,
   FormControl,
-  FormControlLabel,
-  Radio,
-  RadioGroup,
+  // FormControlLabel,
+  // Radio,
+  // RadioGroup,
   useTheme,
 
 } from "@mui/material";
@@ -111,10 +111,10 @@ export default function ContactForm({ setIsOpen }) {
             />
           </Grid>
 
-          <Grid item xs={12}>
+          {/* <Grid item xs={12}>
             <FormControl fullWidth required>
-              {/* <InputLabel sx={{ color: "white" }}>Project Type</InputLabel> */}
-              {/* <RadioGroup
+            <InputLabel sx={{ color: "white" }}>Project Type</InputLabel>
+              <RadioGroup
                 name="projectType"
                 value={formData.projectType}
                 onChange={handleInputChange}
@@ -138,9 +138,9 @@ export default function ContactForm({ setIsOpen }) {
                   label="Development"
                   sx={{ color: theme.palette.textColor?.secondary }} // White color for the label
                 />
-              </RadioGroup> */}
+              </RadioGroup>
             </FormControl>
-          </Grid>
+          </Grid> */}
           {/* Message Input */}
           <Grid item xs={12}>
             <TextField

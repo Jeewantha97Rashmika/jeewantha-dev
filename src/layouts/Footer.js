@@ -304,7 +304,7 @@ export default function Footer() {
         }}
       >
         <Typography
-          component="h3"
+      
           sx={{
             mt: { md: 5, xs: 5 },
             transition: "transform 0.2s",
@@ -317,7 +317,7 @@ export default function Footer() {
           Copyright © {new Date().getFullYear()} Jeewantha Rashmika. 
         </Typography>
         <Typography
-          component="h3"
+        
           sx={{
             transition: "transform 0.2s",
             color: "#f1f1f1",

@@ -6,12 +6,14 @@ export default function TitleDescription({ title, description, align }) {
   return (
     <Box sx={{ my: 1 }}>
       <Typography
+      variant="h2"
         sx={{
           fontSize: { xs: "30px", md: "40px" },
           fontWeight: "bold",
           color: theme.palette.textColor?.secondary,
           fontFamily: "Montserrat",
           textAlign: align && "center",
+          lineHeight: "1.5",
         }}
       >
         {title}

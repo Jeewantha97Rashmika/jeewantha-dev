@@ -6,10 +6,10 @@ import Projrcts from "./home/Projrcts";
 import FunActivity from "./home/FunActivity";
 import Testimonials from "./home/Testimonials";
 import Servicesnew from "./home/Servicesnew";
-import { Box, useTheme } from "@mui/material";
+import { Box } from "@mui/material";
 
 export default function Home() {
-  const theme = useTheme();
+
   return (
     <>
       <Box>

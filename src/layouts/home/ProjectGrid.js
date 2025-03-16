@@ -14,7 +14,6 @@ import ProjectItem from './ProjectItem';
 import DesignSystem from '../../images/design_system.json';
 import AppleVisionPro from '../../images/apple_vision_pro.json';
 import { FaBehanceSquare } from 'react-icons/fa';
-import Background from '../../images/WireframeBg.svg';
 import TitleDescription from '../../components/common/TitleDescription';
 import Spacing from '../../components/common/Spacing';
 import HalfSpacing from '../../components/common/HalfSpacing';
@@ -218,11 +217,11 @@ export default function ProjectGrid() {
             >
               <Typography
                 sx={{
-                  fontSize: '23px',
+                  fontSize: '24px',
                   fontWeight: 600,
                   color: theme.palette.textColor?.Secondary,
                   fontFamily: 'Montserrat',
-                  lineHeight: '24px',
+                  lineHeight: '29px',
                 }}
               >
                 Explore More UI/UX Design Projects on Behance
