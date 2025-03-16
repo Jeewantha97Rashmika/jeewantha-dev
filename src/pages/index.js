@@ -11,8 +11,8 @@ import ScrollToTop from 'react-scroll-to-top';
 const IndexPage = () => {
   const [themeMode, setThemeMode] = useState(() => {
     return typeof window !== 'undefined'
-      ? localStorage.getItem('themeMode') || 'light'
-      : 'light';
+      ? localStorage.getItem('themeMode') || 'dark'
+      : 'dark';
   });
   // const theme = useTheme();
 
@@ -62,6 +62,7 @@ const IndexPage = () => {
             smooth
             color='#333'
             style={{
+              padding:"5px",
               zIndex: 100000,
             }}
           />

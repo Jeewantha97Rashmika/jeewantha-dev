@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Box, Button, Container, useTheme, useMediaQuery } from "@mui/material";
-import Logo from "../images/JeewanthaLogoblack.svg";
 import Logo2 from "../images/logo.svg";
 import { FiMoon, FiSun } from "react-icons/fi";
 import { motion, AnimatePresence } from "framer-motion";

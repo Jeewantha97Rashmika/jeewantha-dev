@@ -24,7 +24,7 @@ export default function WorkingContent03() {
       <Typography
         component={"p"}
         sx={{
-          color: "#FF7262",
+          color: theme.palette.textColor?.secondary,
           fontSize: "16px",
           fontWeight: 600,
           fontFamily: "Montserrat",

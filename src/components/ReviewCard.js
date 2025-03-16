@@ -24,7 +24,7 @@ export default function ReviewCard({
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        maxWidth: { xs: "100%", md: "50vw" },
+        maxWidth: { xs: "100%", md: "55vw" },
         height: "100%",
         my: 5,
         backgroundColor: theme.palette.cardBgColor?.main,

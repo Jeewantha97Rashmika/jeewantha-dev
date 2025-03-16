@@ -34,12 +34,13 @@ export default function ProjectItem({ project }) {
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
           sx={{
+            minHeight:{md:"31rem",xs:"27rem"},
             boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
             transition:
               "transform 0.3s ease, border 0.5s ease, color 0.5s ease, background-color 0.5s ease",
             // boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
             backgroundColor: theme.palette.cardBgColor?.main,
-            borderRadius: "1.8rem",
+            borderRadius: "20px",
             cursor: "pointer",
             padding: "15px",
             // border: `1px solid ${theme.palette.cardBgColor?.main}`,
@@ -65,9 +66,10 @@ export default function ProjectItem({ project }) {
           >
             <Typography
               sx={{
-                fontSize: "1.5rem",
-                fontWeight: 500,
+                fontSize: "1.4rem",
+                fontWeight: 600,
                 color: theme.palette.textColor?.secondary,
+                fontFamily: "Montserrat",
               }}
             >
               {project.heading}
@@ -91,11 +93,12 @@ export default function ProjectItem({ project }) {
               color: theme.palette.textColor?.main,
               mb:1,
               fontWeight: 400,
+              fontFamily: "Montserrat",
             }}
           >
             {project.subheading}
           </Typography>
-          {/* {project.tools.map((val, key) => {
+          {project.tools.map((val, key) => {
             return (
               <img
                 src={val}
@@ -104,7 +107,7 @@ export default function ProjectItem({ project }) {
                 alt={`Image representing a link for `}
               />
             );
-          })} */}
+          })}
         </Box>
       </Link>
     </Grid>

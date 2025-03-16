@@ -16,6 +16,16 @@ export default function ServiceCard({ title, description, image }) {
   return (
     <>
       <Box
+        component={motion.div}
+        initial={{ opacity: 0, y: 80 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        whileHover={{ scale: 0.98 }} // Framer Motion hover effect
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{
+          type: "spring",
+          stiffness: 100,
+          duration: 0.3,
+        }}
         onClick={handleClick} // Trigger handleClick on Box click
         sx={{
           display: "flex",
@@ -30,7 +40,7 @@ export default function ServiceCard({ title, description, image }) {
           transition:
             "background-color 0.5s ease, color 0.1s ease ,scale 0.3s ease",
           ":hover": {
-            scale: 0.98,
+            // scale: 0.98,
             boxShadow: theme.palette.shadow?.secondary,
             transition:
               "background-color 0.5s ease, color 0.1s ease ,scale 0.3s ease",

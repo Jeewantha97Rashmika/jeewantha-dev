@@ -5,9 +5,8 @@ import ServiceCard from '../../components/ServiceCard';
 import TitleDescription from '../../components/common/TitleDescription';
 import DesignProcess from './DesignProcess';
 import Spacing from '../../components/common/Spacing';
-import { Spa } from '@mui/icons-material';
 import HalfSpacing from '../../components/common/HalfSpacing';
-import DescriptionLayout from './DescriptionLayout';
+
 
 export default function Servicesnew() {
   const theme = useTheme();

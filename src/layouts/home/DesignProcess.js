@@ -1,6 +1,6 @@
-import { Box, Grid, Typography, useTheme, Paper } from "@mui/material";
 import React from "react";
-
+import { Box, Grid, Typography, useTheme, Paper } from "@mui/material";
+import { motion } from "framer-motion";
 export default function DesignProcess() {
   const theme = useTheme();
   
@@ -37,6 +37,16 @@ export default function DesignProcess() {
         {data.map((item, key) => (
           <Grid item xs={12} sm={6} md={3} key={key}>
             <Paper
+              component={motion.div}
+                    initial={{ opacity: 0, y: 80 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    whileHover={{ scale: 0.98 }} // Framer Motion hover effect
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 100,
+                      duration: 0.3,
+                    }}
               elevation={0}
               sx={{
                 height: "100%",
