@@ -46,7 +46,7 @@ const IndexPage = () => {
         <meta property='og:type' content='website' />
         <meta
           property='og:image'
-          content='https://yourwebsite.com/og-image.jpg'
+          content='https://cdn.jeewantharashmika.com/og/jeewantha_rashmika.png'
         />
         <meta
           property='og:site_name'
