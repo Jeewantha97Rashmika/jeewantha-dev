@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { Box, useMediaQuery, useTheme } from "@mui/material";
+import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
 export default function PhotoSet() {
   const theme = useTheme();
   return (
@@ -23,20 +23,21 @@ export default function PhotoSet() {
         paddingBottom: "10rem",
       }}
     >
-      <h2
-        style={{
+      <Typography
+        sx={{
           position: "relative",
           zIndex: 0,
-          fontSize: "18vw",
+          fontSize: "23vw",
           fontWeight: "900",
           color: theme.palette.textColor?.funTextColor,
           lineHeight: "1",
           textAlign: "center",
+          fontFamily: "Montserrat",
         }}
       >
         Fav Memo
         <span style={{ color: theme.palette.textColor?.funTextColor }}>.</span>
-      </h2>
+      </Typography>
       <Cards />
     </Box>
   );

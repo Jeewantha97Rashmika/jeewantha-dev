@@ -30,7 +30,9 @@ export default function CountBanner() {
           }}
         >
           <Typography
+          variant='h2'
             sx={{
+              
               color:"rgb(255, 255, 255)",
               fontSize: "40px",
               fontWeight: 800,
@@ -40,6 +42,7 @@ export default function CountBanner() {
             About Me
           </Typography>
           <Typography
+          variant='p'
             sx={{
               color:"rgba(218, 218, 218, 0.8)",
               fontSize: "16px",
@@ -47,6 +50,7 @@ export default function CountBanner() {
               fontFamily: 'Montserrat',
               textAlign: 'center',
               maxWidth: '800px',
+              lineHeight: '1.5',
             }}
           >
             I’m a UI/UX Designer & Engineer passionate about creating intuitive
@@ -56,6 +60,7 @@ export default function CountBanner() {
             impactful solutions together.
           </Typography>
           <Typography
+            variant='p'
             sx={{
               color:"rgba(218, 218, 218, 0.8)",
               fontSize: "16px",
@@ -63,6 +68,7 @@ export default function CountBanner() {
               fontFamily: 'Montserrat',
               textAlign: 'center',
               maxWidth: '800px',
+              lineHeight: '1.5',
             }}
           >
             From interactive prototypes to pixel-perfect designs, I strive to

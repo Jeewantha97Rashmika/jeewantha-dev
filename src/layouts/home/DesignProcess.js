@@ -63,13 +63,15 @@ export default function DesignProcess() {
               }}
             >
               <Typography
-                variant="h6"
+                variant="h3"
                 sx={{
                   mb: 2,
                   display: "flex",
                   alignItems: "center",
                   fontWeight: 600,
                   fontFamily: "Montserrat",
+                  fontSize: "20px",
+                  color: theme.palette.textColor?.secondary,
                 }}
               >
                 <Box

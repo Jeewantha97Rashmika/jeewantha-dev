@@ -63,6 +63,7 @@ export default function ServiceCard({ title, description, image }) {
           <Grid item xs={8}>
             <Box sx={{ ml: 2 }}>
               <Typography
+                variant="h3"
                 sx={{
                   color: theme.palette.textColor?.secondary,
                   fontSize: "1rem",

@@ -65,6 +65,7 @@ export default function ProjectItem({ project }) {
             }}
           >
             <Typography
+              variant="h4"
               sx={{
                 fontSize: "1.4rem",
                 fontWeight: 600,

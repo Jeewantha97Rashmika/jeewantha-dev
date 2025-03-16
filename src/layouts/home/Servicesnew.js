@@ -95,6 +95,7 @@ export default function Servicesnew() {
           </Grid>
           <Grid item xs={12} md={5}>
             <Typography
+            variant='h2'
               sx={{
                 fontSize: { xs: '30px', md: '40px' },
                 fontWeight: 'bold',
