@@ -10,16 +10,16 @@ module.exports = {
     siteUrl: `https://jeewantharashmika.com`,
   },
   plugins: [
-    "gatsby-plugin-image",
-    "gatsby-plugin-sitemap",
+    'gatsby-plugin-image',
+    'gatsby-plugin-sitemap',
     {
-      resolve: "gatsby-plugin-manifest",
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        icon: "src/images/fav.png",
+        icon: 'src/images/fav.png',
       },
     },
 
-    "gatsby-transformer-sharp",
+    'gatsby-transformer-sharp',
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
@@ -32,24 +32,25 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "images",
-        path: "./src/images/",
+        name: 'images',
+        path: './src/images/',
       },
-      __key: "images",
+      __key: 'images',
+    },
+    'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-plugin-no-sourcemaps',
     },
     {
-      resolve: "gatsby-plugin-no-sourcemaps",
-    },
-    {
-      resolve: "gatsby-plugin-google-tagmanager",
+      resolve: 'gatsby-plugin-google-tagmanager',
       options: {
-        id: "GTM-TH73QWLG",
+        id: 'GTM-TH73QWLG',
 
         includeInDevelopment: false,
 
-        defaultDataLayer: { platform: "gatsby" },
+        defaultDataLayer: { platform: 'gatsby' },
       },
     },
   ],

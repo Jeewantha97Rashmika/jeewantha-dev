@@ -97,18 +97,18 @@ const ProjectItemPlaceholder = () => {
 };
 
 export default function ProjectGrid() {
-  const shopifyDevelopment = [
-    'https://www.realisable.co.uk/wp-content/themes/realisable/images/logos/shopify.svg',
-    'https://www.vectorlogo.zone/logos/figma/figma-icon.svg',
-    'https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg',
-  ];
+  // const shopifyDevelopment = [
+  //   'https://www.realisable.co.uk/wp-content/themes/realisable/images/logos/shopify.svg',
+  //   'https://www.vectorlogo.zone/logos/figma/figma-icon.svg',
+  //   'https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg',
+  // ];
 
-  const Development = [
-    'https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg',
-    'https://cdn.iconscout.com/icon/free/png-512/free-gatsby-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-vol-3-pack-logos-icons-2944886.png?f=webp&w=256',
-    'https://www.vectorlogo.zone/logos/figma/figma-icon.svg',
-    'https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg',
-  ];
+  // const Development = [
+  //   'https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg',
+  //   'https://cdn.iconscout.com/icon/free/png-512/free-gatsby-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-vol-3-pack-logos-icons-2944886.png?f=webp&w=256',
+  //   'https://www.vectorlogo.zone/logos/figma/figma-icon.svg',
+  //   'https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg',
+  // ];
 
   const uidesign = [
     'https://www.vectorlogo.zone/logos/figma/figma-icon.svg',

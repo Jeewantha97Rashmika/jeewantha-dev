@@ -105,7 +105,7 @@ export default function ProjectItem({ project }) {
                 src={val}
                 key={key}
                 style={{ width: "1.5rem", marginRight: "1rem" }}
-                alt={`Image representing a link for `}
+                alt={`representing a link for `}
               />
             );
           })}

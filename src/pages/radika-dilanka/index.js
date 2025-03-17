@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import Header from '../../layouts/Header';
-import ScrollToTop from 'react-scroll-to-top';
 import '../../global.css';
-import Footer from '../../layouts/Footer';
-import { Helmet } from 'react-helmet';
 import { Box } from '@mui/material';
+import Header from '../../layouts/Header';
+import Footer from '../../layouts/Footer';
+import ScrollToTop from 'react-scroll-to-top';
 import ThemeLayout from '../../Theme/ThemeLayout';
 import Layout from '../../layouts/xCamera/Layout';
 import Cover from '../../images/radika-dilanka-cover.png';
+import SeoSection from '../../components/shoezone/SeoSection';
 import DesignImage from '../../images/radika-dilanka-design.png';
 
 const IndexPage = () => {
@@ -28,14 +28,15 @@ const IndexPage = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Jeewantha Rashmika | UI/UX Designer</title>
-
-        <meta
-          name='description'
-          content='UI/UX designer who is interested in solving complex problems through designing and mobile app/web development'
-        />
-      </Helmet>
+      <SeoSection
+        title={
+          ' Radika Dilanka Portfolio Website | UI/UX Design by Jeewantha Rashmika'
+        }
+        description={
+          'Clean and modern portfolio UI/UX design for Radika Dilanka, focused on usability and aesthetics.'
+        }
+        canonical={'projects/radika-dilanka/'}
+      />
 
       <ThemeLayout themeMode={themeMode}>
         <Box
