@@ -29,12 +29,18 @@ const IndexPage = () => {
   return (
     <>
       <Helmet>
-        <title>Jeewantha Rashmika | UI/UX Designer</title>
-
+        <title>
+          Radika Dilanka Portfolio Website | UI/UX Design by Jeewantha Rashmika
+        </title>
+        <link
+          rel='canonical'
+          href='https://jeewantharashmika.com/projects/radika-dilanka/'
+        />
         <meta
           name='description'
-          content='UI/UX designer who is interested in solving complex problems through designing and mobile app/web development'
+          content='Clean and modern portfolio UI/UX design for Radika Dilanka, focused on usability and aesthetics.'
         />
+        <meta name='robots' content='noindex, nofollow' />
       </Helmet>
 
       <ThemeLayout themeMode={themeMode}>

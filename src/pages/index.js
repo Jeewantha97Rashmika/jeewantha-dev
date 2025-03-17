@@ -36,7 +36,7 @@ const IndexPage = () => {
         <link rel='canonical' href='https://jeewantharashmika.com/' />
         <meta
           property='og:title'
-          content='UI/UX Designer & Engineer | Expert in Web & App Design'
+          content='Jeewantha Rashmika - UI/UX Designer & Engineer | Expert in Web & App Design'
         />
         <meta
           property='og:description'
@@ -48,6 +48,7 @@ const IndexPage = () => {
           property='og:image'
           content='https://cdn.jeewantharashmika.com/og/jeewantha_rashmika.png'
         />
+        <meta name='robots' content='noindex, nofollow' />
         <meta
           property='og:site_name'
           content='Jeewantha - UI/UX Designer & Engineer'
@@ -62,7 +63,7 @@ const IndexPage = () => {
             smooth
             color='#333'
             style={{
-              padding:"5px",
+              padding: '5px',
               zIndex: 100000,
             }}
           />
