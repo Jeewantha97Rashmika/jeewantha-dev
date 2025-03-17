@@ -3,6 +3,7 @@ import { useLottie } from "lottie-react";
 import { Box, Grid, Typography, useTheme } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { Link } from "gatsby";
+import { motion } from "framer-motion";
 
 export default function ProjectItem({ project }) {
   const [isHovered, setIsHovered] = useState(false);
@@ -31,6 +32,15 @@ export default function ProjectItem({ project }) {
     }}>
       <Link to={project.href} style={{ textDecoration: "none" }}>
         <Box
+         component={motion.div}
+         initial={{ opacity: 0, y: 80 }}
+         whileInView={{ opacity: 1, y: 0 }}
+         viewport={{ once: true, amount: 0.2 }}
+         transition={{
+           type: "spring",
+           stiffness: 100,
+           duration: 0.3,
+         }}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
           sx={{

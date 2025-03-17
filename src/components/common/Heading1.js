@@ -15,9 +15,10 @@ export default function Heading1({ text1, component, text2 }) {
           color: theme.palette.textColor?.secondary,
         }}
       >
-        {text1}
+       <span style={{color: "#FF7262"}}>{text1}</span>
+       <span style={{color: theme.palette.textColor?.secondary}}>{text2}</span>
       </Typography>
-      <Typography
+      {/* <Typography
         component={component}
         sx={{
           fontSize: {xs:"44px", md:"48px",lg:"58px"},
@@ -28,7 +29,7 @@ export default function Heading1({ text1, component, text2 }) {
         }}
       >
         {text2}
-      </Typography>
+      </Typography> */}
     </>
   );
 }
