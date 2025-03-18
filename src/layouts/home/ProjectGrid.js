@@ -124,7 +124,7 @@ export default function ProjectGrid() {
         'Modern Photographer official web site UI/UX Design using figma and photoshop',
       imgSrc: Photographer,
       technology: 'uidesign',
-      href: '/x-camera',
+      href: '/projects/x-camera',
     },
     {
       heading: 'Radika dilanka Official Website',
@@ -133,7 +133,7 @@ export default function ProjectGrid() {
         "Radikadilanka's official website UI/UX Design using figma and photoshop.",
       imgSrc: Radika,
       technology: 'uidesign',
-      href: '/radika-dilanka',
+      href: '/projects/radika-dilanka',
     },
     {
       heading: 'Comprehensive Design System',
@@ -142,7 +142,7 @@ export default function ProjectGrid() {
         'creating a complete, customized design system for a client, built entirely in Figma',
       imgSrc: DesignSystem,
       technology: 'uidesign',
-      href: '/design-system',
+      href: '/projects/design-system',
     },
     {
       heading: 'Apple Vision Pro UI Reimagined',
@@ -151,7 +151,7 @@ export default function ProjectGrid() {
         "Figma design project explores how popular social media platforms might evolve in Apple's spatial computing environment",
       imgSrc: AppleVisionPro,
       technology: 'uidesign',
-      href: '/apple-vision-pro',
+      href: '/projects/apple-vision-pro',
     },
   ];
 
@@ -219,7 +219,7 @@ export default function ProjectGrid() {
                 sx={{
                   fontSize: '24px',
                   fontWeight: 600,
-                  color: theme.palette.textColor?.Secondary,
+                  color: theme.palette.textColor?.secondary,
                   fontFamily: 'Montserrat',
                   lineHeight: '29px',
                 }}

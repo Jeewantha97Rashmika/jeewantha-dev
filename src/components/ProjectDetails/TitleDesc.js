@@ -7,6 +7,7 @@ export default function TitleDesc({ title, description, roles, client }) {
     <div>
       {" "}
       <Typography
+      variant="h1"
         sx={{
           fontSize: { xs: "30px", md: "40px" },
           fontWeight: "bold",

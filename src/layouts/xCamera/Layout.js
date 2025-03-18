@@ -67,6 +67,7 @@ export default function Layout({
           style={{
             boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
             borderRadius: "1rem",
+            border: "4px solid #3f3f3f",
           }}
         />
       </Box>

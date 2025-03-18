@@ -20,7 +20,7 @@ export default function ServiceCard({ title, description, image }) {
         initial={{ opacity: 0, y: 80 }}
         whileInView={{ opacity: 1, y: 0 }}
         whileHover={{ scale: 0.98 }} // Framer Motion hover effect
-        viewport={{ once: true, amount: 0.2 }}
+        viewport={{ once: true, amount: 0.5 }}
         transition={{
           type: "spring",
           stiffness: 100,
