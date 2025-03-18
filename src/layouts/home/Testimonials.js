@@ -99,18 +99,18 @@ export default function Testimonials() {
         {
           name: 'Facebook',
           icon: <FaFacebook />,
-          link: 'https://www.facebook.com/radikadilanka/',
+          link: 'https://www.facebook.com/iroshana/',
         },
         {
           name: 'linkedin',
           icon: <FaLinkedin />,
-          link: 'https://www.linkedin.com/jeewantherashmika/',
+          link: 'https://www.linkedin.com/iroshana/',
         },
-        {
-          name: 'Website',
-          icon: <TbWorldWww />,
-          link: 'https:/radikadilanka.com',
-        },
+        // {
+        //   name: 'Website',
+        //   icon: <TbWorldWww />,
+        //   link: 'https:/radikadilanka.com',
+        // },
       ],
       review:
         'Jeewantha is a software engineer, but he also happens to be exceptionally gifted. No one can beat his capabilities when it comes to UI/UX, software architecture, and product design. These are the two most important qualities that our projects constantly need, innovation and detail orientation. Since we worked together on many projects, I can say that he has an outstanding ability to change complicated requirements into beautiful solutions. He would be a great asset to any team because of his dedication, professionalism, and innovative mindset. Besides technical skills, Jeewantha makes the team work in a collaborative atmosphere that encourages people to share ideas and think creatively about solutions for problems at hand. Projects with his contributions are not only delivered but also exceed client expectations and leave an impressive signature on every piece of work undertaken. I recommend him without any reservations.',

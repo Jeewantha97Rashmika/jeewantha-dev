@@ -2,34 +2,32 @@ import React, { useState, useEffect } from "react";
 import Header from "../../layouts/Header";
 
 import "../../global.css";
-import ProjectGrid from '../../layouts/home/ProjectGrid'
-import SeoSection from '../../components/shoezone/SeoSection'
-import ThemeLayout from '../../Theme/ThemeLayout'
-import { Box } from '@mui/material'
-import ScrollToTop from '../../components/ScrollToTop'
-import Footer from '../../layouts/Footer'
+import ProjectGrid from "../../layouts/home/ProjectGrid";
+import SeoSection from "../../components/shoezone/SeoSection";
+import ThemeLayout from "../../Theme/ThemeLayout";
+import { Box } from "@mui/material";
+import ScrollToTop from "../../components/ScrollToTop";
+import Footer from "../../layouts/Footer";
 
 export default function Index() {
-      const [themeMode, setThemeMode] = useState(() => {
-        return typeof window !== "undefined"
-          ? localStorage.getItem("themeMode") || "light"
-          : "light";
-      });
-      // const theme = useTheme();
-    
-      useEffect(() => {
-        localStorage.setItem("themeMode", themeMode);
-      }, [themeMode]);
-    
-    
-    
-      const toggleTheme = () => {
-        setThemeMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
-      };
-    
+  const [themeMode, setThemeMode] = useState(() => {
+    return typeof window !== "undefined"
+      ? localStorage.getItem("themeMode") || "light"
+      : "light";
+  });
+  // const theme = useTheme();
+
+  useEffect(() => {
+    localStorage.setItem("themeMode", themeMode);
+  }, [themeMode]);
+
+  const toggleTheme = () => {
+    setThemeMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
+  };
+
   return (
     <div>
-        <SeoSection
+      <SeoSection
         title={"Photographer Portfolio Website Design"}
         description={
           "Elegant UI design for a professional photographer's digital platform, enhancing brand identity while showcasing exceptional photography."
@@ -50,13 +48,14 @@ export default function Index() {
             smooth
             color="#333"
             style={{
+              padding: "5px",
               zIndex: 100000,
             }}
           />
-         <ProjectGrid/>
+          <ProjectGrid />
           <Footer />
         </Box>
       </ThemeLayout>
     </div>
-  )
+  );
 }

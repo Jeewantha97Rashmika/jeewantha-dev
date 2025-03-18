@@ -54,6 +54,7 @@ const IndexPage = () => {
             smooth
             color='#333'
             style={{
+              padding: '5px',
               zIndex: 100000,
             }}
           />

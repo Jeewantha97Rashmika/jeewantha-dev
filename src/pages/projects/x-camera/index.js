@@ -48,11 +48,13 @@ const IndexPage = () => {
           <ScrollToTop
             top={900}
             smooth
-            color="#333"
+            color='#333'
             style={{
+              padding: '5px',
               zIndex: 100000,
             }}
           />
+      
           <Layout
             cover={
               "https://cdn.jeewantharashmika.com/projects/x_camera_cover.png"
