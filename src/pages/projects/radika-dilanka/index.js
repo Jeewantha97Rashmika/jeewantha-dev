@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import '../../../global.css';
 import { Box } from '@mui/material';
 import Header from '../../../layouts/Header';
@@ -9,25 +9,10 @@ import Layout from '../../../layouts/xCamera/Layout';
 import Cover from '../../../images/radika-dilanka-cover.png';
 import SeoSection from '../../../components/shoezone/SeoSection';
 import DesignImage from '../../../images/radika-dilanka-design.png';
+import useThemeMode from '../../../customHooks/useThemeMode';
 
 const IndexPage = () => {
-  const [themeMode, setThemeMode] = useState(() => {
-    return typeof window !== 'undefined'
-      ? localStorage.getItem('themeMode') || 'light'
-      : 'light';
-  });
-  // const theme = useTheme();
-
-  useEffect(() => {
-    localStorage.setItem('themeMode', themeMode);
-  }, [themeMode]);
-
-
-
-
-  const toggleTheme = () => {
-    setThemeMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
-  };
+  const { themeMode, toggleTheme } = useThemeMode();
 
   return (
     <>

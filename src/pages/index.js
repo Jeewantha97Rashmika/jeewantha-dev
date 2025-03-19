@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Header from '../layouts/Header';
 import Home from '../layouts/Home';
 import '../global.css';
@@ -7,22 +7,10 @@ import { Helmet } from 'react-helmet';
 import { Box } from '@mui/material';
 import ThemeLayout from '../Theme/ThemeLayout';
 import ScrollToTop from 'react-scroll-to-top';
+import useThemeMode from '../customHooks/useThemeMode';
 
 const IndexPage = () => {
-  const [themeMode, setThemeMode] = useState(() => {
-    return typeof window !== 'undefined'
-      ? localStorage.getItem('themeMode') || 'dark'
-      : 'dark';
-  });
-  // const theme = useTheme();
-
-  useEffect(() => {
-    localStorage.setItem('themeMode', themeMode);
-  }, [themeMode]);
-
-  const toggleTheme = () => {
-    setThemeMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
-  };
+  const { themeMode, toggleTheme } = useThemeMode();
 
   return (
     <>
@@ -48,7 +36,6 @@ const IndexPage = () => {
           property='og:image'
           content='https://cdn.jeewantharashmika.com/og/jeewantha_rashmika.png'
         />
-        <meta name='robots' content='noindex, nofollow' />
         <meta
           property='og:site_name'
           content='Jeewantha - UI/UX Designer & Engineer'
