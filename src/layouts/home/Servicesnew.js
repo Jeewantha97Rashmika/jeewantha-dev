@@ -106,6 +106,7 @@ export default function Servicesnew() {
                 fontWeight: 'bold',
                 color: theme.palette.textColor?.secondary,
                 fontFamily: 'Montserrat',
+                mb: 2,
               }}
             >
               My Design Services
@@ -115,7 +116,7 @@ export default function Servicesnew() {
                 fontSize: { xs: '16px' },
                 color: theme.palette.textColor?.main,
                 fontWeight: 400,
-                mb: 3,
+                mb: 2,
                 fontFamily: 'Montserrat',
               }}
             >

@@ -69,6 +69,7 @@ export default function ServiceCard({ title, description, image }) {
                   fontSize: "1rem",
                   fontWeight: 600,
                   fontFamily: "Montserrat",
+                  mb: 1,
                 }}
               >
                 {title}

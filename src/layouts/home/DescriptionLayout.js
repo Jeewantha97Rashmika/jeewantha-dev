@@ -49,7 +49,7 @@ export default function DescriptionLayout({ description, btnTitle }) {
               sx={{
                 fontSize: { xs: '16px' },
                 color: '#1F1F1F',
-                fontWeight: 400,
+                fontWeight: 600,
                 mb: 3,
                 fontFamily: 'Montserrat',
               }}

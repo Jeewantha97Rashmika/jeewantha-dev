@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Typography, useTheme ,Button} from "@mui/material";
+import { Box, Typography, useTheme, Button } from "@mui/material";
 import { motion } from "framer-motion";
 export default function ReviewCard({
   img,
@@ -138,38 +138,43 @@ export default function ReviewCard({
           );
         })}
       </Box>
-      <div>
+      <motion.div
+        initial={false}
+        animate={{
+          height: isExpanded ? "auto" : "8rem", // Adjust based on how many lines you'd like to show when collapsed
+          opacity: isExpanded ? 1 : 0.9,
+        }}
+        transition={{ duration: 0.4, ease: "easeInOut" }}
+        style={{ overflow: "hidden" }}
+      >
         <Typography
           sx={{
-          
             padding: "1rem",
             color: theme.palette.textColor?.main,
             fontSize: { xs: "12px", md: "15px" },
             fontWeight: 400,
             fontFamily: "Montserrat",
             lineHeight: "1.5rem",
-            display: "-webkit-box",
-            WebkitBoxOrient: "vertical",
-            overflow: isExpanded ? "visible" : "hidden",
-            textOverflow: "ellipsis",
-            WebkitLineClamp: isExpanded ? "none" : 5, // Limits to 5 lines
+            whiteSpace: "pre-line",
           }}
         >
           {review}
         </Typography>
-        <Button
-          onClick={toggleExpand}
-          sx={{
-            mt: 1,
-            color: "#FF5733",
-            fontSize: "12px",
-            fontWeight: 500,
-            textTransform: "none",
-          }}
-        >
-          {isExpanded ? "Read Less" : "Read More"}
-        </Button>
-      </div>
+      </motion.div>
+
+      <Button
+        onClick={toggleExpand}
+        sx={{
+          mt: 1,
+          color: "#FF5733",
+          fontSize: "12px",
+          fontWeight: 500,
+          textTransform: "none",
+        }}
+      >
+        {isExpanded ? "Read Less" : "Read More"}
+      </Button>
+
       <Typography
         sx={{
           color: theme.palette.textColor?.secondary,
