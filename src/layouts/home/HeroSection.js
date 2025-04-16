@@ -172,7 +172,7 @@ export default function HeroSection() {
                     position: 'relative',
                     zIndex: 2,
                   }}
-                  alt='Jeewantha Rashmika'
+                  alt='ui-ux-designe-sri-lanka'
                 />
               </Box>
             </Grid>

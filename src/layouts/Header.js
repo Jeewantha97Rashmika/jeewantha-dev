@@ -165,7 +165,7 @@ export default function Header({ themeMode, toggleTheme }) {
               }}
             >
               <a href="/">
-                <img src={Logo2} alt="logo" width={"auto"} height={20} />
+                <img src={Logo2} alt="jeewantha-logo" width={"auto"} height={20} />
               </a>
             </Box>
 

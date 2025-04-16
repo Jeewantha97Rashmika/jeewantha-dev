@@ -29,7 +29,7 @@ export default function Education01() {
           fontFamily: "Montserrat",
         }}
       >
-        Information and Communication Technology - BICT(horns)
+        Information and Communication Technology - BICT(hons)
       </Typography>{" "}
       <Typography
         component={"p"}
