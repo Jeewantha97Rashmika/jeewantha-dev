@@ -36,7 +36,7 @@ export default function Testimonials() {
         {
           name: 'Website',
           icon: <TbWorldWww />,
-          link: 'https:/radikadilanka.com',
+          link: 'https://radikadilanka.com',
         },
       ],
       review:
