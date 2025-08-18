@@ -105,7 +105,7 @@ const darkTheme = createTheme({
       svg: "#fff",
       secondary: "#fff",
       decText: "#fff",
-      funTextColor: "#C3C4FF",
+      funTextColor: "#FF7262",
       bigText: "#AAAAAA",
     },
     borderColor: {
