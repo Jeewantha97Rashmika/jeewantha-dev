@@ -48,7 +48,7 @@ export default function ContactForm({ setIsOpen }) {
 
     try {
       // Send data to backend API
-      const response = await fetch('http://localhost:3001/api/contact', {
+      const response = await fetch('https://contact-me-backend.vercel.app/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
