@@ -192,7 +192,7 @@ const IndexPage = () => {
       <ThemeLayout themeMode={themeMode}>
         <Box
           sx={{
-            backgroundColor: themeMode === "light" ? "#f7f8fa" : "#0b0b0d",
+            backgroundColor: themeMode === "light" ? "#F6F9FC" : "#1A1C1D",
             transition: "background-color 0.3s ease, color 0.3s ease",
           }}
         >
@@ -223,7 +223,7 @@ const IndexPage = () => {
                   <Typography
                     sx={{
                       fontSize: { xs: "14px", sm: "16px" },
-                      color: "#FF7262",
+                      color: "#008060",
                       fontWeight: 600,
                       fontFamily: "Montserrat",
                       mb: 2,
@@ -245,7 +245,7 @@ const IndexPage = () => {
                     }}
                   >
                     Transform Your
-                    <span style={{ color: "#FF7262" }}> E-commerce</span> Vision
+                    <span style={{ color: "#008060" }}> E-commerce</span> Vision
                     <br />
                     Into Reality
                   </Typography>
@@ -258,15 +258,17 @@ const IndexPage = () => {
                       mb: 4,
                     }}
                   >
-                    Professional Shopify store development, custom theme design,
-                    and optimization services that drive sales and enhance user
-                    experience. Let's build your perfect online store.
+                    Professional{" "}
+                    <strong style={{ color: "#008060" }}>Shopify store</strong>{" "}
+                    development, custom theme design, and optimization services
+                    that drive sales and enhance user experience. Let's build
+                    your perfect online store.
                   </Typography>
                   <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
                     <Button
                       href="#services"
                       sx={{
-                        backgroundColor: "#FF7262",
+                        backgroundColor: "#008060",
                         color: "#fff",
                         fontFamily: "Montserrat",
                         fontWeight: 600,
@@ -275,7 +277,7 @@ const IndexPage = () => {
                         py: 1.5,
                         borderRadius: "30px",
                         "&:hover": {
-                          backgroundColor: "#e55a4f",
+                          backgroundColor: "#004C3F",
                           transform: "translateY(-2px)",
                         },
                         transition: "all 0.3s ease",
@@ -287,8 +289,8 @@ const IndexPage = () => {
                       href="#contact"
                       variant="outlined"
                       sx={{
-                        borderColor: "#FF7262",
-                        color: "#FF7262",
+                        borderColor: "#008060",
+                        color: "#008060",
                         fontFamily: "Montserrat",
                         fontWeight: 600,
                         textTransform: "none",
@@ -296,7 +298,7 @@ const IndexPage = () => {
                         py: 1.5,
                         borderRadius: "30px",
                         "&:hover": {
-                          backgroundColor: "#FF7262",
+                          backgroundColor: "#008060",
                           color: "#fff",
                           transform: "translateY(-2px)",
                         },
@@ -322,7 +324,7 @@ const IndexPage = () => {
                       alignItems: "center",
                       height: { xs: "300px", md: "400px" },
                       background:
-                        "linear-gradient(135deg, #FF7262 0%, #FF9A8B 100%)",
+                        "linear-gradient(135deg, #008060 0%, #004C3F 100%)",
                       borderRadius: "20px",
                       overflow: "hidden",
                     }}
@@ -372,7 +374,7 @@ const IndexPage = () => {
                         sx={{
                           fontSize: { xs: "32px", md: "48px" },
                           fontWeight: "bold",
-                          color: "#FF7262",
+                          color: "#008060",
                           fontFamily: "Montserrat",
                           lineHeight: 1,
                         }}
@@ -408,7 +410,7 @@ const IndexPage = () => {
                 <Typography
                   sx={{
                     fontSize: { xs: "14px", sm: "16px" },
-                    color: "#FF7262",
+                    color: "#008060",
                     fontWeight: 600,
                     fontFamily: "Montserrat",
                     mb: 2,
@@ -494,7 +496,7 @@ const IndexPage = () => {
                           width: 60,
                           height: 60,
                           borderRadius: "50%",
-                          backgroundColor: "#FF7262",
+                          backgroundColor: "#008060",
                           display: "flex",
                           alignItems: "center",
                           justifyContent: "center",
@@ -549,7 +551,7 @@ const IndexPage = () => {
                             >
                               <CheckCircle
                                 size={16}
-                                color="#FF7262"
+                                color="#008060"
                                 style={{ marginRight: "8px" }}
                               />
                               <Typography
@@ -585,7 +587,7 @@ const IndexPage = () => {
                 <Typography
                   sx={{
                     fontSize: { xs: "14px", sm: "16px" },
-                    color: "#FF7262",
+                    color: "#008060",
                     fontWeight: 600,
                     fontFamily: "Montserrat",
                     mb: 2,
@@ -640,7 +642,7 @@ const IndexPage = () => {
                           width: 50,
                           height: 50,
                           borderRadius: "50%",
-                          backgroundColor: "#FF7262",
+                          backgroundColor: "#008060",
                           color: "#fff",
                           display: "flex",
                           alignItems: "center",
@@ -697,7 +699,7 @@ const IndexPage = () => {
                 <Typography
                   sx={{
                     fontSize: { xs: "14px", sm: "16px" },
-                    color: "#FF7262",
+                    color: "#008060",
                     fontWeight: 600,
                     fontFamily: "Montserrat",
                     mb: 2,
@@ -751,8 +753,8 @@ const IndexPage = () => {
                           <Star
                             key={i}
                             size={16}
-                            fill="#FF7262"
-                            color="#FF7262"
+                            fill="#FFD700"
+                            color="#FFD700"
                           />
                         ))}
                       </Box>
@@ -810,11 +812,11 @@ const IndexPage = () => {
                 elevation={0}
                 sx={{
                   background:
-                    "linear-gradient(135deg, #FF7262 0%, #FF9A8B 100%)",
+                    "linear-gradient(135deg, #008060 0%, #004C3F 100%)",
                   borderRadius: 4,
                   p: { xs: 4, md: 8 },
                   textAlign: "center",
-                  color: "white",
+                  color: "#E3E3E3",
                 }}
               >
                 <Typography
