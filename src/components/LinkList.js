@@ -39,6 +39,7 @@ export default function LinkList({ isActive, setSelectedIndicator, data,setIsAct
           color: "white",
           textDecoration: "none",
           marginBottom: "3rem",
+       
         }}
         href={href}
       >

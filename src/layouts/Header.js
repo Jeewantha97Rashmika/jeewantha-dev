@@ -119,7 +119,7 @@ export default function Header({ themeMode, toggleTheme }) {
               ? theme.palette.bgColor?.header // When scrolled
               : "transparent",
             backdropFilter: isScrolled ? "blur(12px)" : "none",
-            width: isScrolled ? "53rem" : "100%",
+            width:  "100%",
             // borderRadius: isScrolled ? "60px" : "60px",
             borderRadius: isScrolled
               ? isMobile
@@ -186,7 +186,7 @@ export default function Header({ themeMode, toggleTheme }) {
               <RevealLinks title={"Work"} link="/#work" />
               <RevealLinks title={"Testimonials"} link="/#testimonials" />
               <RevealLinks
-                title={"Shopify Services"}
+                title={"Shopify-Services"}
                 link="/shopify-store-setup"
               />
 
