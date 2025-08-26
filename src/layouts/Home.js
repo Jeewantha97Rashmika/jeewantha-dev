@@ -6,6 +6,7 @@ import Projrcts from "./home/Projrcts";
 import FunActivity from "./home/FunActivity";
 import Testimonials from "./home/Testimonials";
 import Servicesnew from "./home/Servicesnew";
+import ShopifySection from "./home/ShopifySection";
 import { Box } from "@mui/material";
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
         <CountBanner />
         {/* <Services /> */}
         <Servicesnew />
+        {/* <ShopifySection /> */}
         <Projrcts />
         <Testimonials />
         <EduAndExp />

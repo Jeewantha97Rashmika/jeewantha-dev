@@ -13,7 +13,6 @@ export default function Servicesnew() {
   const theme = useTheme();
 
   const sercivesData = [
-
     {
       title: 'UI/UX Design and Engineering',
       description:

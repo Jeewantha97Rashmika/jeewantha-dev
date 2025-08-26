@@ -22,7 +22,7 @@ import {
   Clock,
   Award,
 } from "lucide-react";
-import ShopifyLogo from "../../components/ShopifyLogo";
+import shopifyWhiteLogo from "../../images/shopify-w.svg";
 
 const IndexPage = () => {
   const { themeMode, toggleTheme } = useThemeMode();
@@ -338,7 +338,15 @@ const IndexPage = () => {
                         flexDirection: { xs: "column", sm: "row" },
                       }}
                     >
-                      <ShopifyLogo size={90} color="white" />
+                      <img 
+                        src={shopifyWhiteLogo} 
+                        alt="Shopify Logo" 
+                        style={{ 
+                          width: 90, 
+                          height: 90,
+                          objectFit: "contain"
+                        }} 
+                      />
                       <Box
                         sx={{
                           width: "2px",

@@ -52,6 +52,7 @@ export default function Nav({ themeMode, toggleTheme, setIsActive }) {
     { title: "Services", href: "/#services" },
     { title: "Work", href: "/#work" },
     { title: "Testimonials", href: "/#testimonials" },
+    { title: "Shopify", href: "/shopify-store-setup" },
     {
       title: themeMode === "light" ? "Dark Mode" : "Light Mode",
       href: toggleTheme,

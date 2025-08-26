@@ -179,7 +179,13 @@ export default function ShopifyFooter() {
         </Box>
         <Box sx={{ mt: { md: 5, xs: 5 } }}>
           <Grid item xs={12}>
-            <div style={{ display: "flex", justifyContent: "center" }}>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                margin: "0 auto",
+              }}
+            >
               <Button
                 onClick={handleServicesClick}
                 color="inherit"
@@ -224,7 +230,7 @@ export default function ShopifyFooter() {
               >
                 Work
               </Button>
-              <Button
+              {/* <Button
                 onClick={handleBlogClick}
                 color="inherit"
                 sx={{
@@ -245,7 +251,7 @@ export default function ShopifyFooter() {
                 }}
               >
                 Testimonials
-              </Button>
+              </Button> */}
               <Button
                 onClick={handleShopifyClick}
                 color="inherit"
@@ -267,7 +273,7 @@ export default function ShopifyFooter() {
                   transition: "transform 0.2s",
                 }}
               >
-                Shopify Services
+                Shopify
               </Button>
             </div>
           </Grid>
