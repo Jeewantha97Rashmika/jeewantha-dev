@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Box, Button, Container, useTheme, useMediaQuery } from "@mui/material";
-import Logo2 from "../images/logo.svg";
+import Logo2 from "../images/green-logo.svg";
 import { FiMoon, FiSun } from "react-icons/fi";
 import { motion, AnimatePresence } from "framer-motion";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
@@ -8,7 +8,7 @@ import SpringModal from "../components/SpringModal";
 import Nav from "../components/Nav";
 import RevealLinks from "../components/animationComponents/RevealLinks";
 
-export default function Header({ themeMode, toggleTheme }) {
+export default function ShopifyHeader({ themeMode, toggleTheme }) {
   const [isOpen, setIsOpen] = useState(false);
   const theme = useTheme();
 
@@ -196,7 +196,7 @@ export default function Header({ themeMode, toggleTheme }) {
                 sx={{
                   color: theme.palette.btnColor?.text,
                   width: { xs: "100%", sm: "auto" },
-                  backgroundColor: "#FF7262",
+                  backgroundColor: "#5E8E3E",
                   transition:
                     "background-color 0.5s ease, color 0.5s ease, border-radius 0.5s ease",
                   display: { xs: "inline-flex" },
@@ -207,7 +207,7 @@ export default function Header({ themeMode, toggleTheme }) {
                   mr: 2,
                   padding: "5px 10px 5px 20px",
                   "&:hover": {
-                    backgroundColor: "#FF7262",
+                    backgroundColor: "#5E8E3E",
                     transition:
                       "background-color 0.5s ease, color 0.5s ease, border-radius 0.5s ease",
                     borderRadius: "0px",

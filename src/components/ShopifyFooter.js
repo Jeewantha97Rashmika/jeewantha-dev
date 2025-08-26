@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Container, Grid, Box, Typography, Button } from "@mui/material";
 
-import Logo2 from "../images/JeewanthaLogowhite.svg";
+import Logo2 from "../images/green-logo-1.svg";
 import { useMediaQuery } from "@mui/material";
-import MainBtn from "../components/MainBtn";
 import GridImage from "../images/grid2.svg";
 import { FaLinkedin } from "react-icons/fa";
 import { FaSquareGithub } from "react-icons/fa6";
@@ -11,33 +10,23 @@ import { MdAttachEmail } from "react-icons/md";
 import { FaSquareInstagram } from "react-icons/fa6";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaSquareBehance } from "react-icons/fa6";
+import ShopifyMainBtn from "./ShopifyMainBtn";
 
-export default function Footer() {
-  // const handleLinkedinClick = () => {
-  //   window.location.href =
-  //     "https://www.linkedin.com/in/jeewantha-rashmika-b5a56820a/"; // Replace with your desired URL
-  // };
-
+export default function ShopifyFooter() {
   const handleBlogClick = () => {
-    window.location.href = "/#testimonials"; // Replace with your desired URL
+    window.location.href = "/#testimonials";
   };
   const handleShopifyClick = () => {
     window.location.href = "/shopify-store-setup"; // Replace with your desired URL
   };
-  // const handleAboutClick = () => {
-  //   window.location.href = "/#about"; // Replace with your desired URL
-  // };
   const handleServicesClick = () => {
-    window.location.href = "/#services"; // Replace with your desired URL
+    window.location.href = "/#services";
   };
   const handleWordClick = () => {
-    window.location.href = "/#work"; // Replace with your desired URL
+    window.location.href = "/#work";
   };
-  // const handleKnowledgeClick = () => {
-  //   window.location.href = "/#knowledge-sharing"; // Replace with your desired URL
-  // };
-  //time now
 
+  //time now
   const [times, setTimes] = useState({
     colombo: "",
     usa: "",
@@ -53,7 +42,7 @@ export default function Footer() {
       }).format(new Date());
 
       const usaTime = new Intl.DateTimeFormat("en-US", {
-        timeZone: "America/New_York", // Change to another timezone if needed
+        timeZone: "America/New_York",
         hour: "2-digit",
         minute: "2-digit",
         second: "2-digit",
@@ -62,10 +51,10 @@ export default function Footer() {
       setTimes({ colombo: colomboTime, usa: usaTime });
     };
 
-    updateTimes(); // Set time immediately
-    const intervalId = setInterval(updateTimes, 1000); // Update every second
+    updateTimes();
+    const intervalId = setInterval(updateTimes, 1000);
 
-    return () => clearInterval(intervalId); // Cleanup interval on unmount
+    return () => clearInterval(intervalId);
   }, []);
 
   //social links
@@ -107,8 +96,6 @@ export default function Footer() {
     <div
       style={{
         backgroundColor: "#1D1D1E",
-        // backgroundColor:theme.palette.bgColor.main,
-
         transition: "background-color 0.5s ease, color 0.5s ease",
         backgroundImage: `url(${GridImage})`,
         position: "relative",
@@ -123,7 +110,7 @@ export default function Footer() {
           width: { xs: "300px", md: "400px" },
           height: { xs: "300px", md: "400px" },
           borderRadius: "50%",
-          backgroundColor: "rgba(255, 0, 0, 0.2)",
+          backgroundColor: "rgba(24, 102, 37, 0.45)",
           filter: "blur(120px)",
           pointerEvents: "none",
         }}
@@ -157,7 +144,7 @@ export default function Footer() {
                     color: "white",
                     mx: 1.5,
                     "&:hover": {
-                      color: "#FF7262",
+                      color: "#5E8E3E",
                       scale: 0.95,
                       transition: "color 0.2s ease, scale 0.2s ease",
                     },
@@ -185,7 +172,7 @@ export default function Footer() {
           <Typography sx={{ color: "white", mx: 2, my: 2, fontSize: "20px" }}>
             SL : {times.colombo}
           </Typography>
-          <MainBtn title={"Contact Me"} color={"#FF7262"} />
+          <ShopifyMainBtn title={"Contact Me"} color={"#5E8E3E"} />
           <Typography sx={{ color: "white", mx: 2, my: 2, fontSize: "20px" }}>
             USA : {times.usa}
           </Typography>
@@ -201,7 +188,6 @@ export default function Footer() {
                   ml: 2,
                   display: isMobile ? "block" : "inline",
                   "&:hover": {
-                    // backgroundColor: "#e8f5ff",
                     padding: "5px 20px",
                     borderRadius: "40px",
                     transform: "scale(0.95)",
@@ -224,7 +210,6 @@ export default function Footer() {
                   ml: 2,
                   display: isMobile ? "block" : "inline",
                   "&:hover": {
-                    // backgroundColor: "#e8f5ff",
                     padding: "5px 20px",
                     borderRadius: "40px",
                     transform: "scale(0.95)",
@@ -239,29 +224,6 @@ export default function Footer() {
               >
                 Work
               </Button>
-              {/* <Button
-                color="inherit"
-                onClick={handleKnowledgeClick}
-                sx={{
-                  color: "white",
-                  ml: 2,
-                  display: isMobile ? "none" : "inline",
-                  "&:hover": {
-                    // backgroundColor: "#e8f5ff",
-                    padding: "5px 20px",
-                    borderRadius: "40px",
-                    transform: "scale(0.95)",
-                  },
-                  fontFamily: "Montserrat",
-                  textAlign: "center",
-                  textTransform: "none",
-                  fontSize: "16px",
-                  padding: "5px 20px",
-                  transition: "transform 0.2s",
-                }}
-              >
-                Knowledge Sharing
-              </Button> */}
               <Button
                 onClick={handleBlogClick}
                 color="inherit"
@@ -270,7 +232,6 @@ export default function Footer() {
                   ml: 2,
                   display: isMobile ? "block" : "inline",
                   "&:hover": {
-                    // backgroundColor: "#e8f5ff",
                     padding: "5px 20px",
                     borderRadius: "40px",
                     transform: "scale(0.95)",
@@ -345,7 +306,6 @@ export default function Footer() {
           }}
         >
           All rights reserved.
-          {/* Designed & developed by Jeewantha Rashmika */}
         </Typography>
       </Box>
     </div>

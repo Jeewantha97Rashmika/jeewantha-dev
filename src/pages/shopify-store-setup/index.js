@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import Header from "../../layouts/Header";
-import Footer from "../../layouts/Footer";
+import ShopifyHeader from "../../components/ShopifyHeader";
+import ShopifyFooter from "../../components/ShopifyFooter";
 import ScrollToTop from "react-scroll-to-top";
 import "../../global.css";
 import { Box, Container, Grid, Typography, Paper, Button } from "@mui/material";
@@ -22,6 +22,7 @@ import {
   Clock,
   Award,
 } from "lucide-react";
+import ShopifyLogo from "../../components/ShopifyLogo";
 
 const IndexPage = () => {
   const { themeMode, toggleTheme } = useThemeMode();
@@ -196,7 +197,7 @@ const IndexPage = () => {
             transition: "background-color 0.3s ease, color 0.3s ease",
           }}
         >
-          <Header themeMode={themeMode} toggleTheme={toggleTheme} />
+          <ShopifyHeader themeMode={themeMode} toggleTheme={toggleTheme} />
           <ScrollToTop
             top={900}
             smooth
@@ -223,7 +224,7 @@ const IndexPage = () => {
                   <Typography
                     sx={{
                       fontSize: { xs: "14px", sm: "16px" },
-                      color: "#008060",
+                      color: "#5E8E3E",
                       fontWeight: 600,
                       fontFamily: "Montserrat",
                       mb: 2,
@@ -245,7 +246,7 @@ const IndexPage = () => {
                     }}
                   >
                     Transform Your
-                    <span style={{ color: "#008060" }}> E-commerce</span> Vision
+                    <span style={{ color: "#5E8E3E" }}> E-commerce</span> Vision
                     <br />
                     Into Reality
                   </Typography>
@@ -259,7 +260,7 @@ const IndexPage = () => {
                     }}
                   >
                     Professional{" "}
-                    <strong style={{ color: "#008060" }}>Shopify store</strong>{" "}
+                    <strong style={{ color: "#5E8E3E" }}>Shopify store</strong>{" "}
                     development, custom theme design, and optimization services
                     that drive sales and enhance user experience. Let's build
                     your perfect online store.
@@ -268,7 +269,7 @@ const IndexPage = () => {
                     <Button
                       href="#services"
                       sx={{
-                        backgroundColor: "#008060",
+                        backgroundColor: "#5E8E3E",
                         color: "#fff",
                         fontFamily: "Montserrat",
                         fontWeight: 600,
@@ -277,7 +278,7 @@ const IndexPage = () => {
                         py: 1.5,
                         borderRadius: "30px",
                         "&:hover": {
-                          backgroundColor: "#004C3F",
+                          backgroundColor: "#7FA639",
                           transform: "translateY(-2px)",
                         },
                         transition: "all 0.3s ease",
@@ -289,8 +290,8 @@ const IndexPage = () => {
                       href="#contact"
                       variant="outlined"
                       sx={{
-                        borderColor: "#008060",
-                        color: "#008060",
+                        borderColor: "#5E8E3E",
+                        color: "#5E8E3E",
                         fontFamily: "Montserrat",
                         fontWeight: 600,
                         textTransform: "none",
@@ -298,7 +299,7 @@ const IndexPage = () => {
                         py: 1.5,
                         borderRadius: "30px",
                         "&:hover": {
-                          backgroundColor: "#008060",
+                          backgroundColor: "#5E8E3E",
                           color: "#fff",
                           transform: "translateY(-2px)",
                         },
@@ -324,12 +325,30 @@ const IndexPage = () => {
                       alignItems: "center",
                       height: { xs: "300px", md: "400px" },
                       background:
-                        "linear-gradient(135deg, #008060 0%, #004C3F 100%)",
+                        "linear-gradient(135deg, #5E8E3E 0%, #7FA639 100%)",
                       borderRadius: "20px",
                       overflow: "hidden",
                     }}
                   >
-                    <Store size={120} color="white" style={{ opacity: 0.9 }} />
+                    <Box
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 4,
+                        flexDirection: { xs: "column", sm: "row" },
+                      }}
+                    >
+                      <ShopifyLogo size={90} color="white" />
+                      <Box
+                        sx={{
+                          width: "2px",
+                          height: "60px",
+                          backgroundColor: "rgba(255, 255, 255, 0.3)",
+                          display: { xs: "none", sm: "block" },
+                        }}
+                      />
+                      <Store size={80} color="white" style={{ opacity: 0.9 }} />
+                    </Box>
                     <Box
                       sx={{
                         position: "absolute",
@@ -359,44 +378,53 @@ const IndexPage = () => {
           </Container>
 
           {/* Stats Section */}
-          <Container maxWidth="lg" sx={{ py: { xs: 6, md: 8 } }}>
-            <Grid container spacing={4}>
-              {stats.map((stat, index) => (
-                <Grid item xs={6} md={3} key={index}>
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                  >
-                    <Box sx={{ textAlign: "center" }}>
-                      <Typography
-                        sx={{
-                          fontSize: { xs: "32px", md: "48px" },
-                          fontWeight: "bold",
-                          color: "#008060",
-                          fontFamily: "Montserrat",
-                          lineHeight: 1,
-                        }}
-                      >
-                        {stat.number}
-                      </Typography>
-                      <Typography
-                        sx={{
-                          fontSize: { xs: "14px", md: "16px" },
-                          color: themeMode === "light" ? "#707070" : "#aaaaaa",
-                          fontFamily: "Montserrat",
-                          mt: 1,
-                        }}
-                      >
-                        {stat.label}
-                      </Typography>
-                    </Box>
-                  </motion.div>
-                </Grid>
-              ))}
-            </Grid>
-          </Container>
+          <Box
+            sx={{
+              backgroundColor: themeMode === "light" ? "#252525ff" : "#1F2A1F",
+              py: { xs: 6, md: 8 },
+              transition: "background-color 0.3s ease",
+            }}
+          >
+            <Container maxWidth="lg">
+              <Grid container spacing={4}>
+                {stats.map((stat, index) => (
+                  <Grid item xs={6} md={3} key={index}>
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                    >
+                      <Box sx={{ textAlign: "center" }}>
+                        <Typography
+                          sx={{
+                            fontSize: { xs: "32px", md: "48px" },
+                            fontWeight: "bold",
+                            color: "#5E8E3E",
+                            fontFamily: "Montserrat",
+                            lineHeight: 1,
+                          }}
+                        >
+                          {stat.number}
+                        </Typography>
+                        <Typography
+                          sx={{
+                            fontSize: { xs: "14px", md: "16px" },
+                            color:
+                              themeMode === "light" ? "#707070" : "#aaaaaa",
+                            fontFamily: "Montserrat",
+                            mt: 1,
+                          }}
+                        >
+                          {stat.label}
+                        </Typography>
+                      </Box>
+                    </motion.div>
+                  </Grid>
+                ))}
+              </Grid>
+            </Container>
+          </Box>
 
           {/* Services Section */}
           <Container maxWidth="lg" sx={{ py: { xs: 8, md: 12 } }} id="services">
@@ -410,7 +438,7 @@ const IndexPage = () => {
                 <Typography
                   sx={{
                     fontSize: { xs: "14px", sm: "16px" },
-                    color: "#008060",
+                    color: "#5E8E3E",
                     fontWeight: 600,
                     fontFamily: "Montserrat",
                     mb: 2,
@@ -496,7 +524,7 @@ const IndexPage = () => {
                           width: 60,
                           height: 60,
                           borderRadius: "50%",
-                          backgroundColor: "#008060",
+                          backgroundColor: "#5E8E3E",
                           display: "flex",
                           alignItems: "center",
                           justifyContent: "center",
@@ -551,7 +579,7 @@ const IndexPage = () => {
                             >
                               <CheckCircle
                                 size={16}
-                                color="#008060"
+                                color="#5E8E3E"
                                 style={{ marginRight: "8px" }}
                               />
                               <Typography
@@ -587,7 +615,7 @@ const IndexPage = () => {
                 <Typography
                   sx={{
                     fontSize: { xs: "14px", sm: "16px" },
-                    color: "#008060",
+                    color: "#5E8E3E",
                     fontWeight: 600,
                     fontFamily: "Montserrat",
                     mb: 2,
@@ -642,7 +670,7 @@ const IndexPage = () => {
                           width: 50,
                           height: 50,
                           borderRadius: "50%",
-                          backgroundColor: "#008060",
+                          backgroundColor: "#5E8E3E",
                           color: "#fff",
                           display: "flex",
                           alignItems: "center",
@@ -699,7 +727,7 @@ const IndexPage = () => {
                 <Typography
                   sx={{
                     fontSize: { xs: "14px", sm: "16px" },
-                    color: "#008060",
+                    color: "#5E8E3E",
                     fontWeight: 600,
                     fontFamily: "Montserrat",
                     mb: 2,
@@ -812,7 +840,7 @@ const IndexPage = () => {
                 elevation={0}
                 sx={{
                   background:
-                    "linear-gradient(135deg, #008060 0%, #004C3F 100%)",
+                    "linear-gradient(135deg, #5E8E3E 0%, #7FA639 100%)",
                   borderRadius: 4,
                   p: { xs: 4, md: 8 },
                   textAlign: "center",
@@ -854,10 +882,10 @@ const IndexPage = () => {
                   }}
                 >
                   <Button
-                    href="mailto:jeewantharashmika80@gmail.com"
+                    href="mailto:hello@jeewantharashmika.com"
                     sx={{
                       backgroundColor: "#fff",
-                      color: "#FF7262",
+                      color: "#5E8E3E",
                       fontFamily: "Montserrat",
                       fontWeight: 600,
                       textTransform: "none",
@@ -874,7 +902,7 @@ const IndexPage = () => {
                     Get Free Quote
                   </Button>
                   <Button
-                    href="https://wa.me/+94771234567"
+                    // href="https://wa.me/+9"
                     target="_blank"
                     variant="outlined"
                     sx={{
@@ -888,7 +916,7 @@ const IndexPage = () => {
                       borderRadius: "30px",
                       "&:hover": {
                         backgroundColor: "#fff",
-                        color: "#FF7262",
+                        color: "#5E8E3E",
                         transform: "translateY(-2px)",
                       },
                       transition: "all 0.3s ease",
@@ -901,7 +929,7 @@ const IndexPage = () => {
             </motion.div>
           </Container>
 
-          <Footer />
+          <ShopifyFooter />
         </Box>
       </ThemeLayout>
     </>
