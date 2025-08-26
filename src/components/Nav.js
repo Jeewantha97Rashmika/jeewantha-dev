@@ -26,7 +26,7 @@ const socialLinks = [
   {
     name: "Email",
     icon: <MdAttachEmail />,
-    link: "mailto:jeewantharashmika80@gmail.com",
+    link: "mailto:hello@jeewantharashmika.com",
   },
   {
     name: "instagram",
