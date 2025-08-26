@@ -185,10 +185,7 @@ export default function ShopifyHeader({ themeMode, toggleTheme }) {
               <RevealLinks title={"Services"} link="/#services" />
               <RevealLinks title={"Work"} link="/#work" />
               <RevealLinks title={"Testimonials"} link="/#testimonials" />
-              <RevealLinks
-                title={"Shopify Services"}
-                link="/shopify-store-setup"
-              />
+           
 
               <Button
                 color="inherit"
