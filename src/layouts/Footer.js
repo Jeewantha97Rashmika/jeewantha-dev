@@ -262,7 +262,7 @@ export default function Footer() {
               >
                 Knowledge Sharing
               </Button> */}
-              <Button
+              {/* <Button
                 onClick={handleBlogClick}
                 color="inherit"
                 sx={{
@@ -284,7 +284,7 @@ export default function Footer() {
                 }}
               >
                 Testimonials
-              </Button>
+              </Button> */}
               <Button
                 onClick={handleShopifyClick}
                 color="inherit"
@@ -306,7 +306,7 @@ export default function Footer() {
                   transition: "transform 0.2s",
                 }}
               >
-                Shopify Services
+                Shopify
               </Button>
             </div>
           </Grid>

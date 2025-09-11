@@ -186,7 +186,7 @@ export default function Header({ themeMode, toggleTheme }) {
               <RevealLinks title={"Work"} link="/#work" />
               <RevealLinks title={"Testimonials"} link="/#testimonials" />
               <RevealLinks
-                title={"Shopify-Services"}
+                title={"Shopify"}
                 link="/shopify-store-setup"
               />
 

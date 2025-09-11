@@ -56,7 +56,7 @@ export default function ShopifyHeader({ themeMode, toggleTheme }) {
       width: "40px",
       height: "40px",
       borderRadius: "50%",
-      backgroundColor: theme.palette.secondary?.main,
+      backgroundColor: "#5E8E3E",
       transition: "background-color 0.3s ease, color 0.5s ease",
       cursor: "pointer",
       display: "flex",
@@ -186,7 +186,7 @@ export default function ShopifyHeader({ themeMode, toggleTheme }) {
               <RevealLinks title={"Work"} link="/#work" />
               <RevealLinks title={"Testimonials"} link="/#testimonials" />
               <RevealLinks
-                title={"Shopify-Services"}
+                title={"Shopify"}
                 link="/shopify-store-setup"
               />
 
