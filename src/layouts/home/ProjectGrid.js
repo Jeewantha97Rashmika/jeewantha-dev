@@ -10,6 +10,7 @@ import {
 } from '@mui/material';
 import Photographer from '../../images/Photographer.json';
 import Radika from '../../images/radika.json';
+import PottiIcon from '../../images/potii-images/Potti-Small-Savings.png';
 import ProjectItem from './ProjectItem';
 import DesignSystem from '../../images/design_system.json';
 import AppleVisionPro from '../../images/apple_vision_pro.json';
@@ -117,6 +118,14 @@ export default function ProjectGrid() {
   ];
 
   const projectData = [
+    {
+      heading: 'Potti - Saving Tracker',
+      tools: [],
+      subheading:
+        'A playful savings tracker app for iOS & Android - set goals, drop coins in your Potti and watch your future grow',
+      coverImage: PottiIcon,
+      href: '/projects/potti',
+    },
     {
       heading: 'Photographer Portfolio Website ',
       tools: uidesign,

@@ -5,27 +5,26 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { Link } from "gatsby";
 import { motion } from "framer-motion";
 
-export default function ProjectItem({ project }) {
-  const [isHovered, setIsHovered] = useState(false);
-  const theme = useTheme();
-  const { View: ProjectView, animationItem } = useLottie({
-    animationData: project.imgSrc,
+function LottiePreview({ data, isHovered }) {
+  const { View, animationItem } = useLottie({
+    animationData: data,
     loop: false,
     autoplay: false,
   });
 
   useEffect(() => {
     if (animationItem) {
-      if (isHovered) {
-        animationItem.setDirection(1); // Play forward
-        animationItem.play();
-      } else {
-        animationItem.setDirection(-1); // Play in reverse
-        animationItem.play();
-      }
+      animationItem.setDirection(isHovered ? 1 : -1);
+      animationItem.play();
     }
   }, [isHovered, animationItem]);
 
+  return View;
+}
+
+export default function ProjectItem({ project }) {
+  const [isHovered, setIsHovered] = useState(false);
+  const theme = useTheme();
   return (
     <Grid container item xs={12} md={6} sx={{
 
@@ -64,7 +63,15 @@ export default function ProjectItem({ project }) {
           }}
         >
           <Box sx={{ borderRadius: "18px", overflow: "hidden" }}>
-            {ProjectView}
+            {project.coverImage ? (
+              <img
+                src={project.coverImage}
+                alt={project.heading}
+                style={{ width: "100%", display: "block" }}
+              />
+            ) : (
+              <LottiePreview data={project.imgSrc} isHovered={isHovered} />
+            )}
           </Box>
           <Box
             sx={{
